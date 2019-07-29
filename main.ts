@@ -20,7 +20,7 @@ function createWindow() {
 
   const mainWindowState = windowStateKeeper({
     defaultWidth: 700,
-    defaultHeight: 200
+    defaultHeight: 300
   });
 
   win = new BrowserWindow({
@@ -35,7 +35,7 @@ function createWindow() {
   });
 
   mainWindowState.manage(win);
-  win.setTitle((serve) ? 'Les - ' + app.getVersion() + ' DEV' : 'Les - ' + app.getVersion());
+  // win.setTitle((serve) ? 'Les - ' + app.getVersion() + ' DEV' : 'Les - ' + app.getVersion());
 
   if (serve) {
     require('electron-reload')(__dirname, {

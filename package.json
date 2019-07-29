@@ -1,6 +1,6 @@
 {
   "name": "les",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "Les",
   "homepage": "https://github.com/ctgroupgit/les",
   "repository": {
@@ -41,8 +41,7 @@
     "linux": {
       "target": [
         "AppImage"
-      ],
-      "icon": "./icona.png"
+      ]
     },
     "portable": {
       "artifactName": "RunServer.exe"
@@ -50,8 +49,7 @@
     "mac": {
       "target": [
         "tar.gz"
-      ],
-      "icon": "./icona.png"
+      ]
     },
     "asar": false,
     "files": [
