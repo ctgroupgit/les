@@ -31,7 +31,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
     },
-    icon: __dirname + '/icona.png'
+    icon: './icona.png'
   });
 
   mainWindowState.manage(win);
