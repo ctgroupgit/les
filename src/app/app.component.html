@@ -1,0 +1,33 @@
+<div fxShow="true">
+  <mat-toolbar color="primary" class="mat-elevation-z3">
+    <mat-toolbar-row>
+      <div fxLayout fxLayoutGap="20px">
+        <span > Les < ver {{ appVersion }} ></span>
+      </div>
+      <div fxFlex fxLayout fxLayoutAlign="flex-end">
+        <ul fxLayout fxLayoutGap="20px">
+          <li fxHide.xs>
+            <button mat-button routerLink="/" routerLinkActive="active" label="HOME">HOME
+            </button>
+          </li>
+          <li fxHide.xs>
+            <button mat-button  (click)="refresh()">RELOAD
+            </button>
+          </li>
+          <li fxHide.xs>
+            <button mat-button   routerLink="/preferences" routerLinkActive="active">CONFIG
+            </button>
+          </li>
+
+          <li fxHide.xs>
+            <button (click)="devTools()" mat-button label="DEV">DEV
+            </button>
+          </li>
+        </ul>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+<div style="margin-top: 60px">
+  <router-outlet></router-outlet>
+</div>
