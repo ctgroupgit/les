@@ -60,7 +60,7 @@ function createWindow() {
   win.on('close', (e) => {
 
     e.preventDefault();
-    win.hide();
+    // win.hide();
   });
 
   win.on('show', function () {
@@ -114,7 +114,7 @@ function start() {
   tray.setContextMenu(contextMenu);
 
   createWindow();
-  win.hide();
+  // win.hide();
 }
 
 try {
@@ -132,6 +132,7 @@ try {
     if (win === null) {
       createWindow();
     }
+    autoUpdater.checkForUpdatesAndNotify()
   });
 
   //-------------------------------------------------------------------
@@ -149,7 +150,6 @@ try {
   });
   autoUpdater.on('update-available', info => {
     sendStatusToWindow('Update available.');
-    autoUpdater.checkForUpdatesAndNotify();
   });
   autoUpdater.on('update-not-available', info => {
     sendStatusToWindow('Update not available.');

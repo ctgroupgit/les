@@ -1,6 +1,6 @@
 {
   "name": "les",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "Les",
   "homepage": "https://github.com/ctgroupgit/les",
   "repository": {
@@ -18,6 +18,11 @@
     "typescript",
     "sass"
   ],
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "node_modules"
+    ]
+  },
   "build": {
     "appId": "com.les.app",
     "publish": [
@@ -82,7 +87,7 @@
     "e2e": "npm run build:prod && mocha --timeout 300000 --require ts-node/register e2e/**/*.spec.ts",
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "gh-publish": "electron-builder --x64 -mwl --publish always",
-    "gh-publish-win": "electron-builder --x64 --all --publish always",
+    "gh-publish-win": "electron-builder --x64 --win --publish always",
     "gh-publish-linux": "electron-builder --x64 --linux --publish always"
   },
   "devDependencies": {

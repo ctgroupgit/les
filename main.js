@@ -27,7 +27,7 @@ function createWindow() {
         webPreferences: {
             nodeIntegration: true,
         },
-        icon: __dirname + '/icona.png'
+        icon: './icona.png'
     });
     mainWindowState.manage(win);
     // win.setTitle((serve) ? 'Les - ' + app.getVersion() + ' DEV' : 'Les - ' + app.getVersion());
@@ -51,7 +51,7 @@ function createWindow() {
     }
     win.on('close', function (e) {
         e.preventDefault();
-        win.hide();
+        // win.hide();
     });
     win.on('show', function () {
         win.reload();
@@ -100,7 +100,7 @@ function start() {
     tray.setToolTip(electron_1.app.getName());
     tray.setContextMenu(contextMenu);
     createWindow();
-    win.hide();
+    // win.hide();
 }
 try {
     electron_1.app.on('ready', function () {
@@ -112,6 +112,7 @@ try {
         if (win === null) {
             createWindow();
         }
+        autoUpdater.checkForUpdatesAndNotify();
     });
     //-------------------------------------------------------------------
     // Auto updates
@@ -127,7 +128,6 @@ try {
     });
     autoUpdater.on('update-available', function (info) {
         sendStatusToWindow_1('Update available.');
-        autoUpdater.checkForUpdatesAndNotify();
     });
     autoUpdater.on('update-not-available', function (info) {
         sendStatusToWindow_1('Update not available.');
