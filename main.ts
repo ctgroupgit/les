@@ -1,7 +1,7 @@
 import {app, BrowserWindow, Tray, Menu, nativeImage, dialog} from 'electron';
 import * as path from 'path';
 import * as url from 'url';
-import * as windowStateKeeper from 'electron-window-state';
+// import * as windowStateKeeper from 'electron-window-state';
 
 const {autoUpdater} = require('electron-updater');
 const log = require('electron-log');
@@ -13,29 +13,20 @@ let tray = null;
 
 // configure logging
 autoUpdater.logger = log;
+
 autoUpdater.logger.transports.file.level = 'info';
+
 log.info('App starting...');
 
 function createWindow() {
-
-  const mainWindowState = windowStateKeeper({
-    defaultWidth: 700,
-    defaultHeight: 300
-  });
-
   win = new BrowserWindow({
-    'x': mainWindowState.x,
-    'y': mainWindowState.y,
-    'width': mainWindowState.width,
-    'height': mainWindowState.height,
+    'width': 700,
+    'height': 300,
     webPreferences: {
       nodeIntegration: true,
     },
     icon: './icona.png'
   });
-
-  mainWindowState.manage(win);
-  // win.setTitle((serve) ? 'Les - ' + app.getVersion() + ' DEV' : 'Les - ' + app.getVersion());
 
   if (serve) {
     require('electron-reload')(__dirname, {
@@ -50,17 +41,13 @@ function createWindow() {
     }));
   }
 
-  // trigger autoupdate check
-  autoUpdater.checkForUpdates();
-
   if (serve) {
-  win.webContents.openDevTools();
+    win.webContents.openDevTools();
   }
 
   win.on('close', (e) => {
-
     e.preventDefault();
-    // win.hide();
+    win.hide();
   });
 
   win.on('show', function () {
@@ -68,72 +55,71 @@ function createWindow() {
   });
 
   win.setMenu(null);
-
-}
-
-function start() {
-  const image = nativeImage.createFromPath(path.join(__dirname, 'icona.png'));
-  if (process.platform === 'win32') {
-    // image = nativeImage.createFromPath(path.join(__dirname, '../icons/win/app.ico'));
-  } else if (process.platform === 'darwin') {
-    // image = nativeImage.createFromPath(path.join(__dirname, '../icons/mac/app.icns'));
-  } else if (process.platform === 'linux') {
-
-  }
-  tray = new Tray(image);
-  const contextMenu = Menu.buildFromTemplate([
-    {
-      label: 'Open', click() {
-        win.show();
-      }
-    },
-    {
-      label: 'Quit', click() {
-        const options = {
-          type: 'question',
-          buttons: ['Yes', 'No'],
-          defaultId: 1,
-          title: 'Question',
-          message: 'Do you want to do this?',
-          detail: 'It does not really matter',
-        };
-        dialog.showMessageBox(null, options, (response) => {
-          if (response === 0) {
-            if (tray != null) {
-              tray.destroy();
-              tray = null;
-            }
-            app.quit();
-          }
-        });
-      }
-    },
-
-  ]);
-  tray.setToolTip(app.getName());
-  tray.setContextMenu(contextMenu);
-
-  createWindow();
-  // win.hide();
 }
 
 try {
 
   app.on('ready', () => {
+    const image = nativeImage.createFromPath('./invio.py');
+    tray = new Tray(image);
+    const contextMenu = Menu.buildFromTemplate([
+      {
+        label: 'Open', click() {
+          win.show();
+        }
+      },
+      {
+        label: 'Hide Windows', click() {
+          win.hide();
+        }
+      },
+      {
+        label: 'Quit', click() {
+          const options = {
+            type: 'question',
+            buttons: ['Yes', 'No'],
+            defaultId: 1,
+            title: 'Question',
+            message: 'Do you want to do this?',
+            detail: 'It does not really matter',
+          };
+          dialog.showMessageBox(null, options, (response) => {
+            if (response === 0) {
+              app.quit();
+            }
+          });
+        }
+      },
 
-    start();
+    ]);
+
+    tray.setToolTip(app.getName());
+    tray.setContextMenu(contextMenu);
+
+    createWindow();
+    autoUpdater.checkForUpdatesAndNotify()
+  });
+
+  app.on('before-quit', () => {
+
+    if(win) {
+      win.removeAllListeners('close');
+      tray.destroy();
+      tray = null;
+      win.close();
+    }
+
   });
 
   app.on('window-all-closed', () => {
 
   });
 
-  app.on('activate', () => {
-    if (win === null) {
-      createWindow();
-    }
-    autoUpdater.checkForUpdatesAndNotify()
-  });
+  // app.on('activate', () => {
+  //   if (win === null) {
+  //     createWindow();
+  //   }
+  // });
 
   //-------------------------------------------------------------------
 // Auto updates
@@ -164,6 +150,8 @@ try {
   });
   autoUpdater.on('update-downloaded', info => {
     sendStatusToWindow('Update downloaded; will install now');
+    tray.destroy();
+    tray = null;
     autoUpdater.quitAndInstall();
   });
 

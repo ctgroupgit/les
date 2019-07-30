@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var electron_1 = require("electron");
 var path = require("path");
 var url = require("url");
-var windowStateKeeper = require("electron-window-state");
+// import * as windowStateKeeper from 'electron-window-state';
 var autoUpdater = require('electron-updater').autoUpdater;
 var log = require('electron-log');
 var win, serve;
@@ -15,22 +15,14 @@ autoUpdater.logger = log;
 autoUpdater.logger.transports.file.level = 'info';
 log.info('App starting...');
 function createWindow() {
-    var mainWindowState = windowStateKeeper({
-        defaultWidth: 700,
-        defaultHeight: 300
-    });
     win = new electron_1.BrowserWindow({
-        'x': mainWindowState.x,
-        'y': mainWindowState.y,
-        'width': mainWindowState.width,
-        'height': mainWindowState.height,
+        'width': 700,
+        'height': 300,
         webPreferences: {
             nodeIntegration: true,
         },
         icon: './icona.png'
     });
-    mainWindowState.manage(win);
-    // win.setTitle((serve) ? 'Les - ' + app.getVersion() + ' DEV' : 'Les - ' + app.getVersion());
     if (serve) {
         require('electron-reload')(__dirname, {
             electron: require(__dirname + "/node_modules/electron")
@@ -44,76 +36,71 @@ function createWindow() {
             slashes: true
         }));
     }
-    // trigger autoupdate check
-    autoUpdater.checkForUpdates();
     if (serve) {
         win.webContents.openDevTools();
     }
     win.on('close', function (e) {
         e.preventDefault();
-        // win.hide();
+        win.hide();
     });
     win.on('show', function () {
         win.reload();
     });
     win.setMenu(null);
 }
-function start() {
-    var image = electron_1.nativeImage.createFromPath(path.join(__dirname, 'icona.png'));
-    if (process.platform === 'win32') {
-        // image = nativeImage.createFromPath(path.join(__dirname, '../icons/win/app.ico'));
-    }
-    else if (process.platform === 'darwin') {
-        // image = nativeImage.createFromPath(path.join(__dirname, '../icons/mac/app.icns'));
-    }
-    else if (process.platform === 'linux') {
-    }
-    tray = new electron_1.Tray(image);
-    var contextMenu = electron_1.Menu.buildFromTemplate([
-        {
-            label: 'Open', click: function () {
-                win.show();
-            }
-        },
-        {
-            label: 'Quit', click: function () {
-                var options = {
-                    type: 'question',
-                    buttons: ['Yes', 'No'],
-                    defaultId: 1,
-                    title: 'Question',
-                    message: 'Do you want to do this?',
-                    detail: 'It does not really matter',
-                };
-                electron_1.dialog.showMessageBox(null, options, function (response) {
-                    if (response === 0) {
-                        if (tray != null) {
-                            tray.destroy();
-                            tray = null;
-                        }
-                        electron_1.app.quit();
-                    }
-                });
-            }
-        },
-    ]);
-    tray.setToolTip(electron_1.app.getName());
-    tray.setContextMenu(contextMenu);
-    createWindow();
-    // win.hide();
-}
 try {
     electron_1.app.on('ready', function () {
-        start();
+        var image = electron_1.nativeImage.createFromPath('./invio.py');
+        tray = new electron_1.Tray(image);
+        var contextMenu = electron_1.Menu.buildFromTemplate([
+            {
+                label: 'Open', click: function () {
+                    win.show();
+                }
+            },
+            {
+                label: 'Hide Windows', click: function () {
+                    win.hide();
+                }
+            },
+            {
+                label: 'Quit', click: function () {
+                    var options = {
+                        type: 'question',
+                        buttons: ['Yes', 'No'],
+                        defaultId: 1,
+                        title: 'Question',
+                        message: 'Do you want to do this?',
+                        detail: 'It does not really matter',
+                    };
+                    electron_1.dialog.showMessageBox(null, options, function (response) {
+                        if (response === 0) {
+                            electron_1.app.quit();
+                        }
+                    });
+                }
+            },
+        ]);
+        tray.setToolTip(electron_1.app.getName());
+        tray.setContextMenu(contextMenu);
+        createWindow();
+        autoUpdater.checkForUpdatesAndNotify();
+    });
+    electron_1.app.on('before-quit', function () {
+        if (win) {
+            win.removeAllListeners('close');
+            tray.destroy();
+            tray = null;
+            win.close();
+        }
     });
     electron_1.app.on('window-all-closed', function () {
     });
-    electron_1.app.on('activate', function () {
-        if (win === null) {
-            createWindow();
-        }
-        autoUpdater.checkForUpdatesAndNotify();
-    });
+    // app.on('activate', () => {
+    //   if (win === null) {
+    //     createWindow();
+    //   }
+    // });
     //-------------------------------------------------------------------
     // Auto updates
     //-------------------------------------------------------------------
@@ -140,6 +127,8 @@ try {
     });
     autoUpdater.on('update-downloaded', function (info) {
         sendStatusToWindow_1('Update downloaded; will install now');
+        tray.destroy();
+        tray = null;
         autoUpdater.quitAndInstall();
     });
 }

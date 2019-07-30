@@ -1,6 +1,6 @@
 {
   "name": "les",
-  "version": "1.0.10",
+  "version": "1.0.20",
   "description": "Les",
   "homepage": "https://github.com/ctgroupgit/les",
   "repository": {
@@ -60,7 +60,8 @@
     "files": [
       "build/**/*",
       "package.json",
-      "main.js"
+      "main.js",
+      "icona.png"
     ]
   },
   "main": "main.js",
