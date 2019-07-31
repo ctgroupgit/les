@@ -17,6 +17,9 @@ export class AppComponent {
     this.appVersion = this.electronService.remote.app.getVersion();
     translate.setDefaultLang('en');
     console.log('AppConfig', AppConfig);
+    console.log(this.electronService.remote.app.getAppPath());
+
+    console.log(this.electronService.remote.app.getPath('appData'));
 
     if (electronService.isElectron()) {
       console.log('Mode electron');

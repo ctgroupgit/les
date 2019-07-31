@@ -1,0 +1,64 @@
+00001;CONTROL;3;4;5;6;7;8;9;10;11;12;01.01.01;02.02.02;T15;T16;T17;T18;T19;T20;T21;T22;T23;T24;T25;T26;T27;T28;T29;052
+305278;KOPIEN;001;000;;;;;;;;;;;AUFTRAGSBESTÄTIGUNG;;;;;;;;;;;;;;;052
+305278;KOPF_DATEN;;;;;;;;;;;23.04.19;;AUFTRAGSBESTÄTIGUNG;Ihre Bestell-Nr;BEST190506                          ;Bestell-Datum;Ihre Zeichen;Frau Behrend      ;Unsere Zeichen;Nicole Naiel      ;KomNr.6-51607-1902;                  ;D;naiel1;Zentrale;        ;0721/62 05-37       ;052
+305278;KOPF_POSUEB;;;;;;;;;;;;;Pos.;Produkt-Nr/Bezeichnung;Menge;ME;Einzelpreis;PE;Gesamt ;EUR ;0;;;;;;0721/62 05-37       ;052
+305278;KONTAKT;;;;;;;;;;;;;0721/6236083;nicole.naiel@zzdrivetech.com;0721/6236083;0721/6205-37;nicole.naiel@zzdrivetech.com; Nicole Naiel;0721/6236083;0721/62 05-37;nicole.naiel@zzdrivetech.com; Nicole Naiel;02521/82455618;02521/82455630;;;;052
+305278;KOPF_USTID;;;;;;;;;;;;;Ihre Ust-IdNr;                ;Unsere Ust-IdNr;DE815609203     ;;;;;;;;;;;;052
+305278;KOPF;;;;;;;;;;;24.04.19;;Datum;Vertreter;;Auftrags-Nr;190277          ;Kunden-Nr;13063   ;FERRO;Industrieanlagen GmbH;Auf dem Tigge 66;59269 Beckum;;;;;052
+305278;KOPF_TEXTF;1;;;;;;;;;;;;tVielen Dank für Ihren Auftrag.                                        ;;;;;;;;;;;;;;;052
+305278;KOPF_TEXTF;2;;;;;;;;;;;;tEs gelten unsere Allgemeinen Verkaufs- und Lieferbedingungen,         ;;;;;;;;;;;;;;;052
+305278;KOPF_TEXTF;3;;;;;;;;;;;;tdie Sie auf unserer Homepage www.zzdrivetech.com unter                ;;;;;;;;;;;;;;;052
+305278;KOPF_TEXTF;4;;;;;;;;;;;;tImpressum einsehen bzw. herunterladen können.                         ;;;;;;;;;;;;;;;052
+305278;POS;1;3;1430;0 ;4290;28,8;;;;;19.07.19;;Ihre Produkt-Nr:;;H005-0876-003;HUBGETRIEBE         ;10130 (Seite E)     ;ST;Termin: ;;;Versandgewicht      ;netto;;;;     ;052
+305278;POS_TEXTP;1;1;;;;;;;;;;;tGetriebetyp/-größe:   FHGV5 mit Verdrehsicherung                      ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;2;1;;;;;;;;;;;tÜbersetzung:          04:1                                            ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;3;1;;;;;;;;;;;tTrapezgewinde:        Tr18x4                                          ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;4;1;;;;;;;;;;;tHub pro Umdrehung:    1mm/U                                           ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;5;1;;;;;;;;;;;tAntriebswelle:        beidseiig                                       ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;6;1;;;;;;;;;;;tSpindellänge:         345mm                                           ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;7;1;;;;;;;;;;;tSpindelführung:       nicht bekannt                                   ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;8;1;;;;;;;;;;;tHub (Lhub):           200mm                                           ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;9;1;;;;;;;;;;;tEinbaulage:           vertikal                                        ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;10;1;;;;;;;;;;;tAntriebsdrehzahl:     675U/min                                        ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;11;1;;;;;;;;;;;tBelastung:            4kN Druck                                       ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;12;1;;;;;;;;;;;tSchmierung:           incl. Lebensmittel-Fließfett/USDA-H1            ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;13;1;;;;;;;;;;;t                      Paraliq GA 3400                                 ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;14;1;;;;;;;;;;;t                      nicht mischbar mit synth. PG-Schmierstoff       ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;15;1;;;;;;;;;;;tOberflächenschutz:    lackiert RAL 2004                               ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;16;1;;;;;;;;;;;tZubehör:              -ohne Kopfplatte                                ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;17;1;;;;;;;;;;;t                      -Schutzrohr mit Verdrehsicherung                ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;18;1;;;;;;;;;;;t                       und Endschalter                                ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;19;1;;;;;;;;;;;t                      -Motorflansch Ø105, Kupplung                    ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;20;1;;;;;;;;;;;t                      -Drehstrommotor 71L/8, P=0.18kW,                ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;21;1;;;;;;;;;;;t                       n=750 1/min, 230/400V, 50Hz,                   ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;22;1;;;;;;;;;;;t                       IP 55, Isolationsklasse F,                     ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;23;1;;;;;;;;;;;t                       Bauf. B14-Ø105                                 ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;24;1;;;;;;;;;;;t                      (Motor wurde kundenseitig ausgewählt,           ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;25;1;;;;;;;;;;;t                       dadurch begrenzte Hublast max.4kN)             ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;26;1;;;;;;;;;;;tWarennummer: 84 83 40 23                                              ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;27;1;;;;;;;;;;;t;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;28;1;;;;;;;;;;;t*                                                                     ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;29;1;;;;;;;;;;;tKENNZEICHNUNG:                                                        ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;30;1;;;;;;;;;;;tGetriebenummer:   1-3                                                 ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;31;1;;;;;;;;;;;tKundenreferenz:   --                                                  ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;32;1;;;;;;;;;;;t*                                                                     ;;;;;;;;;;;;;;;052
+305278;POS;2;3;0;0 ;0;;;;;;19.07.19;;Ihre Produkt-Nr:;;299-DOK-H-DE;DOKUMENTATION ZU    ;HUBGETRIEBEN        ;ST;Termin: ;;;;;;;;     ;052
+305278;POS_TEXTP;1;2;;;;;;;;;;;tBetriebs- und Wartungsanleitung zu Hubgetrieben.                      ;;;;;;;;;;;;;;;052
+305278;POS_TEXTP;2;2;;;;;;;;;;;t-Deutsch-                                                             ;;;;;;;;;;;;;;;052
+305278;FUSS_WERTE;1;;4290;;;;;;;;;;NETTOW;Nettowert;;;;;;;;;;;;;;052
+305278;FUSS_WERTE;2;;52;;;;;;;;;;KOSTEN;Verpackung       ;    ;;;;;;;;;;;;;052
+305278;FUSS_WERTE;3;;4342;;;;;;;;;;NETTOAW;Nettoauftragswert;;;;;;;;;;;;;;052
+305278;FUSS_WERTE;4;19;824,98;;;;;;;;;;MWST;zuzügl.% MWSt;%;;;;;;;;;;;;;052
+305278;FUSS_WERTE;5;;5166,98;;;;;;;;;;AUFTRW;Auftragswert;;;;;;;;;;;;;;052
+305278;FUSS_LIEFB;;;;;;;;;;;;;ab Werk, ausschl. Verpackung                                ;Lieferbedingung:;;;;;;;;;;;;;;052
+305278;FUSS_ZAHLB;1;;;;;;;;;;;;30 Tage netto;Zahlungsbedingung:;;;;;;;;;;;;;;052
+305278;FUSS_TEXTF;1;;;;;;;;;;;;tBitte beachten Sie: Es gilt die zum Zeitpunkt der Leistungs-          ;;;;;;;;;;;;;;;052
+305278;FUSS_TEXTF;2;;;;;;;;;;;;t                    erbringung gültige Mehrwertsteuer.                ;;;;;;;;;;;;;;;052
+305278;FUSS_TEXTF;3;;;;;;;;;;;;t;;;;;;;;;;;;;;;052
+305278;FUSS_TEXTF;4;;;;;;;;;;;;t;;;;;;;;;;;;;;;052
+305278;FUSS_TEXTF;5;;;;;;;;;;;;tMit freundlichen Grüßen                                               ;;;;;;;;;;;;;;;052
+305278;FUSS_TEXTF;6;;;;;;;;;;;;t;;;;;;;;;;;;;;;052
+305278;FUSS_TEXTF;7;;;;;;;;;;;;tZZ-DriveTech GmbH                                                     ;;;;;;;;;;;;;;;052
+305278;FUSS_TEXTF;8;;;;;;;;;;;;t;;;;;;;;;;;;;;;052
+305278;FUSS_TEXTF;9;;;;;;;;;;;;t;;;;;;;;;;;;;;;052
+305278;FUSS_TEXTF;10;;;;;;;;;;;;ti.V. Peter Sohl                                                       ;;;;;;;;;;;;;;;052

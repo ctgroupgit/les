@@ -17,7 +17,7 @@ log.info('App starting...');
 function createWindow() {
     win = new electron_1.BrowserWindow({
         'width': 700,
-        'height': 300,
+        'height': 700,
         webPreferences: {
             nodeIntegration: true,
         },
@@ -44,17 +44,34 @@ function createWindow() {
         win.hide();
     });
     win.on('show', function () {
-        win.reload();
+        // win.reload();
     });
     win.setMenu(null);
 }
 try {
     electron_1.app.on('ready', function () {
-        var image = electron_1.nativeImage.createFromPath('./invio.py');
+        var iconPath = path.join(electron_1.app.getAppPath(), 'build/assets/icona.png');
+        var image;
+        if (serve) {
+            image = electron_1.nativeImage.createFromPath(iconPath);
+        }
+        else {
+            image = electron_1.nativeImage.createFromPath(iconPath);
+        }
         tray = new electron_1.Tray(image);
+        // tray = new Tray(image);
+        tray.setHighlightMode('always');
+        tray.on('click', function () {
+            if (win.isVisible()) {
+                win.hide();
+            }
+            else {
+                win.show();
+            }
+        });
         var contextMenu = electron_1.Menu.buildFromTemplate([
             {
-                label: 'Open', click: function () {
+                label: 'Show Windows', click: function () {
                     win.show();
                 }
             },
@@ -84,7 +101,9 @@ try {
         tray.setToolTip(electron_1.app.getName());
         tray.setContextMenu(contextMenu);
         createWindow();
-        autoUpdater.checkForUpdatesAndNotify();
+        setInterval(function () {
+            autoUpdater.checkForUpdatesAndNotify();
+        }, 60000);
     });
     electron_1.app.on('before-quit', function () {
         if (win) {
@@ -101,9 +120,6 @@ try {
     //     createWindow();
     //   }
     // });
-    //-------------------------------------------------------------------
-    // Auto updates
-    //-------------------------------------------------------------------
     var sendStatusToWindow_1 = function (text) {
         log.info(text);
         if (win) {

@@ -1,6 +1,6 @@
 {
   "name": "les",
-  "version": "1.0.20",
+  "version": "1.0.28",
   "description": "Les",
   "homepage": "https://github.com/ctgroupgit/les",
   "repository": {
@@ -32,24 +32,23 @@
       }
     ],
     "win": {
+      "icon": "src/assets/icona.png",
       "target": [
         "nsis"
       ]
     },
     "nsis": {
-      "oneClick": false,
-      "perMachine": true,
-      "allowElevation": true,
+      "oneClick": true,
+      "perMachine": false,
       "deleteAppDataOnUninstall": true,
       "createDesktopShortcut": "always"
     },
     "linux": {
+      "category": "Office",
+      "icon": "src/assets/icona.png",
       "target": [
         "AppImage"
       ]
-    },
-    "portable": {
-      "artifactName": "RunServer.exe"
     },
     "mac": {
       "target": [
@@ -59,9 +58,11 @@
     "asar": false,
     "files": [
       "build/**/*",
+      "bin/**/*",
       "package.json",
       "main.js",
-      "icona.png"
+      "icona.png",
+      "favicon.ico"
     ]
   },
   "main": "main.js",
@@ -147,7 +148,6 @@
     "base64topdf": "^1.1.8",
     "chart.js": "^2.8.0",
     "chartjs": "^0.3.24",
-    "electron-is-dev": "^1.1.0",
     "electron-log": "^3.0.6",
     "electron-root-path": "^1.0.9",
     "electron-updater": "^4.1.2",

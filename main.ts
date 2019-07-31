@@ -10,7 +10,6 @@ let win, serve;
 const args = process.argv.slice(1);
 serve = args.some(val => val === '--serve');
 let tray = null;
-
 // configure logging
 autoUpdater.logger = log;
 
@@ -21,7 +20,7 @@ log.info('App starting...');
 function createWindow() {
   win = new BrowserWindow({
     'width': 700,
-    'height': 300,
+    'height': 700,
     webPreferences: {
       nodeIntegration: true,
     },
@@ -51,7 +50,7 @@ function createWindow() {
   });
 
   win.on('show', function () {
-    win.reload();
+    // win.reload();
   });
 
   win.setMenu(null);
@@ -60,11 +59,26 @@ function createWindow() {
 try {
 
   app.on('ready', () => {
-    const image = nativeImage.createFromPath('./invio.py');
+    const iconPath = path.join(app.getAppPath(), 'build/assets/icona.png');
+    let image;
+    if (serve) {
+      image = nativeImage.createFromPath(iconPath);
+    } else {
+      image = nativeImage.createFromPath(iconPath);
+    }
     tray = new Tray(image);
+    // tray = new Tray(image);
+    tray.setHighlightMode('always');
+    tray.on('click', () => {
+      if (win.isVisible()) {
+        win.hide();
+      } else {
+        win.show();
+      }
+    });
     const contextMenu = Menu.buildFromTemplate([
       {
-        label: 'Open', click() {
+        label: 'Show Windows', click() {
           win.show();
         }
       },
@@ -97,12 +111,14 @@ try {
     tray.setContextMenu(contextMenu);
 
     createWindow();
-    autoUpdater.checkForUpdatesAndNotify()
+    setInterval(() => {
+      autoUpdater.checkForUpdatesAndNotify();
+    }, 60000);
   });
 
   app.on('before-quit', () => {
 
-    if(win) {
+    if (win) {
       win.removeAllListeners('close');
       tray.destroy();
       tray = null;
@@ -121,9 +137,6 @@ try {
   //   }
   // });
 
-  //-------------------------------------------------------------------
-// Auto updates
-//-------------------------------------------------------------------
   const sendStatusToWindow = (text) => {
     log.info(text);
     if (win) {

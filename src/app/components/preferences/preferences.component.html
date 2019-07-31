@@ -8,4 +8,14 @@
       <mat-icon>folder</mat-icon>
     </button>
   </mat-form-field>
+
+  <mat-form-field style="margin-top: 20px">
+    <input matInput placeholder="Server IP + SFTP PORT (example 127.0.0.1:22)" type="text" value="{{this.localStorage.retrieve('serverIp')}}"  (keyup)="onchangeIP($event)">
+  </mat-form-field>
+  <mat-form-field style="margin-top: 20px">
+    <input matInput placeholder="Username" type="text" value="{{this.localStorage.retrieve('username')}}"  (keyup)="onchangeUsername($event)">
+  </mat-form-field>
+  <mat-form-field style="margin-top: 20px">
+    <input matInput placeholder="Password" type="password" value="{{this.localStorage.retrieve('password')}}"  (keyup)="onchangePassword($event)">
+  </mat-form-field>
 </div>

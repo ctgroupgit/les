@@ -26,20 +26,27 @@ export class PreferencesComponent implements OnInit, OnDestroy, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
   }
 
-  onSelectModelFolder() {
-    this.electron.remote.dialog.showOpenDialog(
-      this.electron.remote.getCurrentWindow(), {properties: ['openDirectory']}, (path) => {
-        this.localStorage.store('modelFolder', path);
-      }
-    );
-  }
-
   onSelectSaveFolder() {
     this.electron.remote.dialog.showOpenDialog(
       this.electron.remote.getCurrentWindow(), {properties: ['openDirectory']}, (path) => {
         this.localStorage.store('saveFolder', path);
       }
     );
+  }
+
+  onchangeIP(event: any) {
+    console.log(event.target.value);
+    this.localStorage.store('serverIp', event.target.value);
+  }
+
+  onchangeUsername(event: any) {
+    console.log(event.target.value);
+    this.localStorage.store('username', event.target.value);
+  }
+
+  onchangePassword(event: any) {
+    console.log(event.target.value);
+    this.localStorage.store('password', event.target.value);
   }
 
   automaticOpenChange() {

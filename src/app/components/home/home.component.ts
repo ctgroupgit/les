@@ -7,6 +7,7 @@ import {MatTableDataSource} from '@angular/material';
 import * as path from 'path';
 import {PdfGenerationService} from '../../providers/pdf-generation.service';
 import {rootPath} from 'electron-root-path';
+import {isDevMode} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -19,11 +20,29 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
   public dataSource = new MatTableDataSource<string>();
   newFileBuffer: Subscription;
   modelFolder: string;
+  IP;
+  USER;
+  downloadPath;
 
   constructor(private electron: ElectronService,
               private sock: SockService,
               private localStorage: LocalStorageService,
               private pdf: PdfGenerationService) {
+
+    this.downloadPath = path.join(this.electron.remote.app.getPath('appData'), this.electron.remote.app.getName(), 'downloadData');
+    if (!this.electron.fs.existsSync(this.downloadPath)) {
+      this.electron.fs.mkdirSync(this.downloadPath);
+    }
+
+    if (isDevMode()) {
+      this.IP = '192.168.1.119:22';
+      this.USER = 'andrea:123';
+    } else {
+      this.IP = (this.localStorage.retrieve('serverIp') === 'undefined') ? '10.76.139.29' : this.localStorage.retrieve('serverIp');
+      const us = (this.localStorage.retrieve('username') === 'undefined') ? 'root' : this.localStorage.retrieve('username');
+      const ps = (this.localStorage.retrieve('password') === 'undefined') ? 'hp' : this.localStorage.retrieve('password');
+      this.USER = us + ':' + ps;
+    }
 
     this.newFileBuffer = this.sock.dati.subscribe((event) => {
       let tempPath;
@@ -36,13 +55,12 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
       let cmd;
       if (finalPath.length > 0) {
         if (process.platform === 'win32') {
-          cmd = rootPath + '\\bin\\curl.exe -k "sftp://10.76.139.29:22' +
-            finalPath.trim() + '" --user "root:hp" -o "' + rootPath + '\\data.csv"';
+          cmd = '"' + rootPath + '\\resources\\app\\bin\\curl.exe" -k "sftp://' + this.IP +
+            finalPath.trim() + '" --user "' + this.USER + '" -o "' + this.downloadPath + '\\data.csv"';
         } else {
-          // cmd = 'curl -k "sftp://10.76.139.29:22' + finalPath.trim() + '" --user "root:hp" -o "' + rootPath + '/data.csv"';
-          cmd = 'curl -k "sftp://192.168.1.159:22' + finalPath.trim() + '" --user "andrea:123" -o "' + rootPath + '/data.csv"';
+          cmd = 'curl -k "sftp://' + this.IP + finalPath.trim() + '" --user "' + this.USER + '" -o "' + this.downloadPath + '/data.csv"';
         }
-        // console.log(cmd);
+        console.log(cmd);
         this.electron.childProcess.exec(cmd, (error, stdout, stderr) => {
           if (error) {
             console.error('exec error: ', stderr);
@@ -50,6 +68,9 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
           } else {
             this.printPdf();
             this.scanDir();
+            if (!isDevMode()) {
+              this.electron.remote.getCurrentWindow().reload();
+            }
           }
         });
       }
@@ -67,7 +88,10 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   public scanDir() {
-    const historyPath = path.join(this.electron.remote.app.getAppPath(), 'history');
+    const historyPath = path.join(this.electron.remote.app.getPath('appData'), this.electron.remote.app.getName(), 'history');
+    if (!this.electron.fs.existsSync(historyPath)) {
+      this.electron.fs.mkdirSync(historyPath);
+    }
     const templateLists: any = [];
     this.electron.fs.readdirSync(historyPath).forEach((file) => {
       console.log(file);
@@ -78,12 +102,8 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   public printPdf() {
-    let pathFile;
-    if (process.platform === 'win32') {
-      pathFile = rootPath + '\\data.csv';
-    } else {
-      pathFile = rootPath + '/data.csv';
-    }
+    const pathFile = path.join(this.downloadPath, 'data.csv');
+
     const buffer = this.electron.fs.readFileSync(pathFile);
     console.log(String.fromCharCode.apply(null, new Uint16Array(buffer)));
     const tempParse = this.csv2Array(String.fromCharCode.apply(null, new Uint16Array(buffer)));
