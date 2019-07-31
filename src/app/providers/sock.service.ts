@@ -16,7 +16,7 @@ export class SockService {
       // socket.write('Welcome ' + socket.remoteAddress + '\n');
       socket.on('data', (data) => {
         this.dati.next(data);
-        // console.log(socket.remoteAddress + ' -> ' + data);
+        // // console.log(socket.remoteAddress + ' -> ' + data);
         // if (!_electron.remote.getCurrentWindow().isVisible()) {
         //   _electron.remote.getCurrentWindow().show();
         // }

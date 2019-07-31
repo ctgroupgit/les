@@ -16,17 +16,17 @@ export class AppComponent {
 
     this.appVersion = this.electronService.remote.app.getVersion();
     translate.setDefaultLang('en');
-    console.log('AppConfig', AppConfig);
-    console.log(this.electronService.remote.app.getAppPath());
+    // console.log('AppConfig', AppConfig);
+    // console.log(this.electronService.remote.app.getAppPath());
 
-    console.log(this.electronService.remote.app.getPath('appData'));
+    // console.log(this.electronService.remote.app.getPath('appData'));
 
     if (electronService.isElectron()) {
-      console.log('Mode electron');
-      console.log('Electron ipcRenderer', electronService.ipcRenderer);
-      console.log('NodeJS childProcess', electronService.childProcess);
+      // console.log('Mode electron');
+      // console.log('Electron ipcRenderer', electronService.ipcRenderer);
+      // console.log('NodeJS childProcess', electronService.childProcess);
     } else {
-      console.log('Mode web');
+      // console.log('Mode web');
     }
   }
 

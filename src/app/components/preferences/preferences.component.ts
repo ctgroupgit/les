@@ -35,17 +35,17 @@ export class PreferencesComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   onchangeIP(event: any) {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     this.localStorage.store('serverIp', event.target.value);
   }
 
   onchangeUsername(event: any) {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     this.localStorage.store('username', event.target.value);
   }
 
   onchangePassword(event: any) {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     this.localStorage.store('password', event.target.value);
   }
 

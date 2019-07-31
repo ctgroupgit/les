@@ -1,4 +1,10 @@
 <table  mat-table [dataSource]="dataSource">
+
+  <ng-container matColumnDef="order">
+    <th mat-header-cell *matHeaderCellDef> Order </th>
+    <td mat-cell *matCellDef="let element"> {{element.order}} </td>
+  </ng-container>
+
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef> History </th>
     <td mat-cell *matCellDef="let element"> {{element.name}} </td>

@@ -22,7 +22,7 @@ export class PdfGenerationService {
   FUSS_OFFSET = 0;
   FINE_BODY = false;
   temp_nr_doc: string;
-
+  tempOffset = 0;
   INTERROMPI = false;
 
   intestazione: string;
@@ -31,19 +31,35 @@ export class PdfGenerationService {
   numeroFornitore: string;
   numeroDocumento: string;
   POS_SPACE = [];
+  saluti = false;
+  data = [];
+
+  isStart = true;
+  tempDatoCheNonSoPercheStaQui = [];
 
 
   constructor(private electron: ElectronService, private ls: LocalStorageService) {
 
   }
 
-  public printOrder(data: string[]) {
-    console.log(data);
+  trimText(text, length) {
+    return text.length > length ? text.substring(0, length) + '.' : text;
+  }
+
+  currencyFormatDE(num) {
+    return (
+      parseFloat(num.replace(',', '.'))
+        .toFixed(2)
+        .replace('.', ',')
+        .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+    );
+  }
+
+  public printOrder(ar: string[]) {
+    this.data = ar;
+    // console.log(data);
     this.doc = new jsPDF({filters: ['ASCIIHexEncode']});
-    // this.doc.addFont('courier', 'courier', 'normal');
-    // this.doc.addFont('', '', 'normal');
-    // this.doc.setFont('PTMono-Regular');
-    this.temp_nr_doc = '';
+
     this.CURRENT_BODY_LINE = 0;
     this.COLUMN_HEADER = [];
     this.intestazione = '';
@@ -55,23 +71,24 @@ export class PdfGenerationService {
     this.BODY_OFFSET = 125;
     this.MAX_BODY_LINE = 27;
     this.POS_SPACE = [];
-
-    let tempDatoCheNonSoPercheStaQui;
+    this.saluti = false;
+    this.tempOffset = 0;
 
     const image = 'data:image/png;base64,' + this.logozz[0]['logozz'];
-    // const image = this.logozz[0]['logozz'];
-    // header
     this.doc.addImage(image, 'JPEG', 100, 1, 100, 54);
     this.doc.setFontSize(8);
     this.doc.setFont('default');
     this.doc.text('ZZ Drive Tech GmbH, An der Tagweide 12, 76139 Karlsruhe', 10, 40);
     this.addFooter();
 
-    let PosCount;
+    let PosCount = '1';
     let tempPosZUSCHCount = 0;
-    data.forEach((row) => {
+    let totDataLength = 0;
+    this.data.forEach((row) => {
       switch (row[1]) {
         case 'POS': {
+          console.log(row[2], ' ', PosCount);
+
           if (row[2].toString() !== PosCount) {
             this.POS_SPACE.push(tempPosZUSCHCount.toString());
             tempPosZUSCHCount = 0;
@@ -84,22 +101,31 @@ export class PdfGenerationService {
           break;
         }
       }
+      totDataLength++;
+      if (totDataLength === this.data.length) {
+        this.POS_SPACE.push(tempPosZUSCHCount.toString());
+        tempPosZUSCHCount = 0;
+      }
     });
 
     let startLeRigheInMezzo = 0;
     let tempNetto;
-    data.forEach((row) => {
+
+    this.data.forEach((row) => {
       if (!this.INTERROMPI) {
         switch (row[1]) {
           case 'CONTROL': {
             break;
           }
           case 'KOPIEN': {
+            if (!this.isStart) {
+              this.newDocument();
+            }
             this.doc.setFont('default');
 
             this.doc.setFontSize(15);
             this.doc.text(row[14], this.offsetX + 10, 90);
-            this.tipoDocumento = row[14].replace(/\s/g, '').trim();
+            this.tipoDocumento = row[14].replace(/\s/g, '').toLocaleUpperCase();
 
             if (this.tipoDocumento === 'BESTELLUNG') {
               this.doc.setFontSize(7);
@@ -108,7 +134,14 @@ export class PdfGenerationService {
                 '2=pro 100; 3=pro 10', this.offsetX + 10, 273);
             }
 
-            tempDatoCheNonSoPercheStaQui = row[26];
+            this.tempDatoCheNonSoPercheStaQui = row[26]
+              .replace(/;/g, ',')
+              .replace(/ /g, '')
+              .replace(/\\/g, ',')
+              .replace(/\//g, ',')
+              .split(',');
+            // console.log(row[26], tempDatoCheNonSoPercheStaQui);
+            this.isStart = false;
             break;
           }
           case 'KOPF_USTID': {
@@ -117,10 +150,17 @@ export class PdfGenerationService {
           case 'KOPF': {
             this.doc.setFont('default');
 
-            this.dataDocumento = row[14] + '\n' + row[13];
-            this.numeroDocumento = row[15] + '\n' + row[16];
-            this.temp_nr_doc = row[16];
-            this.numeroFornitore = row[17] + '\n' + row[18];
+            if (this.tipoDocumento === 'LIEFERSCHEIN') {
+              this.numeroDocumento = row[17] + '\n' + row[18];
+              this.numeroFornitore = row[19] + '\n' + row[20];
+
+            } else {
+              this.dataDocumento = row[14] + '\n' + row[13];
+              this.numeroDocumento = row[15] + '\n' + row[16];
+              this.temp_nr_doc = row[16];
+              this.numeroFornitore = row[17] + '\n' + row[18];
+            }
+
 
 
             this.intestazione = row[21] + '\n' + row[22] + '\n' + row[23] + '\n' + row[24];
@@ -136,29 +176,55 @@ export class PdfGenerationService {
             if (this.tipoDocumento === 'BESTELLUNG') {
               this.numeroFornitore = row[20] + '\n' + row[21];
               this.addHeader();
+            } else if (this.tipoDocumento === 'inquiry/enquiry') {
+              this.addHeader();
             }
 
-            if (this.tipoDocumento !== 'ANFRAGE') {
-              // Angebots-Nr
-              this.doc.setFontStyle('bold');
-              this.doc.text(row[14], this.offsetX + 10, 95);
+
+            // Angebots-Nr
+            this.doc.setFontStyle('bold');
+            this.doc.text(row[14], this.offsetX + 10, 95);
+            this.doc.text(row[15], this.offsetX + 10, 100);
+
+            if (row[13].length > 0) {
+              // let prefix: string;
+              // switch (this.tipoDocumento) {
+              //   case 'BESTELLUNG': {
+              //     prefix = 'vom';
+              //     break;
+              //   }
+              //   case 'inquiry/enquiry': {
+              //     prefix = 'of';
+              //     break;
+              //   }
+              //   case 'FRE': {
+              //     prefix = 'vom';
+              //     break;
+              //   }
+              // }
+              this.doc.text(row[13], this.offsetX + 10, 105);
             }
+
             // KundenNr/Ihre Zeichen
             this.doc.setFontStyle('bold');
             this.doc.text(row[16], this.offsetX + 70, 95);
             this.doc.text(row[22], this.offsetX + 130, 95);
             this.doc.setFontStyle('normal');
 
-            // 124014
             this.doc.text(row[17], this.offsetX + 70, 100);
-
-            // Unser Zeichen / Telefon
 
             this.doc.text(row[23], this.offsetX + 130, 100);
 
             this.doc.text(row[24], this.offsetX + 130, 105);
 
-            this.doc.text(tempDatoCheNonSoPercheStaQui, this.offsetX + 70, 115);
+            this.tempDatoCheNonSoPercheStaQui.forEach(value => {
+              this.doc.text(value.replace(/\s/g, '').trim(), this.offsetX + 70, 115 + this.tempOffset);
+              if (this.tempOffset > 0) {
+                this.BODY_OFFSET += this.INTERLINEA;
+                this.MAX_BODY_LINE -= 1;
+              }
+              this.tempOffset += this.INTERLINEA;
+            });
             break;
           }
           case 'KOPF_POSUEB': {
@@ -184,6 +250,13 @@ export class PdfGenerationService {
             this.doc.text(row[17], this.offsetX + 70, 105);
 
             this.doc.text(row[24], this.offsetX + 70, 110);
+
+            if (row[24].length > 0) {
+              this.doc.setFont('courier');
+              this.doc.setFontSize(10);
+              this.doc.text('Fax-Nr.: ' + row[24], this.offsetX + 10, 47);
+              this.doc.setFont('default');
+            }
             break;
           }
           case 'KOPF_TEXTF': {
@@ -240,11 +313,15 @@ export class PdfGenerationService {
 
             this.doc.text(row[19], this.offsetX + 130, this.BODY_OFFSET);
 
-            this.doc.text(row[4], this.offsetX + 145, this.BODY_OFFSET);
+            if (row[4] !== '') {
+              this.doc.text(this.currencyFormatDE(row[4]), this.offsetX + 145, this.BODY_OFFSET);
+            }
 
             this.doc.text(row[9], this.offsetX + 165, this.BODY_OFFSET);
 
-            this.doc.text(row[5].trim(), this.offsetX + 180, this.BODY_OFFSET);
+            if (row[5] !== '') {
+              this.doc.text(this.currencyFormatDE(row[5]), this.offsetX + 180, this.BODY_OFFSET);
+            }
             this.BODY_OFFSET += this.INTERLINEA;
 
             this.doc.text(row[17], this.offsetX + 25, this.BODY_OFFSET);
@@ -252,24 +329,27 @@ export class PdfGenerationService {
             this.doc.text(row[18], this.offsetX + 25, this.BODY_OFFSET);
             this.BODY_OFFSET += this.INTERLINEA;
 
-            if (this.POS_SPACE[parseInt(row[2], 10)] > 0) {
+            const tempPonNumber = Number(row[2]) - 1;
+            if (this.POS_SPACE[tempPonNumber] > 0) {
               startLeRigheInMezzo = this.BODY_OFFSET;
-              this.BODY_OFFSET += this.INTERLINEA * this.POS_SPACE[row[2]];
+              this.BODY_OFFSET += this.INTERLINEA * this.POS_SPACE[tempPonNumber];
             }
+            console.log('BODY_OFFSET: ', this.BODY_OFFSET, 'startLeRigheInMezzo: ', startLeRigheInMezzo, this.POS_SPACE[tempPonNumber]);
 
             if (row[23].trim().length > 0) {
               this.doc.setFontStyle('bold');
               this.doc.text(row[22].trim() + ' ' + row[23], this.offsetX + 25, this.BODY_OFFSET);
             }
 
-            this.doc.setFontStyle('bold');
-            this.doc.text(row[21].trim() + ' ' + row[13], this.offsetX + 130, this.BODY_OFFSET);
-
-            console.log(tempNetto);
+            if(row[13].length > 0 && row[21].length > 0) {
+              this.doc.setFontStyle('bold');
+              this.doc.text(row[21].trim() + ' ' + row[13], this.offsetX + 130, this.BODY_OFFSET);
+            }
+            // console.log(tempNetto);
             if (tempNetto !== '') {
               this.doc.setFontStyle('normal');
               this.doc.text('netto', this.offsetX + 165, this.BODY_OFFSET);
-              this.doc.text(tempNetto.toString(), this.offsetX + 180, this.BODY_OFFSET);
+              this.doc.text(this.currencyFormatDE(tempNetto), this.offsetX + 180, this.BODY_OFFSET);
             }
 
             this.doc.setFontStyle('normal');
@@ -282,6 +362,12 @@ export class PdfGenerationService {
             if (row[19].length > 0) {
               this.doc.setFontSize(8);
               this.doc.text(row[18] + ' ' + row[19], this.offsetX + 25, this.BODY_OFFSET);
+              this.CURRENT_BODY_LINE++;
+              this.BODY_OFFSET += this.INTERLINEA;
+            }
+            if (row[17].length > 0) {
+              this.doc.setFontSize(8);
+              this.doc.text(row[16] + ' ' + row[17], this.offsetX + 25, this.BODY_OFFSET);
               this.CURRENT_BODY_LINE++;
               this.BODY_OFFSET += this.INTERLINEA;
             }
@@ -327,22 +413,23 @@ export class PdfGenerationService {
           case 'POS_ZUSCH': {
             this.doc.setFont('courier');
             this.doc.setFontSize(8);
-            this.doc.text(row[14].replace(/\s/g, '').trim(), this.offsetX + 130, startLeRigheInMezzo);
-            this.doc.text(row[3].replace(/\s/g, '').trim(), this.offsetX +  145, startLeRigheInMezzo);
-            this.doc.text(row[15].replace(/\s/g, '').trim(), this.offsetX + 165, startLeRigheInMezzo);
-
-            this.doc.text(row[4].replace(/\s/g, '').trim(), this.offsetX + 180, startLeRigheInMezzo);
+            if (row[3] !== '') {
+              this.doc.text(row[14].replace(/\s/g, '').trim(), this.offsetX + 130, startLeRigheInMezzo);
+              this.doc.text(this.currencyFormatDE(row[3]), this.offsetX + 145, startLeRigheInMezzo);
+            }
+            if (row[4] !== '') {
+              this.doc.text(row[15].replace(/\s/g, '').trim(), this.offsetX + 165, startLeRigheInMezzo);
+              this.doc.text(this.currencyFormatDE(row[4]), this.offsetX + 180, startLeRigheInMezzo);
+            }
             startLeRigheInMezzo += this.INTERLINEA;
             break;
           }
           case 'FUSS_WERTE': {
             this.doc.setFont('default');
             if (!this.FINE_BODY) {
-              // this.BODY_OFFSET += this.INTERLINEA * 2;
-              // this.CURRENT_BODY_LINE++;
-              // this.CURRENT_BODY_LINE++;
               this.newPage();
               this.doc.line(10, this.BODY_OFFSET - this.INTERLINEA, 200, this.BODY_OFFSET - this.INTERLINEA);
+              this.doc.line(10, this.BODY_OFFSET + 2, 200, this.BODY_OFFSET + 2);
             }
 
             this.FINE_BODY = true;
@@ -351,13 +438,8 @@ export class PdfGenerationService {
             this.doc.setFontStyle('bold');
 
             const datoUno = row[15].replace(/\s/g, '').trim();
-            const datoDue = row[4].replace(/\s/g, '').trim();
+            const datoDue = this.currencyFormatDE(row[4]);
 
-            // const txtWidth1 = this.doc.getStringUnitWidth(datoUno) * 10 / this.doc.internal.scaleFactor;
-            // const txtWidth2 = this.doc.getStringUnitWidth(datoDue) * 10 / this.doc.internal.scaleFactor;
-            // const width = this.doc.internal.pageSize.getWidth();
-            //
-            // this.doc.text(datoUno , this.offsetX + txtWidth1 + (width - txtWidth1), this.BODY_OFFSET );
             this.doc.text(datoUno, this.offsetX + this.offsetX + 130, this.BODY_OFFSET);
             this.doc.text(datoDue, this.offsetX + 180, this.BODY_OFFSET);
             this.BODY_OFFSET += this.INTERLINEA * 2;
@@ -372,6 +454,8 @@ export class PdfGenerationService {
             this.doc.text(row[15], this.offsetX + 10, this.BODY_OFFSET);
             this.doc.text(row[14], this.offsetX + 10 + row[15].length + 5, this.BODY_OFFSET);
             this.BODY_OFFSET += this.INTERLINEA;
+            this.BODY_OFFSET += this.INTERLINEA;
+            this.CURRENT_BODY_LINE++;
             this.CURRENT_BODY_LINE++;
             break;
           }
@@ -384,7 +468,25 @@ export class PdfGenerationService {
             this.CURRENT_BODY_LINE++;
             break;
           }
-          case 'POFUSS_PRES2': {
+          case 'FUSS_LIEFB': {
+            this.doc.setFont('courier');
+            this.doc.setFontStyle('normal');
+            this.doc.setFontSize(10);
+            this.doc.text(row[15] + ' ' + row[14], this.offsetX + 10, this.BODY_OFFSET);
+            this.BODY_OFFSET += this.INTERLINEA;
+            this.CURRENT_BODY_LINE++;
+            break;
+          }
+          case 'FUSS_ZAHLB': {
+            this.doc.setFont('courier');
+            this.doc.setFontStyle('normal');
+            this.doc.setFontSize(10);
+            this.doc.text(row[15] + ' ' + row[14], this.offsetX + 10, this.BODY_OFFSET);
+            this.BODY_OFFSET += this.INTERLINEA;
+            this.CURRENT_BODY_LINE++;
+            break;
+          }
+          case 'FUSS_PRES2': {
             this.doc.setFont('courier');
             this.doc.setFontStyle('normal');
             this.doc.setFontSize(10);
@@ -394,6 +496,11 @@ export class PdfGenerationService {
             break;
           }
           case 'FUSS_TEXTF': {
+            if (!this.saluti) {
+              this.BODY_OFFSET += this.INTERLINEA;
+              this.CURRENT_BODY_LINE++;
+              this.saluti = true;
+            }
             this.doc.setFont('courier');
             this.doc.setFontStyle('normal');
             this.doc.setFontSize(10);
@@ -407,8 +514,8 @@ export class PdfGenerationService {
           }
         }
 
-        console.log('NUMERO DI LINEE BOBY: ' + this.CURRENT_BODY_LINE);
-        if (this.CURRENT_BODY_LINE === this.MAX_BODY_LINE ) {
+        // console.log('NUMERO DI LINEE BOBY: ' + this.CURRENT_BODY_LINE);
+        if (this.CURRENT_BODY_LINE === this.MAX_BODY_LINE) {
           this.newPage();
           if (this.CURRENT_BODY_LINE === 0 && !this.FINE_BODY) {
             this.addTableHeader();
@@ -421,7 +528,7 @@ export class PdfGenerationService {
       this.ls.retrieve('automaticOpenPDF') === '' ||
       this.ls.retrieve('automaticOpenPDF') === 'undefined') ? true : this.ls.retrieve('automaticOpenPDF');
     if (openAuto) {
-      this.printPreviewPDF(this.doc.output());
+      this.printPreviewPDF(this.doc.output(), this.tipoDocumento + '_' + this.temp_nr_doc);
     } else {
       this.doc.save();
     }
@@ -437,40 +544,72 @@ export class PdfGenerationService {
     this.MAX_BODY_LINE = 27;
   }
 
+  newDocument() {
+    const openAuto = (this.ls.retrieve('automaticOpenPDF') === null ||
+      this.ls.retrieve('automaticOpenPDF') === '' ||
+      this.ls.retrieve('automaticOpenPDF') === 'undefined') ? true : this.ls.retrieve('automaticOpenPDF');
+    if (openAuto) {
+      this.printPreviewPDF(this.doc.output(), this.tipoDocumento + '_' + this.temp_nr_doc);
+    } else {
+      this.doc.save();
+    }
+    this.doc = new jsPDF({filters: ['ASCIIHexEncode']});
+    const image = 'data:image/png;base64,' + this.logozz[0]['logozz'];
+    this.doc.addImage(image, 'JPEG', 100, 1, 100, 54);
+    this.doc.setFontSize(8);
+    this.doc.setFont('default');
+    this.doc.text('ZZ Drive Tech GmbH, An der Tagweide 12, 76139 Karlsruhe', 10, 40);
+    this.addFooter();
+    this.temp_nr_doc = '';
+    this.CURRENT_BODY_LINE = 0;
+    this.COLUMN_HEADER = [];
+    this.intestazione = '';
+    this.tipoDocumento = '';
+    this.dataDocumento = '';
+    this.numeroFornitore = '';
+    this.numeroDocumento = '';
+    this.FINE_BODY = false;
+    this.BODY_OFFSET = 125;
+    this.MAX_BODY_LINE = 27;
+    this.POS_SPACE = [];
+    this.tempOffset = 0;
+    this.saluti = false;
+    this.tempDatoCheNonSoPercheStaQui = [];
+  }
 
   addTableHeader() {
     this.doc.setFont('courier');
     this.doc.setFontStyle('bold');
-    this.doc.setFontSize(8);
+    this.doc.setFontSize(7);
     this.BODY_OFFSET += this.INTERLINEA;
     if (this.COLUMN_HEADER.length > 0) {
       this.doc.line(10, this.BODY_OFFSET + 2, 200, this.BODY_OFFSET + 2);
       this.doc.line(10, this.BODY_OFFSET - 4, 200, this.BODY_OFFSET - 4);
       if (this.COLUMN_HEADER[0] !== 'undefined' && this.COLUMN_HEADER[0] !== null) {
-        console.log(this.COLUMN_HEADER[0]);
-        this.doc.text(this.COLUMN_HEADER[0], this.offsetX + 10, this.BODY_OFFSET);
+        // console.log(this.COLUMN_HEADER[0]);
+        this.doc.text(this.trimText(this.COLUMN_HEADER[0], 5), this.offsetX + 10, this.BODY_OFFSET);
       }
       this.doc.setFontSize(8);
       if (this.COLUMN_HEADER[1] !== 'undefined' && this.COLUMN_HEADER[0] !== null) {
-        this.doc.text(this.COLUMN_HEADER[1].trim(), this.offsetX + 25, this.BODY_OFFSET);
+        this.doc.text(this.trimText(this.COLUMN_HEADER[1], 40), this.offsetX + 25, this.BODY_OFFSET);
       }
       if (this.COLUMN_HEADER[2] !== 'undefined' && this.COLUMN_HEADER[0] !== null) {
-        this.doc.text(this.COLUMN_HEADER[2].trim(), this.offsetX + 115, this.BODY_OFFSET);
+        this.doc.text(this.trimText(this.COLUMN_HEADER[2].trim(), 5), this.offsetX + 115, this.BODY_OFFSET);
       }
       if (this.COLUMN_HEADER[3] !== 'undefined' && this.COLUMN_HEADER[0] !== null) {
-        this.doc.text(this.COLUMN_HEADER[3].trim(), this.offsetX + 130, this.BODY_OFFSET);
+        this.doc.text(this.trimText(this.COLUMN_HEADER[3].trim(), 5), this.offsetX + 130, this.BODY_OFFSET);
       }
       if (this.COLUMN_HEADER[4] !== 'undefined' && this.COLUMN_HEADER[0] !== null) {
-        this.doc.text(this.COLUMN_HEADER[4].trim(), this.offsetX + 145, this.BODY_OFFSET);
+        this.doc.text(this.trimText(this.COLUMN_HEADER[4].trim(), 12), this.offsetX + 145, this.BODY_OFFSET);
       }
       if (this.COLUMN_HEADER[5] !== 'undefined' && this.COLUMN_HEADER[0] !== null) {
-        this.doc.text(this.COLUMN_HEADER[5].trim(), this.offsetX + 165, this.BODY_OFFSET);
+        this.doc.text(this.trimText(this.COLUMN_HEADER[5].trim(), 5), this.offsetX + 165, this.BODY_OFFSET);
       }
       if (this.COLUMN_HEADER[6] !== 'undefined' && this.COLUMN_HEADER[0] !== null) {
-        this.doc.text(this.COLUMN_HEADER[6].trim(), this.offsetX + 180, this.BODY_OFFSET);
+        this.doc.text(this.trimText(this.COLUMN_HEADER[6].trim(), 5), this.offsetX + 180, this.BODY_OFFSET);
       }
       if (this.COLUMN_HEADER[7] !== 'undefined' && this.COLUMN_HEADER[0] !== null) {
-        this.doc.text(this.COLUMN_HEADER[7].trim(), this.offsetX + 192, this.BODY_OFFSET);
+        this.doc.text(this.trimText(this.COLUMN_HEADER[7].trim(), 5), this.offsetX + 192, this.BODY_OFFSET);
       }
     }
     this.doc.setFont('default');
@@ -492,6 +631,7 @@ export class PdfGenerationService {
     this.doc.text('ZZ Drive Tech GmbH', 10, 278);
     this.doc.text('An der Tagweide 12', 10, 281);
     this.doc.text('76139 Karlsruhe', 10, 284);
+    this.doc.text('build(' + this.electron.remote.app.getVersion() + ')', 10, 290);
 
     this.doc.text('Sitz der Gesellschaft Karlsruhe', 45, 278);
     this.doc.text('Registergericht: AG Mannheim HRB 721742', 45, 281);
@@ -512,7 +652,7 @@ export class PdfGenerationService {
   addHeader() {
     this.doc.setFont('default');
     // logo
-    console.log(this.logozz[0]['logozz']);
+    // console.log(this.logozz[0]['logozz']);
     const image = 'data:image/png;base64,' + this.logozz[0]['logozz'];
     this.doc.addImage(image, 'JPEG', 100, 1, 100, 54);
     // header
@@ -540,24 +680,20 @@ export class PdfGenerationService {
     }
   }
 
-  private printPreviewPDF(pdfSrc: any) {
+  private printPreviewPDF(pdfSrc: any, nomeFile: string) {
     const historyPath = path.join(this.electron.remote.app.getPath('appData'), this.electron.remote.app.getName(), 'history');
-    const data = new Date();
-    const date = data.getFullYear() + (data.getMonth() + 1) + data.getDate();
-    const time = data.getHours() + data.getMinutes() + data.getSeconds();
     let fileName;
-    console.log(historyPath);
     try {
       if (!this.electron.fs.existsSync(historyPath)) {
         this.electron.fs.mkdirSync(historyPath);
       }
       const counter = (this.ls.retrieve('counterpdf') === 'undefined') ? 1 : this.ls.retrieve('counterpdf') + 2;
       this.ls.store('counterpdf', counter);
-      fileName = path.join(historyPath, 'file_' + date + time + '_' + counter.toString() + '.pdf');
+      fileName = path.join(historyPath, this.deUmlaut(nomeFile) + '_' + counter.toString() + '.pdf');
       if (this.electron.fs.existsSync(fileName)) {
         this.electron.fs.unlinkSync(fileName);
       }
-      console.log(fileName);
+      // console.log(fileName);
       this.electron.fs.writeFileSync(fileName, pdfSrc);
       this.electron.childProcess.exec(this.getCommandLine() + ' ' + fileName, (error, stdout, stderr) => {
         if (error) {
@@ -568,5 +704,21 @@ export class PdfGenerationService {
     } catch (err) {
       console.error(err);
     }
+  }
+
+  deUmlaut(value) {
+    value = value.toLocaleUpperCase();
+    value = value.replace(/ä/g, 'ae');
+    value = value.replace(/ö/g, 'oe');
+    value = value.replace(/ü/g, 'ue');
+    value = value.replace(/ß/g, 'ss');
+    value = value.replace(/ /g, '');
+    value = value.replace(/\./g, '');
+    value = value.replace(/,/g, '');
+    value = value.replace(/\(/g, '');
+    value = value.replace(/\)/g, '');
+    value = value.replace(/\\/g, '-');
+    value = value.replace(/\//g, '-');
+    return value;
   }
 }

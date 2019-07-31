@@ -16,7 +16,7 @@ import {isDevMode} from '@angular/core';
 })
 export class HomeComponent implements OnInit, OnDestroy, OnChanges {
 
-  public displayedColumns = ['name', 'pathFile'];
+  public displayedColumns = ['order', 'name', 'pathFile'];
   public dataSource = new MatTableDataSource<string>();
   newFileBuffer: Subscription;
   modelFolder: string;
@@ -34,15 +34,15 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
       this.electron.fs.mkdirSync(this.downloadPath);
     }
 
-    if (isDevMode()) {
-      this.IP = '192.168.1.119:22';
-      this.USER = 'andrea:123';
-    } else {
+    // if (isDevMode()) {
+    //   this.IP = '192.168.1.119:22';
+    //   this.USER = 'andrea:123';
+    // } else {
       this.IP = (this.localStorage.retrieve('serverIp') === 'undefined') ? '10.76.139.29' : this.localStorage.retrieve('serverIp');
       const us = (this.localStorage.retrieve('username') === 'undefined') ? 'root' : this.localStorage.retrieve('username');
       const ps = (this.localStorage.retrieve('password') === 'undefined') ? 'hp' : this.localStorage.retrieve('password');
       this.USER = us + ':' + ps;
-    }
+    // }
 
     this.newFileBuffer = this.sock.dati.subscribe((event) => {
       let tempPath;
@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
         } else {
           cmd = 'curl -k "sftp://' + this.IP + finalPath.trim() + '" --user "' + this.USER + '" -o "' + this.downloadPath + '/data.csv"';
         }
-        console.log(cmd);
+        // console.log(cmd);
         this.electron.childProcess.exec(cmd, (error, stdout, stderr) => {
           if (error) {
             console.error('exec error: ', stderr);
@@ -94,24 +94,26 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
     }
     const templateLists: any = [];
     this.electron.fs.readdirSync(historyPath).forEach((file) => {
-      console.log(file);
-      templateLists.push({name: file.toString(), pathFile: path.join(historyPath, file)});
+      // console.log(file);
+      templateLists.push({order: file.split('_').pop().replace('.pdf', ''), name: file.toString(), pathFile: path.join(historyPath, file)});
     });
-    console.log(templateLists);
-    this.dataSource.data = templateLists;
+    // console.log(templateLists);
+    this.dataSource.data = templateLists.sort(function(obj1, obj2) {
+      return obj2.order - obj1.order;
+    });
   }
 
   public printPdf() {
     const pathFile = path.join(this.downloadPath, 'data.csv');
 
     const buffer = this.electron.fs.readFileSync(pathFile);
-    console.log(String.fromCharCode.apply(null, new Uint16Array(buffer)));
+    // console.log(String.fromCharCode.apply(null, new Uint16Array(buffer)));
     const tempParse = this.csv2Array(String.fromCharCode.apply(null, new Uint16Array(buffer)));
     this.pdf.printOrder(tempParse);
   }
 
   public viewHistoryPdf(filePath: string) {
-    console.log(filePath['pathFile']);
+    // console.log(filePath['pathFile']);
     this.electron.childProcess.exec(this.getCommandLine() + ' ' + filePath['pathFile'], (error, stdout, stderr) => {
       if (error) {
         console.error(`exec error: error`);
@@ -143,7 +145,7 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
         for (let j = 0; j < headers.length; j++) {
           tarr.push(data[j]);
         }
-        // console.log(tarr);
+        // // console.log(tarr);
         lines.push(tarr);
       }
     }

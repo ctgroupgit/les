@@ -44,13 +44,13 @@ export class PdfGenerationService {
     this.doc.setLineWidth();
     this.doc.setFontSize(5);
     for (x1 = 0; x1 < 210; x1 += this.INTERLINEA) {
-      console.log(x1.toString());
+      // console.log(x1.toString());
       this.doc.text(x1.toString(), x1, 1.5);
       this.doc.line(x1, 0, x1, 297);
     }
 
     for (y2 = 0; y2 < 297; y2 += this.INTERLINEA) {
-      console.log(y2.toString());
+      // console.log(y2.toString());
       this.doc.text(y2.toString(), 0, y2);
       this.doc.line(0, y2, 210, y2);
     }
@@ -355,10 +355,10 @@ export class PdfGenerationService {
         }
       }
 
-      console.log('OFFSET: ' + this.POS_TEXTP_OFFSET);
-      console.log('NUMERO DI LINEE BOBY: ' + this.CURRENT_BODY_LINE);
+      // console.log('OFFSET: ' + this.POS_TEXTP_OFFSET);
+      // console.log('NUMERO DI LINEE BOBY: ' + this.CURRENT_BODY_LINE);
       if (this.CURRENT_BODY_LINE >= this.MAX_BODY_LINE) {
-        console.log('nuova pagina');
+        // console.log('nuova pagina');
         this.doc.addPage();
         this.KOPF_TEXTF_OFFSET = 0;
         this.POS_TEXTP_OFFSET = 0;
@@ -384,7 +384,7 @@ export class PdfGenerationService {
     this.POS_TEXT_TOT_LINE = 0;
     this.CURRENT_POS = 1;
     // logo
-    console.log(this.logozz[0]['logozz']);
+    // console.log(this.logozz[0]['logozz']);
     const image = 'data:image/png;base64,' + this.logozz[0]['logozz'];
     // const image = this.logozz[0]['logozz'];
     // header
