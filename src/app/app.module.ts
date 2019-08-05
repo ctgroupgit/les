@@ -23,61 +23,62 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgxWebstorageModule} from 'ngx-webstorage';
 import {PreferencesComponent} from './components/preferences/preferences.component';
 import {
-  MatButtonModule, MatCardModule, MatFormFieldModule, MatGridListModule,
-  MatIconModule, MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatSidenavModule, MatSliderModule, MatSlideToggleModule,
-  MatTableModule,
-  MatToolbarModule
+    MatButtonModule, MatCardModule, MatFormFieldModule, MatGridListModule,
+    MatIconModule, MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatSidenavModule, MatSliderModule, MatSlideToggleModule,
+    MatTableModule, MatTabsModule,
+    MatToolbarModule
 } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    PreferencesComponent,
-    WebviewDirective
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    AppRoutingModule,
-    AngularFontAwesomeModule,
-    BrowserAnimationsModule,
-    NgxWebstorageModule.forRoot(),
-    MatListModule,
-    MatTableModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatMenuModule,
-    MatIconModule,
-    MatToolbarModule,
-    FlexLayoutModule,
-    MatGridListModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatCardModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: (HttpLoaderFactory),
-        deps: [HttpClient]
-      }
-    }),
-  ],
-  providers: [ElectronService, SockService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        PreferencesComponent,
+        WebviewDirective
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpClientModule,
+        AppRoutingModule,
+        AngularFontAwesomeModule,
+        BrowserAnimationsModule,
+        NgxWebstorageModule.forRoot(),
+        MatListModule,
+        MatTableModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatMenuModule,
+        MatIconModule,
+        MatToolbarModule,
+        FlexLayoutModule,
+        MatGridListModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSliderModule,
+        MatSlideToggleModule,
+        MatCardModule,
+        MatTabsModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: (HttpLoaderFactory),
+                deps: [HttpClient]
+            }
+        }),
+    ],
+    providers: [ElectronService, SockService],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }

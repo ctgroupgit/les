@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var electron_1 = require("electron");
 var path = require("path");
 var url = require("url");
+var os_1 = require("os");
 // import * as windowStateKeeper from 'electron-window-state';
 var autoUpdater = require('electron-updater').autoUpdater;
 var log = require('electron-log');
@@ -50,13 +51,13 @@ function createWindow() {
 }
 try {
     electron_1.app.on('ready', function () {
-        var iconPath = path.join(electron_1.app.getAppPath(), 'build/assets/icona.png');
+        // const iconPath = path.join(app.getAppPath(), 'build/assets/icona.png');
         var image;
-        if (serve) {
-            image = electron_1.nativeImage.createFromPath(iconPath);
+        if (os_1.platform() === 'darwin') {
+            image = electron_1.nativeImage.createFromPath(path.join(electron_1.app.getAppPath(), 'build/assets/icona.icns'));
         }
         else {
-            image = electron_1.nativeImage.createFromPath(iconPath);
+            image = electron_1.nativeImage.createFromPath(path.join(electron_1.app.getAppPath(), 'build/assets/icona.png'));
         }
         tray = new electron_1.Tray(image);
         // tray = new Tray(image);
@@ -115,11 +116,6 @@ try {
     });
     electron_1.app.on('window-all-closed', function () {
     });
-    // app.on('activate', () => {
-    //   if (win === null) {
-    //     createWindow();
-    //   }
-    // });
     var sendStatusToWindow_1 = function (text) {
         log.info(text);
         if (win) {

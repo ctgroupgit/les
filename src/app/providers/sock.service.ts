@@ -16,7 +16,7 @@ export class SockService {
       // socket.write('Welcome ' + socket.remoteAddress + '\n');
       socket.on('data', (data) => {
         this.dati.next(data);
-        // // console.log(socket.remoteAddress + ' -> ' + data);
+        console.log(socket.remoteAddress + ' -> ' + data);
         // if (!_electron.remote.getCurrentWindow().isVisible()) {
         //   _electron.remote.getCurrentWindow().show();
         // }
@@ -25,4 +25,25 @@ export class SockService {
     });
     this.sock.listen(8010, '0.0.0.0');
   }
+
+  public uploadFile(file: any, filename: string) {
+    let command;
+    switch (process.platform) {
+      case 'linux' : {
+        command  = 'echo $USER';
+        break;
+      }
+      case 'darwin': {
+        command  = 'echo $USER';
+        break;
+      }
+      case 'win32' :{
+        command  = 'cmd.exe /c "echo %username%" ';
+        break;
+      }
+    }
+    const username = this._electron.childProcess.execSync(command);
+    console.log(username + '_' + filename);
+  }
+
 }

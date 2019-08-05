@@ -1,6 +1,6 @@
 {
   "name": "les",
-  "version": "1.0.32",
+  "version": "1.0.34",
   "description": "Les",
   "homepage": "https://github.com/ctgroupgit/les",
   "repository": {
@@ -53,7 +53,8 @@
     "mac": {
       "target": [
         "tar.gz"
-      ]
+      ],
+      "icon": "src/assets/icona.icns"
     },
     "asar": false,
     "files": [
@@ -62,6 +63,7 @@
       "package.json",
       "main.js",
       "icona.png",
+      "icona.icns",
       "favicon.ico"
     ]
   },
@@ -84,12 +86,14 @@
     "electron:linux": "npm run build:prod && electron-builder build --linux",
     "electron:windows": "npm run build:prod && electron-builder build --windows",
     "electron:mac": "npm run build:prod && electron-builder build --mac",
+    "electron:build:all": "npm run build:prod && electron-builder build --x64 -mwl",
     "build:package:windows": "ng build --prod && electron-packager . RunServer  --overwrite  --platform=win32 --arch=x64 --out=out",
     "test": "npm run postinstall:web && ng test",
     "e2e": "npm run build:prod && mocha --timeout 300000 --require ts-node/register e2e/**/*.spec.ts",
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "gh-publish": "electron-builder --x64 -mwl --publish always",
     "gh-publish-win": "electron-builder --x64 --win --publish always",
+    "gh-publish-mac": "electron-builder --x64 --mac --publish always",
     "gh-publish-linux": "electron-builder --x64 --linux --publish always"
   },
   "devDependencies": {

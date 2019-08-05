@@ -19,7 +19,6 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
   public displayedColumns = ['order', 'name', 'pathFile'];
   public dataSource = new MatTableDataSource<string>();
   newFileBuffer: Subscription;
-  modelFolder: string;
   IP;
   USER;
   downloadPath;
@@ -34,15 +33,10 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
       this.electron.fs.mkdirSync(this.downloadPath);
     }
 
-    // if (isDevMode()) {
-    //   this.IP = '192.168.1.119:22';
-    //   this.USER = 'andrea:123';
-    // } else {
       this.IP = (this.localStorage.retrieve('serverIp') === 'undefined') ? '10.76.139.29' : this.localStorage.retrieve('serverIp');
       const us = (this.localStorage.retrieve('username') === 'undefined') ? 'root' : this.localStorage.retrieve('username');
       const ps = (this.localStorage.retrieve('password') === 'undefined') ? 'hp' : this.localStorage.retrieve('password');
       this.USER = us + ':' + ps;
-    // }
 
     this.newFileBuffer = this.sock.dati.subscribe((event) => {
       let tempPath;
@@ -60,15 +54,15 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
         } else {
           cmd = 'curl -k "sftp://' + this.IP + finalPath.trim() + '" --user "' + this.USER + '" -o "' + this.downloadPath + '/data.csv"';
         }
-        // console.log(cmd);
+        console.log(cmd);
         this.electron.childProcess.exec(cmd, (error, stdout, stderr) => {
           if (error) {
-            console.error('exec error: ', stderr);
+            this.electron.printError('exec error: ' + stderr);
             return;
           } else {
             this.printPdf();
             this.scanDir();
-            if (!isDevMode()) {
+            if (this.localStorage.retrieve('automaticOpenPDF')) {
               this.electron.remote.getCurrentWindow().reload();
             }
           }
@@ -105,18 +99,37 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
 
   public printPdf() {
     const pathFile = path.join(this.downloadPath, 'data.csv');
-
     const buffer = this.electron.fs.readFileSync(pathFile);
-    // console.log(String.fromCharCode.apply(null, new Uint16Array(buffer)));
     const tempParse = this.csv2Array(String.fromCharCode.apply(null, new Uint16Array(buffer)));
-    this.pdf.printOrder(tempParse);
+
+    let nome = '';
+
+    tempParse.forEach((row) => {
+      switch (row[1]) {
+        case 'KOPIEN': {
+          nome += row[14].replace(/\s/g, '').toLocaleUpperCase();
+          break;
+        }
+        case 'KOPF': {
+          nome += '_' + row[18] + row[16];
+          break;
+        }
+      }
+    });
+
+    this.electron.fs.copyFile(pathFile,path.join(this.downloadPath,nome), (error) => {
+      if (error) {
+        this.electron.printError(error);
+      } else {
+        this.pdf.printOrder(tempParse);
+      }
+    });
   }
 
   public viewHistoryPdf(filePath: string) {
-    // console.log(filePath['pathFile']);
-    this.electron.childProcess.exec(this.getCommandLine() + ' ' + filePath['pathFile'], (error, stdout, stderr) => {
+    this.electron.childProcess.exec(this.getCommandLine() + '"' + filePath['pathFile'] + '"', (error, stdout, stderr) => {
       if (error) {
-        console.error(`exec error: error`);
+        this.electron.printError('exec error: \n' + stdout + '\n' + stderr);
         return;
       }
     });
@@ -127,9 +140,9 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
       case 'darwin' :
         return 'open ';
       case 'win32' :
-        return 'start ';
+        return ' ';
       default :
-        return 'xdg-open ';
+        return ' ';
     }
   }
 

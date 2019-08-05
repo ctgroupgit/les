@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-import socket
+import sockets
 
-HOST = '127.0.0.1'  # The server's hostname or IP address
+HOST = '192.168.1.172'  # The server's hostname or IP address
 PORT = 8010        # The port used by the server
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -23,4 +23,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 
     data = s.recv(1024)
 
-print('Received', repr(data))
+
+
+

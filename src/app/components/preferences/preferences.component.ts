@@ -2,6 +2,9 @@ import {Component, OnInit, OnDestroy, OnChanges, SimpleChanges} from '@angular/c
 import {ElectronService} from '../../providers/electron.service';
 
 import {LocalStorageService} from 'ngx-webstorage';
+import {MatTableDataSource} from "@angular/material";
+import * as path from "path";
+import {SockService} from "../../providers/sock.service";
 
 @Component({
   selector: 'app-preferences',
@@ -10,13 +13,61 @@ import {LocalStorageService} from 'ngx-webstorage';
 })
 export class PreferencesComponent implements OnInit, OnDestroy, OnChanges {
 
-  constructor(private electron: ElectronService,
-              public localStorage: LocalStorageService) {
+  public displayedColumns = ['name', 'pathFile'];
+  public dataSource = new MatTableDataSource<string>();
+  downloadPath;
 
+  constructor(private electron: ElectronService,
+              public localStorage: LocalStorageService,
+              public sock: SockService) {
+    this.downloadPath = path.join(this.electron.remote.app.getPath('appData'), this.electron.remote.app.getName(), 'downloadData');
   }
 
-  ngOnInit() {
+  public scanDir() {
+    const templateLists: any = [];
+    this.electron.fs.readdirSync(this.downloadPath).forEach((file) => {
+      // console.log(file);
+      templateLists.push({name: file.toString(), pathFile: path.join(this.downloadPath, file)});
+    });
+    // console.log(templateLists);
+    this.dataSource.data = templateLists.sort(function(obj1, obj2) {
+      return obj2.order - obj1.order;
+    });
+  }
 
+  public downloadFile(filePath: string) {
+    const destination = '';
+      let options = {
+        //Placeholder 1
+        title: "Save file ",
+        //Placeholder 4
+        buttonLabel: "Save"
+      };
+
+    let fileDestination = this.electron.remote.dialog.showSaveDialog(this.electron.remote.getCurrentWindow(), options);
+    if (fileDestination.length > 0) {
+      this.electron.fs.writeFileSync(filePath['pathFile'], fileDestination);
+    }
+  }
+
+  public uploadFile(filePath: string) {
+    this.sock.uploadFile('', '');
+  }
+
+  getCommandLine() {
+    switch (process.platform) {
+      case 'darwin' :
+        return 'open ';
+      case 'win32' :
+        return 'start ';
+      default :
+        return 'xdg-open ';
+    }
+  }
+
+
+  ngOnInit() {
+    this.scanDir();
   }
 
   ngOnDestroy() {

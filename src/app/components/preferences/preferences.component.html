@@ -1,21 +1,52 @@
-<div class="example-container">
+<mat-tab-group>
+    <mat-tab label="Config">
+        <div class="example-container">
 
-  <mat-slide-toggle color="primary" (change)="automaticOpenChange()" checked="{{this.localStorage.retrieve('automaticOpenPDF')}}">Automatic Open PDF</mat-slide-toggle>
+            <mat-slide-toggle color="primary" (change)="automaticOpenChange()" checked="{{this.localStorage.retrieve('automaticOpenPDF')}}">HOT RELOAD</mat-slide-toggle>
 
-  <mat-form-field style="margin-top: 30px">
-    <input matInput placeholder="Default Save Folder" value="{{this.localStorage.retrieve('saveFolder')}}">
-    <button mat-icon-button matSuffix (click)="onSelectSaveFolder()">
-      <mat-icon>folder</mat-icon>
-    </button>
-  </mat-form-field>
+<!--            <mat-form-field style="margin-top: 30px">-->
+<!--                <input matInput placeholder="Default Save Folder" value="{{this.localStorage.retrieve('saveFolder')}}">-->
+<!--                <button mat-icon-button matSuffix (click)="onSelectSaveFolder()">-->
+<!--                    <mat-icon>folder</mat-icon>-->
+<!--                </button>-->
+<!--            </mat-form-field>-->
 
-  <mat-form-field style="margin-top: 20px">
-    <input matInput placeholder="Server IP + SFTP PORT (example 127.0.0.1:22)" type="text" value="{{this.localStorage.retrieve('serverIp')}}"  (keyup)="onchangeIP($event)">
-  </mat-form-field>
-  <mat-form-field style="margin-top: 20px">
-    <input matInput placeholder="Username" type="text" value="{{this.localStorage.retrieve('username')}}"  (keyup)="onchangeUsername($event)">
-  </mat-form-field>
-  <mat-form-field style="margin-top: 20px">
-    <input matInput placeholder="Password" type="password" value="{{this.localStorage.retrieve('password')}}"  (keyup)="onchangePassword($event)">
-  </mat-form-field>
-</div>
+            <mat-form-field style="margin-top: 20px">
+                <input matInput placeholder="Server IP + SFTP PORT (example 127.0.0.1:22)" type="text" value="{{this.localStorage.retrieve('serverIp')}}" (keyup)="onchangeIP($event)">
+            </mat-form-field>
+            <mat-form-field style="margin-top: 20px">
+                <input matInput placeholder="Username" type="text" value="{{this.localStorage.retrieve('username')}}" (keyup)="onchangeUsername($event)">
+            </mat-form-field>
+            <mat-form-field style="margin-top: 20px">
+                <input matInput placeholder="Password" type="password" value="{{this.localStorage.retrieve('password')}}" (keyup)="onchangePassword($event)">
+            </mat-form-field>
+        </div>
+
+    </mat-tab>
+    <mat-tab label="Download Data File">
+      <div class="example-container">
+        <table mat-table [dataSource]="dataSource">
+
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> File</th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="pathFile">
+                <th mat-header-cell *matHeaderCellDef style="width: 20px"> Action</th>
+                <td mat-cell *matCellDef="let element">
+                  <button mat-icon-button color="warn" (click)="uploadFile(element)">
+                    <mat-icon class="">cloud_upload</mat-icon>
+                  </button>
+                  <button mat-icon-button color="primary" (click)="downloadFile(element)">
+                    <mat-icon class="">cloud_download</mat-icon>
+                  </button>
+
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </mat-tab>
+</mat-tab-group>

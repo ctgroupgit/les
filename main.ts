@@ -1,6 +1,7 @@
 import {app, BrowserWindow, Tray, Menu, nativeImage, dialog} from 'electron';
 import * as path from 'path';
 import * as url from 'url';
+import {platform} from "os";
 // import * as windowStateKeeper from 'electron-window-state';
 
 const {autoUpdater} = require('electron-updater');
@@ -59,12 +60,12 @@ function createWindow() {
 try {
 
   app.on('ready', () => {
-    const iconPath = path.join(app.getAppPath(), 'build/assets/icona.png');
+    // const iconPath = path.join(app.getAppPath(), 'build/assets/icona.png');
     let image;
-    if (serve) {
-      image = nativeImage.createFromPath(iconPath);
+    if (platform() === 'darwin') {
+      image = nativeImage.createFromPath(path.join(app.getAppPath(), 'build/assets/icona.icns'));
     } else {
-      image = nativeImage.createFromPath(iconPath);
+      image = nativeImage.createFromPath(path.join(app.getAppPath(), 'build/assets/icona.png'));
     }
     tray = new Tray(image);
     // tray = new Tray(image);
@@ -131,11 +132,6 @@ try {
 
   });
 
-  // app.on('activate', () => {
-  //   if (win === null) {
-  //     createWindow();
-  //   }
-  // });
 
   const sendStatusToWindow = (text) => {
     log.info(text);

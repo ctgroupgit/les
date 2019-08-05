@@ -33,4 +33,8 @@ export class ElectronService {
     return window && window.process && window.process.type;
   }
 
+  printError(errore) {
+    console.log(errore);
+  }
+
 }
