@@ -17,6 +17,7 @@ do
     (6) ANFRAGE DOPPIO DOCUMENTO
     (7) BESTELLUNG 108151
     (8) AAAAAAA
+    (9) BESTELLUNG 108141
     (Q) Quit
     ------------------------------
 EOF
@@ -30,6 +31,7 @@ EOF
     "6")  echo "/cmd $(PWD)/debug/bgvlse052.txt" | nc 127.0.0.1 8010 ;;
     "7")  echo "/cmd $(PWD)/debug/data108151.csv" | nc 127.0.0.1 8010 ;;
     "8")  echo "/cmd $(PWD)/debug/data18.csv" | nc 127.0.0.1 8010 ;;
+    "9")  echo "/cmd $(PWD)/debug/BESTELLUNG_108151.csv" | nc 127.0.0.1 8010 ;;
     "q")  exit                      ;;
     "Q")  exit                      ;;
      * )  echo "invalid option"     ;;
