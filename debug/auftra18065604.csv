@@ -1,0 +1,69 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|045
+306656|KOPIEN|001|000|||||||||||AUFTRAGSBESTÄTIGUNG|||||||||||||||045
+306656|KOPF_ANS|||||||||||||||||||Lieferanschrift|Hellwig GmbH|Uellendahl 15|45549 Sprockhövel||||||045
+306656|KOPF_RGAN|||||||||||||||||||Rechnung an|Winkler & Dünnebier GmbH|Sohler Weg 65|56564 Neuwied||||||045
+306656|KOPF_USTID|||||||||||||Ihre Ust-IdNr|                |Unsere Ust-IdNr|DE815609203     ||||||||||||045
+306656|KOPF_DATEN|||||||||||30.07.19||AUFTRAGSBESTÄTIGUNG|Ihre Bestell-Nr|1264679                             |Bestell-Datum|Ihre Zeichen|Herr Studener     |Unsere Zeichen|Nicole Naiel      |Lief.-Nr. 4336 Z.I|Text bei Zusatz II|D|naiel1|Zentrale|12303   |0721/6205-37        |045
+306656|KOPF_POSUEB|||||||||||||Pos.|Produkt-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt |EUR |0||||||07751/87310         |045
+306656|KONTAKT|||||||||||||0721/6236083|nicole.naiel@zzdrivetech.com|0721/6236083|0721/6205-37|nicole.naiel@zzdrivetech.com| Nicole Naiel|0721/6236084|0721/6205-36|jacqueline.schreck@zz-antriebe.de| Jacqueline Schreck|07141/404-500|07141/404-0|07751/873150|07751/87310||045
+306656|KOPF|||||||||||06.08.19||Datum|Vertreter|Heinz Flohr                     |Auftrags-Nr|18065604        |Kunden-Nr|11697   |Gleason-Pfauter|Maschinenfabrik GmbH|Postfach 8 20|71608 Ludwigsburg|||||045
+306656|KOPF_TEXTF|1||||||||||||tVielen Dank für Ihren Auftrag.                                        |||||||||||||||045
+306656|KOPF_TEXTF|2||||||||||||tEs gelten unsere Allgemeinen Verkaufs- und Lieferbedingungen,         |||||||||||||||045
+306656|KOPF_TEXTF|3||||||||||||tdie Sie auf unserer Homepage www.zzdrivetech.com unter                |||||||||||||||045
+306656|KOPF_TEXTF|4||||||||||||tImpressum einsehen bzw. herunterladen können.                         |||||||||||||||045
+306656|KOPF_TEXTA|1||||||||||||tAus Ihrem Rahmenauftrag Nr. 203571 vom 16.08.18                       |||||||||||||||045
+306656|KOPF_TEXTA|2||||||||||||tGesamtstückzahl = 20                                                  |||||||||||||||045
+306656|KOPF_TEXTA|3||||||||||||tReststückzahl   =  4                                                  |||||||||||||||045
+306656|KOPF_TEXTA|4||||||||||||t=================================================                     |||||||||||||||045
+306656|POS|1|4|1080|0 |4320|65,6|||||10.01.20||Ihre Produkt-Nr:|1204897|H025A1022-001|HUBGETRIEBE         |FHVA25 24:1 Hub=250 |ST|Termin: |||Versandgewicht      |netto||||10.01.20|045
+306656|POS_TEXTP|1|1|||||||||||tGetriebetyp/-größe:   FHVA25                                          |||||||||||||||045
+306656|POS_TEXTP|2|1|||||||||||tÜbersetzung:          24:1                                            |||||||||||||||045
+306656|POS_TEXTP|3|1|||||||||||tTrapezgewinde:        Tr30x6 .                                        |||||||||||||||045
+306656|POS_TEXTP|4|1|||||||||||tHub pro Umdrehung:    0.25mm/U                                        |||||||||||||||045
+306656|POS_TEXTP|5|1|||||||||||tAntriebswelle:        beidseiig                                       |||||||||||||||045
+306656|POS_TEXTP|6|1|||||||||||tKonzeption:           Fettschmierung                                  |||||||||||||||045
+306656|POS_TEXTP|7|1|||||||||||tSpindelführung:       EULER II                                        |||||||||||||||045
+306656|POS_TEXTP|8|1|||||||||||tHub (Lhub):           250mm                                           |||||||||||||||045
+306656|POS_TEXTP|9|1|||||||||||tSpindellänge:         450mm                                           |||||||||||||||045
+306656|POS_TEXTP|10|1|||||||||||tEinbaulage:           vertikal Spindel nach unten                     |||||||||||||||045
+306656|POS_TEXTP|11|1|||||||||||t                      Verdrehschutzrohr nach oben                     |||||||||||||||045
+306656|POS_TEXTP|12|1|||||||||||tEinbaumaß:            Oberkante Gehäuse - Ende Schutzrohr: 330mm      |||||||||||||||045
+306656|POS_TEXTP|13|1|||||||||||tAntriebsdrehzahl:     3000U/min                                       |||||||||||||||045
+306656|POS_TEXTP|14|1|||||||||||tHubgeschwindigkeit:   12.5mm/s bzw. 0.750m/min                        |||||||||||||||045
+306656|POS_TEXTP|15|1|||||||||||tBelastung:            15kN Zug                                        |||||||||||||||045
+306656|POS_TEXTP|16|1|||||||||||tBelastungsart:        statisch                                        |||||||||||||||045
+306656|POS_TEXTP|17|1|||||||||||tSchmierung:           incl. synthetischem Fliessfett                  |||||||||||||||045
+306656|POS_TEXTP|18|1|||||||||||tOberflächenschutz:    Lackierung, RAL 9005, schwarz                   |||||||||||||||045
+306656|POS_TEXTP|19|1|||||||||||tZubehör:              - mit Kugelgelenkkopf                           |||||||||||||||045
+306656|POS_TEXTP|20|1|||||||||||t                      - Schutzrohr mit Verdrehsicherung               |||||||||||||||045
+306656|POS_TEXTP|21|1|||||||||||t                      - Kardanadapter                                 |||||||||||||||045
+306656|POS_TEXTP|22|1|||||||||||t                      - Motorflansch Vierkant 126mm                   |||||||||||||||045
+306656|POS_TEXTP|23|1|||||||||||t                      - Kupplung                                      |||||||||||||||045
+306656|POS_TEXTP|24|1|||||||||||tAntriebsmotor:        - nicht Bestandteil der Lieferung               |||||||||||||||045
+306656|POS_TEXTP|25|1|||||||||||t                        TYP: Siemens 1FK7060-5, n=3000U/min           |||||||||||||||045
+306656|POS_TEXTP|26|1|||||||||||t                             (Welle Ø24x50 ohne Passfedernut)         |||||||||||||||045
+306656|POS_TEXTP|27|1|||||||||||tAusführungsfreigabe:  Zeichnung AZH-051212                            |||||||||||||||045
+306656|POS_TEXTP|28|1|||||||||||tKunden-Produktnummer: 1204897                                         |||||||||||||||045
+306656|POS_TEXTP|29|1|||||||||||tWarennummer: 84 83 40 29                                              |||||||||||||||045
+306656|POS_TEXTP|30|1|||||||||||t|||||||||||||||045
+306656|POS_TEXTP|31|1|||||||||||t*                                                                     |||||||||||||||045
+306656|POS_TEXTP|32|1|||||||||||tKENNZEICHNUNG:                                                        |||||||||||||||045
+306656|POS_TEXTP|33|1|||||||||||tGetriebenummer:   13-16                                               |||||||||||||||045
+306656|POS_TEXTP|34|1|||||||||||tKundenreferenz:   1204897                                             |||||||||||||||045
+306656|POS_TEXTP|35|1|||||||||||t*                                                                     |||||||||||||||045
+306656|FUSS_WERTE|1||4320||||||||||NETTOW|Nettowert||||||||||||||045
+306656|FUSS_WERTE|2|19|820,8||||||||||MWST|zuzügl.% MWSt|%|||||||||||||045
+306656|FUSS_WERTE|3||5140,8||||||||||AUFTRW|Auftragswert||||||||||||||045
+306656|FUSS_LIEFB|||||||||||||frei Haus, inkl. Verp.                                      |Lieferbedingung:||||||||||||||045
+306656|FUSS_ZAHLB|1||||||||||||10 Tage 2 % Skonto|Zahlungsbedingung:||||||||||||||045
+306656|FUSS_ZAHLB|2||||||||||||30 Tage netto|Zahlungsbedingung:||||||||||||||045
+306656|FUSS_TEXTF|1||||||||||||tBitte beachten Sie: Es gilt die zum Zeitpunkt der Leistungs-          |||||||||||||||045
+306656|FUSS_TEXTF|2||||||||||||t                    erbringung gültige Mehrwertsteuer.                |||||||||||||||045
+306656|FUSS_TEXTF|3||||||||||||t|||||||||||||||045
+306656|FUSS_TEXTF|4||||||||||||t|||||||||||||||045
+306656|FUSS_TEXTF|5||||||||||||tMit freundlichen Grüßen                                               |||||||||||||||045
+306656|FUSS_TEXTF|6||||||||||||t|||||||||||||||045
+306656|FUSS_TEXTF|7||||||||||||tZZ-DriveTech GmbH                                                     |||||||||||||||045
+306656|FUSS_TEXTF|8||||||||||||t|||||||||||||||045
+306656|FUSS_TEXTF|9||||||||||||t|||||||||||||||045
+306656|FUSS_TEXTF|10||||||||||||ti.V. Peter Sohl                                                       |||||||||||||||045
