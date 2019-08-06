@@ -340,8 +340,15 @@ export class PdfGenerationService {
 
                         this.doc.text(row[19], this.offsetX + 130, this.BODY_OFFSET);
 
+
                         if (row[4] !== '') {
                             this.doc.text(this.currencyFormatDE(row[4]), this.offsetX + 145, this.BODY_OFFSET);
+                        }
+
+                        if (this.tipoDocumento === 'ANFRAGE') {
+                            if (row[28].length > 0) {
+                                this.doc.text(row[28], this.offsetX + 145, this.BODY_OFFSET);
+                            }
                         }
 
                         this.doc.text(row[9], this.offsetX + 165, this.BODY_OFFSET);
@@ -503,11 +510,8 @@ export class PdfGenerationService {
                         console.log('INTERPRETO', 'FUSS_PRE');
                         this.doc.setFontStyle('normal');
                         this.doc.setFontSize(10);
-                        this.doc.text(row[15], this.offsetX + 10, this.BODY_OFFSET);
-                        this.doc.text(row[14], this.offsetX + 10 + row[15].length + 5, this.BODY_OFFSET);
+                        this.doc.text(row[15] + ' ' + row[14], this.offsetX + 10, this.BODY_OFFSET);
                         this.BODY_OFFSET += this.INTERLINEA;
-                        this.BODY_OFFSET += this.INTERLINEA;
-                        this.CURRENT_BODY_LINE++;
                         this.CURRENT_BODY_LINE++;
                         break;
                     }
@@ -747,7 +751,7 @@ export class PdfGenerationService {
             this.doc.text(this.tipoDocumento, this.offsetX + 10, 85);
             this.doc.setFontStyle('normal');
             this.doc.setFontSize(10);
-            this.doc.text(this.faxCliente, this.offsetX + 10, 40);
+            // this.doc.text(this.faxCliente, this.offsetX + 10, 40);
             this.doc.text(this.datiCliente, this.offsetX + 10, 50);
             this.doc.setFontStyle('bold');
             this.doc.text(this.dataDocumento.substring(0, this.dataDocumento.indexOf('\n')), this.offsetX + 160, 60);
