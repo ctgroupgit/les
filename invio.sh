@@ -36,7 +36,7 @@ EOF
     "8")  echo "/cmd $(PWD)/debug/data18.csv" | nc 127.0.0.1 8010 ;;
     "9")  echo "/cmd $(PWD)/debug/BESTELLUNG_108151.csv" | nc 127.0.0.1 8010 ;;
     "a")  echo "/cmd $(PWD)/debug/105829liferchein.csv" | nc 127.0.0.1 8010 ;;
-    "b")  echo "/cmd $(PWD)/debug/rechnug105829.csv.csv" | nc 127.0.0.1 8010 ;;
+    "b")  echo "/cmd $(PWD)/debug/rechnug105829.csv" | nc 127.0.0.1 8010 ;;
     "c")  echo "/cmd $(PWD)/debug/auftra18065604.csv" | nc 127.0.0.1 8010 ;;
     "q")  exit                      ;;
     "Q")  exit                      ;;

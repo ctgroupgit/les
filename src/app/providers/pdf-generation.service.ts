@@ -62,7 +62,7 @@ export class PdfGenerationService {
 
     static normalizeChar(str: string, nrChar: number) {
         console.log(str);
-        const newStr = str.replace(':', '').replace(' ', '');
+        const newStr = str.replace(':', '').replace(/\s/g, '');
         return newStr + ' '.repeat(nrChar - newStr.length) + ': ';
     }
 
@@ -181,7 +181,8 @@ export class PdfGenerationService {
                             if (row[_i].length > 0) {
                                 this.KOPF_ANS.push(row[_i]);
                             }
-                        }
+                            }
+
                         break;
                     }
                     case 'KOPF_RGAN': {
@@ -189,7 +190,8 @@ export class PdfGenerationService {
                             if (row[_i].length > 0) {
                                 this.KOPF_RGAN.push(row[_i]);
                             }
-                        }
+                            }
+
                         break;
                     }
                     case 'KOPF': {
@@ -215,12 +217,16 @@ export class PdfGenerationService {
                             }
                         }
 
+                        if (this.tipoDocumento === 'RECHNUNG') {
+                            this.auftragsDatum = row[19] + '\n' + row[20];
+                        }
+
                         break;
                     }
                     case 'KOPF_DATEN': {
                         console.log('INTERPRETO', 'KOPF_DATEN');
 
-                        if (row[28].length > 0) {
+                        if (row[28].length > 0 && this.tipoDocumento !== 'RECHNUNG') {
                             this.auftragsNr = row[14] + '\n' + row[28];
                         }
 
@@ -237,6 +243,11 @@ export class PdfGenerationService {
                         // }
                         this.ihreBestellNr.push(row[22]);
                         this.ihreBestellNr.push(row[23]);
+                        if (this.tipoDocumento === 'RECHNUNG') {
+                            this.ihreBestellNr.push(row[18]);
+                            this.ihreBestellNr.push(row[20]);
+
+                        }
 
 
                         this.angebotsNr = row[14] + '\n' + row[15];
@@ -258,6 +269,20 @@ export class PdfGenerationService {
                         this.contattoZZ.push(row[22]);
                         this.contattoZZ.push(row[23]);
                         this.contattoZZ.push(row[24]);
+
+                        break;
+                    }
+                    case 'KOPF_DATEN2': {
+                        console.log('INTERPRETO', 'KOPF_DATEN2');
+
+                        if (this.tipoDocumento === 'RECHNUNG') {
+                            this.angebotsNr = row[15] + '\n' + row[14];
+                            // this.numeroDocumento = row[15] + '\n' + row[14];
+                            this.temp_nr_doc = row[14];
+
+                            this.auftragsNr = row[15] + '\n' + row[14];
+
+                        }
 
                         break;
                     }
@@ -312,7 +337,7 @@ export class PdfGenerationService {
                         this.contattoZZ.push(row[15]);
                         this.faxCliente = 'Fax-Nr.: ' + row[24];
 
-                        if (this.tipoDocumento !== 'LIEFERSCHEIN' && this.tipoDocumento !== 'AUFTRAGSBESTÄTIGUNG') {
+                        if (this.tipoDocumento !== 'LIEFERSCHEIN' && this.tipoDocumento !== 'AUFTRAGSBESTÄTIGUNG' && this.tipoDocumento !== 'RECHNUNG') {
                             this.addHeader();
                             console.log('ho lanciato header');
                             this.KOPF_TEXT.forEach(value => {
@@ -385,7 +410,11 @@ export class PdfGenerationService {
                             }
                         }
 
-                        this.doc.text(row[9], this.offsetX + 165, this.BODY_OFFSET);
+                        if (row[9].indexOf(',', 0) > 0) {
+                            this.doc.text(row[9].substring(0, row[9].indexOf(',', 0)), this.offsetX + 165, this.BODY_OFFSET);
+                        } else {
+                            this.doc.text(row[9], this.offsetX + 165, this.BODY_OFFSET);
+                        }
 
                         if (row[5] !== '' && row[6] === '') {
                             this.doc.text(this.currencyFormatDE(row[5]), this.offsetX + 180, this.BODY_OFFSET);
@@ -419,7 +448,7 @@ export class PdfGenerationService {
                         }
 
                         // // console.log(tempNetto);
-                        if (tempNetto !== '' && this.tipoDocumento !== 'LIEFERSCHEIN' && this.tipoDocumento !== 'AUFTRAGSBESTÄTIGUNG') {
+                        if (tempNetto !== '' && this.tipoDocumento === 'BESTELLUNG') {
                             this.doc.setFontStyle('normal');
                             this.doc.text('netto', this.offsetX + 165, this.BODY_OFFSET);
                             this.doc.text(this.currencyFormatDE(tempNetto), this.offsetX + 180, this.BODY_OFFSET);
@@ -555,7 +584,7 @@ export class PdfGenerationService {
                         console.log('INTERPRETO', 'FUSS_PRE');
                         this.doc.setFontStyle('normal');
                         this.doc.setFontSize(10);
-                        this.doc.text(row[15] + ' ' + row[14], this.offsetX + 10, this.BODY_OFFSET);
+                        this.doc.text(row[15] + ' ' + row[14].replace(/\s/g, ''), this.offsetX + 10, this.BODY_OFFSET);
                         this.BODY_OFFSET += this.INTERLINEA;
                         this.CURRENT_BODY_LINE++;
                         break;
@@ -564,7 +593,7 @@ export class PdfGenerationService {
                         console.log('INTERPRETO', 'FUSS_LIEFD');
                         this.doc.setFontStyle('normal');
                         this.doc.setFontSize(10);
-                        this.doc.text(row[14].substring(1, row[14].length), this.offsetX + 10, this.BODY_OFFSET);
+                        this.doc.text(row[14].substring(1, row[14].replace(/\s/g, '').length), this.offsetX + 10, this.BODY_OFFSET);
                         this.BODY_OFFSET += this.INTERLINEA;
                         this.CURRENT_BODY_LINE++;
                         break;
@@ -573,7 +602,7 @@ export class PdfGenerationService {
                         console.log('INTERPRETO', 'FUSS_LIEFB');
                         this.doc.setFontStyle('normal');
                         this.doc.setFontSize(9);
-                        this.doc.text(PdfGenerationService.normalizeChar(row[15], 25) + row[14], this.offsetX + 10, this.BODY_OFFSET);
+                        this.doc.text(PdfGenerationService.normalizeChar(row[15], 25) + row[14].replace(/\s/g, ''), this.offsetX + 10, this.BODY_OFFSET);
                         this.BODY_OFFSET += this.INTERLINEA;
                         this.CURRENT_BODY_LINE++;
                         break;
@@ -582,7 +611,7 @@ export class PdfGenerationService {
                         console.log('INTERPRETO', 'FUSS_PACK');
                         this.doc.setFontStyle('normal');
                         this.doc.setFontSize(9);
-                        this.doc.text(PdfGenerationService.normalizeChar(row[15], 25) + row[14] + row[16] + ' ' + row[17], this.offsetX + 10, this.BODY_OFFSET);
+                        this.doc.text(PdfGenerationService.normalizeChar(row[15], 25) + row[14].replace(/\s/g, '') + row[16] + ' ' + row[17], this.offsetX + 10, this.BODY_OFFSET);
                         this.BODY_OFFSET += this.INTERLINEA;
                         this.CURRENT_BODY_LINE++;
                         break;
@@ -591,7 +620,7 @@ export class PdfGenerationService {
                         console.log('INTERPRETO', 'FUSS_GEW');
                         this.doc.setFontStyle('normal');
                         this.doc.setFontSize(9);
-                        this.doc.text(PdfGenerationService.normalizeChar(row[15], 25) + row[14] + ' ' + row[16] + ' ' + row[3] + ' Kg', this.offsetX + 10, this.BODY_OFFSET);
+                        this.doc.text(PdfGenerationService.normalizeChar(row[15], 25) + row[14].replace(/\s/g, '') + ' ' + row[16] + ' ' + row[3] + ' Kg', this.offsetX + 10, this.BODY_OFFSET);
                         this.BODY_OFFSET += this.INTERLINEA;
                         this.CURRENT_BODY_LINE++;
                         break;
@@ -600,7 +629,7 @@ export class PdfGenerationService {
                         console.log('INTERPRETO', 'FUSS_ZAHLB');
                         this.doc.setFontStyle('normal');
                         this.doc.setFontSize(10);
-                        this.doc.text(PdfGenerationService.normalizeChar(row[15], 25) + row[14], this.offsetX + 10, this.BODY_OFFSET);
+                        this.doc.text(PdfGenerationService.normalizeChar(row[15], 25) + row[14].replace(/\s/g, '').replace(/\s/g, ''), this.offsetX + 10, this.BODY_OFFSET);
                         this.BODY_OFFSET += this.INTERLINEA;
                         this.CURRENT_BODY_LINE++;
                         break;
@@ -609,7 +638,7 @@ export class PdfGenerationService {
                         console.log('INTERPRETO', 'FUSS_ZAHLA');
                         this.doc.setFontStyle('normal');
                         this.doc.setFontSize(10);
-                        this.doc.text(PdfGenerationService.normalizeChar(row[15], 25) + row[14], this.offsetX + 10, this.BODY_OFFSET);
+                        this.doc.text(PdfGenerationService.normalizeChar(row[15], 25) + row[14].replace(/\s/g, '').replace(/\s/g, ''), this.offsetX + 10, this.BODY_OFFSET);
                         this.BODY_OFFSET += this.INTERLINEA;
                         this.CURRENT_BODY_LINE++;
                         break;
@@ -627,7 +656,7 @@ export class PdfGenerationService {
                         console.log('INTERPRETO', 'FUSS_VART');
                         this.doc.setFontStyle('normal');
                         this.doc.setFontSize(9);
-                        this.doc.text(PdfGenerationService.normalizeChar(row[15], 25) + row[14], this.offsetX + 10, this.BODY_OFFSET);
+                        this.doc.text(PdfGenerationService.normalizeChar(row[15], 25) + row[14].replace(/\s/g, ''), this.offsetX + 10, this.BODY_OFFSET);
                         this.BODY_OFFSET += this.INTERLINEA;
                         this.CURRENT_BODY_LINE++;
                         break;
@@ -832,7 +861,7 @@ export class PdfGenerationService {
             this.doc.text(this.numeroDocumento.substring(0, this.numeroDocumento.indexOf('\n')), this.offsetX + 160, 80);
             this.doc.setFontStyle('normal');
             this.doc.text(this.numeroDocumento.substring(this.numeroDocumento.indexOf('\n'), this.numeroDocumento.length), this.offsetX + 160, 80);
-            if (this.tipoDocumento === 'LIEFERSCHEIN') {
+            if (this.tipoDocumento === 'LIEFERSCHEIN' || this.tipoDocumento === 'RECHNUNG') {
                 if (this.auftragsNr.length > 0) {
                     this.doc.setFontStyle('bold');
                     this.doc.text(this.auftragsNr.substring(0, this.auftragsNr.indexOf('\n')), this.offsetX + 120, 70);

@@ -1,6 +1,6 @@
 {
   "name": "les",
-  "version": "1.0.38",
+  "version": "1.0.39",
   "description": "Les",
   "homepage": "https://github.com/ctgroupgit/les",
   "repository": {
@@ -91,10 +91,10 @@
     "test": "npm run postinstall:web && ng test",
     "e2e": "npm run build:prod && mocha --timeout 300000 --require ts-node/register e2e/**/*.spec.ts",
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-    "gh-publish": "electron-builder --x64 -mwl --publish always",
-    "gh-publish-win": "electron-builder --x64 --win --publish always",
-    "gh-publish-mac": "electron-builder --x64 --mac --publish always",
-    "gh-publish-linux": "electron-builder --x64 --linux --publish always"
+    "gh-publish": "npm run build:prod && electron-builder --x64 -mwl --publish always",
+    "gh-publish-win": "npm run build:prod && electron-builder --x64 --win --publish always",
+    "gh-publish-mac": "npm run build:prod && electron-builder --x64 --mac --publish always",
+    "gh-publish-linux": "npm run build:prod && electron-builder --x64 --linux --publish always"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.800.0",

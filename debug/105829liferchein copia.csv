@@ -1,46 +1,46 @@
-;00001;CONTROL;3;4;5;6;7;8;9;10;11;12;01.01.01;02.02.02;T15;T16;T17;T18;T19;T20;T21;T22;T23;T24;T25;T26;T27;T28;T29;045
-304446;KOPIEN;001;002;;;;;;;;;;;LIEFERSCHEIN;LIEFERSCHEIN;LIEFERSCHEIN KOPIE;;;;;;;;;;;;;045
-304446;KOPF_POSUEB;;;;;;;;;;;;08.03.19;Pos.;Produkt-Nr/Bezeichnung;Bestellmenge;Liefermenge;Restmenge;ME;Auftrags-Datum;;;Datum     ____________  Empfangsbestätigung: _________________________;;;;;0721/62 05-37;045
-304446;KOPF_ANS;;;;;;;;;;;;;;;;;;VERSAND;Im Auftrag von;Winkler & Dünnebier GmbH;Sohler Weg 65;56564 Neuwied;;;;;;045
-304446;KOPF_USTID;;;;;;;;;;;;;Ihre Ust-IdNr;                ;Unsere Ust-IdNr;DE815609203     ;;;;;;;;;;;;045
-304446;KOPF;;;;;;;;;;;06.08.19;;Datum;Vertreter;--                              ;Lieferschein;105829;Kunden-Nr;12303   ;Winkler & Dünnebier GmbH;Sohler Weg 65;56564 Neuwied;;;;;;045
-304446;KOPF_TEXTF;1;;;;;;;;;;;;tSie erhielten für Ihre Rechnung und Gefahr die unten                  ;;;;;;;;;;;;;;;045
-304446;KOPF_TEXTF;2;;;;;;;;;;;;taufgeführten Waren.                                                   ;;;;;;;;;;;;;;;045
-304446;KOPF_TEXTF;3;;;;;;;;;;;;tWir wünschen Ihnen guten Empfang der Sendung.                         ;;;;;;;;;;;;;;;045
-304446;KOPF_DATEN;;;;;;;;;;;08.03.19;08.03.19;Auftrags-Nr;Ihre Bestell-Nr;45629480                            ;Bestell-Datum;LIEFERSCHEIN;Herr Porath       ;0721/62 05-37       ;Nicole Naiel      ;Lief.-Nr. 1388    ;                  ;D;naiel1;Zentrale;        ;190165          ;045
-304446;KOPF_DATEN2;;;;;;;;;;;;;;;;;;LieferantNr;1388      ;  ;56564 Neuwied;;;;;;;045
-304446;KONTAKT;;;;;;;;;;;;;0721/6236083;nicole.naiel@zzdrivetech.com;0721/6236083;0721/6205-37;nicole.naiel@zzdrivetech.com; Nicole Naiel;;;; ;02631/84-581;02631/84-0;;;;045
-304446;POS;1;2,0000;2,0000;;70;70;;;;;;19.07.19;Ihre Produkt-Nr:;K2.077.57;K0033-41;KEGELRADGETRIEBE    ;K2.077.57      1:1  ;ST;Termin: ;;;;;Versandgewicht      ;netto;brutto;29/19;045
-304446;POS2;1;;;;;;;;;;;;Änderungsindex      ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;1;1;;;;;;;;;;;tKundenreferenz:       Zeichnung K2_077_57_00 vom 07.05.93             ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;2;1;;;;;;;;;;;tÜbersetzung:          1:1                                             ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;3;1;;;;;;;;;;;tAusführung:           311/1  (wahlweise 311/2)                        ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;4;1;;;;;;;;;;;tMontagebauform:       K01 (2-B)                                       ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;5;1;;;;;;;;;;;tAntriebsdrehzahl n1:  125-2000U/min                                   ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;6;1;;;;;;;;;;;tAntriebsleistung P1:  0,75-9kW                                        ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;7;1;;;;;;;;;;;tEinschaltdauer ED:    100%                                            ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;8;1;;;;;;;;;;;tVerzahnungsart:       HPGS Präzisionsverzahnung                       ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;9;1;;;;;;;;;;;tVerdrehflankenspiel:  eingeengt, 0,10...0,14mm/R100                   ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;10;1;;;;;;;;;;;t                                 (ca. 3,4...4.8 arcmin)               ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;11;1;;;;;;;;;;;tWellenrundlauf:       <0,04                                           ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;12;1;;;;;;;;;;;tWellendichtringe:     Standard NBR, Viton                             ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;13;1;;;;;;;;;;;tEntlüftung:           nicht montiert, beigelegt                       ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;14;1;;;;;;;;;;;tSchmierung:           für Ölschmierung vorgesehen                     ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;15;1;;;;;;;;;;;tAuslieferung:         ohne Öl                                         ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;16;1;;;;;;;;;;;tÖlmenge:              ca. 800ml (kundenseitig befüllt)                ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;17;1;;;;;;;;;;;t                                (Mitte unteres Ölschauglas)           ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;18;1;;;;;;;;;;;tLackierung:           grundiert                                       ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;19;1;;;;;;;;;;;tZubehör:              -Passfedern mit Abdrückgewinde                  ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;20;1;;;;;;;;;;;t                      -alle Wellen mit Gewindezentrierung M16         ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;21;1;;;;;;;;;;;tHinweis:              Durch die Betriebsweise als 311/2 und 311/2     ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;22;1;;;;;;;;;;;t                      sind 2 Ölschaugläser vertikal übereinander      ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;23;1;;;;;;;;;;;t                      angeordnet.                                     ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;24;1;;;;;;;;;;;t                      Der Ölstand ist immer auf Mitte des unteren     ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;25;1;;;;;;;;;;;t                      Ölschauglases aufzufüllen.  (ca. 0,8 Liter)     ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;26;1;;;;;;;;;;;tEntlüftung:           Die beigefügte Entlüftung ist in Betriebs-      ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;27;1;;;;;;;;;;;t                      position mit der obersten Verschlussschraube    ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;28;1;;;;;;;;;;;t                      vor Inbetriebnahme auszutauschen.               ;;;;;;;;;;;;;;;045
-304446;POS_TEXTP;29;1;;;;;;;;;;;t*                                                                     ;;;;;;;;;;;;;;;045
-304446;FUSS_LIEFB;;;;;;;;;;;;;frei Haus, inkl. Verp.                                      ;Lieferbedingung:;4;;;;;;;;;;;;;045
-304446;FUSS_PACK;1;;;;;;;;;;;;EWP.;Verpackung:;DNV;;;;;;;;;;;;;045
-304446;FUSS_GEW;;70;;;;;;;;;;;;Versandgewichte:;netto;brutto;;;;;;;;;;;;045
+;1;CONTROL;3;4;5;6;7;8;9;10;11;12;01.01.01;02.02.02;T15;T16;T17;T18;T19;T20;T21;T22;T23;T24;T25;T26;T27;T28;T29;45
+304446;KOPIEN;1;2;;;;;;;;;;;LIEFERSCHEIN;LIEFERSCHEIN;LIEFERSCHEIN KOPIE;;;;;;;;;;;;;45;
+304446;KOPF_POSUEB;;;;;;;;;;;;08.03.19;Pos.;Produkt-Nr/Bezeichnung;Bestellmenge;Liefermenge;Restmenge;ME;Auftrags-Datum;;;Datum     ____________  Empfangsbestätigung: _________________________;;;;;0721/62 05-37;45;
+304446;KOPF_ANS;;;;;;;;;;;;;;;;;;VERSAND;Im Auftrag von;Winkler & Dünnebier GmbH;Sohler Weg 65;56564 Neuwied;;;;;;45;
+304446;KOPF_USTID;;;;;;;;;;;;;Ihre Ust-IdNr;                ;Unsere Ust-IdNr;DE815609203     ;;;;;;;;;;;;45;
+304446;KOPF;;;;;;;;;;;06.08.19;;Datum;Vertreter;--                              ;Lieferschein;105829;Kunden-Nr;12303;Winkler & Dünnebier GmbH;Sohler Weg 65;56564 Neuwied;;;;;;45;
+304446;KOPF_TEXTF;1;;;;;;;;;;;;tSie erhielten für Ihre Rechnung und Gefahr die unten                  ;;;;;;;;;;;;;;;45;
+304446;KOPF_TEXTF;2;;;;;;;;;;;;taufgeführten Waren.                                                   ;;;;;;;;;;;;;;;45;
+304446;KOPF_TEXTF;3;;;;;;;;;;;;tWir wünschen Ihnen guten Empfang der Sendung.                         ;;;;;;;;;;;;;;;45;
+304446;KOPF_DATEN;;;;;;;;;;;08.03.19;08.03.19;Auftrags-Nr;Ihre Bestell-Nr;45629480;Bestell-Datum;LIEFERSCHEIN;Herr Porath       ;0721/62 05-37       ;Nicole Naiel      ;Lief.-Nr. 1388    ;                  ;D;naiel1;Zentrale;        ;190165;45;
+304446;KOPF_DATEN2;;;;;;;;;;;;;;;;;;LieferantNr;1388;  ;56564 Neuwied;;;;;;;45;
+304446;KONTAKT;;;;;;;;;;;;;0721/6236083;nicole.naiel@zzdrivetech.com;0721/6236083;0721/6205-37;nicole.naiel@zzdrivetech.com; Nicole Naiel;;;; ;02631/84-581;02631/84-0;;;;45;
+304446;POS;1;2;2;;70;70;;;;;;19.07.19;Ihre Produkt-Nr:;K2.077.57;K0033-41;KEGELRADGETRIEBE    ;K2.077.57      1:1  ;ST;Termin: ;;;;;Versandgewicht      ;netto;brutto;29/19;45;
+304446;POS2;1;;;;;;;;;;;;Änderungsindex      ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;1;1;;;;;;;;;;;tKundenreferenz:       Zeichnung K2_077_57_00 vom 07.05.93             ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;2;1;;;;;;;;;;;tÜbersetzung:          1:1                                             ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;3;1;;;;;;;;;;;tAusführung:           311/1  (wahlweise 311/2)                        ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;4;1;;;;;;;;;;;tMontagebauform:       K01 (2-B)                                       ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;5;1;;;;;;;;;;;tAntriebsdrehzahl n1:  125-2000U/min                                   ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;6;1;;;;;;;;;;;tAntriebsleistung P1:  0,75-9kW                                        ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;7;1;;;;;;;;;;;tEinschaltdauer ED:    100%                                            ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;8;1;;;;;;;;;;;tVerzahnungsart:       HPGS Präzisionsverzahnung                       ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;9;1;;;;;;;;;;;tVerdrehflankenspiel:  eingeengt, 0,10...0,14mm/R100                   ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;10;1;;;;;;;;;;;t                                 (ca. 3,4...4.8 arcmin)               ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;11;1;;;;;;;;;;;tWellenrundlauf:       <0,04                                           ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;12;1;;;;;;;;;;;tWellendichtringe:     Standard NBR, Viton                             ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;13;1;;;;;;;;;;;tEntlüftung:           nicht montiert, beigelegt                       ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;14;1;;;;;;;;;;;tSchmierung:           für Ölschmierung vorgesehen                     ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;15;1;;;;;;;;;;;tAuslieferung:         ohne Öl                                         ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;16;1;;;;;;;;;;;tÖlmenge:              ca. 800ml (kundenseitig befüllt)                ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;17;1;;;;;;;;;;;t                                (Mitte unteres Ölschauglas)           ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;18;1;;;;;;;;;;;tLackierung:           grundiert                                       ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;19;1;;;;;;;;;;;tZubehör:              -Passfedern mit Abdrückgewinde                  ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;20;1;;;;;;;;;;;t                      -alle Wellen mit Gewindezentrierung M16         ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;21;1;;;;;;;;;;;tHinweis:              Durch die Betriebsweise als 311/2 und 311/2     ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;22;1;;;;;;;;;;;t                      sind 2 Ölschaugläser vertikal übereinander      ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;23;1;;;;;;;;;;;t                      angeordnet.                                     ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;24;1;;;;;;;;;;;t                      Der Ölstand ist immer auf Mitte des unteren     ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;25;1;;;;;;;;;;;t                      Ölschauglases aufzufüllen.  (ca. 0,8 Liter)     ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;26;1;;;;;;;;;;;tEntlüftung:           Die beigefügte Entlüftung ist in Betriebs-      ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;27;1;;;;;;;;;;;t                      position mit der obersten Verschlussschraube    ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;28;1;;;;;;;;;;;t                      vor Inbetriebnahme auszutauschen.               ;;;;;;;;;;;;;;;45;
+304446;POS_TEXTP;29;1;;;;;;;;;;;t*                                                                     ;;;;;;;;;;;;;;;45;
+304446;FUSS_LIEFB;;;;;;;;;;;;;frei Haus, inkl. Verp.                                      ;Lieferbedingung:;4;;;;;;;;;;;;;45;
+304446;FUSS_PACK;1;;;;;;;;;;;;EWP.;Verpackung:;DNV;;;;;;;;;;;;;45;
+304446;FUSS_GEW;;70;;;;;;;;;;;;Versandgewichte:;netto;brutto;;;;;;;;;;;;45;
