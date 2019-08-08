@@ -4,34 +4,74 @@
 -149596|KOPF||||||||||||01.08.19|Datum|Bestellung|108151          |||||OMP|Via Di Pietro Adalgiso 1|66100 Chieti|Italien|||||023
 -149596|KOPF_DATEN||||||||||||        |Angebots-Nr|                  |KundenNr/Ihre Zeichen |                    |                  ||Lieferant|63166   |Unser Zeichen / Telefon|Klaus Korte                     |0721 6205-51        |D|korte|||023
 -149596|KONTAKT|||||||||||||Fax:0721 6205-10|klaus.korte@zzdrivetech.com|Fax:0721 6205-10|0721 6205-51|klaus.korte@zzdrivetech.com|Klaus Korte|Fax:0721 6205-10|0721 6205-51|klaus.korte@zzdrivetech.com|Klaus Korte|00390871551110|00390871565624||||023
--149596|KOPF_TEXTF|1||||||||||||tIn allen Schriftstücken bitte unsere Bestell-Daten                    |||||||||||||||023
+-149596|KOPF_TEXTF|1||||||||||||tIn allen Schriftstï¿½cken bitte unsere Bestell-Daten                    |||||||||||||||023
 -149596|KOPF_TEXTF|2||||||||||||tangeben, Rechnung + Lieferschein zweifach.                            |||||||||||||||023
 -149596|KOPF_TEXTF|3||||||||||||tZu unseren Einkaufsbedingungen bestellen wir:                         |||||||||||||||023
 -149596|KOPF_TEXTK|1||||||||||||t*******************************************************               |||||||||||||||023
 -149596|KOPF_TEXTK|2||||||||||||tBitte beachten Sie, bei der Fertigung von kompletten                  |||||||||||||||023
--149596|KOPF_TEXTK|3||||||||||||tZeichnungsteilen gehört zum Mindestlieferumfang:                      |||||||||||||||023
+-149596|KOPF_TEXTK|3||||||||||||tZeichnungsteilen gehï¿½rt zum Mindestlieferumfang:                      |||||||||||||||023
 -149596|KOPF_TEXTK|4||||||||||||t- Kennzeichnung mit Zeichnungsnummer                                  |||||||||||||||023
 -149596|KOPF_TEXTK|5||||||||||||t- Kennzeichnung mit Bestellnummer                                     |||||||||||||||023
--149596|KOPF_TEXTK|6||||||||||||t- Prüfprotokoll Stichprobe der Paßmaße (Eintrag der                   |||||||||||||||023
+-149596|KOPF_TEXTK|6||||||||||||t- Prï¿½fprotokoll Stichprobe der Paï¿½maï¿½e (Eintrag der                   |||||||||||||||023
 -149596|KOPF_TEXTK|7||||||||||||t  gemessenen Werte auf die Zeichnung ist mit                          |||||||||||||||023
 -149596|KOPF_TEXTK|8||||||||||||t  Unterschrift ausreichend).                                          |||||||||||||||023
--149596|KOPF_TEXTK|9||||||||||||tSollten im Positionstext oder auf der Zeichnung höhere                |||||||||||||||023
--149596|KOPF_TEXTK|10||||||||||||tAnforderungen genannt werden haben dies Gültigkeit.                   |||||||||||||||023
--149596|KOPF_TEXTK|11||||||||||||tFalls einzelne Punkte nicht erfüllt werden können ist                 |||||||||||||||023
--149596|KOPF_TEXTK|12||||||||||||tdies mit dem zuständigen Einkäufer abzustimmen und                    |||||||||||||||023
--149596|KOPF_TEXTK|13||||||||||||tzusätzlich auf dem Lieferschein zu vermerken.                         |||||||||||||||023
+-149596|KOPF_TEXTK|9||||||||||||tSollten im Positionstext oder auf der Zeichnung hï¿½here                |||||||||||||||023
+-149596|KOPF_TEXTK|10||||||||||||tAnforderungen genannt werden haben dies Gï¿½ltigkeit.                   |||||||||||||||023
+-149596|KOPF_TEXTK|11||||||||||||tFalls einzelne Punkte nicht erfï¿½llt werden kï¿½nnen ist                 |||||||||||||||023
+-149596|KOPF_TEXTK|12||||||||||||tdies mit dem zustï¿½ndigen Einkï¿½ufer abzustimmen und                    |||||||||||||||023
+-149596|KOPF_TEXTK|13||||||||||||tzusï¿½tzlich auf dem Lieferschein zu vermerken.                         |||||||||||||||023
 -149596|KOPF_TEXTK|14||||||||||||t*******************************************************               |||||||||||||||023
 -149596|KOPF_POSUEB|||||||||||||Pos  |Artikel-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt|EUR ||||||||023
 -149596|POS|1|40,00|12,00|480,00|480,00|||0,00||||02.09.19|Ihre Artikel-Nr:|                        |922|Drehen              |                    |ST||Termin:        |Kommission:    |19040600            |||||36/19|023
--149596|POS2|1||||||||||||Kostenstelle:||Kontierungsgruppe:|590     |Werkstoff:||Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||023
+-149596|POS2|1||||||||||||Kostenstelle:||Kontierungsgruppe:|590     |Werkstoff:||Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ï¿½I:|||023
 -149596|POS 3|1||||||||||||||Lohnschein          |21122801|Zeichn-Nr           |KN070-3111          |KN070-3111      |Bezeichnung         |ANTRIEBSWELLE       |||||||023
 -149596|POS_TEXTP|1|1|||||||||||tdrehen mit Schleifzugabe                                              |||||||||||||||023
 -149596|POS_TEXTP|2|1|||||||||||tinkl. Material.                                                       |||||||||||||||023
--149596|POS_TEXTP|3|1|||||||||||tIncl. Zentrierung und  Bohrung Ø5, sowie                              |||||||||||||||023
+-149596|POS_TEXTP|3|1|||||||||||tIncl. Zentrierung und  Bohrung ï¿½5, sowie                              |||||||||||||||023
 -149596|POS_TEXTP|4|1|||||||||||tGewinde M22x1,5 und Gewinde M6.                                       |||||||||||||||023
--149596|POS_TEXTP|5|1|||||||||||tAußen ø fertig drehen,                                                |||||||||||||||023
--149596|POS_TEXTP|6|1|||||||||||tBohrung Ø15 auf 14,8 +0.05 vorgedreht                                 |||||||||||||||023
--149596|POS_TEXTP|7|1|||||||||||tRundlauf innen zu außen max 0,03                                      |||||||||||||||023
+-149596|POS_TEXTP|5|1|||||||||||tAuï¿½en ï¿½ fertig drehen,                                                |||||||||||||||023
+-149596|POS_TEXTP|6|1|||||||||||tBohrung ï¿½15 auf 14,8 +0.05 vorgedreht                                 |||||||||||||||023
+-149596|POS_TEXTP|7|1|||||||||||tRundlauf innen zu auï¿½en max 0,03                                      |||||||||||||||023
+-149596|POS|2|40                                                                                                                                                                                                                                         ,00|12                                                                          ,00|480,00|480,00|||0,00||||02.09.19|Ihre Artikel-Nr:|                        |922|Drehen              |                    |ST||Termin:        |Kommission:    |19040600            |||||36/19|023
+-149596|POS2|1||||||||||||Kostenstelle:||Kontierungsgruppe:|590     |Werkstoff:||Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ï¿½I:|||023
+-149596|POS 3|1||||||||||||||Lohnschein          |21122801|Zeichn-Nr           |KN070-3111          |KN070-3111      |Bezeichnung         |ANTRIEBSWELLE       |||||||023
+-149596|POS_TEXTP|1|1|||||||||||tdrehen mit Schleifzugabe                                              |||||||||||||||023
+-149596|POS_TEXTP|2|1|||||||||||tinkl. Material.                                                       |||||||||||||||023
+-149596|POS_TEXTP|3|1|||||||||||tIncl. Zentrierung und  Bohrung ï¿½5                                                                                                                                                                                       ,sowie                              |||||||||||||||023
+-149596|POS_TEXTP|4|1|||||||||||tGewinde M22x1                                                                                                                                                                                                           ,5 und Gewinde M6.                                       |||||||||||||||023
+-149596|POS_TEXTP|5|1|||||||||||tAuï¿½en ï¿½ fertig drehen                                                                                                                                                                                                   ,|||||||||||||||023
+-149596|POS_TEXTP|6|1|||||||||||tBohrung ï¿½15 auf 14                                                                                                                                                                                                      ,8 +0.05 vorgedreht                                 |||||||||||||||023
+-149596|POS_TEXTP|7|1|||||||||||tRundlauf innen zu auï¿½en max 0                                                                                                                                                                                           ,03                                      |||||||||||||||023
+-149596|POS|3|40                                                                                                                                                                                                                                         ,00|12                                                                          ,00|480,00|480,00|||0,00||||02.09.19|Ihre Artikel-Nr:|                        |922|Drehen              |                    |ST||Termin:        |Kommission:    |19040600            |||||36/19|023
+-149596|POS2|1||||||||||||Kostenstelle:||Kontierungsgruppe:|590     |Werkstoff:||Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ï¿½I:|||023
+-149596|POS 3|1||||||||||||||Lohnschein          |21122801|Zeichn-Nr           |KN070-3111          |KN070-3111      |Bezeichnung         |ANTRIEBSWELLE       |||||||023
+-149596|POS_TEXTP|1|1|||||||||||tdrehen mit Schleifzugabe                                              |||||||||||||||023
+-149596|POS_TEXTP|2|1|||||||||||tinkl. Material.                                                       |||||||||||||||023
+-149596|POS_TEXTP|3|1|||||||||||tIncl. Zentrierung und  Bohrung ï¿½5                                                                                                                                                                                       ,sowie                              |||||||||||||||023
+-149596|POS_TEXTP|4|1|||||||||||tGewinde M22x1                                                                                                                                                                                                           ,5 und Gewinde M6.                                       |||||||||||||||023
+-149596|POS_TEXTP|5|1|||||||||||tAuï¿½en ï¿½ fertig drehen                                                                                                                                                                                                   ,|||||||||||||||023
+-149596|POS_TEXTP|6|1|||||||||||tBohrung ï¿½15 auf 14                                                                                                                                                                                                      ,8 +0.05 vorgedreht                                 |||||||||||||||023
+-149596|POS_TEXTP|7|1|||||||||||tRundlauf innen zu auï¿½en max 0                                                                                                                                                                                           ,03                                      |||||||||||||||023
+-149596|POS|4|40                                                                                                                                                                                                                                         ,00|12                                                                          ,00|480,00|480,00|||0,00||||02.09.19|Ihre Artikel-Nr:|                        |922|Drehen              |                    |ST||Termin:        |Kommission:    |19040600            |||||36/19|023
+-149596|POS2|1||||||||||||Kostenstelle:||Kontierungsgruppe:|590     |Werkstoff:||Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ï¿½I:|||023
+-149596|POS 3|1||||||||||||||Lohnschein          |21122801|Zeichn-Nr           |KN070-3111          |KN070-3111      |Bezeichnung         |ANTRIEBSWELLE       |||||||023
+-149596|POS_TEXTP|1|1|||||||||||tdrehen mit Schleifzugabe                                              |||||||||||||||023
+-149596|POS_TEXTP|2|1|||||||||||tinkl. Material.                                                       |||||||||||||||023
+-149596|POS_TEXTP|3|1|||||||||||tIncl. Zentrierung und  Bohrung ï¿½5                                                                                                                                                                                       ,sowie                              |||||||||||||||023
+-149596|POS_TEXTP|4|1|||||||||||tGewinde M22x1                                                                                                                                                                                                           ,5 und Gewinde M6.                                       |||||||||||||||023
+-149596|POS_TEXTP|5|1|||||||||||tAuï¿½en ï¿½ fertig drehen                                                                                                                                                                                                   ,|||||||||||||||023
+-149596|POS_TEXTP|6|1|||||||||||tBohrung ï¿½15 auf 14                                                                                                                                                                                                      ,8 +0.05 vorgedreht                                 |||||||||||||||023
+-149596|POS_TEXTP|7|1|||||||||||tRundlauf innen zu auï¿½en max 0                                                                                                                                                                                           ,03                                      |||||||||||||||023
+-149596|POS|6|40                                                                                                                                                                                                                                         ,00|12                                                                          ,00|480,00|480,00|||0,00||||02.09.19|Ihre Artikel-Nr:|                        |922|Drehen              |                    |ST||Termin:        |Kommission:    |19040600            |||||36/19|023
+-149596|POS2|1||||||||||||Kostenstelle:||Kontierungsgruppe:|590     |Werkstoff:||Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ï¿½I:|||023
+-149596|POS 3|1||||||||||||||Lohnschein          |21122801|Zeichn-Nr           |KN070-3111          |KN070-3111      |Bezeichnung         |ANTRIEBSWELLE       |||||||023
+-149596|POS_TEXTP|1|1|||||||||||tdrehen mit Schleifzugabe                                              |||||||||||||||023
+-149596|POS_TEXTP|2|1|||||||||||tinkl. Material.                                                       |||||||||||||||023
+-149596|POS_TEXTP|3|1|||||||||||tIncl. Zentrierung und  Bohrung ï¿½5                                                                                                                                                                                       ,sowie                              |||||||||||||||023
+-149596|POS_TEXTP|4|1|||||||||||tGewinde M22x1                                                                                                                                                                                                           ,5 und Gewinde M6.                                       |||||||||||||||023
+-149596|POS_TEXTP|5|1|||||||||||tAuï¿½en ï¿½ fertig drehen                                                                                                                                                                                                   ,|||||||||||||||023
+-149596|POS_TEXTP|6|1|||||||||||tBohrung ï¿½15 auf 14                                                                                                                                                                                                      ,8 +0.05 vorgedreht                                 |||||||||||||||023
+-149596|POS_TEXTP|7|1|||||||||||tRundlauf innen zu auï¿½en max 0                                                                                                                                                                                           ,03                                      |||||||||||||||023
 -149596|FUSS_WERTE|1||480,00||||||||||AUFTRW|Bestellwert||||||||||||||023
 -149596|FUSS_LIEFD||||||||||||02.09.19||Liefertermin:      ||||||||||||||023
 -149596|FUSS_ZAHLB|1||||||||||||BBC 60/90 GG FM                                                       |Zahlungsbedingung: ||||||||||||||023
@@ -43,9 +83,9 @@
 -149596|FUSS_TEXTF|6||||||||||||t|||||||||||||||023
 -149596|FUSS_TEXTF|7||||||||||||t|||||||||||||||023
 -149596|FUSS_TEXTF|8||||||||||||t*****************************************************                 |||||||||||||||023
--149596|FUSS_TEXTF|9||||||||||||tWir bitten um eine Auftragsbestätigung innerhalb                      |||||||||||||||023
+-149596|FUSS_TEXTF|9||||||||||||tWir bitten um eine Auftragsbestï¿½tigung innerhalb                      |||||||||||||||023
 -149596|FUSS_TEXTF|10||||||||||||tvon 3 Arbeitstagen.                                                   |||||||||||||||023
--149596|FUSS_TEXTF|11||||||||||||tBei Auftragsbestätigungen und Lieferscheinen immer                    |||||||||||||||023
+-149596|FUSS_TEXTF|11||||||||||||tBei Auftragsbestï¿½tigungen und Lieferscheinen immer                    |||||||||||||||023
 -149596|FUSS_TEXTF|12||||||||||||tunsere Artikelnummern angeben.                                        |||||||||||||||023
 -149596|FUSS_TEXTF|13||||||||||||tBitte die Ware zum angegebenen Liefertermin anliefern                 |||||||||||||||023
 -149596|FUSS_TEXTF|14||||||||||||t*****************************************************                 |||||||||||||||023
