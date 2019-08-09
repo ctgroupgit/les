@@ -22,6 +22,7 @@ do
     (b) RECHNUNG 105829
     (c) AUFTRAGSBESTESTIGUNG 18065604
     (d) BESTELLUNG 108168
+    (e) AUFTRAGSBESTESTIGUNG 190289
     (Q) Quit
     ------------------------------
 EOF
@@ -40,6 +41,7 @@ EOF
     "b")  echo "/cmd $(PWD)/debug/rechnug105829.csv" | nc 127.0.0.1 8010 ;;
     "c")  echo "/cmd $(PWD)/debug/auftra18065604.csv" | nc 127.0.0.1 8010 ;;
     "d")  echo "/cmd $(PWD)/debug/data_108168.csv" | nc 127.0.0.1 8010 ;;
+    "e")  echo "/cmd $(PWD)/debug/nail.csv" | nc 127.0.0.1 8010 ;;
     "q")  exit                      ;;
     "Q")  exit                      ;;
      * )  echo "invalid option"     ;;
