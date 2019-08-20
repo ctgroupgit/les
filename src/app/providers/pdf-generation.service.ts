@@ -219,7 +219,7 @@ export class PdfGenerationService {
 
                         this.datiCliente = row[21] + '\n' + row[22] + '\n' + row[23] + '\n' + row[24] + '\n' + row[25];
 
-                        if (this.tipoDocumento === 'LIEFERSCHEIN' || this.tipoDocumento === 'AUFTRAGSBESTÄTIGUNG') {
+                        if (this.tipoDocumento === 'LIEFERSCHEIN' || this.tipoDocumento === 'AUFTRAGSBESTÄTIGUNG' || this.tipoDocumento === 'ORDER CONFIRMATION') {
                             this.numeroDocumento = row[17] + '\n' + row[18];
                             this.kundenNr = row[19] + '\n' + row[20];
                             this.temp_nr_doc = row[18];
@@ -304,7 +304,7 @@ export class PdfGenerationService {
 
                             this.lieferNr = row[17] + '\n' + row[16];
                             this.lieferDatum = row[18] + '\n' + row[12];
-                        } else if (this.tipoDocumento === 'AUFTRAGSBESTÄTIGUNG') {
+                        } else if (this.tipoDocumento === 'AUFTRAGSBESTÄTIGUNG' || this.tipoDocumento === 'ORDER CONFIRMATION') {
                             this.auftragsDatum = row[19] + '\n' + row[20];
                         }
 
@@ -399,16 +399,17 @@ export class PdfGenerationService {
                             this.addNewLine();
                         }
 
-                        if (this.tipoDocumento === 'AUFTRAGSBESTÄTIGUNG' && row[2] !== '1' && tempNetto.length > 0) {
-                            this.doc.text('netto  ' + tempNetto + ' kg', this.offsetX + 25, this.BODY_OFFSET);
-                            this.addNewLine();
-                        }
-
-                        if (this.tipoDocumento === 'AUFTRAGSBESTÄTIGUNG') {
+                        if (this.tipoDocumento === 'AUFTRAGSBESTÄTIGUNG' || this.tipoDocumento === 'ORDER CONFIRMATION') {
                             tempNetto = row[7];
                         } else {
                             tempNetto = row[6];
                         }
+
+                        if ((this.tipoDocumento === 'AUFTRAGSBESTÄTIGUNG' || this.tipoDocumento === 'ORDER CONFIRMATION') && row[2] !== '1' && tempNetto.length > 0) {
+                            this.doc.text('netto  ' + tempNetto + ' kg', this.offsetX + 25, this.BODY_OFFSET);
+                            this.addNewLine();
+                        }
+
                         startLeRigheInMezzo = 0;
                         if (row[2] === '1') {
                             this.addTableHeader();
@@ -432,7 +433,7 @@ export class PdfGenerationService {
 
                         this.doc.setFontStyle('normal');
                         // this.doc.text(row[3].substring(0, row[9].indexOf(',', 0)), this.offsetX + 115, this.BODY_OFFSET);
-                        console.log('MIA RIGA', row[3], row[3].substring(0, row[9].indexOf(',', 0)));
+                        // console.log('MIA RIGA', row[3], row[3].substring(0, row[9].indexOf(',', 0)));
                         if (row[3].indexOf(',', 0) > 0) {
                             this.doc.text(row[3].substring(0, row[3].indexOf(',', 0)), this.offsetX + 115, this.BODY_OFFSET);
                         } else {
@@ -457,9 +458,9 @@ export class PdfGenerationService {
                             this.doc.text(row[9], this.offsetX + 165, this.BODY_OFFSET);
                         }
 
-                        if (row[5] !== '' && row[6] === '') {
+                        if (row[5] !== '' && Number(row[5]) !== 0) {
                             this.doc.text(this.currencyFormatDE(row[5]), this.offsetX + 200, this.BODY_OFFSET, {align: 'right'});
-                        } else if (row[5] !== '' && row[6] !== '0') {
+                        } else {
                             this.doc.text(this.currencyFormatDE(row[6]), this.offsetX + 200, this.BODY_OFFSET, {align: 'right'});
                         }
 
@@ -492,7 +493,7 @@ export class PdfGenerationService {
                             this.doc.text('netto', this.offsetX + 165, this.BODY_OFFSET);
                             this.doc.text(this.currencyFormatDE(tempNetto), this.offsetX + 200, this.BODY_OFFSET, {align: 'right'});
                         }
-                        if (this.tipoDocumento === 'AUFTRAGSBESTÄTIGUNG') {
+                        if (this.tipoDocumento === 'AUFTRAGSBESTÄTIGUNG' || this.tipoDocumento === 'ORDER CONFIRMATION') {
                             this.doc.setFontStyle('bold');
                             this.doc.text(row[20] + ' ' + row[12], this.offsetX + 165, this.BODY_OFFSET);
                             this.doc.setFontStyle('normal');
@@ -539,7 +540,7 @@ export class PdfGenerationService {
                         // this.doc.setFont('courier');
                         // this.doc.setFontSize(10);
 
-                        console.log(this.MAX_BODY_LINE, this.CURRENT_BODY_LINE);
+                        // console.log(this.MAX_BODY_LINE, this.CURRENT_BODY_LINE);
                         const itemCount = 2;
                         for (let _i = 0; _i < itemCount; _i++) {
                             if (row[16 + (_i * 2) + 1].length > 0) {
@@ -886,7 +887,7 @@ export class PdfGenerationService {
         // footer
         // if (this.tipoDocumento === 'BESTELLUNG' || this.tipoDocumento === 'ANFRAGE') {
         this.doc.text('ME = Mengeneinheit: ST = Stück; g = Gramm; kg = Kilogramm    PE = Preiseinheit: 0=1 Stück; 1=pro 10; ' +
-            '2=pro 100; 3=pro 10', this.offsetX + 10, 266);
+            '2=pro 100; 3=pro 1000', this.offsetX + 10, 266);
         // }
         this.doc.line(8, 268, 203, 268);
         this.doc.setFontStyle('normal');
@@ -924,24 +925,30 @@ export class PdfGenerationService {
     }
 
     addHeader() {
+        const leftMargin = 8;
+        const topMargin = 10;
         if (!this.headerPrinted) {
             this.headerPrinted = true;
             const image = 'data:image/png;base64,' + this.logozz[0]['logozz'];
             this.doc.addImage(image, 'JPEG', 100, 1, 100, 54);
+            this.doc.setLineDash([3, 3, 3, 3], 3);
+            this.doc.setLineWidth(0.1);
+            this.doc.line(10, 35, 10, 80);
+            this.doc.setLineDash(0);
+            this.doc.setLineWidth(0.2);
             if (this.pagina === 1) {
-                this.doc.setFontSize(8);
-                this.doc.text('ZZ Drive Tech GmbH, An der Tagweide 12, 76139 Karlsruhe', 10, 30);
+                this.doc.setFontSize(7);
+                this.doc.text('ZZ Drive Tech GmbH, An der Tagweide 12, 76139 Karlsruhe', this.offsetX + 10 + leftMargin, topMargin + 35);
             }
+            this.doc.setFontSize(10);
+            if (this.tipoDocumento !== 'BESTELLUNG' && this.tipoDocumento !== 'AUFTRAGSBESTÄTIGUNG' && this.tipoDocumento !== 'RECHNUNG' && this.tipoDocumento !== 'ORDER CONFIRMATION') {
+                this.doc.text(this.faxCliente, this.offsetX + leftMargin + 10, topMargin + 40);
+            }
+            this.doc.text(this.datiCliente, this.offsetX + leftMargin + 10, topMargin + 45);
             this.doc.setFontSize(15);
             this.doc.setFontStyle('bold');
-            this.doc.text(this.tipoDocumento, this.offsetX + 10, 85);
-            this.doc.setFontStyle('normal');
+            this.doc.text(this.tipoDocumento, this.offsetX + 10, 90);
             this.doc.setFontSize(10);
-            if (this.tipoDocumento !== 'BESTELLUNG' && this.tipoDocumento !== 'AUFTRAGSBESTÄTIGUNG' && this.tipoDocumento !== 'RECHNUNG') {
-                this.doc.text(this.faxCliente, this.offsetX + 10, 40);
-            }
-            this.doc.text(this.datiCliente, this.offsetX + 10, 50);
-            this.doc.setFontStyle('bold');
             this.doc.text(this.dataDocumento.substring(0, this.dataDocumento.indexOf('\n')), this.offsetX + 170, 60);
             this.doc.setFontStyle('normal');
             this.doc.text(this.dataDocumento.substring(this.dataDocumento.indexOf('\n'), this.dataDocumento.length), this.offsetX + 170, 60);
@@ -961,7 +968,7 @@ export class PdfGenerationService {
             this.doc.setFontStyle('normal');
             this.doc.setFontSize(10);
 
-            if (this.tipoDocumento === 'LIEFERSCHEIN' || this.tipoDocumento === 'RECHNUNG' || this.tipoDocumento === 'AUFTRAGSBESTÄTIGUNG') {
+            if (this.tipoDocumento === 'LIEFERSCHEIN' || this.tipoDocumento === 'RECHNUNG' || this.tipoDocumento === 'AUFTRAGSBESTÄTIGUNG' || this.tipoDocumento === 'ORDER CONFIRMATION') {
                 if (this.auftragsNr.length > 0) {
                     this.doc.setFontStyle('bold');
                     this.doc.text(this.auftragsNr.substring(0, this.auftragsNr.indexOf('\n')), this.offsetX + 135, 70);
@@ -974,7 +981,7 @@ export class PdfGenerationService {
                     this.doc.setFontStyle('normal');
                     this.doc.text(this.auftragsDatum.substring(this.auftragsDatum.indexOf('\n'), this.auftragsDatum.length), this.offsetX + 135, 80);
                 }
-                if (this.tipoDocumento === 'RECHNUNG') {
+                if (this.tipoDocumento === 'RECHNUNG' || this.tipoDocumento === 'GUTSCHRIFT' || this.tipoDocumento === 'CREDIT NOTE') {
                     this.doc.setFontStyle('bold');
                     this.doc.text(this.recNr.substring(0, this.recNr.indexOf('\n')), this.offsetX + 135, 60);
                     this.doc.setFontStyle('normal');
@@ -1003,7 +1010,8 @@ export class PdfGenerationService {
 
                 // console.log(this.deUmlaut(this.tipoDocumento), this.tipoDocumento);
 
-                if (this.tipoDocumento !== 'LIEFERSCHEIN' && this.tipoDocumento !== 'AUFTRAGSBESTÄTIGUNG' && this.tipoDocumento !== 'RECHNUNG') {
+                if (this.tipoDocumento !== 'LIEFERSCHEIN' && this.tipoDocumento !== 'AUFTRAGSBESTÄTIGUNG' && this.tipoDocumento !== 'RECHNUNG' && this.tipoDocumento !== 'ORDER CONFIRMATION'
+                ) {
                     this.doc.setFontStyle('bold');
                     this.doc.text(this.angebotsNr.substring(0, this.angebotsNr.indexOf('\n')), this.offsetX + 10, this.BODY_OFFSET);
                     this.doc.setFontStyle('normal');

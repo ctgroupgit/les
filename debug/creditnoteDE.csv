@@ -1,0 +1,48 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|036
+303791|KOPIEN|001|001|||||||||||GUTSCHRIFT|GUTSCHRIFT||||||||||||||036
+303791|KOPF|||||||||||22.01.19||Datum|Vertreter|Flohr  Direkt                   |LieferantNr|          |Kunden-Nr|10502   |FLOHR Industrietechnik GmbH|Im unteren Tal 1|79761 Waldshut-Tiengen||||||036
+303791|KOPF_POSUEB|||||||||||||Pos.|Produkt-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt |EUR ||||||||036
+303791|KOPF_DATEN|||||||||||22.10.18||GUTSCHRIFT|Ihre Bestell-Nr|161225-4                            |Bestell-Datum|Auftrags-Nr|Hr. Zimmermann    |18029403        |Frau Sezer                         ,Seher |Lief. 9000-1000   |Abruf 3 - Ruggli  |D|batzlerm|Zentrale|        |0721-6205-36        |036
+303791|KOPF_DATEN2||||||||||||22.01.19|700182|Rechnungs-Nr|104789|Gutschrift-Nr||||||||||||036
+303791|KOPF_USTID|||||||||||||Ihre Ust-IdNr|DE 811378260    |Unsere Ust-IdNr|DE815609203     ||||||||||||036
+303791|KONTAKT||||||||||||||seher.sezer@zzdrivetech.com|0721/6205-10|0721/6205-72|michael.batzler@zzdrivetech.com| Michael Batzler|||| |07751/8731-50|07751/8731-0||||036
+303791|KOPF_TEXTA|1||||||||||||tINTERNE GUTSCHRIFT - VORGEBUCHT                                       |||||||||||||||036
+303791|KOPF_TEXTA|2||||||||||||t**********************************************************            |||||||||||||||036
+303791|POS|1|2|1620|0 |3045                                                                                                                                                                            ,6||||||        ||Ihre Produkt-Nr:|020.510.003.01|Y100-0075-008-V|SCHRITTGETRIEBE     |020.510.003.01      |ST||||||||||036
+303791|POS_RB|1|6|0||||||||||- Rabatt 1|%|- Rabatt 2|%||||||||||||036
+303791|POS_TEXTP|1|1|||||||||||tKundennummer:         020.510.003.01                                  |||||||||||||||036
+303791|POS_TEXTP|2|1|||||||||||tKunden Zeichng.:      1000210033                                      |||||||||||||||036
+303791|POS_TEXTP|3|1|||||||||||tGetriebetyp/-gr��e:   Y100                                            |||||||||||||||036
+303791|POS_TEXTP|4|1|||||||||||tSchaltschritte:       4                                               |||||||||||||||036
+303791|POS_TEXTP|5|1|||||||||||tSchaltwinkel:         180�                                            |||||||||||||||036
+303791|POS_TEXTP|6|1|||||||||||tBewegungsgesetz:      100-04-�35-180R-MS                              |||||||||||||||036
+303791|POS_TEXTP|7|1|||||||||||tDrehrichtung:         rechts                                          |||||||||||||||036
+303791|POS_TEXTP|8|1|||||||||||tBeschleunigungsform:  Mod.-Sin.                                       |||||||||||||||036
+303791|POS_TEXTP|9|1|||||||||||tEingangswelle:        einseitig �30k6x80                              |||||||||||||||036
+303791|POS_TEXTP|10|1|||||||||||tAbtriebswelle:        einseitig �30k6x80                              |||||||||||||||036
+303791|POS_TEXTP|11|1|||||||||||tAntriebsdrehzahl:     75 U/min                                        |||||||||||||||036
+303791|POS_TEXTP|12|1|||||||||||tSchmierung:           Flie�fett                                                                                                                                       ,Shell Gadus S5 V142W 00              |||||||||||||||036
+303791|POS_TEXTP|13|1|||||||||||tLieferzustand:        incl. Flie�fettf�llung  2 Liter                 |||||||||||||||036
+303791|POS_TEXTP|14|1|||||||||||tLackierung:           ohne                                            |||||||||||||||036
+303791|POS_TEXTP|15|1|||||||||||tGewicht:              ca. 24kg                                        |||||||||||||||036
+303791|POS_TEXTP|16|1|||||||||||tHinweis:              - Geh�use Werkstoff Alu blank                   |||||||||||||||036
+303791|POS_TEXTP|17|1|||||||||||t                      - Befestigungsgewinde M10 mit Heli-Coil         |||||||||||||||036
+303791|POS_TEXTP|18|1|||||||||||t                      - Sonderbefestigungsbohrung 2xM6 +2xM5          |||||||||||||||036
+303791|POS_TEXTP|19|1|||||||||||t                        auf Geh�useseitenfl�chen.                     |||||||||||||||036
+303791|POS_TEXTP|20|1|||||||||||t*                                                                     |||||||||||||||036
+303791|POS_TEXTP|21|1|||||||||||tKENNZEICHNUNG:                                                        |||||||||||||||036
+303791|POS_TEXTP|22|1|||||||||||tGetriebenummer:   5-6                                                 |||||||||||||||036
+303791|POS_TEXTP|23|1|||||||||||tKundenreferenz:   020.510.003.01                                      |||||||||||||||036
+303791|POS_TEXTP|24|1|||||||||||t*                                                                     |||||||||||||||036
+303791|FUSS_WERTE|1||3045                                                                                                                                                                              ,6||||||||||NETTOW|Nettowert||||||||||||||036
+303791|FUSS_WERTE|2||52||||||||||KOSTEN|Verpackung       |    |||||||||||||036
+303791|FUSS_WERTE|3||3097                                                                                                                                                                              ,6||||||||||NETTOAW|Nettoauftragswert||||||||||||||036
+303791|FUSS_WERTE|4|19|588                                                                                                                                                                             ,54||||||||||MWST|Mehrwertsteuer|%|||||||||||||036
+303791|FUSS_WERTE|5||3686                                                                                                                                                                              ,14||||||||||AUFTRW|Gutschriftsbetrag||||||||||||||036
+303791|FUSS_LIEFB|||||||||||||ab Werk                                                                                                                                                                  ,ausschl. Verpackung                                |Lieferbedingung:||||||||||||||036
+303791|FUSS_VART|1||||||||||||Spedition HUGGER GmbH                                                 |Versandart:||||||||||||||036
+303791|FUSS_VART|2||||||||||||In Rohr�cker 5                                                                                                                                                           ,78554 Aldingen                                        |Versandart:||||||||||||||036
+303791|FUSS_VART|3||||||||||||Ansprechpartner: Herr Fabian K�stle                                   |Versandart:||||||||||||||036
+303791|FUSS_VART|4||||||||||||Tel: 07424/9792-41                                                    |Versandart:||||||||||||||036
+303791|FUSS_VART|5||||||||||||Fax: 07424/9792-72                                                    |Versandart:||||||||||||||036
+303791|FUSS_VART|6||||||||||||E-mail: orderline@hugger-spedition.de                                 |Versandart:||||||||||||||036

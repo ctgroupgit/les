@@ -23,6 +23,9 @@ do
     (c) AUFTRAGSBESTESTIGUNG 18065604
     (d) BESTELLUNG 108168
     (e) AUFTRAGSBESTESTIGUNG 190289
+    (f) BESTELLUNG 108177
+    (g) GUTSCHRIFT
+    (h) CREDIT NOTE
     (Q) Quit
     ------------------------------
 EOF
@@ -42,6 +45,9 @@ EOF
     "c")  echo "/cmd $(PWD)/debug/auftra18065604.csv" | nc 127.0.0.1 8010 ;;
     "d")  echo "/cmd $(PWD)/debug/data_108168.csv" | nc 127.0.0.1 8010 ;;
     "e")  echo "/cmd $(PWD)/debug/nail.csv" | nc 127.0.0.1 8010 ;;
+    "f")  echo "/cmd $(PWD)/debug/best108177.txt.csv" | nc 127.0.0.1 8010 ;;
+    "g")  echo "/cmd $(PWD)/debug/creditnoteDE.csv" | nc 127.0.0.1 8010 ;;
+    "h")  echo "/cmd $(PWD)/debug/creditnoteEN.csv" | nc 127.0.0.1 8010 ;;
     "q")  exit                      ;;
     "Q")  exit                      ;;
      * )  echo "invalid option"     ;;

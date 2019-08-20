@@ -107,17 +107,17 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
     tempParse.forEach((row) => {
       switch (row[1]) {
         case 'KOPIEN': {
-          nome += row[14].replace(/\s/g, '').toLocaleUpperCase();
+            nome += row[14].replace(/\s/g, '_');
           break;
         }
         case 'KOPF': {
-          nome += '_' + row[18] + row[16];
+            nome += '_' + row[18].replace(/\s/g, '_') + '_' + row[16].replace(/\s/g, '_');
           break;
         }
       }
     });
 
-    this.electron.fs.copyFile(pathFile,path.join(this.downloadPath,nome), (error) => {
+      this.electron.fs.copyFile(pathFile, path.join(this.downloadPath, nome), (error) => {
       if (error) {
         this.electron.printError(error);
       } else {
