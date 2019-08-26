@@ -290,6 +290,7 @@ export class PdfGenerationService {
                         break;
                     }
                     case 'KOPF_POSUEB': {
+
                         this.COLUMN_HEADER.push(row[14]);
                         this.COLUMN_HEADER.push(row[15]);
                         this.COLUMN_HEADER.push(row[16]);
