@@ -26,6 +26,8 @@ do
     (f) BESTELLUNG 108177
     (g) GUTSCHRIFT
     (h) CREDIT NOTE
+    (i) INVOICE
+    (l) DELIVERY NOTE
     (Q) Quit
     ------------------------------
 EOF
@@ -48,6 +50,8 @@ EOF
     "f")  echo "/cmd $(PWD)/debug/best108177.txt.csv" | nc 127.0.0.1 8010 ;;
     "g")  echo "/cmd $(PWD)/debug/creditnoteDE.csv" | nc 127.0.0.1 8010 ;;
     "h")  echo "/cmd $(PWD)/debug/creditnoteEN.csv" | nc 127.0.0.1 8010 ;;
+    "i")  echo "/cmd $(PWD)/debug/invoice.txt" | nc 127.0.0.1 8010 ;;
+    "l")  echo "/cmd $(PWD)/debug/delivery.txt" | nc 127.0.0.1 8010 ;;
     "q")  exit                      ;;
     "Q")  exit                      ;;
      * )  echo "invalid option"     ;;

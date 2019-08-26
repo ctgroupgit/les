@@ -4,7 +4,7 @@ var electron_1 = require("electron");
 var path = require("path");
 var url = require("url");
 var os_1 = require("os");
-// import * as windowStateKeeper from 'electron-window-state';
+var systemPreferences = require('electron').systemPreferences;
 var autoUpdater = require('electron-updater').autoUpdater;
 var log = require('electron-log');
 var win, serve;

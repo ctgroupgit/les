@@ -1,10 +1,9 @@
 import {Component, OnInit, OnDestroy, OnChanges, SimpleChanges} from '@angular/core';
 import {ElectronService} from '../../providers/electron.service';
-
 import {LocalStorageService} from 'ngx-webstorage';
-import {MatTableDataSource} from "@angular/material";
-import * as path from "path";
-import {SockService} from "../../providers/sock.service";
+import {MatTableDataSource} from '@angular/material';
+import * as path from 'path';
+import {SockService} from '../../providers/sock.service';
 
 @Component({
   selector: 'app-preferences',
@@ -37,14 +36,12 @@ export class PreferencesComponent implements OnInit, OnDestroy, OnChanges {
 
   public downloadFile(filePath: string) {
     const destination = '';
-      let options = {
-        //Placeholder 1
-        title: "Save file ",
-        //Placeholder 4
-        buttonLabel: "Save"
+      const options = {
+        title: 'Save file ',
+        buttonLabel: 'Save'
       };
 
-    let fileDestination = this.electron.remote.dialog.showSaveDialog(this.electron.remote.getCurrentWindow(), options);
+    const fileDestination = this.electron.remote.dialog.showSaveDialog(this.electron.remote.getCurrentWindow(), options);
     if (fileDestination.length > 0) {
       this.electron.fs.writeFileSync(filePath['pathFile'], fileDestination);
     }
