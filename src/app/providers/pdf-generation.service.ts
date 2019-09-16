@@ -62,6 +62,7 @@ export class PdfGenerationService {
     intestazione = '';
     currentDataLength = 0;
     KOPFTEXT_PRINTED = false;
+    vertreter = '';
 
     static normalizeChar(str: string, nrChar: number) {
         // console.log(str);
@@ -125,6 +126,7 @@ export class PdfGenerationService {
         this.memText = '';
         this.intestazione = '';
         this.KOPFTEXT_PRINTED = false;
+        this.vertreter = '';
 
         this.doc.setFontSize(8);
         this.doc.setFont('courier');
@@ -169,7 +171,12 @@ export class PdfGenerationService {
                         if (!this.isStart) {
                             this.newDocument();
                         }
-                        this.tipoDocumento = row[14].toLocaleUpperCase();
+
+                        if (row[15].length > 0) {
+                            this.tipoDocumento = row[15].toLocaleUpperCase();
+                        } else {
+                            this.tipoDocumento = row[14].toLocaleUpperCase();
+                        }
 
                         this.tempDatoCheNonSoPercheStaQui = row[26]
                             .replace(/;/g, ',')
@@ -204,6 +211,7 @@ export class PdfGenerationService {
                     case 'KOPF': {
                         this.datiCliente = row[21] + '\n' + row[22] + '\n' + row[23] + '\n' + row[24] + '\n' + row[25];
                         if (this.tipoDocumento === 'LIEFERSCHEIN' ||
+                            this.tipoDocumento === 'LIEFERSCHEIN KOPIE' ||
                             this.tipoDocumento === 'DELIVERY NOTE' ||
                             this.tipoDocumento === 'AUFTRAGSBESTÄTIGUNG' ||
                             this.tipoDocumento === 'ORDER CONFIRMATION' ||
@@ -214,6 +222,7 @@ export class PdfGenerationService {
                             this.temp_nr_doc = row[18];
                             this.dataDocumento = row[14] + '\n' + row[12];
                             this.auftragsNr = row[15] + '\n' + row[16];
+                            this.vertreter = row[15] + '\n' + row[16];
                         } else {
                             this.numeroDocumento = row[15] + '\n' + row[16];
                             this.temp_nr_doc = row[16];
@@ -269,23 +278,76 @@ export class PdfGenerationService {
                         break;
                     }
                     case 'KOPF_DATEN2': {
-                        if (this.tipoDocumento === 'RECHNUNG' || this.tipoDocumento === 'GUTSCHRIFT' || this.tipoDocumento === 'CREDIT NOTE') {
-                            if (this.tipoDocumento === 'RECHNUNG') {
-                                this.angebotsNr = row[15] + '\n' + row[14];
-                                this.auftragsNr = row[15] + '\n' + row[14];
-
-                            } else {
+                        switch (this.tipoDocumento) {
+                            case 'GUTSCHRIFT':
+                            case 'CREDIT NOTE': {
                                 this.angebotsNr = row[15] + '\n' + row[16];
                                 this.auftragsNr = row[17] + '\n' + row[14];
-
+                                this.lieferNr = row[15] + '\n' + row[16];
+                                this.lieferDatum = row[18] + '\n' + row[12];
+                                break;
                             }
-
-                            this.temp_nr_doc = row[14];
-                            this.lieferNr = row[17] + '\n' + row[16];
-                            this.lieferDatum = row[18] + '\n' + row[12];
-                        } else if (this.tipoDocumento === 'AUFTRAGSBESTÄTIGUNG' || this.tipoDocumento === 'ORDER CONFIRMATION') {
-                            this.auftragsDatum = row[19] + '\n' + row[20];
+                            case 'INVOICE': {
+                                this.lieferNr = row[15] + '\n' + row[16];
+                                this.lieferDatum = row[18] + '\n' + row[12];
+                                break;
+                            }
+                            case 'PURCHASE ORDER CHANGE':
+                            case 'PURCHASE ORDER': {
+                                this.lieferNr = row[17] + '\n' + row[16];
+                                this.lieferDatum = row[18] + '\n' + row[12];
+                                this.numeroDocumento = row[15] + '\n' + row[16];
+                                break;
+                            }
+                            case 'AUFTRAGSBESTÄTIGUNG':
+                            case 'ORDER CONFIRMATION': {
+                                this.lieferNr = row[17] + '\n' + row[16];
+                                this.lieferDatum = row[18] + '\n' + row[12];
+                                this.auftragsDatum = row[19] + '\n' + row[20];
+                                break;
+                            }
+                            default: {
+                                this.angebotsNr = row[15] + '\n' + row[14];
+                                this.auftragsNr = row[16] + '\n' + row[17];
+                                this.lieferNr = row[17] + '\n' + row[16];
+                                this.lieferDatum = row[18] + '\n' + row[12];
+                                break;
+                            }
                         }
+                        this.temp_nr_doc = row[14];
+
+                        // if (this.tipoDocumento === 'RECHNUNG' ||
+                        //     this.tipoDocumento === 'GUTSCHRIFT' ||
+                        //     this.tipoDocumento === 'CREDIT NOTE' ||
+                        //     this.tipoDocumento === 'INVOICE' ||
+                        //     this.tipoDocumento === 'PURCHASE ORDER CHANGE' ||
+                        //     this.tipoDocumento === 'PURCHASE ORDER'
+                        // ) {
+                        //     if (this.tipoDocumento !== 'INVOICE') {
+                        //         if (this.tipoDocumento === 'GUTSCHRIFT' ||
+                        //             this.tipoDocumento === 'CREDIT NOTE' ) {
+                        //             this.angebotsNr = row[15] + '\n' + row[16];
+                        //             this.auftragsNr = row[17] + '\n' + row[14];
+                        //         } else {
+                        //             this.angebotsNr = row[15] + '\n' + row[14];
+                        //             this.auftragsNr = row[15] + '\n' + row[14];
+                        //         }
+                        //         this.lieferNr = row[17] + '\n' + row[16];
+                        //         this.lieferDatum = row[18] + '\n' + row[12];
+                        //     } else {
+                        //         this.lieferNr = row[15] + '\n' + row[16];
+                        //     }
+                        //
+                        //
+                        //     this.temp_nr_doc = row[14];
+                        //     if (this.tipoDocumento === 'PURCHASE ORDER CHANGE' ||
+                        //         this.tipoDocumento === 'PURCHASE ORDER') {
+                        //         this.numeroDocumento = row[15] + '\n' + row[16];
+                        //     }
+                        //
+                        // } else if (this.tipoDocumento === 'AUFTRAGSBESTÄTIGUNG' || this.tipoDocumento === 'ORDER CONFIRMATION') {
+                        //     this.auftragsDatum = row[19] + '\n' + row[20];
+                        // }
 
                         break;
                     }
@@ -301,6 +363,7 @@ export class PdfGenerationService {
                         this.COLUMN_HEADER.push(row[21]);
                         this.COLUMN_HEADER.push(row[22]);
                         this.ultimeRighe.push(row[23]);
+
                         if (row[13].length > 0) {
                             this.auftragsDatum = row[20] + '\n' + row[13];
                         }
@@ -377,26 +440,60 @@ export class PdfGenerationService {
                         }
                         this.doc.text(row[16], this.offsetX + 25, this.BODY_OFFSET);
                         this.doc.setFontStyle('normal');
-                        if (row[3].indexOf(',', 0) > 0) {
-                            this.doc.text(row[3].substring(0, row[3].indexOf(',', 0)), this.offsetX + 115, this.BODY_OFFSET);
+                        console.log('aaaaaa', row[3].substring(0, row[3].indexOf(',', 0)));
+                        const tempQta = row[3].split('');
+                        let qta = '';
+                        tempQta.forEach((char, index) => {
+                            if (char === ',') {
+                                if ((Number(tempQta[index + 1]) > 0) && index <= tempQta.length) {
+                                    qta += char;
+                                }
+                            } else {
+                                if (index <= tempQta.indexOf(',')) {
+                                    qta += char;
+                                } else {
+                                    if ((Number(tempQta[index]) > 0)) {
+                                        qta += char;
+                                    }
+                                }
+                            }
+                        });
+
+                        this.doc.text(qta, this.offsetX + 115, this.BODY_OFFSET);
+
+                        if (this.tipoDocumento === 'LIEFERSCHEIN KOPIE') {
+                            this.doc.text(row[4].substring(0, row[4].indexOf(',', 0)), this.offsetX + 130, this.BODY_OFFSET);
                         } else {
-                            this.doc.text(row[3], this.offsetX + 115, this.BODY_OFFSET);
+                            this.doc.text(row[19], this.offsetX + 130, this.BODY_OFFSET);
                         }
-                        this.doc.text(row[19], this.offsetX + 130, this.BODY_OFFSET);
-                        if (row[4] !== '') {
-                            this.doc.text(this.currencyFormatDE(row[4]), this.offsetX + 145, this.BODY_OFFSET);
+
+                        if (this.tipoDocumento !== 'LIEFERSCHEIN KOPIE') {
+                            if (row[4] !== '') {
+                                this.doc.text(this.currencyFormatDE(row[4]), this.offsetX + 145, this.BODY_OFFSET);
+                            }
+                        } else {
+                            if (row[5] !== '') {
+                                this.doc.text(this.currencyFormatDE(row[5]), this.offsetX + 145, this.BODY_OFFSET);
+                            }
                         }
+
                         if (this.tipoDocumento === 'ANFRAGE') {
                             if (row[28].length > 0) {
                                 this.doc.text(row[28], this.offsetX + 145, this.BODY_OFFSET);
                             }
                         }
-                        if (row[9].indexOf(',', 0) > 0) {
-                            this.doc.text(row[9].substring(0, row[9].indexOf(',', 0)), this.offsetX + 165, this.BODY_OFFSET);
+
+                        if (this.tipoDocumento !== 'LIEFERSCHEIN KOPIE') {
+                            if (row[9].indexOf(',', 0) > 0) {
+                                this.doc.text(row[9].substring(0, row[9].indexOf(',', 0)), this.offsetX + 165, this.BODY_OFFSET);
+                            } else {
+                                this.doc.text(row[9], this.offsetX + 165, this.BODY_OFFSET);
+                            }
                         } else {
-                            this.doc.text(row[9], this.offsetX + 165, this.BODY_OFFSET);
+                            this.doc.text(row[19], this.offsetX + 165, this.BODY_OFFSET);
                         }
-                        if (this.tipoDocumento !== 'DELIVERY NOTE') {
+
+                        if (this.tipoDocumento !== 'DELIVERY NOTE' && this.tipoDocumento !== 'LIEFERSCHEIN KOPIE') {
                             if (row[5] !== '' && Number(row[5]) !== 0) {
                                 this.doc.text(this.currencyFormatDE(row[5]), this.offsetX + 200, this.BODY_OFFSET, {align: 'right'});
                             } else {
@@ -504,13 +601,13 @@ export class PdfGenerationService {
                     }
                     case 'POS_ZUSCH': {
                         this.doc.setFontStyle('normal');
-                        if (row[3] !== '') {
+                        if (row[3] !== '' && row[14] !== '') {
                             this.doc.text(row[14], this.offsetX + 130, startLeRigheInMezzo);
-                            this.doc.text(this.currencyFormatDE(row[3]), this.offsetX + 145, startLeRigheInMezzo);
+                            // this.doc.text(this.currencyFormatDE(row[3]), this.offsetX + 145, startLeRigheInMezzo, {align: 'right'});
                         }
-                        if (row[4] !== '') {
+                        if (row[4] !== '' && row[15] !== '') {
                             this.doc.text(row[15], this.offsetX + 165, startLeRigheInMezzo);
-                            this.doc.text(this.currencyFormatDE(row[4]), this.offsetX + 180, startLeRigheInMezzo);
+                            this.doc.text(this.currencyFormatDE(row[4]), this.offsetX + 200, startLeRigheInMezzo, {align: 'right'});
                         }
                         startLeRigheInMezzo += this.INTERLINEA;
                         break;
@@ -766,14 +863,17 @@ export class PdfGenerationService {
         this.memText = '';
         this.intestazione = '';
         this.KOPFTEXT_PRINTED = false;
+        this.vertreter = '';
     }
 
     addTableHeader() {
+        const kk = (this.tipoDocumento === 'LIEFERSCHEIN KOPIE');
         this.doc.setFontStyle('bold');
         this.doc.setFontSize(7);
         if (this.COLUMN_HEADER.length > 0) {
             this.doc.line(10, this.BODY_OFFSET + 2, 200, this.BODY_OFFSET + 2);
             this.doc.line(10, this.BODY_OFFSET - 4, 200, this.BODY_OFFSET - 4);
+
             if (this.COLUMN_HEADER[0] !== 'undefined' && this.COLUMN_HEADER[0] !== null) {
                 this.doc.text(this.trimText(this.COLUMN_HEADER[0], 5), this.offsetX + 10, this.BODY_OFFSET);
             }
@@ -793,11 +893,13 @@ export class PdfGenerationService {
             if (this.COLUMN_HEADER[5] !== 'undefined' && this.COLUMN_HEADER[0] !== null) {
                 this.doc.text(this.trimText(this.COLUMN_HEADER[5], 5), this.offsetX + 165, this.BODY_OFFSET);
             }
-            if (this.COLUMN_HEADER[6] !== 'undefined' && this.COLUMN_HEADER[0] !== null) {
-                this.doc.text(this.trimText(this.COLUMN_HEADER[6], 5), this.offsetX + 180, this.BODY_OFFSET);
-            }
-            if (this.COLUMN_HEADER[7] !== 'undefined' && this.COLUMN_HEADER[0] !== null) {
-                this.doc.text(this.trimText(this.COLUMN_HEADER[7], 5), this.offsetX + 192, this.BODY_OFFSET);
+            if (!kk) {
+                if (this.COLUMN_HEADER[6] !== 'undefined' && this.COLUMN_HEADER[0] !== null) {
+                    this.doc.text(this.trimText(this.COLUMN_HEADER[6], 5), this.offsetX + 180, this.BODY_OFFSET);
+                }
+                if (this.COLUMN_HEADER[7] !== 'undefined' && this.COLUMN_HEADER[0] !== null) {
+                    this.doc.text(this.trimText(this.COLUMN_HEADER[7], 5), this.offsetX + 192, this.BODY_OFFSET);
+                }
             }
         }
         this.doc.setFontStyle('normal');
@@ -850,15 +952,15 @@ export class PdfGenerationService {
             this.headerPrinted = true;
             const image = 'data:image/png;base64,' + this.logozz[0]['logozz'];
             this.doc.addImage(image, 'JPEG', 100, 1, 100, 54);
-            this.doc.setLineDash([3, 3, 3, 3], 3);
-            this.doc.setLineWidth(0.1);
-            this.doc.line(10, 35, 10, 80);
-            this.doc.setLineDash(0);
+            // this.doc.setLineDash([3, 3, 3, 3], 3);
+            // this.doc.setLineWidth(0.1);
+            // this.doc.line(10, 35, 10, 80);
+            // this.doc.setLineDash(0);
             this.doc.setLineWidth(0.2);
-            if (this.pagina === 1) {
+            // if (this.pagina === 1) {
                 this.doc.setFontSize(7);
-                this.doc.text('ZZ Drive Tech GmbH, An der Tagweide 12, 76139 Karlsruhe', this.offsetX + 10 + leftMargin, topMargin + 35);
-            }
+            this.doc.text('ZZ-DriveTech GmbH, An der Tagweide 12, 76139 Karlsruhe', this.offsetX + 10 + leftMargin, topMargin + 35);
+            // }
             this.doc.setFontStyle('normal');
             this.doc.setFontSize(10);
             if (this.tipoDocumento !== 'BESTELLUNG' &&
@@ -885,19 +987,29 @@ export class PdfGenerationService {
             this.doc.setFontStyle('normal');
             this.doc.text(this.kundenNr.substring(this.kundenNr.indexOf('\n'), this.kundenNr.length), this.offsetX + 170, 70);
             this.doc.setFontStyle('bold');
-            this.doc.text(this.numeroDocumento.substring(0, this.numeroDocumento.indexOf('\n')), this.offsetX + 170, 80);
-            // this.doc.setFontStyle('normal');
+            if (this.tipoDocumento === 'GUTSCHRIFT') {
+                this.doc.text(this.vertreter.substring(0, this.lieferNr.indexOf('\n')), this.offsetX + 170, 80);
+            } else {
+                this.doc.text(this.numeroDocumento.substring(0, this.numeroDocumento.indexOf('\n')), this.offsetX + 170, 80);
+            }
+
             if (this.tipoDocumento === 'BESTELLUNG' || this.tipoDocumento === 'ANFRAGE') {
                 this.doc.setFontSize(12);
             } else {
                 this.doc.setFontStyle('normal');
             }
-            this.doc.text(this.numeroDocumento.substring(this.numeroDocumento.indexOf('\n'),
-                this.numeroDocumento.length), this.offsetX + 170, 80);
+            if (this.tipoDocumento === 'GUTSCHRIFT') {
+                this.doc.text(this.vertreter.substring(this.vertreter.indexOf('\n'),
+                    this.vertreter.length), this.offsetX + 170, 80);
+            } else {
+                this.doc.text(this.numeroDocumento.substring(this.numeroDocumento.indexOf('\n'),
+                    this.numeroDocumento.length), this.offsetX + 170, 80);
+            }
             this.doc.setFontStyle('normal');
             this.doc.setFontSize(10);
 
             if (this.tipoDocumento === 'LIEFERSCHEIN' ||
+                this.tipoDocumento === 'LIEFERSCHEIN KOPIE' ||
                 this.tipoDocumento === 'DELIVERY NOTE' ||
                 this.tipoDocumento === 'RECHNUNG' ||
                 this.tipoDocumento === 'AUFTRAGSBESTÄTIGUNG' ||
@@ -952,6 +1064,7 @@ export class PdfGenerationService {
                 // console.log(this.deUmlaut(this.tipoDocumento), this.tipoDocumento);
 
                 if (this.tipoDocumento !== 'LIEFERSCHEIN' &&
+                    this.tipoDocumento !== 'LIEFERSCHEIN KOPIE' &&
                     this.tipoDocumento !== 'DELIVERY NOTE' &&
                     this.tipoDocumento !== 'AUFTRAGSBESTÄTIGUNG' &&
                     this.tipoDocumento !== 'RECHNUNG' &&
