@@ -1,0 +1,46 @@
+00001;CONTROL;3;4;5;6;7;8;9;10;11;12;01.01.01;02.02.02;T15;T16;T17;T18;T19;T20;T21;T22;T23;T24;T25;T26;T27;T28;T29;044
+-149480;KOPIEN;001;000;;;;;;;;0;;;BESTELLUNG;;;;;;;;;;;0;petraversen@hersta.de;;;044
+-149480;KOPF_USTID;;;;;;;;;;;;;Ihre Ust-Identnr;                ;Unsere Ust-Identnr;DE815609203     ;;;;;;;;;;;;044
+-149480;KOPF;;;;;;;;;;;;17.07.19;Datum;Bestellung;108045          ;;;;;Hermann Stahlschmidt;Stahlgesellschaft mbH;Formerweg 1+2;47877 Willich;;;;;044
+-149480;KOPF_DATEN;;;;;;;;;;;;        ;Angebots-Nr;                  ;KundenNr/Ihre Zeichen ;32018               ;                  ;;Lieferant;62105   ;Unser Zeichen / Telefon;Klaus Korte                     ;0721 6205-51        ;D;batzlerm;;;044
+-149480;KONTAKT;;;;;;;;;;;;;Fax:0721 6205-10;klaus.korte@zzdrivetech.com;0721/6205-10;0721/6205-72;michael.batzler@zzdrivetech.com; Michael Batzler;;;; ;02154/4999-50;02154/4999-0;;;;044
+-149480;KOPF_TEXTF;1;;;;;;;;;;;;tIn allen Schriftst�cken bitte unsere Bestell-Daten                    ;;;;;;;;;;;;;;;044
+-149480;KOPF_TEXTF;2;;;;;;;;;;;;tangeben                                                                                                                                                                                                               ,Rechnung + Lieferschein zweifach.                            ;;;;;;;;;;;;;;;044
+-149480;KOPF_TEXTF;3;;;;;;;;;;;;tZu unseren Einkaufsbedingungen bestellen wir:                         ;;;;;;;;;;;;;;;044
+-149480;KOPF_POSUEB;;;;;;;;;;;;;Pos  ;Artikel-Nr/Bezeichnung;Menge;ME;Einzelpreis;PE;Gesamt;EUR ;;;;;;;;044
+-149480;POS;1;2                                                                                                                                                                                                                                        ,00;40959                                                                                                                      ,00;819                                                  ,18;843,18;399,60;205,00;2,00;2,00;;;12.08.19;Ihre Artikel-Nr:;                        ;140-1.3505-180;100Cr6              ;�180                ;M ;KG;Termin:        ;Kommission:    ;                    ;;;;;12.08.19;044
+-149480;POS2;1;;;;;;;;;;;;Kostenstelle:;;Kontierungsgruppe:;;Werkstoff:;100Cr6          ;Zeichn.-Nr.:;;MOD/DIN:;;Abmessung:;;�I:;;;044
+-149480;POS 3;1;;;;;;;;;;;;;;;;;;;;;;;;;;;044
+-149480;POS_TEXTA;1;1;;;;;;;;;;;tmit Werkszeugnis DIN EN10204/2.2                                      ;;;;;;;;;;;;;;;044
+-149480;POS_ZUSCH;1;        9;      9                                                                                                                                                                                                                  ,00;;;;;;;;;;S�gen           ;EUR       ;;;;;;;;;;;;;;044
+-149480;POS_ZUSCH;1;       15;     15                                                                                                                                                                                                                  ,00;;;;;;;;;;WAZ             ;EUR       ;;;;;;;;;;;;;;044
+-149480;POS;2;1                                                                                                                                                                                                                                        ,00;45633                                                                                                                      ,00;456                                                  ,33;480,83;222,60;205,00;2,00;2,00;;;12.08.19;Ihre Artikel-Nr:;                        ;140-1.3505-190;100Cr6              ;�190                ;M ;KG;Termin:        ;Kommission:    ;                    ;;;;;12.08.19;044
+-149480;POS2;2;;;;;;;;;;;;Kostenstelle:;;Kontierungsgruppe:;;Werkstoff:;100Cr6          ;Zeichn.-Nr.:;;MOD/DIN:;;Abmessung:;;�I:;;;044
+-149480;POS 3;2;;;;;;;;;;;;;;;;;;;;;;;;;;;044
+-149480;POS_ZUSCH;2;      9                                                                                                                                                                                                                            ,5;      9                                                                                                                     ,50;;;;;;;;;;S�gen           ;EUR       ;;;;;;;;;;;;;;044
+-149480;POS_ZUSCH;2;       15;     15                                                                                                                                                                                                                  ,00;;;;;;;;;;WAZ             ;EUR       ;;;;;;;;;;;;;;044
+-149480;POS;3;1                                                                                                                                                                                                                                        ,00;50840                                                                                                                      ,00;508                                                  ,40;533,40;248,00;205,00;2,00;2,00;;;12.08.19;Ihre Artikel-Nr:;                        ;140-1.3505-200;100Cr6              ;�200                ;M ;KG;Termin:        ;Kommission:    ;                    ;;;;;12.08.19;044
+-149480;POS2;3;;;;;;;;;;;;Kostenstelle:;;Kontierungsgruppe:;;Werkstoff:;100Cr6          ;Zeichn.-Nr.:;;MOD/DIN:;;Abmessung:;;�I:;;;044
+-149480;POS 3;3;;;;;;;;;;;;;;;;;;;;;;;;;;;044
+-149480;POS_TEXTA;1;3;;;;;;;;;;;tMit Werkszeugnis DIN EN 10204/2.2                                     ;;;;;;;;;;;;;;;044
+-149480;POS_ZUSCH;3;       10;     10                                                                                                                                                                                                                  ,00;;;;;;;;;;S�gen           ;EUR       ;;;;;;;;;;;;;;044
+-149480;POS_ZUSCH;3;       15;     15                                                                                                                                                                                                                  ,00;;;;;;;;;;WAZ             ;EUR       ;;;;;;;;;;;;;;044
+-149480;FUSS_WERTE;1;;1857                                                                                                                                                                                                                             ,41;;;;;;;;;;AUFTRW;Bestellwert;;;;;;;;;;;;;;044
+-149480;FUSS_LIEFD;;;;;;;;;;;;12.08.19;;Liefertermin:      ;;;;;;;;;;;;;;044
+-149480;FUSS_PRE;1;;;;;;;;;;;;zzgl. 19 % MWST                                                       ;Preisstellung:     ;;;;;;;;;;;;;;044
+-149480;FUSS_ZAHLB;1;;;;;;;;;;;;10 Tage 2                                                                                                                                                                                                              ,00 % Skonto                                                                              ;Zahlungsbedingung: ;;;;;;;;;;;;;;044
+-149480;FUSS_ZAHLB;3;;;;;;;;;;;;45 Tage netto                                                                                      ;Zahlungsbedingung: ;;;;;;;;;;;;;;044
+-149480;FUSS_TEXTF;1;;;;;;;;;;;;t;;;;;;;;;;;;;;;044
+-149480;FUSS_TEXTF;2;;;;;;;;;;;;tZZ Drive Tech GmbH                                                    ;;;;;;;;;;;;;;;044
+-149480;FUSS_TEXTF;3;;;;;;;;;;;;t;;;;;;;;;;;;;;;044
+-149480;FUSS_TEXTF;4;;;;;;;;;;;;ti.A.         i.A.             i.A.                                    ;;;;;;;;;;;;;;;044
+-149480;FUSS_TEXTF;5;;;;;;;;;;;;tKlaus Korte  Nadine Cordeiro  Michael Batzler                         ;;;;;;;;;;;;;;;044
+-149480;FUSS_TEXTF;6;;;;;;;;;;;;t;;;;;;;;;;;;;;;044
+-149480;FUSS_TEXTF;7;;;;;;;;;;;;t;;;;;;;;;;;;;;;044
+-149480;FUSS_TEXTF;8;;;;;;;;;;;;t*****************************************************                 ;;;;;;;;;;;;;;;044
+-149480;FUSS_TEXTF;9;;;;;;;;;;;;tWir bitten um eine Auftragsbest�tigung innerhalb                      ;;;;;;;;;;;;;;;044
+-149480;FUSS_TEXTF;10;;;;;;;;;;;;tvon 3 Arbeitstagen.                                                   ;;;;;;;;;;;;;;;044
+-149480;FUSS_TEXTF;11;;;;;;;;;;;;tBei Auftragsbest�tigungen und Lieferscheinen immer                    ;;;;;;;;;;;;;;;044
+-149480;FUSS_TEXTF;12;;;;;;;;;;;;tunsere Artikelnummern angeben.                                        ;;;;;;;;;;;;;;;044
+-149480;FUSS_TEXTF;13;;;;;;;;;;;;tBitte die Ware zum angegebenen Liefertermin anliefern                 ;;;;;;;;;;;;;;;044
+-149480;FUSS_TEXTF;14;;;;;;;;;;;;t*****************************************************                 ;;;;;;;;;;;;;;;044

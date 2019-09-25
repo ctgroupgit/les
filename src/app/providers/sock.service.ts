@@ -37,13 +37,13 @@ export class SockService {
         command  = 'echo $USER';
         break;
       }
-      case 'win32' :{
+        case 'win32' : {
         command  = 'cmd.exe /c "echo %username%" ';
         break;
       }
     }
     const username = this._electron.childProcess.execSync(command);
-    console.log(username + '_' + filename);
+      // console.log(username + '_' + filename);
   }
 
 }

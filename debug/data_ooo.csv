@@ -1,0 +1,41 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|026
+-149617|KOPIEN|001|000||||||||0|||BESTELLUNG|||||||||||0|stahlhandel@dewald-stahl.de                                                                                                                                                                ,uwe.bechtle@dewald-stahl.d|||026
+-149617|KOPF_USTID|||||||||||||Ihre Ust-Identnr|                |Unsere Ust-Identnr|DE815609203     ||||||||||||026
+-149617|KOPF||||||||||||07.08.19|Datum|Bestellung|108170          |||||Hans Dewald GmbH|Gottlieb-Daimler-Stra�e 11|74385 Pleidelsheim||||||026
+-149617|KOPF_DATEN||||||||||||        |Angebots-Nr|Preisliste        |KundenNr/Ihre Zeichen |33222               |                  ||Lieferant|60404   |Unser Zeichen / Telefon|Michael Batzler                 |0721/6205-72        |D|korte|||026
+-149617|KONTAKT|||||||||||||0721/6205-10|michael.batzler@zzdrivetech.com|Fax:0721 6205-10|0721 6205-51|klaus.korte@zzdrivetech.com|Klaus Korte|||| |07144/281599|07144/2693-0||||026
+-149617|KOPF_TEXTF|1||||||||||||tIn allen Schriftst�cken bitte unsere Bestell-Daten                    |||||||||||||||026
+-149617|KOPF_TEXTF|2||||||||||||tangeben                                                                                                                                                                                                            ,Rechnung + Lieferschein zweifach.                            |||||||||||||||026
+-149617|KOPF_TEXTF|3||||||||||||tZu unseren Einkaufsbedingungen bestellen wir:                         |||||||||||||||026
+-149617|KOPF_POSUEB|||||||||||||Pos  |Artikel-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt|EUR ||||||||026
+-149617|POS|1|6                                                                                                                                                                                                                                     ,00|4194                                                                                                                       ,96|251,70|251,70|299,64|84,00|2,00|2,00|||16.09.19|Ihre Artikel-Nr:|                        |140-1.7131-090|16MnCr5             |�090                |M |KG|Termin:        |Kommission:    |                    |||||38/19|026
+-149617|POS2|1||||||||||||Kostenstelle:||Kontierungsgruppe:||Werkstoff:|16MnCr5         |Zeichn.-Nr.:||MOD/DIN:||Abmessung:||�I:|||026
+-149617|POS 3|1|||||||||||||||||||||||||||026
+-149617|POS_TEXTA|1|1|||||||||||tMit Werkszeugnis EN 10204/2.2                                         |||||||||||||||026
+-149617|POS|2|3                                                                                                                                                                                                                                     ,00|8752                                                                                                                       ,80|262,58|262,58|312,60|84,00|2,00|2,00|||12.08.19|Ihre Artikel-Nr:|                        |140-1.7131-130|16MnCr5             |�130                |M |KG|Termin:        |Kommission:    |                    |||||33/19|026
+-149617|POS2|2||||||||||||Kostenstelle:||Kontierungsgruppe:||Werkstoff:|16MnCr5         |Zeichn.-Nr.:||MOD/DIN:||Abmessung:||�I:|||026
+-149617|POS 3|2|||||||||||||||||||||||||||026
+-149617|POS_TEXTA|1|2|||||||||||tMit Werkszeugnis EN 10204/2.2                                         |||||||||||||||026
+-149617|POS|3|3                                                                                                                                                                                                                                     ,00|9441                                                                                                                       ,60|283,25|283,25|337,20|84,00|2,00|2,00|||12.08.19|Ihre Artikel-Nr:|                        |140-1.7131-135|16MnCr5             |�135                |M |KG|Termin:        |Kommission:    |                    |||||33/19|026
+-149617|POS2|3||||||||||||Kostenstelle:||Kontierungsgruppe:||Werkstoff:|16MnCr5         |Zeichn.-Nr.:||MOD/DIN:||Abmessung:||�I:|||026
+-149617|POS 3|3|||||||||||||||||||||||||||026
+-149617|POS_TEXTA|1|3|||||||||||tMit Werkszeugnis EN 10204/2.2                                         |||||||||||||||026
+-149617|FUSS_WERTE|1||797                                                                                                                                                                                                                           ,53||||||||||AUFTRW|Bestellwert||||||||||||||026
+-149617|FUSS_LIEFD||||||||||||12.08.19||Liefertermin:      ||||||||||||||026
+-149617|FUSS_PRE|1||||||||||||zzgl. 19 % MWST                                                       |Preisstellung:     ||||||||||||||026
+-149617|FUSS_ZAHLB|1||||||||||||14 Tage 2                                                                                                                                                                                                           ,00 % Skonto                                                                              |Zahlungsbedingung: ||||||||||||||026
+-149617|FUSS_ZAHLB|3||||||||||||45 Tage netto                                                                                      |Zahlungsbedingung: ||||||||||||||026
+-149617|FUSS_TEXTF|1||||||||||||t|||||||||||||||026
+-149617|FUSS_TEXTF|2||||||||||||tZZ Drive Tech GmbH                                                    |||||||||||||||026
+-149617|FUSS_TEXTF|3||||||||||||t|||||||||||||||026
+-149617|FUSS_TEXTF|4||||||||||||ti.A.         i.A.             i.A.                                    |||||||||||||||026
+-149617|FUSS_TEXTF|5||||||||||||tKlaus Korte  Nadine Cordeiro  Michael Batzler                         |||||||||||||||026
+-149617|FUSS_TEXTF|6||||||||||||t|||||||||||||||026
+-149617|FUSS_TEXTF|7||||||||||||t|||||||||||||||026
+-149617|FUSS_TEXTF|8||||||||||||t*****************************************************                 |||||||||||||||026
+-149617|FUSS_TEXTF|9||||||||||||tWir bitten um eine Auftragsbest�tigung innerhalb                      |||||||||||||||026
+-149617|FUSS_TEXTF|10||||||||||||tvon 3 Arbeitstagen.                                                   |||||||||||||||026
+-149617|FUSS_TEXTF|11||||||||||||tBei Auftragsbest�tigungen und Lieferscheinen immer                    |||||||||||||||026
+-149617|FUSS_TEXTF|12||||||||||||tunsere Artikelnummern angeben.                                        |||||||||||||||026
+-149617|FUSS_TEXTF|13||||||||||||tBitte die Ware zum angegebenen Liefertermin anliefern                 |||||||||||||||026
+-149617|FUSS_TEXTF|14||||||||||||t*****************************************************                 |||||||||||||||026

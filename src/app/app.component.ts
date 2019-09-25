@@ -2,6 +2,8 @@ import {Component} from '@angular/core';
 import {ElectronService} from './providers/electron.service';
 import {TranslateService} from '@ngx-translate/core';
 import {AppConfig} from '../environments/environment';
+import {GlobalService} from './providers/global.service';
+import {LoggerService} from './providers/logger.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +14,8 @@ export class AppComponent {
   appVersion: string;
 
   constructor(public electronService: ElectronService,
-              private translate: TranslateService) {
+              private translate: TranslateService,
+              private log: LoggerService) {
 
     this.appVersion = this.electronService.remote.app.getVersion();
     translate.setDefaultLang('en');

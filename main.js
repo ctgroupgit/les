@@ -37,9 +37,9 @@ function createWindow() {
             slashes: true
         }));
     }
-    if (serve) {
-        win.webContents.openDevTools();
-    }
+    // if (serve) {
+    //     win.webContents.openDevTools();
+    // }
     win.on('close', function (e) {
         e.preventDefault();
         win.hide();

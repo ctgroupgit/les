@@ -32,6 +32,8 @@ import {
     MatToolbarModule
 } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {LoggerService} from './providers/logger.service';
+import {ConsoleLoggerService} from './providers/console-logger.service';
 
 
 // AoT requires an exported function for factories
@@ -44,7 +46,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         AppComponent,
         HomeComponent,
         PreferencesComponent,
-        WebviewDirective
+        WebviewDirective,
     ],
     imports: [
         BrowserModule,
@@ -77,7 +79,7 @@ export function HttpLoaderFactory(http: HttpClient) {
             }
         }),
     ],
-    providers: [ElectronService, SockService],
+    providers: [ElectronService, SockService, {provide: LoggerService, useClass: ConsoleLoggerService}],
     bootstrap: [AppComponent]
 })
 export class AppModule {
