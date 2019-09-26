@@ -1,33 +1,33 @@
 <div fxShow="true">
-  <mat-toolbar color="primary" class="mat-elevation-z3">
-    <mat-toolbar-row>
-      <div fxLayout fxLayoutGap="20px">
-        <span > Les < ver {{ appVersion }} ></span>
-      </div>
-      <div fxFlex fxLayout fxLayoutAlign="flex-end">
-        <ul fxLayout fxLayoutGap="20px">
-          <li fxHide.xs>
-            <button mat-button routerLink="/" routerLinkActive="active" label="HOME">HOME
-            </button>
-          </li>
-          <li fxHide.xs>
-            <button mat-button>REFRESH
-            </button>
-          </li>
-          <li fxHide.xs>
-            <button mat-button   routerLink="/preferences" routerLinkActive="active">CONFIG
-            </button>
-          </li>
+    <mat-toolbar color="primary" class="mat-elevation-z3">
+        <mat-toolbar-row>
+            <div fxLayout fxLayoutGap="20px">
+                <!--        <span > Les < ver {{ appVersion }} ></span>-->
+                <mat-slide-toggle color="accent" (toggleChange)="(gb.printTypeMultiple = !gb.printTypeMultiple)" [checked]="gb.printTypeMultiple">Print Multiple</mat-slide-toggle>
+            </div>
+            <div fxFlex fxLayout fxLayoutAlign="flex-end">
+                <ul fxLayout fxLayoutGap="20px">
+                    <li fxHide.xs>
+                        <button mat-button routerLink="/" routerLinkActive="active" label="HOME">HOME
+                        </button>
+                    </li>
+                    <li fxHide.xs>
+                        <button mat-button routerLink="/preferences" routerLinkActive="active">CONFIG
+                        </button>
+                    </li>
 
-          <li fxHide.xs>
-            <button (click)="devTools()" mat-button label="DEV">DEV
-            </button>
-          </li>
-        </ul>
-      </div>
-    </mat-toolbar-row>
-  </mat-toolbar>
+                    <li fxHide.xs>
+                        <button (click)="devTools()" mat-button label="DEV">DEV
+                        </button>
+                    </li>
+                    <li fxHide.xs>
+                        <a style="font-size: 14px">ver {{ appVersion }}</a>
+                    </li>
+                </ul>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
 </div>
 <div style="margin-top: 60px">
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 </div>

@@ -48,7 +48,7 @@ export class PreferencesComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   public uploadFile(filePath: string) {
-    this.sock.uploadFile('', '');
+      // this.sock.uploadFile('', '');
   }
 
   getCommandLine() {
@@ -56,7 +56,7 @@ export class PreferencesComponent implements OnInit, OnDestroy, OnChanges {
       case 'darwin' :
         return 'open ';
       case 'win32' :
-        return 'start ';
+          return 'explorer ';
       default :
         return 'xdg-open ';
     }

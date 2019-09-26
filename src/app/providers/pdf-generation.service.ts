@@ -13,6 +13,7 @@ import {LieferscheinService} from './lieferschein.service';
 import {ProformaRechnungService} from './proforma-rechnung.service';
 import {GutschriftService} from './gutschrift.service';
 import {AuftragsbestaetigungService} from './auftragsbestaetigung.service';
+import {BestellungService} from './bestellung.service';
 
 
 @Injectable({
@@ -33,6 +34,7 @@ export class PdfGenerationService {
     COLUMN_START = [];
     BODY_FINISH = false;
     TOT_PAGE = 0;
+    DOCUMENT_FINISH = false;
 
     constructor(private electron: ElectronService,
                 private ls: LocalStorageService,
@@ -42,7 +44,8 @@ export class PdfGenerationService {
                 private lieferschein: LieferscheinService,
                 private proformaRechnung: ProformaRechnungService,
                 private gutschrift: GutschriftService,
-                private auftragsbestaetigung: AuftragsbestaetigungService) {
+                private auftragsbestaetigung: AuftragsbestaetigungService,
+                private bestellung: BestellungService) {
     }
 
 
@@ -81,6 +84,19 @@ export class PdfGenerationService {
                 this.docClass = this.auftragsbestaetigung.generate(csvData, type);
                 break;
             }
+            case 'BESTELLUNG':
+            case 'BESTELLUNG-ÄNDERUNG': {
+                this.docClass = this.bestellung.generate(csvData, type);
+                break;
+            }
+            case 'ANFRAGE': {
+                this.docClass = this.bestellung.generate(csvData, type);
+                break;
+            }
+            default: {
+                this.electron.remote.dialog.showErrorBox('Print Error',
+                    'No template found for the document you are trying to print was found');
+            }
         }
 
         this.log.info(this.docClass);
@@ -98,6 +114,7 @@ export class PdfGenerationService {
 
         this.TOT_PAGE = Math.ceil(totLine / this.DEFAULT_MAX_BODY_LINE);
 
+        this.DOCUMENT_FINISH = false;
         this.HEADER_IS_PRINTED = false;
         this.PAGE_NUMBER = 1;
         this.CURRENT_BODY_LINE = 0;
@@ -115,6 +132,7 @@ export class PdfGenerationService {
     }
 
     drawHeading() {
+        this.paper.setFontSize(10);
         let currentHeadingLine = 45;
         this.docClass.heading.forEach((row) => {
             this.paper.text(row, this.LEFT_MARGIN + 18, this.TOP_MARGIN + currentHeadingLine);
@@ -171,6 +189,7 @@ export class PdfGenerationService {
         this.paper.text(this.docClass.dh7.description, this.LEFT_MARGIN + 100, this.TOP_MARGIN + 80 + this.SLUG);
 
         if (!this.HEADER_IS_PRINTED) {
+            this.docClass.docHeadingDetail.yourContact.push(this.docClass.docHeadingDetail.youContactLastLine);
             let maxArray = [];
             let minArray = [];
             let firstX: number;
@@ -179,11 +198,11 @@ export class PdfGenerationService {
                 maxArray = this.docClass.docHeadingDetail.yourContact;
                 minArray = this.docClass.docHeadingDetail.ourContact;
                 firstX = 10;
-                secondX = 100;
+                secondX = 130;
             } else {
                 maxArray = this.docClass.docHeadingDetail.ourContact;
                 minArray = this.docClass.docHeadingDetail.yourContact;
-                firstX = 100;
+                firstX = 130;
                 secondX = 10;
             }
             for (let idx = 0; idx !== maxArray.length; idx++) {
@@ -211,7 +230,9 @@ export class PdfGenerationService {
                 this.paper.text(bodyRow.col1, this.COLUMN_START[0], this.TOP_MARGIN + this.CURRENT_BODY_OFFSET);
             }
             if (this.COLUMN_START[1]) {
+                this.paper.setFontStyle('bold');
                 this.paper.text(bodyRow.col2.rowDescription, this.COLUMN_START[1], this.TOP_MARGIN + this.CURRENT_BODY_OFFSET);
+                this.paper.setFontStyle('normal');
             }
             if (this.COLUMN_START[2]) {
                 this.paper.text(bodyRow.col3, this.COLUMN_START[2], this.TOP_MARGIN + this.CURRENT_BODY_OFFSET);
@@ -231,10 +252,29 @@ export class PdfGenerationService {
                     this.TOP_MARGIN + this.CURRENT_BODY_OFFSET, {align: 'right'});
             }
 
+            bodyRow.otherItemDetail.forEach((oitm) => {
+                this.addNewLine();
+                this.paper.text(oitm.title + ' ' + oitm.description,
+                    this.COLUMN_START[this.COLUMN_START.length - 1] +
+                    this.paper.getTextWidth(this.docClass.tableHeading[this.docClass.tableHeading.length - 1]),
+                    this.TOP_MARGIN + this.CURRENT_BODY_OFFSET, {align: 'right'});
+            });
+
             this.addNewLine();
+            if (bodyRow.col2.priceDetailValue.length > 0) {
+                this.paper.setFontStyle('bold');
+                this.paper.text(bodyRow.col2.priceDetailDescription + ' ' + bodyRow.col2.priceDetailValue,
+                    this.COLUMN_START[this.COLUMN_START.length - 1] +
+                    this.paper.getTextWidth(this.docClass.tableHeading[this.docClass.tableHeading.length - 1]),
+                    this.TOP_MARGIN + this.CURRENT_BODY_OFFSET, {align: 'right'});
+                this.paper.setFontStyle('normal');
+            }
             bodyRow.col2.otherDetail.forEach((row) => {
                 this.writeLine(row, 20, 7);
             });
+            if (bodyRow.lastLine.length > 0) {
+                this.writeLine(bodyRow.lastLine, 20, 7);
+            }
         });
         this.BODY_FINISH = true;
     }
@@ -302,6 +342,7 @@ export class PdfGenerationService {
             this.writeLine(item, 10, 9);
         });
         this.writeLine(this.docClass.lastLine, 10);
+        this.DOCUMENT_FINISH = false;
     }
 
     drawHeadedPaper() {
@@ -382,17 +423,19 @@ export class PdfGenerationService {
     }
 
     newPage() {
-        this.paper.addPage();
-        this.paper.setFont('courier');
-        this.PAGE_NUMBER++;
-        this.CURRENT_BODY_LINE = 0;
-        this.CURRENT_BODY_OFFSET = 95;
-        this.MAX_BODY_LINE = this.DEFAULT_MAX_BODY_LINE;
-        this.drawHeadedPaper();
+        if (!this.DOCUMENT_FINISH) {
+            this.paper.addPage();
+            this.paper.setFont('courier');
+            this.PAGE_NUMBER++;
+            this.CURRENT_BODY_LINE = 0;
+            this.CURRENT_BODY_OFFSET = 95;
+            this.MAX_BODY_LINE = this.DEFAULT_MAX_BODY_LINE;
+            this.drawHeadedPaper();
 
-        this.drawHeading();
-        if (!this.BODY_FINISH) {
-            this.drawTableHeader();
+            this.drawHeading();
+            if (!this.BODY_FINISH) {
+                this.drawTableHeader();
+            }
         }
     }
 
@@ -410,26 +453,32 @@ export class PdfGenerationService {
                 this.electron.fs.unlinkSync(fileName);
             }
             this.electron.fs.writeFileSync(fileName, pdfSrc);
+            // console.log('APRO IL FILE');
+
             this.electron.childProcess.exec(this.gb.getCommandLine() + '"' + fileName + '"', (error, stdout, stderr) => {
                 if (error) {
-                    const options = {
-                        type: 'error',
-                        buttons: ['OK'],
-                        title: 'exec error',
-                        message: stdout + '\n' + stderr
-                    };
-                    this.electron.remote.dialog.showMessageBox(null, options);
+                    // const options = {
+                    //     type: 'error',
+                    //     buttons: ['OK'],
+                    //     title: 'exec error',
+                    //     message: stdout + '\n' + stderr
+                    // };
+                    // this.electron.remote.dialog.showMessageBox(null, options);
+                    console.log(error);
                     return;
+                } else {
+                    // this.electron.remote.getCurrentWindow().reload();
                 }
             });
         } catch (err) {
-            const options = {
-                type: 'error',
-                buttons: ['OK'],
-                title: 'exec error',
-                message: err.toString()
-            };
-            this.electron.remote.dialog.showMessageBox(null, options);
+            // const options = {
+            //     type: 'error',
+            //     buttons: ['OK'],
+            //     title: 'exec error',
+            //     message: err.toString()
+            // };
+            // this.electron.remote.dialog.showMessageBox(null, options);
+            console.log(err);
             return;
         }
     }

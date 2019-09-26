@@ -26,7 +26,7 @@ import {
     MatButtonModule, MatCardModule, MatFormFieldModule, MatGridListModule,
     MatIconModule, MatInputModule,
     MatListModule,
-    MatMenuModule,
+    MatMenuModule, MatSelectModule,
     MatSidenavModule, MatSliderModule, MatSlideToggleModule,
     MatTableModule, MatTabsModule,
     MatToolbarModule
@@ -71,6 +71,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         MatSlideToggleModule,
         MatCardModule,
         MatTabsModule,
+        MatSelectModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,

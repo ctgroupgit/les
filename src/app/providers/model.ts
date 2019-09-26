@@ -21,6 +21,7 @@ export class DocumentModel {
 
 export class DocHeadingDetailModel {
     yourContact: string[] = [];
+    youContactLastLine = '';
     ourContact: string[] = [];
     detail: string[] = [];
 }
@@ -33,6 +34,8 @@ export class TableRowModel {
     col5 = '';
     col6 = '';
     col7 = '';
+    lastLine = '';
+    otherItemDetail: FieldModel[] = [];
 }
 
 export class TableFooterModel {
@@ -43,6 +46,8 @@ export class TableFooterModel {
 
 export class TableRowDetailModel {
     rowDescription = '';
+    priceDetailDescription = '';
+    priceDetailValue = '';
     otherDetail: string[] = [];
 }
 

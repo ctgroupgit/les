@@ -12,10 +12,11 @@ import {LoggerService} from './providers/logger.service';
 })
 export class AppComponent {
   appVersion: string;
-
+    selected;
   constructor(public electronService: ElectronService,
               private translate: TranslateService,
-              private log: LoggerService) {
+              private log: LoggerService,
+              public  gb: GlobalService) {
 
     this.appVersion = this.electronService.remote.app.getVersion();
     translate.setDefaultLang('en');

@@ -33,7 +33,7 @@ do
     (o) LIEFERSCHEIN KOPIE
     (p) GUTSCHRIFT 700207
     (\) RECHNUNG ultima
-    (r) LIEFERSCHEIN ultima
+    (r) bgeeke012.txt ultima
     (Q) Quit
     ------------------------------
 EOF
@@ -62,8 +62,8 @@ EOF
   "n")  echo "/cmd $(PWD)/debug/108205.csv" | nc 127.0.0.1 8010 ;;
   "o")  echo "/cmd $(PWD)/debug/bgvlse040.csv" | nc 127.0.0.1 8010 ;;
   "p")  echo "/cmd $(PWD)/debug/bgvgse031.csv" | nc 127.0.0.1 8010 ;;
-  "\\")  echo "/cmd $(PWD)/debug/bgvrge040.txt" | nc 127.0.0.1 8010 ;;
-  "r")  echo "/cmd $(PWD)/debug/lieferschein.txt" | nc 127.0.0.1 8010 ;;
+  "\\")  echo "/cmd $(PWD)/debug/bgvrge040.txt" | nc 127.0.0.1 8010 && echo "/cmd $(PWD)/debug/bgvgse031.csv" | nc 127.0.0.1 8010 ;;
+  "r")  echo "/cmd /Users/andrea/Downloads/test/innn.txt" | nc 127.0.0.1 8010 ;;
   "q")  exit                      ;;
   "Q")  exit                      ;;
    * )  echo "invalid option"     ;;
