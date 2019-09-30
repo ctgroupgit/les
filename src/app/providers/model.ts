@@ -23,6 +23,7 @@ export class DocHeadingDetailModel {
     yourContact: string[] = [];
     youContactLastLine = '';
     ourContact: string[] = [];
+    deliveryContact: string[] = [];
     detail: string[] = [];
 }
 

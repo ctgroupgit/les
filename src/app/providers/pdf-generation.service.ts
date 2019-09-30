@@ -14,6 +14,7 @@ import {ProformaRechnungService} from './proforma-rechnung.service';
 import {GutschriftService} from './gutschrift.service';
 import {AuftragsbestaetigungService} from './auftragsbestaetigung.service';
 import {BestellungService} from './bestellung.service';
+import {AnfrageService} from './anfrage.service';
 
 
 @Injectable({
@@ -45,7 +46,8 @@ export class PdfGenerationService {
                 private proformaRechnung: ProformaRechnungService,
                 private gutschrift: GutschriftService,
                 private auftragsbestaetigung: AuftragsbestaetigungService,
-                private bestellung: BestellungService) {
+                private bestellung: BestellungService,
+                private anfrage: AnfrageService) {
     }
 
 
@@ -90,7 +92,7 @@ export class PdfGenerationService {
                 break;
             }
             case 'ANFRAGE': {
-                this.docClass = this.bestellung.generate(csvData, type);
+                this.docClass = this.anfrage.generate(csvData, type);
                 break;
             }
             default: {
@@ -190,32 +192,48 @@ export class PdfGenerationService {
 
         if (!this.HEADER_IS_PRINTED) {
             this.docClass.docHeadingDetail.yourContact.push(this.docClass.docHeadingDetail.youContactLastLine);
-            let maxArray = [];
-            let minArray = [];
-            let firstX: number;
-            let secondX: number;
-            if (this.docClass.docHeadingDetail.yourContact.length > this.docClass.docHeadingDetail.ourContact.length) {
-                maxArray = this.docClass.docHeadingDetail.yourContact;
-                minArray = this.docClass.docHeadingDetail.ourContact;
-                firstX = 10;
-                secondX = 130;
-            } else {
-                maxArray = this.docClass.docHeadingDetail.ourContact;
-                minArray = this.docClass.docHeadingDetail.yourContact;
-                firstX = 130;
-                secondX = 10;
-            }
-            for (let idx = 0; idx !== maxArray.length; idx++) {
-                if (minArray[idx]) {
-                    this.writeLine(minArray[idx], secondX, 7, false);
+            const maxLine = Math.max(this.docClass.docHeadingDetail.yourContact.length,
+                this.docClass.docHeadingDetail.ourContact.length,
+                this.docClass.docHeadingDetail.deliveryContact.length);
+
+            for (let idx = 0; idx < maxLine; idx++) {
+                if (this.docClass.docHeadingDetail.yourContact[idx]) {
+                    this.writeLine(this.docClass.docHeadingDetail.yourContact[idx], 10, 7, false);
                 }
-                if (maxArray[idx]) {
-                    this.writeLine(maxArray[idx], firstX, 7, true);
+                if (this.docClass.docHeadingDetail.ourContact[idx]) {
+                    this.writeLine(this.docClass.docHeadingDetail.ourContact[idx], 80, 7, false);
                 }
+                if (this.docClass.docHeadingDetail.deliveryContact[idx]) {
+                    this.writeLine(this.docClass.docHeadingDetail.deliveryContact[idx], 140, 7, false);
+                }
+                this.addNewLine();
             }
-            this.addNewLine();
+            // let maxArray = [];
+            // let minArray = [];
+            // let firstX: number;
+            // let secondX: number;
+            // if (this.docClass.docHeadingDetail.yourContact.length > this.docClass.docHeadingDetail.ourContact.length) {
+            //     maxArray = this.docClass.docHeadingDetail.yourContact;
+            //     minArray = this.docClass.docHeadingDetail.ourContact;
+            //     firstX = 10;
+            //     secondX = 130;
+            // } else {
+            //     maxArray = this.docClass.docHeadingDetail.ourContact;
+            //     minArray = this.docClass.docHeadingDetail.yourContact;
+            //     firstX = 130;
+            //     secondX = 10;
+            // }
+            // for (let idx = 0; idx !== maxArray.length; idx++) {
+            //     if (minArray[idx]) {
+            //         this.writeLine(minArray[idx], secondX, 7, false);
+            //     }
+            //     if (maxArray[idx]) {
+            //         this.writeLine(maxArray[idx], firstX, 7, true);
+            //     }
+            // }
+            // this.addNewLine();
             this.docClass.docHeadingDetail.detail.forEach((value) => {
-                this.writeLine(value, firstX, 8);
+                this.writeLine(value, 10, 8);
             });
             this.HEADER_IS_PRINTED = true;
         }
@@ -285,9 +303,11 @@ export class PdfGenerationService {
         this.paper.line(10, this.TOP_MARGIN + this.CURRENT_BODY_OFFSET - 4.5, 200, this.TOP_MARGIN + this.CURRENT_BODY_OFFSET - 4.5);
         this.docClass.tableFooter.forEach((footerRow) => {
             this.paper.text(footerRow.col1, this.COLUMN_START[2], this.TOP_MARGIN + this.CURRENT_BODY_OFFSET);
-            this.paper.text(footerRow.col2 + ((footerRow.col2.length > 0) ? '%' : ''),
-                this.COLUMN_START[this.COLUMN_START.length - 1] - this.paper.getTextWidth(footerRow.col3.trim())
-                - this.paper.getTextWidth(footerRow.col2.trim()), this.TOP_MARGIN + this.CURRENT_BODY_OFFSET);
+            const ttt = footerRow.col2 + ((footerRow.col2.length > 0) ? '%' : '');
+            this.paper.text(ttt,
+                this.COLUMN_START[this.COLUMN_START.length - 1] -
+                this.paper.getTextWidth(ttt) - 10
+                , this.TOP_MARGIN + this.CURRENT_BODY_OFFSET);
 
             this.paper.setFontStyle('bold');
             this.paper.text(this.gb.currencyFormatDE(footerRow.col3), this.COLUMN_START[this.COLUMN_START.length - 1] +
@@ -365,7 +385,7 @@ export class PdfGenerationService {
         this.paper.text('Made by CTGROUP IT Department', 120, 293);
         this.paper.setFontStyle('bold');
         this.paper.setFontSize(9);
-        this.paper.text('Page ' + this.PAGE_NUMBER + ' of ' + this.TOT_PAGE, 182, 293);
+        this.paper.text('Page ' + this.PAGE_NUMBER, 182, 293);
         this.paper.setFontStyle('normal');
         this.paper.setFontSize(7);
 
@@ -457,13 +477,6 @@ export class PdfGenerationService {
 
             this.electron.childProcess.exec(this.gb.getCommandLine() + '"' + fileName + '"', (error, stdout, stderr) => {
                 if (error) {
-                    // const options = {
-                    //     type: 'error',
-                    //     buttons: ['OK'],
-                    //     title: 'exec error',
-                    //     message: stdout + '\n' + stderr
-                    // };
-                    // this.electron.remote.dialog.showMessageBox(null, options);
                     console.log(error);
                     return;
                 } else {
@@ -471,13 +484,6 @@ export class PdfGenerationService {
                 }
             });
         } catch (err) {
-            // const options = {
-            //     type: 'error',
-            //     buttons: ['OK'],
-            //     title: 'exec error',
-            //     message: err.toString()
-            // };
-            // this.electron.remote.dialog.showMessageBox(null, options);
             console.log(err);
             return;
         }

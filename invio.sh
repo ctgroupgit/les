@@ -63,7 +63,7 @@ EOF
   "o")  echo "/cmd $(PWD)/debug/bgvlse040.csv" | nc 127.0.0.1 8010 ;;
   "p")  echo "/cmd $(PWD)/debug/bgvgse031.csv" | nc 127.0.0.1 8010 ;;
   "\\")  echo "/cmd $(PWD)/debug/bgvrge040.txt" | nc 127.0.0.1 8010 && echo "/cmd $(PWD)/debug/bgvgse031.csv" | nc 127.0.0.1 8010 ;;
-  "r")  echo "/cmd /Users/andrea/Downloads/test/106063.txt" | nc 127.0.0.1 8010 ;;
+  "r")  echo "/cmd /Users/andrea/Downloads/test/aaa/anf.txt" | nc 127.0.0.1 8010 ;;
   "q")  exit                      ;;
   "Q")  exit                      ;;
    * )  echo "invalid option"     ;;
