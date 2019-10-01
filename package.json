@@ -91,7 +91,7 @@
     "test": "npm run postinstall:web && ng test",
     "e2e": "npm run build:prod && mocha --timeout 300000 --require ts-node/register e2e/**/*.spec.ts",
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-    "gh-publish": "npm run build:prod && electron-builder --x64 -mwl --publish always",
+    "gh-publish": "GH_TOKEN=c16035f5009617e097358f831f1d518829a47be3 && npm run build:prod && electron-builder --x64 -mwl --publish always",
     "gh-publish-win": "npm run build:prod && electron-builder --x64 --win --publish always",
     "gh-publish-mac": "npm run build:prod && electron-builder --x64 --mac --publish always",
     "gh-publish-linux": "npm run build:prod && electron-builder --x64 --linux --publish always"
