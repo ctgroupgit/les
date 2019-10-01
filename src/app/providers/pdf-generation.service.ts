@@ -8,7 +8,6 @@ import {RechnungService} from './rechnung.service';
 import {GlobalService} from './global.service';
 import {DocumentModel} from './model';
 import {LoggerService} from './logger.service';
-import {min} from 'rxjs/operators';
 import {LieferscheinService} from './lieferschein.service';
 import {ProformaRechnungService} from './proforma-rechnung.service';
 import {GutschriftService} from './gutschrift.service';
@@ -21,7 +20,7 @@ import {AnfrageService} from './anfrage.service';
     providedIn: 'root'
 })
 export class PdfGenerationService {
-    docClass = new DocumentModel;
+    currentDoc: DocumentModel;
     paper: jsPDF;
     DEFAULT_MAX_BODY_LINE = 39;
     PAGE_NUMBER = 0;
@@ -36,6 +35,13 @@ export class PdfGenerationService {
     BODY_FINISH = false;
     TOT_PAGE = 0;
     DOCUMENT_FINISH = false;
+    DEFAULT_FONT_SIZE_NORMAL_TEXT = 10;
+    DEFAULT_FONT_SIZE_DOCUMENT_FOOTER = 10;
+    DEFAULT_FONT_SIZE_HEADING_DETAIL = 8;
+    DEFAULT_FONT_SIZE_TABLE_HEADER = 8;
+    DEFAULT_FONT_SIZE_TABLE_BODY = 8;
+    DEFAULT_FONT_SIZE_TABLE_FOOTER = 10;
+
 
     constructor(private electron: ElectronService,
                 private ls: LocalStorageService,
@@ -53,13 +59,16 @@ export class PdfGenerationService {
 
     public print(csvData = []) {
         const type = this.gb.checkDocType(csvData);
+        console.log('Tipo Documento ', type);
         switch (type) {
             case 'RECHNUNG':
             case 'RECHNUNG KOPIE':
             case 'RECHNUNG DUPLIKAT':
             case 'FACTURE':
             case 'INVOICE': {
-                this.docClass = this.rechnung.generate(csvData, type);
+                this.rechnung.generate(csvData, type).forEach((idoc) => {
+                    this.sendPaginator(idoc);
+                });
                 break;
             }
             case 'LIEFERSCHEIN':
@@ -67,55 +76,55 @@ export class PdfGenerationService {
             case 'LIEFERSCHEIN DUPLIKAT':
             case 'BON DE LIVRAISON':
             case 'DELIVERY NOTE': {
-                this.docClass = this.lieferschein.generate(csvData, type);
+                this.lieferschein.generate(csvData, type).forEach((idoc) => {
+                    this.sendPaginator(idoc);
+                });
                 break;
             }
             case 'PROFORMA RECHNUNG': {
-                this.docClass = this.proformaRechnung.generate(csvData, type);
+                this.proformaRechnung.generate(csvData, type).forEach((idoc) => {
+                    this.sendPaginator(idoc);
+                });
                 break;
             }
             case 'GUTSCHRIFT':
             case 'AVOIR':
             case 'CREDIT NOTE': {
-                this.docClass = this.gutschrift.generate(csvData, type);
+                this.gutschrift.generate(csvData, type).forEach((idoc) => {
+                    this.sendPaginator(idoc);
+                });
                 break;
             }
             case 'AUFTRAGSBESTÄTIGUNG':
             case 'ORDER CONFIRMATION':
             case 'CONFIRMATION DE COMMANDE': {
-                this.docClass = this.auftragsbestaetigung.generate(csvData, type);
+                this.auftragsbestaetigung.generate(csvData, type).forEach((idoc) => {
+                    this.sendPaginator(idoc);
+                });
                 break;
             }
             case 'BESTELLUNG':
             case 'BESTELLUNG-ÄNDERUNG': {
-                this.docClass = this.bestellung.generate(csvData, type);
+                this.bestellung.generate(csvData, type).forEach((idoc) => {
+                    this.sendPaginator(idoc);
+                });
                 break;
             }
             case 'ANFRAGE': {
-                this.docClass = this.anfrage.generate(csvData, type);
+                this.anfrage.generate(csvData, type).forEach((idoc) => {
+                    this.sendPaginator(idoc);
+                });
                 break;
             }
             default: {
                 this.electron.remote.dialog.showErrorBox('Print Error',
-                    'No template found for the document you are trying to print was found');
+                    'No template found for the this.document you are trying to print was found');
             }
         }
+    }
 
-        this.log.info(this.docClass);
-
+    sendPaginator(doc: DocumentModel) {
         this.paper = new jsPDF({filters: ['ASCIIHexEncode']});
-        let totLine = this.docClass.docHeadingDetail.detail.length +
-            this.docClass.docHeadingDetail.yourContact.length +
-            this.docClass.tableFooter.length +
-            this.docClass.documentFooter.length;
-
-        this.docClass.tableRow.forEach((item => {
-            totLine++;
-            totLine += item.col2.otherDetail.length;
-        }));
-
-        this.TOT_PAGE = Math.ceil(totLine / this.DEFAULT_MAX_BODY_LINE);
-
         this.DOCUMENT_FINISH = false;
         this.HEADER_IS_PRINTED = false;
         this.PAGE_NUMBER = 1;
@@ -123,117 +132,96 @@ export class PdfGenerationService {
         this.CURRENT_BODY_OFFSET = 95;
         this.MAX_BODY_LINE = this.DEFAULT_MAX_BODY_LINE;
         this.COLUMN_START = [];
-
-        this.drawHeadedPaper();
+        this.currentDoc = doc;
+        this.drawBackGroundPaper();
         this.drawHeading();
         this.drawTableHeader();
         this.drawTableBody();
         this.drawTableFooter();
         this.drawDocumentFooter();
-        this.printPreviewPDF(this.paper.output(), this.docClass.docType + '_' + this.docClass.documentNumber.description);
+        this.printPreviewPDF(this.paper.output(), this.currentDoc.docType + '_' + this.currentDoc.documentNumber.description);
     }
 
     drawHeading() {
-        this.paper.setFontSize(10);
+        this.paper.setFontSize(this.DEFAULT_FONT_SIZE_NORMAL_TEXT);
         let currentHeadingLine = 45;
-        this.docClass.heading.forEach((row) => {
+        this.currentDoc.heading.forEach((row) => {
             this.paper.text(row, this.LEFT_MARGIN + 18, this.TOP_MARGIN + currentHeadingLine);
             currentHeadingLine += this.SLUG;
         });
         this.paper.setFontSize(15);
         this.paper.setFontStyle('bold');
-        this.paper.text(this.docClass.docType, this.LEFT_MARGIN + 10, this.TOP_MARGIN + 90);
-        this.paper.setFontSize(10);
+        this.paper.text(this.currentDoc.docType, this.LEFT_MARGIN + 10, this.TOP_MARGIN + 90);
+        this.paper.setFontSize(this.DEFAULT_FONT_SIZE_NORMAL_TEXT);
 
         this.paper.setFontStyle('bold');
-        this.paper.text(this.docClass.documentDate.title, this.LEFT_MARGIN + 170, this.TOP_MARGIN + 60);
+        this.paper.text(this.currentDoc.documentDate.title, this.LEFT_MARGIN + 170, this.TOP_MARGIN + 60);
         this.paper.setFontStyle('normal');
-        this.paper.text(this.docClass.documentDate.description, this.LEFT_MARGIN + 170, this.TOP_MARGIN + 60 + this.SLUG);
+        this.paper.text(this.currentDoc.documentDate.description, this.LEFT_MARGIN + 170, this.TOP_MARGIN + 60 + this.SLUG);
 
         this.paper.setFontStyle('bold');
-        this.paper.text(this.docClass.documentNumber.title, this.LEFT_MARGIN + 170, this.TOP_MARGIN + 70);
+        this.paper.text(this.currentDoc.documentNumber.title, this.LEFT_MARGIN + 170, this.TOP_MARGIN + 70);
         this.paper.setFontStyle('normal');
-        this.paper.text(this.docClass.documentNumber.description, this.LEFT_MARGIN + 170, this.TOP_MARGIN + 70 + this.SLUG);
+        this.paper.text(this.currentDoc.documentNumber.description, this.LEFT_MARGIN + 170, this.TOP_MARGIN + 70 + this.SLUG);
 
         this.paper.setFontStyle('bold');
-        this.paper.text(this.docClass.dh1.title, this.LEFT_MARGIN + 170, this.TOP_MARGIN + 80);
+        this.paper.text(this.currentDoc.dh1.title, this.LEFT_MARGIN + 170, this.TOP_MARGIN + 80);
         this.paper.setFontStyle('normal');
-        this.paper.text(this.docClass.dh1.description, this.LEFT_MARGIN + 170, this.TOP_MARGIN + 80 + this.SLUG);
+        this.paper.text(this.currentDoc.dh1.description, this.LEFT_MARGIN + 170, this.TOP_MARGIN + 80 + this.SLUG);
 
         this.paper.setFontStyle('bold');
-        this.paper.text(this.docClass.dh2.title, this.LEFT_MARGIN + 135, this.TOP_MARGIN + 60);
+        this.paper.text(this.currentDoc.dh2.title, this.LEFT_MARGIN + 135, this.TOP_MARGIN + 60);
         this.paper.setFontStyle('normal');
-        this.paper.text(this.docClass.dh2.description, this.LEFT_MARGIN + 135, this.TOP_MARGIN + 60 + this.SLUG);
+        this.paper.text(this.currentDoc.dh2.description, this.LEFT_MARGIN + 135, this.TOP_MARGIN + 60 + this.SLUG);
 
         this.paper.setFontStyle('bold');
-        this.paper.text(this.docClass.dh3.title, this.LEFT_MARGIN + 135, this.TOP_MARGIN + 70);
+        this.paper.text(this.currentDoc.dh3.title, this.LEFT_MARGIN + 135, this.TOP_MARGIN + 70);
         this.paper.setFontStyle('normal');
-        this.paper.text(this.docClass.dh3.description, this.LEFT_MARGIN + 135, this.TOP_MARGIN + 70 + this.SLUG);
+        this.paper.text(this.currentDoc.dh3.description, this.LEFT_MARGIN + 135, this.TOP_MARGIN + 70 + this.SLUG);
 
         this.paper.setFontStyle('bold');
-        this.paper.text(this.docClass.dh4.title, this.LEFT_MARGIN + 135, this.TOP_MARGIN + 80);
+        this.paper.text(this.currentDoc.dh4.title, this.LEFT_MARGIN + 135, this.TOP_MARGIN + 80);
         this.paper.setFontStyle('normal');
-        this.paper.text(this.docClass.dh4.description, this.LEFT_MARGIN + 135, this.TOP_MARGIN + 80 + this.SLUG);
+        this.paper.text(this.currentDoc.dh4.description, this.LEFT_MARGIN + 135, this.TOP_MARGIN + 80 + this.SLUG);
 
         this.paper.setFontStyle('bold');
-        this.paper.text(this.docClass.dh5.title, this.LEFT_MARGIN + 100, this.TOP_MARGIN + 60);
+        this.paper.text(this.currentDoc.dh5.title, this.LEFT_MARGIN + 100, this.TOP_MARGIN + 60);
         this.paper.setFontStyle('normal');
-        this.paper.text(this.docClass.dh5.description, this.LEFT_MARGIN + 100, this.TOP_MARGIN + 60 + this.SLUG);
+        this.paper.text(this.currentDoc.dh5.description, this.LEFT_MARGIN + 100, this.TOP_MARGIN + 60 + this.SLUG);
 
         this.paper.setFontStyle('bold');
-        this.paper.text(this.docClass.dh6.title, this.LEFT_MARGIN + 100, this.TOP_MARGIN + 70);
+        this.paper.text(this.currentDoc.dh6.title, this.LEFT_MARGIN + 100, this.TOP_MARGIN + 70);
         this.paper.setFontStyle('normal');
-        this.paper.text(this.docClass.dh6.description, this.LEFT_MARGIN + 100, this.TOP_MARGIN + 70 + this.SLUG);
+        this.paper.text(this.currentDoc.dh6.description, this.LEFT_MARGIN + 100, this.TOP_MARGIN + 70 + this.SLUG);
 
         this.paper.setFontStyle('bold');
-        this.paper.text(this.docClass.dh7.title, this.LEFT_MARGIN + 100, this.TOP_MARGIN + 80);
+        this.paper.text(this.currentDoc.dh7.title, this.LEFT_MARGIN + 100, this.TOP_MARGIN + 80);
         this.paper.setFontStyle('normal');
-        this.paper.text(this.docClass.dh7.description, this.LEFT_MARGIN + 100, this.TOP_MARGIN + 80 + this.SLUG);
+        this.paper.text(this.currentDoc.dh7.description, this.LEFT_MARGIN + 100, this.TOP_MARGIN + 80 + this.SLUG);
 
         if (!this.HEADER_IS_PRINTED) {
-            this.docClass.docHeadingDetail.yourContact.push(this.docClass.docHeadingDetail.youContactLastLine);
-            const maxLine = Math.max(this.docClass.docHeadingDetail.yourContact.length,
-                this.docClass.docHeadingDetail.ourContact.length,
-                this.docClass.docHeadingDetail.deliveryContact.length);
+            this.currentDoc.docHeadingDetail.yourContact.push(this.currentDoc.docHeadingDetail.youContactLastLine);
+            const maxLine = Math.max(this.currentDoc.docHeadingDetail.yourContact.length,
+                this.currentDoc.docHeadingDetail.ourContact.length,
+                this.currentDoc.docHeadingDetail.deliveryContact.length);
 
             for (let idx = 0; idx < maxLine; idx++) {
-                if (this.docClass.docHeadingDetail.yourContact[idx]) {
-                    this.writeLine(this.docClass.docHeadingDetail.yourContact[idx], 10, 7, false);
+                if (this.currentDoc.docHeadingDetail.yourContact[idx]) {
+                    this.writeLine(this.currentDoc.docHeadingDetail.yourContact[idx], 10,
+                        this.DEFAULT_FONT_SIZE_HEADING_DETAIL, false);
                 }
-                if (this.docClass.docHeadingDetail.ourContact[idx]) {
-                    this.writeLine(this.docClass.docHeadingDetail.ourContact[idx], 80, 7, false);
+                if (this.currentDoc.docHeadingDetail.ourContact[idx]) {
+                    this.writeLine(this.currentDoc.docHeadingDetail.ourContact[idx], 80,
+                        this.DEFAULT_FONT_SIZE_HEADING_DETAIL, false);
                 }
-                if (this.docClass.docHeadingDetail.deliveryContact[idx]) {
-                    this.writeLine(this.docClass.docHeadingDetail.deliveryContact[idx], 140, 7, false);
+                if (this.currentDoc.docHeadingDetail.deliveryContact[idx]) {
+                    this.writeLine(this.currentDoc.docHeadingDetail.deliveryContact[idx], 140,
+                        this.DEFAULT_FONT_SIZE_HEADING_DETAIL, false);
                 }
                 this.addNewLine();
             }
-            // let maxArray = [];
-            // let minArray = [];
-            // let firstX: number;
-            // let secondX: number;
-            // if (this.docClass.docHeadingDetail.yourContact.length > this.docClass.docHeadingDetail.ourContact.length) {
-            //     maxArray = this.docClass.docHeadingDetail.yourContact;
-            //     minArray = this.docClass.docHeadingDetail.ourContact;
-            //     firstX = 10;
-            //     secondX = 130;
-            // } else {
-            //     maxArray = this.docClass.docHeadingDetail.ourContact;
-            //     minArray = this.docClass.docHeadingDetail.yourContact;
-            //     firstX = 130;
-            //     secondX = 10;
-            // }
-            // for (let idx = 0; idx !== maxArray.length; idx++) {
-            //     if (minArray[idx]) {
-            //         this.writeLine(minArray[idx], secondX, 7, false);
-            //     }
-            //     if (maxArray[idx]) {
-            //         this.writeLine(maxArray[idx], firstX, 7, true);
-            //     }
-            // }
-            // this.addNewLine();
-            this.docClass.docHeadingDetail.detail.forEach((value) => {
-                this.writeLine(value, 10, 8);
+            this.currentDoc.docHeadingDetail.detail.forEach((value) => {
+                this.writeLine(value, 10, this.DEFAULT_FONT_SIZE_HEADING_DETAIL);
             });
             this.HEADER_IS_PRINTED = true;
         }
@@ -242,8 +230,8 @@ export class PdfGenerationService {
     drawTableBody() {
         this.BODY_FINISH = false;
         this.paper.setFontStyle('normal');
-        this.paper.setFontSize(7);
-        this.docClass.tableRow.forEach((bodyRow) => {
+        this.paper.setFontSize(this.DEFAULT_FONT_SIZE_TABLE_BODY);
+        this.currentDoc.tableRow.forEach((bodyRow) => {
             if (this.COLUMN_START[0]) {
                 this.paper.text(bodyRow.col1, this.COLUMN_START[0], this.TOP_MARGIN + this.CURRENT_BODY_OFFSET);
             }
@@ -266,7 +254,7 @@ export class PdfGenerationService {
             }
             if (this.COLUMN_START[6]) {
                 this.paper.text(bodyRow.col7, this.COLUMN_START[this.COLUMN_START.length - 1] +
-                    this.paper.getTextWidth(this.docClass.tableHeading[this.docClass.tableHeading.length - 1]),
+                    this.paper.getTextWidth(this.currentDoc.tableHeading[this.currentDoc.tableHeading.length - 1]),
                     this.TOP_MARGIN + this.CURRENT_BODY_OFFSET, {align: 'right'});
             }
 
@@ -274,7 +262,7 @@ export class PdfGenerationService {
                 this.addNewLine();
                 this.paper.text(oitm.title + ' ' + oitm.description,
                     this.COLUMN_START[this.COLUMN_START.length - 1] +
-                    this.paper.getTextWidth(this.docClass.tableHeading[this.docClass.tableHeading.length - 1]),
+                    this.paper.getTextWidth(this.currentDoc.tableHeading[this.currentDoc.tableHeading.length - 1]),
                     this.TOP_MARGIN + this.CURRENT_BODY_OFFSET, {align: 'right'});
             });
 
@@ -283,15 +271,15 @@ export class PdfGenerationService {
                 this.paper.setFontStyle('bold');
                 this.paper.text(bodyRow.col2.priceDetailDescription + ' ' + bodyRow.col2.priceDetailValue,
                     this.COLUMN_START[this.COLUMN_START.length - 1] +
-                    this.paper.getTextWidth(this.docClass.tableHeading[this.docClass.tableHeading.length - 1]),
+                    this.paper.getTextWidth(this.currentDoc.tableHeading[this.currentDoc.tableHeading.length - 1]),
                     this.TOP_MARGIN + this.CURRENT_BODY_OFFSET, {align: 'right'});
                 this.paper.setFontStyle('normal');
             }
             bodyRow.col2.otherDetail.forEach((row) => {
-                this.writeLine(row, 20, 7);
+                this.writeLine(row, 20, this.DEFAULT_FONT_SIZE_TABLE_BODY);
             });
             if (bodyRow.lastLine.length > 0) {
-                this.writeLine(bodyRow.lastLine, 20, 7);
+                this.writeLine(bodyRow.lastLine, 20, this.DEFAULT_FONT_SIZE_TABLE_BODY);
             }
         });
         this.BODY_FINISH = true;
@@ -299,9 +287,9 @@ export class PdfGenerationService {
 
     drawTableFooter() {
         this.addNewLine();
-        this.paper.setFontSize(8);
+        this.paper.setFontSize(this.DEFAULT_FONT_SIZE_TABLE_FOOTER);
         this.paper.line(10, this.TOP_MARGIN + this.CURRENT_BODY_OFFSET - 4.5, 200, this.TOP_MARGIN + this.CURRENT_BODY_OFFSET - 4.5);
-        this.docClass.tableFooter.forEach((footerRow) => {
+        this.currentDoc.tableFooter.forEach((footerRow) => {
             this.paper.text(footerRow.col1, this.COLUMN_START[2], this.TOP_MARGIN + this.CURRENT_BODY_OFFSET);
             const ttt = footerRow.col2 + ((footerRow.col2.length > 0) ? '%' : '');
             this.paper.text(ttt,
@@ -311,7 +299,7 @@ export class PdfGenerationService {
 
             this.paper.setFontStyle('bold');
             this.paper.text(this.gb.currencyFormatDE(footerRow.col3), this.COLUMN_START[this.COLUMN_START.length - 1] +
-                this.paper.getTextWidth(this.docClass.tableHeading[this.docClass.tableHeading.length - 1]),
+                this.paper.getTextWidth(this.currentDoc.tableHeading[this.currentDoc.tableHeading.length - 1]),
                 this.TOP_MARGIN + this.CURRENT_BODY_OFFSET, {align: 'right'});
             this.paper.setFontStyle('normal');
 
@@ -322,10 +310,10 @@ export class PdfGenerationService {
 
     drawTableHeader() {
         this.addNewLine(1);
-        let currTab = 130;
+        let currTab = 120;
         this.paper.setFontStyle('bold');
-        this.paper.setFontSize(7);
-        this.docClass.tableHeading.forEach((title, index) => {
+        this.paper.setFontSize(this.DEFAULT_FONT_SIZE_TABLE_HEADER);
+        this.currentDoc.tableHeading.forEach((title, index) => {
             switch (index) {
                 case 0: {
                     this.paper.text(title, 10, this.TOP_MARGIN + this.CURRENT_BODY_OFFSET);
@@ -358,14 +346,14 @@ export class PdfGenerationService {
     }
 
     drawDocumentFooter() {
-        this.docClass.documentFooter.forEach((item) => {
-            this.writeLine(item, 10, 9);
+        this.currentDoc.documentFooter.forEach((item) => {
+            this.writeLine(item, 10, this.DEFAULT_FONT_SIZE_DOCUMENT_FOOTER);
         });
-        this.writeLine(this.docClass.lastLine, 10);
+        this.writeLine(this.currentDoc.lastLine, 10, this.DEFAULT_FONT_SIZE_DOCUMENT_FOOTER);
         this.DOCUMENT_FINISH = false;
     }
 
-    drawHeadedPaper() {
+    drawBackGroundPaper() {
         const imageZZ = 'data:image/png;base64,' + logoData[0]['logozz'];
         const imageCT = 'data:image/png;base64,' + logoData[0]['logoct'];
         this.paper.addImage(imageZZ, 'JPEG', 100, 1, 100, 54);
@@ -373,7 +361,6 @@ export class PdfGenerationService {
         this.paper.setFontSize(7);
         this.paper.text('ZZ-DriveTech GmbH, An der Tagweide 12, 76139 Karlsruhe', this.LEFT_MARGIN + 10, this.TOP_MARGIN + 35);
         this.paper.setFontStyle('normal');
-        this.paper.setFontSize(7);
         this.paper.setFont('courier');
         this.paper.addImage(imageCT, 'JPEG', 10, 269, 23, 26);
         this.paper.text('ME = Mengeneinheit: ST = Stück; g = Gramm; kg = Kilogramm    PE = Preiseinheit: 0=1 Stück; 1=pro 10; ' +
@@ -450,7 +437,7 @@ export class PdfGenerationService {
             this.CURRENT_BODY_LINE = 0;
             this.CURRENT_BODY_OFFSET = 95;
             this.MAX_BODY_LINE = this.DEFAULT_MAX_BODY_LINE;
-            this.drawHeadedPaper();
+            this.drawBackGroundPaper();
 
             this.drawHeading();
             if (!this.BODY_FINISH) {

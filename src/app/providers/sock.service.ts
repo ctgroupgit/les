@@ -56,6 +56,8 @@ export class SockService {
           } else {
             cmd = 'curl -k "sftp://' + this.IP + finalPath.trim() + '" --user "' + this.USER + '" -o "' + this.downloadPath + '/data.csv"';
           }
+            console.log(cmd);
+
           this._electron.childProcess.exec(cmd, (error, stdout, stderr) => {
             if (error) {
               console.log(stderr);

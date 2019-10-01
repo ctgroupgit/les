@@ -9,6 +9,8 @@ import {DocumentModel, TableFooterModel, TableRowModel} from './model';
   providedIn: 'root'
 })
 export class LieferscheinService {
+  docClass: DocumentModel = new DocumentModel();
+  allDocClass: DocumentModel[] = [];
   bodyRow: TableRowModel;
   tempCheckSameValue = '';
   constructor(private electron: ElectronService,
@@ -17,15 +19,22 @@ export class LieferscheinService {
               private log: LoggerService) { }
 
 
-  generate(data = [], type: string) {
-    const docClass = new DocumentModel();
-    docClass.docType = type;
+  generate(data = [], type) {
+    this.allDocClass.pop();
+    let totDoc = 0;
     data.forEach( (row) => {
       switch (row[1]) {
         case 'CONTROL': {
           break;
         }
         case 'KOPIEN': {
+          if (totDoc > 0) {
+            this.allDocClass.push(this.docClass);
+          }
+          this.docClass = new DocumentModel();
+          this.docClass.docType = type;
+          this.docClass.docHeadingDetail.youContactLastLine = row[26].trim();
+          totDoc++;
           break;
         }
         case 'KOPF_ANS': {
@@ -35,69 +44,69 @@ export class LieferscheinService {
           break;
         }
         case 'KOPF': {
-          docClass.heading.push(row[21].trim());
-          docClass.heading.push(row[22].trim());
-          docClass.heading.push(row[23].trim());
-          docClass.heading.push(row[24].trim());
-          docClass.heading.push(row[25].trim());
-          docClass.documentDate.title = row[14].trim();
-          docClass.documentDate.description = row[12].trim();
-          docClass.documentNumber.title = row[17].trim();
-          docClass.documentNumber.description = row[18].trim();
+          this.docClass.heading.push(row[21].trim());
+          this.docClass.heading.push(row[22].trim());
+          this.docClass.heading.push(row[23].trim());
+          this.docClass.heading.push(row[24].trim());
+          this.docClass.heading.push(row[25].trim());
+          this.docClass.documentDate.title = row[14].trim();
+          this.docClass.documentDate.description = row[12].trim();
+          this.docClass.documentNumber.title = row[17].trim();
+          this.docClass.documentNumber.description = row[18].trim();
 
-          docClass.dh1.title = row[19].trim();
-          docClass.dh1.description = row[20].trim();
+          this.docClass.dh1.title = row[19].trim();
+          this.docClass.dh1.description = row[20].trim();
 
 
           break;
         }
         case 'KOPF_DATEN': {
-          docClass.dh3.title = row[14].trim();
-          docClass.dh3.description = row[28].trim();
-          docClass.docHeadingDetail.yourContact.push('-B' + row[15]);
-          docClass.docHeadingDetail.yourContact.push(row[16]);
-          docClass.docHeadingDetail.yourContact.push(row[22]);
-          docClass.docHeadingDetail.yourContact.push('-B' + row[17]);
-          docClass.docHeadingDetail.yourContact.push(row[12]);
-          docClass.docHeadingDetail.yourContact.push('-B' + 'Your Sign');
-          docClass.docHeadingDetail.yourContact.push(row[19]);
-          docClass.docHeadingDetail.ourContact.push('-B' + 'Our Contact');
+          this.docClass.dh3.title = row[14].trim();
+          this.docClass.dh3.description = row[28].trim();
+          this.docClass.docHeadingDetail.yourContact.push('-B' + row[15]);
+          this.docClass.docHeadingDetail.yourContact.push(row[16]);
+          this.docClass.docHeadingDetail.yourContact.push(row[22]);
+          this.docClass.docHeadingDetail.yourContact.push('-B' + row[17]);
+          this.docClass.docHeadingDetail.yourContact.push(row[12]);
+          this.docClass.docHeadingDetail.yourContact.push('-B' + 'Your Sign');
+          this.docClass.docHeadingDetail.yourContact.push(row[19]);
+          this.docClass.docHeadingDetail.ourContact.push('-B' + 'Our Contact');
           this.gb.genKontakt(row).forEach((val) => {
-            docClass.docHeadingDetail.ourContact.push(val);
+            this.docClass.docHeadingDetail.ourContact.push(val);
           });
           break;
         }
         case 'KOPF_DATEN2': {
 
-          docClass.dh2.title = row[19].trim();
-          docClass.dh2.description = row[20].trim();
+          this.docClass.dh2.title = row[19].trim();
+          this.docClass.dh2.description = row[20].trim();
 
           break;
         }
         case 'KOPF_POSUEB': {
           for (let idx = 14; idx <= 19; idx++) {
             if (row[idx].trim().length > 0) {
-              docClass.tableHeading.push(row[idx].trim());
+              this.docClass.tableHeading.push(row[idx].trim());
             }
           }
-          docClass.lastLine = row[23];
+          this.docClass.lastLine = row[23];
           break;
         }
         case 'KOPF_TEXTF': {
           if (row[14].length > 1) {
-            docClass.docHeadingDetail.detail.push(row[14].substr(1, row[14].length));
+            this.docClass.docHeadingDetail.detail.push(row[14].substr(1, row[14].length));
           }
           break;
         }
         case 'KOPF_TEXTK': {
           if (row[14].length > 1) {
-            docClass.docHeadingDetail.detail.push(row[14].substr(1, row[14].length));
+            this.docClass.docHeadingDetail.detail.push(row[14].substr(1, row[14].length));
           }
           break;
         }
         case 'KOPF_TEXTA': {
           if (row[14].length > 1) {
-            docClass.docHeadingDetail.detail.push(row[14].substr(1, row[14].length));
+            this.docClass.docHeadingDetail.detail.push(row[14].substr(1, row[14].length));
           }
           break;
         }
@@ -105,10 +114,10 @@ export class LieferscheinService {
           break;
         }
         case 'KOPF_USTID': {
-          docClass.docHeadingDetail.yourContact.push('-B' + row[14]);
-          docClass.docHeadingDetail.yourContact.push(row[15]);
-          docClass.docHeadingDetail.yourContact.push('-B' + row[16]);
-          docClass.docHeadingDetail.yourContact.push(row[17]);
+          this.docClass.docHeadingDetail.yourContact.push('-B' + row[14]);
+          this.docClass.docHeadingDetail.yourContact.push(row[15]);
+          this.docClass.docHeadingDetail.yourContact.push('-B' + row[16]);
+          this.docClass.docHeadingDetail.yourContact.push(row[17]);
           break;
         }
         case 'POS': {
@@ -129,7 +138,7 @@ export class LieferscheinService {
           this.bodyRow.col5 = this.gb.StrToNumber(row[5]);
           this.bodyRow.col6 = row[19];
           // this.bodyRow.col7 = this.gb.currencyFormatDE(row[6]);
-          docClass.tableRow.push(this.bodyRow);
+          this.docClass.tableRow.push(this.bodyRow);
           break;
         }
         case 'POS_RB': {
@@ -142,12 +151,12 @@ export class LieferscheinService {
           break;
         }
         case 'POS_TEXTA': {
-          docClass.tableRow[docClass.tableRow.length - 1].col2.otherDetail.push(row[14]
+          this.docClass.tableRow[this.docClass.tableRow.length - 1].col2.otherDetail.push(row[14]
               .substr(1, row[14].length));
           break;
         }
         case 'POS_TEXTP': {
-          docClass.tableRow[docClass.tableRow.length - 1].col2.otherDetail.push(row[14]
+          this.docClass.tableRow[this.docClass.tableRow.length - 1].col2.otherDetail.push(row[14]
               .substr(1, row[14].length));
           break;
         }
@@ -159,7 +168,7 @@ export class LieferscheinService {
           tempRowFooter.col1 = this.gb.normalizeChar(row[15].trim(), 20);
           tempRowFooter.col2 = row[3];
           tempRowFooter.col3 = row[4];
-          docClass.tableFooter.push(tempRowFooter);
+          this.docClass.tableFooter.push(tempRowFooter);
           break;
         }
         case 'FUSS_PRE': {
@@ -169,7 +178,7 @@ export class LieferscheinService {
             this.tempCheckSameValue = row[15];
           }
           temStr += row[14].trim();
-          docClass.documentFooter.push(this.gb.normalizeChar(temStr, 25));
+          this.docClass.documentFooter.push(this.gb.normalizeChar(temStr, 25));
           break;
         }
         case 'FUSS_LIEFD': {
@@ -179,7 +188,7 @@ export class LieferscheinService {
             this.tempCheckSameValue = row[15];
           }
           temStr += row[14].trim();
-          docClass.documentFooter.push(this.gb.normalizeChar(temStr, 25));
+          this.docClass.documentFooter.push(this.gb.normalizeChar(temStr, 25));
           break;
         }
         case 'FUSS_LIEFB': {
@@ -189,7 +198,7 @@ export class LieferscheinService {
             this.tempCheckSameValue = row[15];
           }
           temStr += row[14].trim();
-          docClass.documentFooter.push(this.gb.normalizeChar(temStr, 25));
+          this.docClass.documentFooter.push(this.gb.normalizeChar(temStr, 25));
           break;
         }
         case 'FUSS_PACK': {
@@ -199,19 +208,19 @@ export class LieferscheinService {
             this.tempCheckSameValue = row[15];
           }
           temStr += row[14].trim();
-          docClass.documentFooter.push(this.gb.normalizeChar(row[15].trim() + row[2].trim() + ' ' + row[14].trim(), 25));
+          this.docClass.documentFooter.push(this.gb.normalizeChar(row[15].trim() + row[2].trim() + ' ' + row[14].trim(), 25));
           break;
         }
         case 'FUSS_GEW': {
-          docClass.documentFooter.push(' ');
+          this.docClass.documentFooter.push(' ');
           let temStr = '';
           if (row[16] !== this.tempCheckSameValue) {
             temStr += row[15].trim();
             this.tempCheckSameValue = row[16];
           }
           temStr += row[16].trim() + ' ' + row[3].trim() + ' Kg';
-          docClass.documentFooter.push(this.gb.normalizeChar(temStr, 25));
-          docClass.documentFooter.push(' ');
+          this.docClass.documentFooter.push(this.gb.normalizeChar(temStr, 25));
+          this.docClass.documentFooter.push(' ');
           break;
         }
         case 'FUSS_ZAHLB': {
@@ -239,7 +248,7 @@ export class LieferscheinService {
             this.tempCheckSameValue = row[15];
           }
           temStr += ((row[16].trim().length > 0) ? row[16].trim() : '')  + ((row[14].trim().length > 0) ? ' ' + row[14] : '');
-          docClass.documentFooter.push(this.gb.normalizeChar(temStr, 25));
+          this.docClass.documentFooter.push(this.gb.normalizeChar(temStr, 25));
           break;
         }
         case 'FUSS_VART': {
@@ -249,7 +258,7 @@ export class LieferscheinService {
             this.tempCheckSameValue = row[15];
           }
           temStr += ((row[16].trim().length > 0) ? row[16].trim() : '')  + ((row[14].trim().length > 0) ? ' ' + row[14] : '');
-          docClass.documentFooter.push(this.gb.normalizeChar(temStr, 25));
+          this.docClass.documentFooter.push(this.gb.normalizeChar(temStr, 25));
           break;
         }
         case 'FUSS_TEXTF': {
@@ -259,12 +268,13 @@ export class LieferscheinService {
             this.tempCheckSameValue = row[15];
           }
           temStr += row[14].trim().substr(1, row[14].length);
-          docClass.documentFooter.push(this.gb.normalizeChar(temStr, 25));
+          this.docClass.documentFooter.push(this.gb.normalizeChar(temStr, 25));
           break;
         }
       }
     });
-    this.log.info('', docClass);
-    return docClass;
+    this.allDocClass.push(this.docClass);
+    console.log('result generate ', this.allDocClass);
+    return this.allDocClass;
   }
 }
