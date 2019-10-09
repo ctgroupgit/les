@@ -104,13 +104,16 @@ export class PdfGenerationService {
                 break;
             }
             case 'BESTELLUNG':
-            case 'BESTELLUNG-ÄNDERUNG': {
+            case 'BESTELLUNG-ÄNDERUNG':
+            case 'PURCHASE ORDER':
+            case 'PURCHASE ORDER CHANGE': {
                 this.bestellung.generate(csvData, type).forEach((idoc) => {
                     this.sendPaginator(idoc);
                 });
                 break;
             }
-            case 'ANFRAGE': {
+            case 'ANFRAGE':
+            case 'INQUIRY/ENQUIRY': {
                 this.anfrage.generate(csvData, type).forEach((idoc) => {
                     this.sendPaginator(idoc);
                 });

@@ -14,6 +14,8 @@ do
     (3) DELIVERY
     (4) INVOICE
     (5) gutshit
+    (6) Inquiry
+    (7) purchase order change
     (Q) Quit
     ------------------------------
 EOF
@@ -24,6 +26,8 @@ EOF
   "3")  echo "/cmd /home/andrea/Developer/les/debug/delivery.txt" | nc 127.0.0.1 8010 ;;
   "4")  echo "/cmd /home/andrea/Developer/les/debug/invoice.txt" | nc 127.0.0.1 8010 ;;
   "5")  echo "/cmd /home/andrea/Developer/les/debug/gutshit.txt" | nc 127.0.0.1 8010 ;;
+  "6")  echo "/cmd /home/andrea/Downloads/aa/inq.txt" | nc 127.0.0.1 8010 ;;
+  "7")  echo "/cmd /home/andrea/Downloads/aa/inq1.txt" | nc 127.0.0.1 8010 ;;
   "q")  exit                      ;;
   "Q")  exit                      ;;
    * )  echo "invalid option"     ;;
