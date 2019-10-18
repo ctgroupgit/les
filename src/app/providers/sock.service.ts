@@ -30,10 +30,18 @@ export class SockService {
       this._electron.fs.mkdirSync(this.downloadPath);
     }
 
-    this.IP = (this.localStorage.retrieve('serverIp') === 'undefined') ? '10.76.139.29' : this.localStorage.retrieve('serverIp');
-    const us = (this.localStorage.retrieve('username') === 'undefined') ? 'root' : this.localStorage.retrieve('username');
-    const ps = (this.localStorage.retrieve('password') === 'undefined') ? 'hp' : this.localStorage.retrieve('password');
-    this.USER = us + ':' + ps;
+
+    if (this.localStorage.retrieve('debug')) {
+      this.IP = '127.0.0.1:22';
+      this.USER = 'andrea:123';
+    } else {
+      this.IP = '10.76.139.111:22';
+      this.USER = 'nova:nova';
+    }
+    // this.IP = (this.localStorage.retrieve('serverIp') === 'undefined') ? '10.76.139.111' : this.localStorage.retrieve('serverIp');
+    // const us = (this.localStorage.retrieve('username') === 'undefined') ? 'root' : this.localStorage.retrieve('username');
+    // const ps = (this.localStorage.retrieve('password') === 'undefined') ? 'hp' : this.localStorage.retrieve('password');
+    // this.USER = us + ':' + ps;
 
     this.sock = this._electron.net.createServer(socket => {
       socket.on('data', (data) => {

@@ -2,7 +2,7 @@
     <mat-tab label="Config">
         <div class="example-container">
 
-            <!--            <mat-slide-toggle color="primary" (change)="automaticOpenChange()" checked="{{this.localStorage.retrieve('automaticOpenPDF')}}">HOT RELOAD</mat-slide-toggle>-->
+            <mat-slide-toggle color="primary" (change)="automaticOpenChange()" checked="{{this.localStorage.retrieve('debug')}}">MOD DEBUG</mat-slide-toggle>
 
 <!--            <mat-form-field style="margin-top: 30px">-->
 <!--                <input matInput placeholder="Default Save Folder" value="{{this.localStorage.retrieve('saveFolder')}}">-->
@@ -11,15 +11,15 @@
 <!--                </button>-->
 <!--            </mat-form-field>-->
 
-            <mat-form-field style="margin-top: 20px">
-                <input matInput placeholder="Server IP + SFTP PORT (example 127.0.0.1:22)" type="text" value="{{this.localStorage.retrieve('serverIp')}}" (keyup)="onchangeIP($event)">
-            </mat-form-field>
-            <mat-form-field style="margin-top: 20px">
-                <input matInput placeholder="Username" type="text" value="{{this.localStorage.retrieve('username')}}" (keyup)="onchangeUsername($event)">
-            </mat-form-field>
-            <mat-form-field style="margin-top: 20px">
-                <input matInput placeholder="Password" type="password" value="{{this.localStorage.retrieve('password')}}" (keyup)="onchangePassword($event)">
-            </mat-form-field>
+            <!--            <mat-form-field style="margin-top: 20px">-->
+            <!--                <input matInput placeholder="Server IP + SFTP PORT (example 127.0.0.1:22)" type="text" value="{{this.localStorage.retrieve('serverIp')}}" (keyup)="onchangeIP($event)">-->
+            <!--            </mat-form-field>-->
+            <!--            <mat-form-field style="margin-top: 20px">-->
+            <!--                <input matInput placeholder="Username" type="text" value="{{this.localStorage.retrieve('username')}}" (keyup)="onchangeUsername($event)">-->
+            <!--            </mat-form-field>-->
+            <!--            <mat-form-field style="margin-top: 20px">-->
+            <!--                <input matInput placeholder="Password" type="password" value="{{this.localStorage.retrieve('password')}}" (keyup)="onchangePassword($event)">-->
+            <!--            </mat-form-field>-->
         </div>
 
     </mat-tab>

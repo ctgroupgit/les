@@ -98,7 +98,7 @@ export class PreferencesComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   automaticOpenChange() {
-    this.localStorage.store('automaticOpenPDF', !this.localStorage.retrieve('automaticOpenPDF'));
+    this.localStorage.store('debug', !this.localStorage.retrieve('debug'));
   }
 }
 
