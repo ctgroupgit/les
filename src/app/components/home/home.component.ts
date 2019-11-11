@@ -1,4 +1,4 @@
-import {Component, OnInit, OnDestroy, OnChanges, SimpleChanges} from '@angular/core';
+import {Component, OnInit, OnDestroy, AfterViewChecked, ChangeDetectorRef, ViewRef} from '@angular/core';
 import {ElectronService} from '../../providers/electron.service';
 import {SockService} from '../../providers/sock.service';
 import {Subscription} from 'rxjs';
@@ -15,7 +15,7 @@ import {GlobalService} from '../../providers/global.service';
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy, OnChanges {
+export class HomeComponent implements OnInit, OnDestroy, AfterViewChecked {
 
     public displayedColumns = ['order', 'name', 'pathFile'];
     public dataSource = new MatTableDataSource<string>();
@@ -26,21 +26,24 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
                 private sock: SockService,
                 private localStorage: LocalStorageService,
                 private pdf: PdfGenerationService,
-                private gb: GlobalService) {
-
-        this.newFileBuffer = this.sock.dati.subscribe((event) => {
-            this.scanDir();
-        });
+                private gb: GlobalService,
+                private cd: ChangeDetectorRef) {
     }
 
     ngOnInit() {
+        this.newFileBuffer = this.sock.dati.subscribe((event) => {
+            this.scanDir();
+        });
     }
 
     ngOnDestroy() {
         this.newFileBuffer.unsubscribe();
     }
 
-    ngOnChanges(changes: SimpleChanges): void {
+    ngAfterViewChecked() {
+        if (!(this.cd as ViewRef).destroyed) {
+            this.cd.detectChanges();
+        }
     }
 
     public scanDir() {

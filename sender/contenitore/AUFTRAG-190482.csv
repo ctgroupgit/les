@@ -1,0 +1,38 @@
+00001;CONTROL;3;4;5;6;7;8;9;10;11;12;01.01.01;02.02.02;T15;T16;T17;T18;T19;T20;T21;T22;T23;T24;T25;T26;T27;T28;T29;019
+307631;KOPIEN;001;000;;;;;;;;;;;AUFTRAGSBESTÄTIGUNG;;;;;;;;;;;;;;;019
+307631;KOPF_DATEN;;;;;;;;;;;23.07.19;;AUFTRAGSBESTÄTIGUNG;Ihre Bestell-Nr;747279                              ;Bestell-Datum;Ihre Zeichen;Frau Selchert     ;Unsere Zeichen;Nicole Naiel      ;Lief.-Nr. 700217  ;                  ;D;sezer;Zentrale;        ;0721/6205-37        ;019
+307631;KOPF_POSUEB;;;;;;;;;;;;;Pos.;Produkt-Nr/Bezeichnung;Menge;ME;Einzelpreis;PE;Gesamt ;EUR ;0;;;;;;0721-6205-36        ;019
+307631;KONTAKT;;;;;;;;;;;;;Fax.: 0721/6205-10;nicole.naiel@zzdrivetech.com;;0721-6205-36;seher.sezer@zzdrivetech.com; Frau Sezer, Seher;;;; ;0721/94601-39;0721/94601-0;;;;019
+307631;KOPF_USTID;;;;;;;;;;;;;Ihre Ust-IdNr;                ;Unsere Ust-IdNr;DE815609203     ;;;;;;;;;;;;019
+307631;KOPF;;;;;;;;;;;08.10.19;;Datum;Vertreter;;Auftrags-Nr;190482          ;Kunden-Nr;10846   ;Mall + Herlan GmbH;Wöschbacher Str. 33;76327 Pfinztal;;;;;;019
+307631;KOPF_TEXTF;1;;;;;;;;;;;;tVielen Dank für Ihren Auftrag.                                        ;;;;;;;;;;;;;;;019
+307631;KOPF_TEXTF;2;;;;;;;;;;;;tEs gelten unsere Allgemeinen Verkaufs- und Lieferbedingungen,         ;;;;;;;;;;;;;;;019
+307631;KOPF_TEXTF;3;;;;;;;;;;;;tdie Sie auf unserer Homepage www.zzdrivetech.com unter                ;;;;;;;;;;;;;;;019
+307631;KOPF_TEXTF;4;;;;;;;;;;;;tImpressum einsehen bzw. herunterladen können.                         ;;;;;;;;;;;;;;;019
+307631;POS;2;1;695;0 ;695;;;;;;18.10.19;;Ihre Produkt-Nr:;B0028330;G0069-B0028330;FLANSCH             ;B0028330            ;ST;Termin: ;;;;;;;;     ;019
+307631;POS_TEXTP;1;2;;;;;;;;;;;tÄnderungsindex "5"                                                    ;;;;;;;;;;;;;;;019
+307631;POS_TEXTP;2;2;;;;;;;;;;;tWerkstoff:  C45                                                       ;;;;;;;;;;;;;;;019
+307631;POS_TEXTP;3;2;;;;;;;;;;;tOberfläche: brüniert                                                  ;;;;;;;;;;;;;;;019
+307631;POS_TEXTP;4;2;;;;;;;;;;;t*                                                                     ;;;;;;;;;;;;;;;019
+307631;POS_TEXTP;5;2;;;;;;;;;;;tFlansch wird auf Welle B0024551 montiert und                          ;;;;;;;;;;;;;;;019
+307631;POS_TEXTP;6;2;;;;;;;;;;;tfertig bearbeitet.                                                    ;;;;;;;;;;;;;;;019
+307631;POS_TEXTP;7;2;;;;;;;;;;;tSiehe auch Zeichnung B0090940.                                        ;;;;;;;;;;;;;;;019
+307631;FUSS_WERTE;1;;695;;;;;;;;;;NETTOW;Nettowert;;;;;;;;;;;;;;019
+307631;FUSS_WERTE;2;;25;;;;;;;;;;KOSTEN;Verpackung       ;    ;;;;;;;;;;;;;019
+307631;FUSS_WERTE;3;;720;;;;;;;;;;NETTOAW;Nettoauftragswert;;;;;;;;;;;;;;019
+307631;FUSS_WERTE;4;19;136,8;;;;;;;;;;MWST;zuzügl.% MWSt;%;;;;;;;;;;;;;019
+307631;FUSS_WERTE;5;;856,8;;;;;;;;;;AUFTRW;Auftragswert;;;;;;;;;;;;;;019
+307631;FUSS_LIEFB;;;;;;;;;;;;;frei Haus, ausschließl. Verp.                               ;Lieferbedingung:;;;;;;;;;;;;;;019
+307631;FUSS_VART;1;;;;;;;;;;;;Zufuhr                                                                ;Versandart:;;;;;;;;;;;;;;019
+307631;FUSS_ZAHLB;1;;;;;;;;;;;;14 Tage 3 % Skonto;Zahlungsbedingung:;;;;;;;;;;;;;;019
+307631;FUSS_ZAHLB;2;;;;;;;;;;;;30 Tage netto;Zahlungsbedingung:;;;;;;;;;;;;;;019
+307631;FUSS_TEXTF;1;;;;;;;;;;;;tBitte beachten Sie: Es gilt die zum Zeitpunkt der Leistungs-          ;;;;;;;;;;;;;;;019
+307631;FUSS_TEXTF;2;;;;;;;;;;;;t                    erbringung gültige Mehrwertsteuer.                ;;;;;;;;;;;;;;;019
+307631;FUSS_TEXTF;3;;;;;;;;;;;;t;;;;;;;;;;;;;;;019
+307631;FUSS_TEXTF;4;;;;;;;;;;;;t;;;;;;;;;;;;;;;019
+307631;FUSS_TEXTF;5;;;;;;;;;;;;tMit freundlichen Grüßen                                               ;;;;;;;;;;;;;;;019
+307631;FUSS_TEXTF;6;;;;;;;;;;;;t;;;;;;;;;;;;;;;019
+307631;FUSS_TEXTF;7;;;;;;;;;;;;tZZ-DriveTech GmbH                                                     ;;;;;;;;;;;;;;;019
+307631;FUSS_TEXTF;8;;;;;;;;;;;;t;;;;;;;;;;;;;;;019
+307631;FUSS_TEXTF;9;;;;;;;;;;;;t;;;;;;;;;;;;;;;019
+307631;FUSS_TEXTF;10;;;;;;;;;;;;ti.V. Peter Sohl                                                       ;;;;;;;;;;;;;;;019

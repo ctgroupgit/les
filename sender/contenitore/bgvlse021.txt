@@ -1,0 +1,61 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|021
+306914|KOPIEN|001|002|||||||||||LIEFERSCHEIN|LIEFERSCHEIN|LIEFERSCHEIN KOPIE||||||||||781218|||021
+306914|KOPF_POSUEB||||||||||||14.08.19|Pos.|Produkt-Nr/Bezeichnung|Bestellmenge|Liefermenge|Restmenge|ME|Auftrags-Datum|||Datum     ____________  Empfangsbestätigung: _________________________|||||0721/6205-37|021
+306914|KOPF_ANS||||||||||||||||||IMC|Im Auftrag von|ARKU Maschinenbau GmbH|Siemensstraße 11|76532 Baden-Baden||||||021
+306914|KOPF_USTID|||||||||||||Ihre Ust-IdNr|                |Unsere Ust-IdNr|DE815609203     ||||||||||||021
+306914|KOPF|||||||||||08.10.19||Datum|Vertreter|Heinz Flohr                     |Lieferschein|106085|Kunden-Nr|10068   |IMC Slovakia, s.r.o.|Industrial Marketing|& Cooperation|Sebestanova 255|01701 Povazska Bystrica|Slowakische Republik|||021
+306914|KOPF_TEXTF|1||||||||||||tSie erhielten für Ihre Rechnung und Gefahr die unten                  |||||||||||||||021
+306914|KOPF_TEXTF|2||||||||||||taufgeführten Waren.                                                   |||||||||||||||021
+306914|KOPF_TEXTF|3||||||||||||tWir wünschen Ihnen guten Empfang der Sendung.                         |||||||||||||||021
+306914|KOPF_DATEN|||||||||||05.08.19|14.08.19|Auftrags-Nr|Ihre Bestell-Nr|BE 134758 Proj.9529 all in Met.2/18 |Bestell-Datum|LIEFERSCHEIN|Herr Henschel     |0721/6205-37        |Nicole Naiel      |Lief.-Nr. 70390   |                  |D|sezer|Zentrale|        |18041103        |021
+306914|KOPF_DATEN2||||||||||||||||||||  |01701 Povazska Bystrica|||||||021
+306914|KONTAKT|||||||||||||Fax.: 0721/6205-10|nicole.naiel@zzdrivetech.com||0721-6205-36|seher.sezer@zzdrivetech.com| Frau Sezer, Seher|||| |07221/5009-24 EK|07221/5009-0|07751/873150|07751/87310||021
+306914|KOPF_TEXTA|1||||||||||||tAus Ihrem Rahmenauftrag Nr. AB 88219 vom 14.05.18                     |||||||||||||||021
+306914|KOPF_TEXTA|2||||||||||||t|||||||||||||||021
+306914|KOPF_TEXTA|3||||||||||||tGesamtstückzahl                   Reststückzahl                       |||||||||||||||021
+306914|KOPF_TEXTA|4||||||||||||tK12399; G0519-35   4 Stück             1 Stück                        |||||||||||||||021
+306914|KOPF_TEXTA|5||||||||||||t|||||||||||||||021
+306914|KOPF_TEXTA|6||||||||||||tGesamtstückzahl                                                       |||||||||||||||021
+306914|KOPF_TEXTA|7||||||||||||tK12400, G0519-34   1 Stück             1 Stück                        |||||||||||||||021
+306914|KOPF_TEXTA|8||||||||||||t===================================================                   |||||||||||||||021
+306914|POS|1|1,0000|1,0000||198|198||||||27.09.19|Ihre Produkt-Nr:|K12399|G0519-35|VERTEILERGETRIEBE   |K12399 CF50-9 li/re |ST|Termin: |||||Versandgewicht      |netto|brutto|40/19|021
+306914|POS2|1||||||||||||Änderungsindex      |||||||||||||||021
+306914|POS_TEXTP|1|1|||||||||||tGetriebebezeichnung:  CF50-9 li/re                                    |||||||||||||||021
+306914|POS_TEXTP|2|1|||||||||||tGetriebety:           CF50-9 li/re, 9-Walzen-Verteilergetriebe        |||||||||||||||021
+306914|POS_TEXTP|3|1|||||||||||tKunden Art-Nr:        K12399                                          |||||||||||||||021
+306914|POS_TEXTP|4|1|||||||||||tAusführung:           9 Richtwellen (Abtriebswellen)                  |||||||||||||||021
+306914|POS_TEXTP|5|1|||||||||||tAbtriebswellen:       mit Verzahnung DIN 5480-W28x1,25x30x21x8g       |||||||||||||||021
+306914|POS_TEXTP|6|1|||||||||||tStirnradverzahnungen: alle nach DIN 867 geschliffen                   |||||||||||||||021
+306914|POS_TEXTP|7|1|||||||||||tKundenreferenz:       CF50-9 re/li, 9-Walzen-Verteilergetriebe        |||||||||||||||021
+306914|POS_TEXTP|8|1|||||||||||tKunden Art-Nr:        K12400                                          |||||||||||||||021
+306914|POS_TEXTP|9|1|||||||||||tGetriebetyp:          Mehrwellengetriebe, 2 Vorschubwalzen            |||||||||||||||021
+306914|POS_TEXTP|10|1|||||||||||tÜbersetzung:          0.675                                           |||||||||||||||021
+306914|POS_TEXTP|11|1|||||||||||tAbtriebswellen:       mit Verzahnung DIN 5480-W28x1.25x30x21x8g       |||||||||||||||021
+306914|POS_TEXTP|12|1|||||||||||tVerzahnung:           Stirnräder nach DIN 867 geschliffen             |||||||||||||||021
+306914|POS_TEXTP|13|1|||||||||||tMax. Verdrehspiel:    zwischen Eintrieb und Abtriebswellen            |||||||||||||||021
+306914|POS_TEXTP|14|1|||||||||||t                      ca. 12 arcmin (Kundenwunsch)                    |||||||||||||||021
+306914|POS_TEXTP|15|1|||||||||||ttats. Verdrehspiel:   wird durch Messungen ermittelt                  |||||||||||||||021
+306914|POS_TEXTP|16|1|||||||||||tVerdrehspiel:         Vorschubwellen 0,25/R100                        |||||||||||||||021
+306914|POS_TEXTP|17|1|||||||||||tAntriebsmoment:       max 621 Nm                                      |||||||||||||||021
+306914|POS_TEXTP|18|1|||||||||||tAntriebsdrehzahl:     192 U/min                                       |||||||||||||||021
+306914|POS_TEXTP|19|1|||||||||||tAbtriebsdrehzahl:     284 U/min                                       |||||||||||||||021
+306914|POS_TEXTP|20|1|||||||||||tÜbersetzung:          0,675                                           |||||||||||||||021
+306914|POS_TEXTP|21|1|||||||||||tAntrieb:              über Zahnriemen (kundenseits)                   |||||||||||||||021
+306914|POS_TEXTP|22|1|||||||||||tRadialbelastung:      Fr= max 11kN/125mm von Mitte Getriebe           |||||||||||||||021
+306914|POS_TEXTP|23|1|||||||||||tSchmierstoff:         Empfehlung Getriebeöl CLP ISO VG 320-460        |||||||||||||||021
+306914|POS_TEXTP|24|1|||||||||||tSchmierstoffmenge:    ca 15 Liter                                     |||||||||||||||021
+306914|POS_TEXTP|25|1|||||||||||tAuslieferung:         ohne Öl                                         |||||||||||||||021
+306914|POS_TEXTP|26|1|||||||||||tErster Ölwechsel:     nach ca.100 Bh,                                 |||||||||||||||021
+306914|POS_TEXTP|27|1|||||||||||tWeitere Ölwechsel:    danach alle 8000 Bh oder alle 2 Jahre           |||||||||||||||021
+306914|POS_TEXTP|28|1|||||||||||tLackierung:           RAL 9005 schwarz                                |||||||||||||||021
+306914|POS_TEXTP|29|1|||||||||||tMasse:                ca. 188 kg (ohne Ölfüllung)                     |||||||||||||||021
+306914|POS_TEXTP|30|1|||||||||||t|||||||||||||||021
+306914|POS_TEXTP|31|1|||||||||||t*                                                                     |||||||||||||||021
+306914|POS_TEXTP|32|1|||||||||||tKENNZEICHNUNG:                                                        |||||||||||||||021
+306914|POS_TEXTP|33|1|||||||||||tGetriebenummer:   3                                                   |||||||||||||||021
+306914|POS_TEXTP|34|1|||||||||||tKundenreferenz:   K12399                                              |||||||||||||||021
+306914|POS_TEXTP|35|1|||||||||||t*                                                                     |||||||||||||||021
+306914|FUSS_LIEFB|||||||||||||frei Haus, inkl. Verp.                                      |Lieferbedingung:|4|||||||||||||021
+306914|FUSS_VART|1||||||||||||DNV                                                                   |Versandart:|1|||||||||||||021
+306914|FUSS_PACK|1||||||||||||Europal.|Verpackung:||||||||||||||021
+306914|FUSS_GEW||198||||||||||||Versandgewichte:|netto|brutto||||||||||||021

@@ -1,0 +1,84 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|021
+308183|KOPIEN|001|000|||||||||||AUFTRAGSBESTÄTIGUNG|||||||||||||||021
+308183|KOPF_USTID|||||||||||||Ihre Ust-IdNr|DE 811378260    |Unsere Ust-IdNr|DE815609203     ||||||||||||021
+308183|KOPF_DATEN|||||||||||14.10.19||AUFTRAGSBESTÄTIGUNG|Ihre Bestell-Nr|166007-2 Bestelländerung 1          |Bestell-Datum|Ihre Zeichen|Fr. Frauendiener  |Unsere Zeichen|Frau Sezer, Seher |Abruf 1 - Ruggli  |Lief. 9000-1000   |D|sezer|Zentrale|        |0721-6205-36        |021
+308183|KOPF_DATEN2||||||||||||||||||LieferantNr|9000-1000 |||||||||021
+308183|KOPF_POSUEB|||||||||||||Pos.|Produkt-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt |EUR |0||||||                    |021
+308183|KONTAKT||||||||||||||seher.sezer@zzdrivetech.com||0721-6205-36|seher.sezer@zzdrivetech.com| Frau Sezer, Seher|||| |07751/8731-50|07751/8731-0||||021
+308183|KOPF|||||||||||06.11.19||Datum|Vertreter|Flohr  Direkt                   |Auftrags-Nr|19062901        |Kunden-Nr|10502   |FLOHR Industrietechnik GmbH|Im unteren Tal 1|79761 Waldshut-Tiengen||||||021
+308183|KOPF_TEXTF|1||||||||||||tVielen Dank für Ihren Auftrag.                                        |||||||||||||||021
+308183|KOPF_TEXTF|2||||||||||||tEs gelten unsere Allgemeinen Verkaufs- und Lieferbedingungen,         |||||||||||||||021
+308183|KOPF_TEXTF|3||||||||||||tdie Sie auf unserer Homepage www.zzdrivetech.com unter                |||||||||||||||021
+308183|KOPF_TEXTF|4||||||||||||tImpressum einsehen bzw. herunterladen können.                         |||||||||||||||021
+308183|KOPF_TEXTA|1||||||||||||tAbruf aus Ihrem Rahmen 166007-1 vom 14.10.19                          |||||||||||||||021
+308183|KOPF_TEXTA|2||||||||||||t************************************************                      |||||||||||||||021
+308183|KOPF_TEXTA|3||||||||||||tGesamtmenge = 5 Stück                                                 |||||||||||||||021
+308183|KOPF_TEXTA|4||||||||||||tRestmenge = 2 Stück                                                   |||||||||||||||021
+308183|KOPF_TEXTA|5||||||||||||t************************************************                      |||||||||||||||021
+308183|POS|1|1|1020|0 |958,8|36|||||22.11.19||Ihre Produkt-Nr:|015.502.002.B|K170-0075-011|KEGELRADGETRIEBE    |015.502.002.B       |ST|Termin: |||Versandgewicht      |netto||||47/19|021
+308183|POS_RB|1|6|0||||||||||- Rabatt 1|%|- Rabatt 2|%||||||||||||021
+308183|POS_TEXTP|1|1|||||||||||tKundenzeichnung:      2-3123-00, Index -, Stand 03.05.2017            |||||||||||||||021
+308183|POS_TEXTP|2|1|||||||||||tÜbersetzung:          1:1                                             |||||||||||||||021
+308183|POS_TEXTP|3|1|||||||||||tAusführung:           111/2                                           |||||||||||||||021
+308183|POS_TEXTP|4|1|||||||||||tMontagebauform:       KO1 (alte Bez. B14B)                            |||||||||||||||021
+308183|POS_TEXTP|5|1|||||||||||tAntriebsdrehzahl:     100U/min                                        |||||||||||||||021
+308183|POS_TEXTP|6|1|||||||||||tVerdrehflankenspiel:  reduziert                                       |||||||||||||||021
+308183|POS_TEXTP|7|1|||||||||||tWellendichtringe:     Standard NBR                                    |||||||||||||||021
+308183|POS_TEXTP|8|1|||||||||||tEntlüftung:           Entlüftung mit Winkel im Beutel verpackt,       |||||||||||||||021
+308183|POS_TEXTP|9|1|||||||||||t                      am Gehäuse angehängt mitgeliefert.              |||||||||||||||021
+308183|POS_TEXTP|10|1|||||||||||tSchmierung:           synth. Fliessfett GL00                          |||||||||||||||021
+308183|POS_TEXTP|11|1|||||||||||tAuslieferung:         incl.                                           |||||||||||||||021
+308183|POS_TEXTP|12|1|||||||||||tSchmiermittelmenge:   ca.2dm3                                         |||||||||||||||021
+308183|POS_TEXTP|13|1|||||||||||tOberflächenschutz:    grundiert, Anschlußfläche und Zentrier-         |||||||||||||||021
+308183|POS_TEXTP|14|1|||||||||||t                      durchmesser (Seite KW-profil) unlackiert        |||||||||||||||021
+308183|POS_TEXTP|15|1|||||||||||tZubehör:              Hohlwelle nitriert                              |||||||||||||||021
+308183|POS_TEXTP|16|1|||||||||||t                      Keilnabenprofil  A36H7x42H11x7D9 DIN 5463       |||||||||||||||021
+308183|POS_TEXTP|17|1|||||||||||t*                                                                     |||||||||||||||021
+308183|POS_TEXTP|18|1|||||||||||tKENNZEICHNUNG:                                                        |||||||||||||||021
+308183|POS_TEXTP|19|1|||||||||||tGetriebenummer:   1                                                   |||||||||||||||021
+308183|POS_TEXTP|20|1|||||||||||tKundenreferenz:   015.502.002.B                                       |||||||||||||||021
+308183|POS_TEXTP|21|1|||||||||||t*                                                                     |||||||||||||||021
+308183|POS|2|2|1020|0 |1917,6|72|||||22.11.19||Ihre Produkt-Nr:|015.502.002.B|K170-0075-011|KEGELRADGETRIEBE    |015.502.002.B       |ST|Termin: |||Versandgewicht      |netto||||47/19|021
+308183|POS_RB|2|6|0||||||||||- Rabatt 1|%|- Rabatt 2|%||||||||||||021
+308183|POS_TEXTP|1|2|||||||||||tKundenzeichnung:      2-3123-00, Index -, Stand 03.05.2017            |||||||||||||||021
+308183|POS_TEXTP|2|2|||||||||||tÜbersetzung:          1:1                                             |||||||||||||||021
+308183|POS_TEXTP|3|2|||||||||||tAusführung:           111/2                                           |||||||||||||||021
+308183|POS_TEXTP|4|2|||||||||||tMontagebauform:       KO1 (alte Bez. B14B)                            |||||||||||||||021
+308183|POS_TEXTP|5|2|||||||||||tAntriebsdrehzahl:     100U/min                                        |||||||||||||||021
+308183|POS_TEXTP|6|2|||||||||||tVerdrehflankenspiel:  reduziert                                       |||||||||||||||021
+308183|POS_TEXTP|7|2|||||||||||tWellendichtringe:     Standard NBR                                    |||||||||||||||021
+308183|POS_TEXTP|8|2|||||||||||tEntlüftung:           Entlüftung mit Winkel im Beutel verpackt,       |||||||||||||||021
+308183|POS_TEXTP|9|2|||||||||||t                      am Gehäuse angehängt mitgeliefert.              |||||||||||||||021
+308183|POS_TEXTP|10|2|||||||||||tSchmierung:           synth. Fliessfett GL00                          |||||||||||||||021
+308183|POS_TEXTP|11|2|||||||||||tAuslieferung:         incl.                                           |||||||||||||||021
+308183|POS_TEXTP|12|2|||||||||||tSchmiermittelmenge:   ca.2dm3                                         |||||||||||||||021
+308183|POS_TEXTP|13|2|||||||||||tOberflächenschutz:    grundiert, Anschlußfläche und Zentrier-         |||||||||||||||021
+308183|POS_TEXTP|14|2|||||||||||t                      durchmesser (Seite KW-profil) unlackiert        |||||||||||||||021
+308183|POS_TEXTP|15|2|||||||||||tZubehör:              Hohlwelle nitriert                              |||||||||||||||021
+308183|POS_TEXTP|16|2|||||||||||t                      Keilnabenprofil  A36H7x42H11x7D9 DIN 5463       |||||||||||||||021
+308183|POS_TEXTP|17|2|||||||||||t*                                                                     |||||||||||||||021
+308183|POS_TEXTP|18|2|||||||||||tKENNZEICHNUNG:                                                        |||||||||||||||021
+308183|POS_TEXTP|19|2|||||||||||tGetriebenummer:   2-3                                                 |||||||||||||||021
+308183|POS_TEXTP|20|2|||||||||||tKundenreferenz:   015.502.002.B                                       |||||||||||||||021
+308183|POS_TEXTP|21|2|||||||||||t*                                                                     |||||||||||||||021
+308183|FUSS_WERTE|1||2876,4||||||||||NETTOW|Nettowert||||||||||||||021
+308183|FUSS_WERTE|2|19|546,52||||||||||MWST|zuzügl.% MWSt|%|||||||||||||021
+308183|FUSS_WERTE|3||3422,92||||||||||AUFTRW|Auftragswert||||||||||||||021
+308183|FUSS_LIEFB|||||||||||||ab Werk, ausschl. Verpackung                                |Lieferbedingung:||||||||||||||021
+308183|FUSS_VART|1||||||||||||Spedition HUGGER GmbH                                                 |Versandart:||||||||||||||021
+308183|FUSS_VART|2||||||||||||In Rohräcker 5, 78554 Aldingen                                        |Versandart:||||||||||||||021
+308183|FUSS_VART|3||||||||||||Ansprechpartner: Herr Fabian Kästle                                   |Versandart:||||||||||||||021
+308183|FUSS_VART|4||||||||||||Tel: 07424/9792-41                                                    |Versandart:||||||||||||||021
+308183|FUSS_VART|5||||||||||||Fax: 07424/9792-72                                                    |Versandart:||||||||||||||021
+308183|FUSS_VART|6||||||||||||E-mail: orderline@hugger-spedition.de                                 |Versandart:||||||||||||||021
+308183|FUSS_ZAHLB|1||||||||||||14 Tage 2% Skonto, 30 Tage 1% Skonto                                  |Zahlungsbedingung:||||||||||||||021
+308183|FUSS_TEXTF|1||||||||||||tBitte beachten Sie: Es gilt die zum Zeitpunkt der Leistungs-          |||||||||||||||021
+308183|FUSS_TEXTF|2||||||||||||t                    erbringung gültige Mehrwertsteuer.                |||||||||||||||021
+308183|FUSS_TEXTF|3||||||||||||t|||||||||||||||021
+308183|FUSS_TEXTF|4||||||||||||t|||||||||||||||021
+308183|FUSS_TEXTF|5||||||||||||tMit freundlichen Grüßen                                               |||||||||||||||021
+308183|FUSS_TEXTF|6||||||||||||t|||||||||||||||021
+308183|FUSS_TEXTF|7||||||||||||tZZ-DriveTech GmbH                                                     |||||||||||||||021
+308183|FUSS_TEXTF|8||||||||||||t|||||||||||||||021
+308183|FUSS_TEXTF|9||||||||||||t|||||||||||||||021
+308183|FUSS_TEXTF|10||||||||||||ti.V. Peter Sohl                                                       |||||||||||||||021

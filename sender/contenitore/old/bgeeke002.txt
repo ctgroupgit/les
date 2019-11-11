@@ -1,0 +1,34 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|002
+-149928|KOPIEN|001|000||||||||0|||BESTELLUNG|||||||||||0|u.bechtle@hd-stahl.de|||002
+-149928|KOPF_USTID|||||||||||||Ihre Ust-Identnr|                |Unsere Ust-Identnr|DE815609203     ||||||||||||002
+-149928|KOPF||||||||||||14.10.19|Datum|Bestellung|108440          |||||Hagelauer Dewald GmbH|Gottlieb-Daimler-Straﬁe 11|74385 Pleidelsheim||||||002
+-149928|KOPF_DATEN||||||||||||        |Angebots-Nr|                  |KundenNr/Ihre Zeichen |33222               |                  ||Lieferant|60404   |Unser Zeichen / Telefon|Michael Batzler                 |0721/6205-72        |D|korte|||002
+-149928|KONTAKT|||||||||||||Fax.: 0721/6205-10|michael.batzler@zzdrivetech.com|Fax:0721 6205-10|0721 6205-51|klaus.korte@zzdrivetech.com|Klaus Korte|||| |07144/281599|07144/2693-0||||002
+-149928|KOPF_TEXTF|1||||||||||||tIn allen Schriftstœcken bitte unsere Bestell-Daten                    |||||||||||||||002
+-149928|KOPF_TEXTF|2||||||||||||tangeben, Rechnung + Lieferschein zweifach.                            |||||||||||||||002
+-149928|KOPF_TEXTF|3||||||||||||tZu unseren Einkaufsbedingungen bestellen wir:                         |||||||||||||||002
+-149928|KOPF_POSUEB|||||||||||||Pos  |Artikel-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt|EUR ||||||||002
+-149928|POS|1|2,00|197,00|394,00|394,00|||0,00||||21.10.19|Ihre Artikel-Nr:|                        |141-1.7225-400|SÿGEABSCHNITT       |“400x125    42CrMo4V|ST||Termin:        |Kommission:    |190616              |||||43/19|002
+-149928|POS2|1||||||||||||Kostenstelle:||Kontierungsgruppe:||Werkstoff:|42CrMo4V        |Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÿI:|||002
+-149928|POS 3|1|||||||||||||||||||||||||||002
+-149928|POS_TEXTA|1|1|||||||||||tFtg.-Maﬁ: “386x120                                                    |||||||||||||||002
+-149928|POS_TEXTA|2|1|||||||||||tMit Werkszeugnis DIN EN 10204-2.2                                     |||||||||||||||002
+-149928|FUSS_WERTE|1||394,00||||||||||AUFTRW|Bestellwert||||||||||||||002
+-149928|FUSS_LIEFD||||||||||||21.10.19||Liefertermin:      ||||||||||||||002
+-149928|FUSS_PRE|1||||||||||||zzgl. 19 % MWST                                                       |Preisstellung:     ||||||||||||||002
+-149928|FUSS_ZAHLB|1||||||||||||14 Tage 2,00 % Skonto                                                                              |Zahlungsbedingung: ||||||||||||||002
+-149928|FUSS_ZAHLB|3||||||||||||45 Tage netto                                                                                      |Zahlungsbedingung: ||||||||||||||002
+-149928|FUSS_TEXTF|1||||||||||||t|||||||||||||||002
+-149928|FUSS_TEXTF|2||||||||||||tZZ Drive Tech GmbH                                                    |||||||||||||||002
+-149928|FUSS_TEXTF|3||||||||||||t|||||||||||||||002
+-149928|FUSS_TEXTF|4||||||||||||ti.A.         i.A.             i.A.                                    |||||||||||||||002
+-149928|FUSS_TEXTF|5||||||||||||tKlaus Korte  Nadine Cordeiro  Michael Batzler                         |||||||||||||||002
+-149928|FUSS_TEXTF|6||||||||||||t|||||||||||||||002
+-149928|FUSS_TEXTF|7||||||||||||t|||||||||||||||002
+-149928|FUSS_TEXTF|8||||||||||||t*****************************************************                 |||||||||||||||002
+-149928|FUSS_TEXTF|9||||||||||||tWir bitten um eine AuftragsbestÃtigung innerhalb                      |||||||||||||||002
+-149928|FUSS_TEXTF|10||||||||||||tvon 3 Arbeitstagen.                                                   |||||||||||||||002
+-149928|FUSS_TEXTF|11||||||||||||tBei AuftragsbestÃtigungen und Lieferscheinen immer                    |||||||||||||||002
+-149928|FUSS_TEXTF|12||||||||||||tunsere Artikelnummern angeben.                                        |||||||||||||||002
+-149928|FUSS_TEXTF|13||||||||||||tBitte die Ware zum angegebenen Liefertermin anliefern                 |||||||||||||||002
+-149928|FUSS_TEXTF|14||||||||||||t*****************************************************                 |||||||||||||||002

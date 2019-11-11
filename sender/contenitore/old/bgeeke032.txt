@@ -1,0 +1,34 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|032
+-149880|KOPIEN|001|000||||||||0|||BESTELLUNG|||||||||||0|u.bechtle@hd-stahl.de|||032
+-149880|KOPF_USTID|||||||||||||Ihre Ust-Identnr|                |Unsere Ust-Identnr|DE815609203     ||||||||||||032
+-149880|KOPF||||||||||||01.10.19|Datum|Bestellung|108401          |||||Hagelauer Dewald GmbH|Gottlieb-Daimler-Straße 11|74385 Pleidelsheim||||||032
+-149880|KOPF_DATEN||||||||||||        |Angebots-Nr|                  |KundenNr/Ihre Zeichen |33222               |                  ||Lieferant|60404   |Unser Zeichen / Telefon|Klaus Korte                     |0721 6205-51        |D|korte|||032
+-149880|KONTAKT|||||||||||||Fax:0721 6205-10|klaus.korte@zzdrivetech.com|Fax:0721 6205-10|0721 6205-51|klaus.korte@zzdrivetech.com|Klaus Korte|||| |07144/281599|07144/2693-0||||032
+-149880|KOPF_TEXTF|1||||||||||||tIn allen Schriftstücken bitte unsere Bestell-Daten                    |||||||||||||||032
+-149880|KOPF_TEXTF|2||||||||||||tangeben, Rechnung + Lieferschein zweifach.                            |||||||||||||||032
+-149880|KOPF_TEXTF|3||||||||||||tZu unseren Einkaufsbedingungen bestellen wir:                         |||||||||||||||032
+-149880|KOPF_POSUEB|||||||||||||Pos  |Artikel-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt|EUR ||||||||032
+-149880|POS|1|2,00|220,00|440,00|440,00|||0,00||||29.10.19|Ihre Artikel-Nr:|                        |141-1.7735-280-1|Sägeabschnitt       |Ø280x60  14CrMoV6.9 |ST||Termin:        |Kommission:    |190602              |||||29.10.19|032
+-149880|POS2|1||||||||||||Kostenstelle:||Kontierungsgruppe:||Werkstoff:|14CrMoV6.9      |Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||032
+-149880|POS 3|1|||||||||||||||||||||||||||032
+-149880|POS_TEXTA|1|1|||||||||||tMit Werkszeugnis EN 10204/3.1                                         |||||||||||||||032
+-149880|POS_TEXTA|2|1|||||||||||tFtg.maß für F0360-10-0015: ø268,02x54,26                              |||||||||||||||032
+-149880|FUSS_WERTE|1||440,00||||||||||AUFTRW|Bestellwert||||||||||||||032
+-149880|FUSS_LIEFD||||||||||||29.10.19||Liefertermin:      ||||||||||||||032
+-149880|FUSS_PRE|1||||||||||||zzgl. 19 % MWST                                                       |Preisstellung:     ||||||||||||||032
+-149880|FUSS_ZAHLB|1||||||||||||14 Tage 2,00 % Skonto                                                                              |Zahlungsbedingung: ||||||||||||||032
+-149880|FUSS_ZAHLB|3||||||||||||45 Tage netto                                                                                      |Zahlungsbedingung: ||||||||||||||032
+-149880|FUSS_TEXTF|1||||||||||||t|||||||||||||||032
+-149880|FUSS_TEXTF|2||||||||||||tZZ Drive Tech GmbH                                                    |||||||||||||||032
+-149880|FUSS_TEXTF|3||||||||||||t|||||||||||||||032
+-149880|FUSS_TEXTF|4||||||||||||ti.A.         i.A.             i.A.                                    |||||||||||||||032
+-149880|FUSS_TEXTF|5||||||||||||tKlaus Korte  Nadine Cordeiro  Michael Batzler                         |||||||||||||||032
+-149880|FUSS_TEXTF|6||||||||||||t|||||||||||||||032
+-149880|FUSS_TEXTF|7||||||||||||t|||||||||||||||032
+-149880|FUSS_TEXTF|8||||||||||||t*****************************************************                 |||||||||||||||032
+-149880|FUSS_TEXTF|9||||||||||||tWir bitten um eine Auftragsbestätigung innerhalb                      |||||||||||||||032
+-149880|FUSS_TEXTF|10||||||||||||tvon 3 Arbeitstagen.                                                   |||||||||||||||032
+-149880|FUSS_TEXTF|11||||||||||||tBei Auftragsbestätigungen und Lieferscheinen immer                    |||||||||||||||032
+-149880|FUSS_TEXTF|12||||||||||||tunsere Artikelnummern angeben.                                        |||||||||||||||032
+-149880|FUSS_TEXTF|13||||||||||||tBitte die Ware zum angegebenen Liefertermin anliefern                 |||||||||||||||032
+-149880|FUSS_TEXTF|14||||||||||||t*****************************************************                 |||||||||||||||032

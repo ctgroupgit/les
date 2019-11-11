@@ -112,8 +112,6 @@ THE SOFTWARE.
 
 @angular/material/button
 
-@angular/material/form-field
-
 @angular/material/icon
 
 @angular/material/slide-toggle

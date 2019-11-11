@@ -1,0 +1,35 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|008
+-150067|KOPIEN|001|000||||||||0|||BESTELLUNG|||||||||||0|tina.dieterle@stehle-gmbh.de|||008
+-150067|KOPF_USTID|||||||||||||Ihre Ust-Identnr|                |Unsere Ust-Identnr|DE815609203     ||||||||||||008
+-150067|KOPF||||||||||||07.11.19|Datum|Bestellung|108557          |||||Stehle GmbH|Zerspanungs- u. Schleiftechnik|Kinzigstr. 28|77716 Fischerbach|||||008
+-150067|KOPF_DATEN||||||||||||        |Angebots-Nr|                  |KundenNr/Ihre Zeichen |15601               |                  ||Lieferant|62112   |Unser Zeichen / Telefon|Klaus Korte                     |0721 6205-51        |D|korte|||008
+-150067|KONTAKT|||||||||||||Fax:0721 6205-10|klaus.korte@zzdrivetech.com|Fax:0721 6205-10|0721 6205-51|klaus.korte@zzdrivetech.com|Klaus Korte|||| |07832/97609-79|07832/97609-0||||008
+-150067|KOPF_TEXTF|1||||||||||||tIn allen Schriftstücken bitte unsere Bestell-Daten                    |||||||||||||||008
+-150067|KOPF_TEXTF|2||||||||||||tangeben, Rechnung + Lieferschein zweifach.                            |||||||||||||||008
+-150067|KOPF_TEXTF|3||||||||||||tZu unseren Einkaufsbedingungen bestellen wir:                         |||||||||||||||008
+-150067|KOPF_POSUEB|||||||||||||Pos  |Artikel-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt|EUR ||||||||008
+-150067|POS|1|12,00|128,00|1536,00|1536,00|||0,00||||14.11.19|Ihre Artikel-Nr:|                        |201-KRGL63.5-01|KURVENROLLE Ø 2,5   |Gleitgelagert       |ST||Termin:        |Kommission:    |18091903            |||||14.11.19|008
+-150067|POS2|1||||||||||||Kostenstelle:||Kontierungsgruppe:||Werkstoff:||Zeichn.-Nr.:|201-KRGL63.5-01 |MOD/DIN:||Abmessung:||ÄI:|||008
+-150067|POS 3|1|||||||||||||||||||||||||||008
+-150067|POS_TEXTA|1|1|||||||||||tØ 2,5"                                                                |||||||||||||||008
+-150067|POS_TEXTA|2|1|||||||||||tGefertigt von Fa. Stehle vgl. Zeichnung                               |||||||||||||||008
+-150067|FUSS_WERTE|1||1536,00||||||||||AUFTRW|Bestellwert||||||||||||||008
+-150067|FUSS_LIEFD||||||||||||14.11.19||Liefertermin:      ||||||||||||||008
+-150067|FUSS_LIEFB|||||||||||||frei Haus, ausschließl. Verp.                               |Lieferbedingung:   ||||||||||||||008
+-150067|FUSS_PRE|1||||||||||||zzgl. 19 % MWST                                                       |Preisstellung:     ||||||||||||||008
+-150067|FUSS_ZAHLB|1||||||||||||10 Tage 2,00 % Skonto                                                                              |Zahlungsbedingung: ||||||||||||||008
+-150067|FUSS_ZAHLB|3||||||||||||30 Tage netto                                                                                      |Zahlungsbedingung: ||||||||||||||008
+-150067|FUSS_TEXTF|1||||||||||||t|||||||||||||||008
+-150067|FUSS_TEXTF|2||||||||||||tZZ Drive Tech GmbH                                                    |||||||||||||||008
+-150067|FUSS_TEXTF|3||||||||||||t|||||||||||||||008
+-150067|FUSS_TEXTF|4||||||||||||ti.A.         i.A.             i.A.                                    |||||||||||||||008
+-150067|FUSS_TEXTF|5||||||||||||tKlaus Korte  Nadine Cordeiro  Michael Batzler                         |||||||||||||||008
+-150067|FUSS_TEXTF|6||||||||||||t|||||||||||||||008
+-150067|FUSS_TEXTF|7||||||||||||t|||||||||||||||008
+-150067|FUSS_TEXTF|8||||||||||||t*****************************************************                 |||||||||||||||008
+-150067|FUSS_TEXTF|9||||||||||||tWir bitten um eine Auftragsbestätigung innerhalb                      |||||||||||||||008
+-150067|FUSS_TEXTF|10||||||||||||tvon 3 Arbeitstagen.                                                   |||||||||||||||008
+-150067|FUSS_TEXTF|11||||||||||||tBei Auftragsbestätigungen und Lieferscheinen immer                    |||||||||||||||008
+-150067|FUSS_TEXTF|12||||||||||||tunsere Artikelnummern angeben.                                        |||||||||||||||008
+-150067|FUSS_TEXTF|13||||||||||||tBitte die Ware zum angegebenen Liefertermin anliefern                 |||||||||||||||008
+-150067|FUSS_TEXTF|14||||||||||||t*****************************************************                 |||||||||||||||008

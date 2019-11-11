@@ -16,9 +16,9 @@ export class GlobalService {
 
     checkDocType(csvData = []): string {
         let type = '';
-        console.log(this.printTypeMultiple);
+        // console.log(this.printTypeMultiple);
         csvData.forEach((row) => {
-            if (row[1].trim() === 'KOPIEN') {
+            if (row[1] === 'KOPIEN') {
                 if (this.printTypeMultiple) {
                     type = row[14].toLocaleUpperCase();
                 } else {

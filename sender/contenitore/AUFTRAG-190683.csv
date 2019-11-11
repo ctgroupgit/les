@@ -1,0 +1,61 @@
+00001;CONTROL;3;4;5;6;7;8;9;10;11;12;01.01.01;02.02.02;T15;T16;T17;T18;T19;T20;T21;T22;T23;T24;T25;T26;T27;T28;T29;012
+308202;KOPIEN;001;000;;;;;;;;;;;AUFTRAGSBESTÄTIGUNG;;;;;;;;;;;;74338;;;012
+308202;KOPF_ANS;;;;;;;;;;;;;;;;;;;Lieferanschrift;J.M. Voith SE & Co. KG / VTA;Entladestelle L.02;ACHTUNG:LS mitFrachtbrief senden;Ludwig-Erhard-Straße 20;74564 Crailsheim;;;;012
+308202;KOPF_RGAN;;;;;;;;;;;;;;;;;;;Rechnung an;J.M. Voith SE & Co. KG / VTA;c/o Voith Global Business;Services EMEA GmbH;St. Pöltener Straße 43;89522 Heidenheim;;;;012
+308202;KOPF_USTID;;;;;;;;;;;;;Ihre Ust-IdNr;                ;Unsere Ust-IdNr;DE815609203     ;;;;;;;;;;;;012
+308202;KOPF_DATEN;;;;;;;;;;;05.11.19;;AUFTRAGSBESTÄTIGUNG;Ihre Bestell-Nr;1000/4501736304/230                 ;Bestell-Datum;Ihre Zeichen;Frau Karger       ;Unsere Zeichen;Nicole Naiel      ;Lief.-Nr. 3203654 ;                  ;D;naiel1;Zentrale;13060   ;0721/6205-37        ;012
+308202;KOPF_DATEN2;;;;;;;;;;;;;;;;;;LieferantNr;3203654   ;;;;;;;;;012
+308202;KOPF_POSUEB;;;;;;;;;;;;;Pos.;Produkt-Nr/Bezeichnung;Menge;ME;Einzelpreis;PE;Gesamt ;EUR ;0;;;;;;07751/87310         ;012
+308202;KONTAKT;;;;;;;;;;;;;Fax.: 0721/6205-10;nicole.naiel@zzdrivetech.com;Fax.: 0721/6205-10;0721/6205-37;nicole.naiel@zzdrivetech.com; Nicole Naiel;;;; ;07951/32-666;07951/32-0;07751/873150;07751/87310;;012
+308202;KOPF;;;;;;;;;;;07.11.19;;Datum;Vertreter;Heinz Flohr                     ;Auftrags-Nr;190683          ;Kunden-Nr;12203   ;J.M. Voith SE & Co. KG / VTA;Voithstraße 1;74564 Crailsheim;;;;;;012
+308202;KOPF_TEXTF;1;;;;;;;;;;;;tVielen Dank für Ihren Auftrag.                                        ;;;;;;;;;;;;;;;012
+308202;KOPF_TEXTF;2;;;;;;;;;;;;tEs gelten unsere Allgemeinen Verkaufs- und Lieferbedingungen,         ;;;;;;;;;;;;;;;012
+308202;KOPF_TEXTF;3;;;;;;;;;;;;tdie Sie auf unserer Homepage www.zzdrivetech.com unter                ;;;;;;;;;;;;;;;012
+308202;KOPF_TEXTF;4;;;;;;;;;;;;tImpressum einsehen bzw. herunterladen können.                         ;;;;;;;;;;;;;;;012
+308202;POS;1;1;2490;0 ;2490;;;;;;14.02.20;;Ihre Produkt-Nr:;206.03534710;F0360-00-0037;KEGELRADSATZ        ;206.03534710        ;ST;Termin: ;;;;;;;;14.02.20;012
+308202;POS_TEXTP;1;1;;;;;;;;;;;tKundenartikel Nr : 206.03534710                                       ;;;;;;;;;;;;;;;012
+308202;POS_TEXTP;2;1;;;;;;;;;;;tZeichnungen      : 20603534810/20603534910                            ;;;;;;;;;;;;;;;012
+308202;POS_TEXTP;3;1;;;;;;;;;;;tZZ-Teilenummer   : F0360-12-0045/F0360-12-0046                        ;;;;;;;;;;;;;;;012
+308202;POS_TEXTP;4;1;;;;;;;;;;;tVerzahnungsart   : Klingelnberg Zyklo-Palloid HPGS                    ;;;;;;;;;;;;;;;012
+308202;POS_TEXTP;5;1;;;;;;;;;;;tQualität(DIN3965): 5-6                                                ;;;;;;;;;;;;;;;012
+308202;POS_TEXTP;6;1;;;;;;;;;;;tMaterial         : 18CrNiMo7-6                                        ;;;;;;;;;;;;;;;012
+308202;POS_TEXTP;7;1;;;;;;;;;;;tNormalmodul      : 2,62                                               ;;;;;;;;;;;;;;;012
+308202;POS_TEXTP;8;1;;;;;;;;;;;tZähnezahl        : 27/27                                              ;;;;;;;;;;;;;;;012
+308202;POS_TEXTP;9;1;;;;;;;;;;;tZahnbreite       : 25                                                 ;;;;;;;;;;;;;;;012
+308202;POS_TEXTP;10;1;;;;;;;;;;;tFertigungsumfang : Kplt. Bearbeitung inkl.Material                    ;;;;;;;;;;;;;;;012
+308202;POS_TEXTP;11;1;;;;;;;;;;;t;;;;;;;;;;;;;;;012
+308202;POS_TEXTP;12;1;;;;;;;;;;;tDokumentation    : Protokoll Verzahnung 100%                          ;;;;;;;;;;;;;;;012
+308202;POS_TEXTP;13;1;;;;;;;;;;;t                   Protokoll Paßmaße                                  ;;;;;;;;;;;;;;;012
+308202;POS_TEXTP;14;1;;;;;;;;;;;t                   Sichtkontrolle                                     ;;;;;;;;;;;;;;;012
+308202;POS_TEXTP;15;1;;;;;;;;;;;t;;;;;;;;;;;;;;;012
+308202;POS_TEXTP;16;1;;;;;;;;;;;tWarennummer: 84 83 90 89                                              ;;;;;;;;;;;;;;;012
+308202;FUSS_WERTE;1;;2490;;;;;;;;;;NETTOW;Nettowert;;;;;;;;;;;;;;012
+308202;FUSS_WERTE;2;19;473,1;;;;;;;;;;MWST;zuzügl.% MWSt;%;;;;;;;;;;;;;012
+308202;FUSS_WERTE;3;;2963,1;;;;;;;;;;AUFTRW;Auftragswert;;;;;;;;;;;;;;012
+308202;FUSS_LIEFB;;;;;;;;;;;;;FCA Karlsruhe ZZ Drive Tech GmbH                            ;Lieferbedingung:;;;;;;;;;;;;;;012
+308202;FUSS_VART;1;;;;;;;;;;;;Schenker Deutschland AG                                               ;Versandart:;;;;;;;;;;;;;;012
+308202;FUSS_VART;2;;;;;;;;;;;;Ludwig-Erhard-Str. 100                                                ;Versandart:;;;;;;;;;;;;;;012
+308202;FUSS_VART;3;;;;;;;;;;;;74564 Crailsheim                                                      ;Versandart:;;;;;;;;;;;;;;012
+308202;FUSS_VART;4;;;;;;;;;;;;Tel. 07951-306 380                                                    ;Versandart:;;;;;;;;;;;;;;012
+308202;FUSS_VART;5;;;;;;;;;;;;(Tel. 7951/3060; Fax 07951/306-149)                                   ;Versandart:;;;;;;;;;;;;;;012
+308202;FUSS_VART;6;;;;;;;;;;;;e-mail: crailsheim.kundenservice@dbschenker.com                       ;Versandart:;;;;;;;;;;;;;;012
+308202;FUSS_VART;7;;;;;;;;;;;;über 31,5 kg                                                          ;Versandart:;;;;;;;;;;;;;;012
+308202;FUSS_VART;9;;;;;;;;;;;;bis 30 kg DHL                                                         ;Versandart:;;;;;;;;;;;;;;012
+308202;FUSS_VART;10;;;;;;;;;;;;(Avisierung über das DHL-Abholportal an                               ;Versandart:;;;;;;;;;;;;;;012
+308202;FUSS_VART;11;;;;;;;;;;;;Voith Turbo GmbH & Co. KG, Ludwig-Erhard-Str. 20,                     ;Versandart:;;;;;;;;;;;;;;012
+308202;FUSS_VART;12;;;;;;;;;;;;74564 Crailsheim, Ansprechpartner bei VTCR:                           ;Versandart:;;;;;;;;;;;;;;012
+308202;FUSS_VART;13;;;;;;;;;;;;Herr Albert Ebert, Telefon 07951/321853)                              ;Versandart:;;;;;;;;;;;;;;012
+308202;FUSS_VART;14;;;;;;;;;;;;LINK: www.dhl.de/abholportal/Voith                                    ;Versandart:;;;;;;;;;;;;;;012
+308202;FUSS_VART;15;;;;;;;;;;;;Standort: Crailsheim auswählen.                                       ;Versandart:;;;;;;;;;;;;;;012
+308202;FUSS_ZAHLB;1;;;;;;;;;;;;10 Tage 2 % Skonto;Zahlungsbedingung:;;;;;;;;;;;;;;012
+308202;FUSS_ZAHLB;2;;;;;;;;;;;;30 Tage netto;Zahlungsbedingung:;;;;;;;;;;;;;;012
+308202;FUSS_TEXTF;1;;;;;;;;;;;;tBitte beachten Sie: Es gilt die zum Zeitpunkt der Leistungs-          ;;;;;;;;;;;;;;;012
+308202;FUSS_TEXTF;2;;;;;;;;;;;;t                    erbringung gültige Mehrwertsteuer.                ;;;;;;;;;;;;;;;012
+308202;FUSS_TEXTF;3;;;;;;;;;;;;t;;;;;;;;;;;;;;;012
+308202;FUSS_TEXTF;4;;;;;;;;;;;;t;;;;;;;;;;;;;;;012
+308202;FUSS_TEXTF;5;;;;;;;;;;;;tMit freundlichen Grüßen                                               ;;;;;;;;;;;;;;;012
+308202;FUSS_TEXTF;6;;;;;;;;;;;;t;;;;;;;;;;;;;;;012
+308202;FUSS_TEXTF;7;;;;;;;;;;;;tZZ-DriveTech GmbH                                                     ;;;;;;;;;;;;;;;012
+308202;FUSS_TEXTF;8;;;;;;;;;;;;t;;;;;;;;;;;;;;;012
+308202;FUSS_TEXTF;9;;;;;;;;;;;;t;;;;;;;;;;;;;;;012
+308202;FUSS_TEXTF;10;;;;;;;;;;;;ti.V. Peter Sohl                                                       ;;;;;;;;;;;;;;;012

@@ -1,0 +1,61 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|019
+308030|KOPIEN|001|000|||||||||||AUFTRAGSBESTÄTIGUNG|||||||||||||||019
+308030|KOPF_DATEN|||||||||||17.10.19||AUFTRAGSBESTÄTIGUNG|Ihre Bestell-Nr|749326                              |Bestell-Datum|Ihre Zeichen|Roland Voitl      |Unsere Zeichen|Frau Sezer, Seher |Lief. 700217      |ZZ-Ang. A190736a  |D|sezer|Zentrale|        |0721-6205-36        |019
+308030|KOPF_POSUEB|||||||||||||Pos.|Produkt-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt |EUR |0||||||0721-6205-36        |019
+308030|KONTAKT||||||||||||||seher.sezer@zzdrivetech.com||0721-6205-36|seher.sezer@zzdrivetech.com| Frau Sezer, Seher|||| |0721/94601-39|0721/94601-0||||019
+308030|KOPF_USTID|||||||||||||Ihre Ust-IdNr|                |Unsere Ust-IdNr|DE815609203     ||||||||||||019
+308030|KOPF|||||||||||07.11.19||Datum|Vertreter||Auftrags-Nr|18091903        |Kunden-Nr|10846   |Mall + Herlan GmbH|Wöschbacher Str. 33|76327 Pfinztal||||||019
+308030|KOPF_TEXTF|1||||||||||||tVielen Dank für Ihren Auftrag.                                        |||||||||||||||019
+308030|KOPF_TEXTF|2||||||||||||tEs gelten unsere Allgemeinen Verkaufs- und Lieferbedingungen,         |||||||||||||||019
+308030|KOPF_TEXTF|3||||||||||||tdie Sie auf unserer Homepage www.zzdrivetech.com unter                |||||||||||||||019
+308030|KOPF_TEXTF|4||||||||||||tImpressum einsehen bzw. herunterladen können.                         |||||||||||||||019
+308030|KOPF_TEXTA|1||||||||||||tAbruf auf Ihrem Rahmenkontrakt 741944                                 |||||||||||||||019
+308030|KOPF_TEXTA|2||||||||||||t*****************************************                             |||||||||||||||019
+308030|KOPF_TEXTA|3||||||||||||tGesamtmenge = 12 Stück                                                |||||||||||||||019
+308030|KOPF_TEXTA|4||||||||||||tRestmenge = 4 Stück                                                   |||||||||||||||019
+308030|KOPF_TEXTA|5||||||||||||t*****************************************                             |||||||||||||||019
+308030|POS|1|1|22400|0 |22400|1070|||||29.11.19||Ihre Produkt-Nr:|00859049|X0069-39-B|SCHRITTGETRIEBE     |00859049            |ST|Termin: |||Versandgewicht      |netto||||48/19|019
+308030|POS_TEXTP|1|1|||||||||||tKunden-Ident-Nr.: 00859049                                            |||||||||||||||019
+308030|POS_TEXTP|2|1|||||||||||tX330 Globoidschrittgetriebe                                           |||||||||||||||019
+308030|POS_TEXTP|3|1|||||||||||t     Achsabstand  : 330                                               |||||||||||||||019
+308030|POS_TEXTP|4|1|||||||||||t     Schrittwinkel: 30°(12 Stop)                                      |||||||||||||||019
+308030|POS_TEXTP|5|1|||||||||||t     Schaltwinkel : 120° L                                            |||||||||||||||019
+308030|POS_TEXTP|6|1|||||||||||t     Rastwinkel   : 240°                                              |||||||||||||||019
+308030|POS_TEXTP|7|1|||||||||||t     Kurvenrolle  : 2,5" gleitgelagert                                |||||||||||||||019
+308030|POS_TEXTP|8|1|||||||||||t     Max. Abtriebsdrehmoment: 2400 Nm                                 |||||||||||||||019
+308030|POS_TEXTP|9|1|||||||||||t     Taktzahl max:  200 1/min                                         |||||||||||||||019
+308030|POS_TEXTP|10|1|||||||||||tS160 Schenckengetriebe                                                |||||||||||||||019
+308030|POS_TEXTP|11|1|||||||||||t     Übersetzung:  i=40:4                                             |||||||||||||||019
+308030|POS_TEXTP|12|1|||||||||||t     Gangrichtung: rechts                                             |||||||||||||||019
+308030|POS_TEXTP|13|1|||||||||||t     Achsabstand:  160                                                |||||||||||||||019
+308030|POS_TEXTP|14|1|||||||||||t     Max. Abtriebsdrehmoment: 495 Nm                                  |||||||||||||||019
+308030|POS_TEXTP|15|1|||||||||||t     Antriebsdrehzahl: 2000 1/min                                     |||||||||||||||019
+308030|POS_TEXTP|16|1|||||||||||tSchmiermittel        : Shell Tivela S220 (PG-Öl ISO VG 220)           |||||||||||||||019
+308030|POS_TEXTP|17|1|||||||||||t  - Probelauf        : UNION OEL Spezial GEAR Oil 2950                |||||||||||||||019
+308030|POS_TEXTP|18|1|||||||||||t  - im Betrieb       : -kundenseitig befüllt                          |||||||||||||||019
+308030|POS_TEXTP|19|1|||||||||||t                        mit Shell Tivela S220                         |||||||||||||||019
+308030|POS_TEXTP|20|1|||||||||||t                       -Durchfluss ca. 4 l/min                        |||||||||||||||019
+308030|POS_TEXTP|21|1|||||||||||tSchmiermittelwechsel : alle 8000h bzw jährlich                        |||||||||||||||019
+308030|POS_TEXTP|22|1|||||||||||tLieferung ohne Öl                                                     |||||||||||||||019
+308030|POS_TEXTP|23|1|||||||||||tLackierung: RAL 9005 matt (schwarz)                                   |||||||||||||||019
+308030|POS_TEXTP|24|1|||||||||||t*                                                                     |||||||||||||||019
+308030|POS_TEXTP|25|1|||||||||||tKENNZEICHNUNG:                                                        |||||||||||||||019
+308030|POS_TEXTP|26|1|||||||||||tGetriebenummer:   8                                                   |||||||||||||||019
+308030|POS_TEXTP|27|1|||||||||||tKundenreferenz:   00859049                                            |||||||||||||||019
+308030|POS_TEXTP|28|1|||||||||||t*                                                                     |||||||||||||||019
+308030|FUSS_WERTE|1||22400||||||||||NETTOW|Nettowert||||||||||||||019
+308030|FUSS_WERTE|2|19|4256||||||||||MWST|zuzügl.% MWSt|%|||||||||||||019
+308030|FUSS_WERTE|3||26656||||||||||AUFTRW|Auftragswert||||||||||||||019
+308030|FUSS_LIEFB|||||||||||||frei Haus, ausschließl. Verp.                               |Lieferbedingung:||||||||||||||019
+308030|FUSS_ZAHLB|1||||||||||||14 Tage 3 % Skonto|Zahlungsbedingung:||||||||||||||019
+308030|FUSS_ZAHLB|2||||||||||||30 Tage netto|Zahlungsbedingung:||||||||||||||019
+308030|FUSS_TEXTF|1||||||||||||tBitte beachten Sie: Es gilt die zum Zeitpunkt der Leistungs-          |||||||||||||||019
+308030|FUSS_TEXTF|2||||||||||||t                    erbringung gültige Mehrwertsteuer.                |||||||||||||||019
+308030|FUSS_TEXTF|3||||||||||||t|||||||||||||||019
+308030|FUSS_TEXTF|4||||||||||||t|||||||||||||||019
+308030|FUSS_TEXTF|5||||||||||||tMit freundlichen Grüßen                                               |||||||||||||||019
+308030|FUSS_TEXTF|6||||||||||||t|||||||||||||||019
+308030|FUSS_TEXTF|7||||||||||||tZZ-DriveTech GmbH                                                     |||||||||||||||019
+308030|FUSS_TEXTF|8||||||||||||t|||||||||||||||019
+308030|FUSS_TEXTF|9||||||||||||t|||||||||||||||019
+308030|FUSS_TEXTF|10||||||||||||ti.V. Peter Sohl                                                       |||||||||||||||019

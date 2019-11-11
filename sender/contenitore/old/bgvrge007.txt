@@ -1,0 +1,65 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|007
+308194|KOPIEN|002|001|||||||||||RECHNUNG|RECHNUNG DUPLIKAT|RECHNUNG|||||||||||||007
+308194|KOPF_POSUEB|||||||||||||Pos.|Produkt-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt |EUR ||||||||007
+308194|KOPF_ANS|||||||||||||||||||Lieferanschrift|GMM Kronberg Plant-PG|Service|BLDG 01, Frankfurter Straße 145|61476 Kronberg|||||007
+308194|KOPF_IMAUF|||||||||||||||||||Im Auftrag von|Procter & Gamble|Service GmbH|Sulzbacher Straße 40-50|65824 Schwalbach am Taunus|||||007
+308194|KOPF|||||||||||07.11.19||Datum|Vertreter|--                              |LieferantNr|          |Kunden-Nr|13057   |Procter & Gamble Service GmbH|CAPA|Sulzbacher Straße 40|65824 Schwalbach am Taunus|||||007
+308194|KOPF_TEXTF|1||||||||||||t|||||||||||||||007
+308194|KOPF_TEXTF|2||||||||||||t|||||||||||||||007
+308194|KOPF_TEXTF|3||||||||||||t  Sie erhielten für Ihre Rechnung und Gefahr die unten                |||||||||||||||007
+308194|KOPF_TEXTF|4||||||||||||t  aufgeführten Waren.  -Lieferscheindatum = Leistungsdatum-           |||||||||||||||007
+308194|KOPF_DATEN|||||||||||15.11.19||RECHNUNG|Ihre Bestell-Nr|LS-Nr. 15708; Rekl.;GBP-4501494051  |Bestell-Datum|Auftrags-Nr|Herr Udo Burgmann |180034/N|Nicole Naiel      |Lief.-Nr. 15035796|                  |D|spancken|Zentrale|13058   |0721/62 05-37       |007
+308194|KOPF_DATEN2|||||||||106227|106227|07.11.19|07.11.19|106227|Rechnungs-Nr|106227|Lieferschein|Lieferdatum|||||||||||007
+308194|KONTAKT|||||||||||||Fax.: 0721/6205-10|nicole.naiel@zzdrivetech.com|||| |Fax.: 0721/6205-10|0721/62 05-37|nicole.naiel@zzdrivetech.com| Nicole Naiel||||||007
+308194|KOPF_USTID|||||||||||||Ihre Ust-IdNr|DE293480388     |Unsere Ust-IdNr|DE815609203     ||||||||||||007
+308194|POS|1|1,0000||0 |0,00|||||||08.11.19|Ihre Produkt-Nr:||OK100-180034/N|REPARATUR K-GETRIEBE|kostenlos           |ST||||||||||007
+308194|POS_TEXTP|1|1|||||||||||tZZ-Servoline Art.-Nr. KN0140-1342-002                                 |||||||||||||||007
+308194|POS_TEXTP|2|1|||||||||||tGetr.-Nr. 180034/001; Baujahr 2018                                    |||||||||||||||007
+308194|POS_TEXTP|3|1|||||||||||tId.-Nr. 206404                                                        |||||||||||||||007
+308194|POS_TEXTP|4|1|||||||||||tFehlerbeschreibung: undicht                                           |||||||||||||||007
+308194|POS_TEXTP|5|1|||||||||||t|||||||||||||||007
+308194|POS_TEXTP|6|1|||||||||||tKOSTENLOSE NACHARBEIT                                                 |||||||||||||||007
+308194|POS_TEXTP|7|1|||||||||||t=====================                                                 |||||||||||||||007
+308194|POS_TEXTP|8|1|||||||||||t|||||||||||||||007
+308194|POS_TEXTP|9|1|||||||||||te-mail Hr. Burgmann/Hr. Brüstle/Hr. Sohl                              |||||||||||||||007
+308194|POS_TEXTP|10|1|||||||||||t|||||||||||||||007
+308194|POS_TEXTP|11|1|||||||||||tKundenreferenz:         03-051500.01.07-040  21.05.12                 |||||||||||||||007
+308194|POS_TEXTP|12|1|||||||||||tÜbersetzung:            i= 4:1                                        |||||||||||||||007
+308194|POS_TEXTP|13|1|||||||||||tNennantriebsdrehzahl:   240U/min                                      |||||||||||||||007
+308194|POS_TEXTP|14|1|||||||||||tMax. Antriebsdrehzahl:  960U/min                                      |||||||||||||||007
+308194|POS_TEXTP|15|1|||||||||||tVerdrehspiel:           Standard                                      |||||||||||||||007
+308194|POS_TEXTP|16|1|||||||||||tBauform:                K3 Abtriebszapfen beidseitig                  |||||||||||||||007
+308194|POS_TEXTP|17|1|||||||||||tAntriebswelle:          Ø22j6x30 glatt ohne PFN                       |||||||||||||||007
+308194|POS_TEXTP|18|1|||||||||||tAbtriebswelle:          Sonder mit PFN, L=350 mm                      |||||||||||||||007
+308194|POS_TEXTP|19|1|||||||||||tEinbaulage:             beliebig                                      |||||||||||||||007
+308194|POS_TEXTP|20|1|||||||||||tAusführung:             unlackiert (Aluminium blank)                  |||||||||||||||007
+308194|POS_TEXTP|21|1|||||||||||tÜbersetzung:            i= 4:1                                        |||||||||||||||007
+308194|POS_TEXTP|22|1|||||||||||tNennantriebsdrehzahl:   240U/min                                      |||||||||||||||007
+308194|POS_TEXTP|23|1|||||||||||tMax. Antriebsdrehzahl:  960U/min                                      |||||||||||||||007
+308194|POS_TEXTP|24|1|||||||||||tVerdrehspiel:           Standard                                      |||||||||||||||007
+308194|POS_TEXTP|25|1|||||||||||tBauform:                K3 Abtriebszapfen beidseitig                  |||||||||||||||007
+308194|POS_TEXTP|26|1|||||||||||tAntriebswelle:          Ø22j6x30 glatt ohne PFN                       |||||||||||||||007
+308194|POS_TEXTP|27|1|||||||||||tAbtriebswelle:          Sonder mit PFN, L=350 mm                      |||||||||||||||007
+308194|POS_TEXTP|28|1|||||||||||tEinbaulage:             beliebig                                      |||||||||||||||007
+308194|POS_TEXTP|29|1|||||||||||tAusführung:             unlackiert (Aluminium blank)                  |||||||||||||||007
+308194|POS_TEXTP|30|1|||||||||||tÖlschmierung:           Synth. Hypoidöl GL5, werkseitig befüllt,      |||||||||||||||007
+308194|POS_TEXTP|31|1|||||||||||t                        Lebensdauerschmierung                         |||||||||||||||007
+308194|POS_TEXTP|32|1|||||||||||tHinweis:                Nach Befestigung des Getriebes in die         |||||||||||||||007
+308194|POS_TEXTP|33|1|||||||||||t                        endgültige Einbaulage, wird die Ver-          |||||||||||||||007
+308194|POS_TEXTP|34|1|||||||||||t                        schlußschraube an höchster Stelle durch       |||||||||||||||007
+308194|POS_TEXTP|35|1|||||||||||t                        beigelegtes Entlüftungsventil vom             |||||||||||||||007
+308194|POS_TEXTP|36|1|||||||||||t                        Kunden ausgetauscht.                          |||||||||||||||007
+308194|POS_TEXTP|37|1|||||||||||tWarennummer: 84 83 40 23                                              |||||||||||||||007
+308194|FUSS_WERTE|1|19,00|        0,00||||||||||MWST|Mehrwertsteuer|%|||||||||||||007
+308194|FUSS_LIEFB|||||||||||||frei Haus, inkl. Verp.                                      |Lieferbedingung:||||||||||||||007
+308194|FUSS_VART|1||||||||||||GLS                                                                   |Versandart:||||||||||||||007
+308194|FUSS_PACK|1||||||||||||Karton    |Verpackung:||||||||||||||007
+308194|FUSS_ZAHLB|1|||||||||||| Der Rechnungsbetrag ist fällig am 07.12.19 netto|Zahlungsbedingung:||||||||||||||007
+308194|FUSS_ZAHLB|2||||||||||||                     abzgl. 2,0% Skonto:      0,00 EUR bis zum 17.11.19|Zahlungsbedingung:||||||||||||||007
+308194|FUSS_TEXTF|1||||||||||||tBITTE BEACHTEN SIE UNSERE NEUE BANKVERBINDUNG GÜLTIG AB 01.01.16      |||||||||||||||007
+308194|FUSS_TEXTF|2||||||||||||t*****************************************************************     |||||||||||||||007
+308194|FUSS_TEXTF|3||||||||||||t|||||||||||||||007
+308194|FUSS_TEXTF|4||||||||||||tKontonummer:22616510                                                  |||||||||||||||007
+308194|FUSS_TEXTF|5||||||||||||tIBAN: DE81660202860022616510                                          |||||||||||||||007
+308194|FUSS_TEXTF|6||||||||||||tBIC:  HYVEDEMM475                                                     |||||||||||||||007
+308194|FUSS_TEXTF|7||||||||||||t*****************************************************************     |||||||||||||||007

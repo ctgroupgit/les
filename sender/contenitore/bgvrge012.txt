@@ -1,0 +1,30 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|012
+308077|KOPIEN|001|001|||||||||||RECHNUNG|RECHNUNG||||||||||||||012
+308077|KOPF_POSUEB|||||||||||||Pos.|Produkt-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt |EUR ||||||||012
+308077|KOPF|||||||||||31.10.19||Datum|Vertreter|Flohr  Direkt                   |LieferantNr|9000-1000 |Kunden-Nr|10502   |FLOHR Industrietechnik GmbH|Im unteren Tal 1|79761 Waldshut-Tiengen||||||012
+308077|KOPF_TEXTF|1||||||||||||t|||||||||||||||012
+308077|KOPF_TEXTF|2||||||||||||t|||||||||||||||012
+308077|KOPF_TEXTF|3||||||||||||t  Sie erhielten für Ihre Rechnung und Gefahr die unten                |||||||||||||||012
+308077|KOPF_TEXTF|4||||||||||||t  aufgeführten Waren.  -Lieferscheindatum = Leistungsdatum-           |||||||||||||||012
+308077|KOPF_DATEN|||||||||||28.10.19||RECHNUNG|Ihre Bestell-Nr|166137-1                            |Bestell-Datum|Auftrags-Nr|Hr. Zimmermann    |190665|Frau Sezer, Seher |Lief. 9000-1000   |                  |D|naiel1|Zentrale|        |0721-6205-36        |012
+308077|KOPF_DATEN2|||||||||106200|106200|04.11.19|31.10.19|106200|Rechnungs-Nr|106200|Lieferschein|Lieferdatum|LieferantNr|9000-1000 |||||||||012
+308077|KONTAKT||||||||||||||seher.sezer@zzdrivetech.com|Fax.: 0721/6205-10|0721/6205-37|nicole.naiel@zzdrivetech.com| Nicole Naiel|||| |07751/8731-50|07751/8731-0||||012
+308077|KOPF_USTID|||||||||||||Ihre Ust-IdNr|DE 811378260    |Unsere Ust-IdNr|DE815609203     ||||||||||||012
+308077|POS|1|20,0000|120,0000|0 |2256,00|5,2||||||08.11.19|Ihre Produkt-Nr:|015.021.2411.00|K080-2411|KEGELRITZELWELLE    |1:1   23L/23R-1.5 EH|ST|||||Versandgewicht      |netto||||012
+308077|POS_RB|1|6,00|0,00||||||||||- Rabatt 1|%|- Rabatt 2|%||||||||||||012
+308077|POS_TEXTP|1|1|||||||||||tGegenrad:K080-2311 Z=23                                               |||||||||||||||012
+308077|FUSS_WERTE|1||2256,00||||||||||NETTOW|Nettowert||||||||||||||012
+308077|FUSS_WERTE|2|19,00|      428,64||||||||||MWST|Mehrwertsteuer|%|||||||||||||012
+308077|FUSS_WERTE|3||2684,64||||||||||AUFTRW|Rechnungsbetrag||||||||||||||012
+308077|FUSS_LIEFB|||||||||||||ab Werk, ausschl. Verpackung                                |Lieferbedingung:||||||||||||||012
+308077|FUSS_VART|1||||||||||||GLS                                                                   |Versandart:||||||||||||||012
+308077|FUSS_PACK|1||||||||||||Karton    |Verpackung:||||||||||||||012
+308077|FUSS_GEW||5,2000||||||||||||Versandgewichte:|netto|brutto||||||||||||012
+308077|FUSS_ZAHLB|1||||||||||||14 Tage 2% Skonto, 30 Tage 1% Skonto                                  |Zahlungsbedingung:||||||||||||||012
+308077|FUSS_TEXTF|1||||||||||||tBITTE BEACHTEN SIE UNSERE NEUE BANKVERBINDUNG GÜLTIG AB 01.01.16      |||||||||||||||012
+308077|FUSS_TEXTF|2||||||||||||t*****************************************************************     |||||||||||||||012
+308077|FUSS_TEXTF|3||||||||||||t|||||||||||||||012
+308077|FUSS_TEXTF|4||||||||||||tKontonummer:22616510                                                  |||||||||||||||012
+308077|FUSS_TEXTF|5||||||||||||tIBAN: DE81660202860022616510                                          |||||||||||||||012
+308077|FUSS_TEXTF|6||||||||||||tBIC:  HYVEDEMM475                                                     |||||||||||||||012
+308077|FUSS_TEXTF|7||||||||||||t*****************************************************************     |||||||||||||||012

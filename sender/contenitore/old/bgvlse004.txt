@@ -1,0 +1,73 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|004
+307845|KOPIEN|002|002|||||||||||LIEFERSCHEIN|LIEFERSCHEIN KOPIE|LIEFERSCHEIN|LIEFERSCHEIN KOPIE||||||||||||004
+307845|KOPF_POSUEB||||||||||||15.10.19|Pos.|Produkt-Nr/Bezeichnung|Bestellmenge|Liefermenge|Restmenge|ME|Auftrags-Datum|||Datum     ____________  EmpfangsbestÃtigung: _________________________|||||0721-6205-36|004
+307845|KOPF|||||||||||21.10.19||Datum|Vertreter||Lieferschein|106173|Kunden-Nr|10846   |Mall + Herlan GmbH|WŒschbacher Str. 33|76327 Pfinztal||||||004
+307845|KOPF_TEXTF|1||||||||||||tSie erhielten fœr Ihre Rechnung und Gefahr die unten                  |||||||||||||||004
+307845|KOPF_TEXTF|2||||||||||||taufgefœhrten Waren.                                                   |||||||||||||||004
+307845|KOPF_TEXTF|3||||||||||||tWir wœnschen Ihnen guten Empfang der Sendung.                         |||||||||||||||004
+307845|KOPF_DATEN|||||||||||15.10.19|15.10.19|Auftrags-Nr|Ihre Bestell-Nr|749254                              |Bestell-Datum|LIEFERSCHEIN|Tristan Mayer     |0721-6205-36        |Frau Sezer, Seher |Lief. 700217      |Abruf 4           |D|naiel1|Zentrale|        |17061104        |004
+307845|KOPF_DATEN2||||||||||||||||||||  ||||||||004
+307845|KONTAKT||||||||||||||seher.sezer@zzdrivetech.com|Fax.: 0721/6205-10|0721/6205-37|nicole.naiel@zzdrivetech.com| Nicole Naiel|||| |0721/94601-39|0721/94601-0||||004
+307845|KOPF_USTID|||||||||||||Ihre Ust-IdNr|                |Unsere Ust-IdNr|DE815609203     ||||||||||||004
+307845|KOPF_TEXTA|1||||||||||||tHiermit ist Ihr Rahmen 729477 komplett ausgeschŒpft.                  |||||||||||||||004
+307845|KOPF_TEXTA|2||||||||||||t********************************************************              |||||||||||||||004
+307845|POS|1|1,0000|1,0000||425|425||||||31.10.19|Ihre Produkt-Nr:|ETN92202|X730-0069-001-KS|KOMPONENTENSATZ     |ETN92202            |ST|Termin: |||||Versandgewicht      |netto|brutto|44/19|004
+307845|POS2|1||||||||||||ÿnderungsindex      |||||||||||||||004
+307845|POS_TEXTP|1|1|||||||||||tGloboid-Komponentensatz                                               |||||||||||||||004
+307845|POS_TEXTP|2|1|||||||||||tGloboid-KS:           X730                                            |||||||||||||||004
+307845|POS_TEXTP|3|1|||||||||||tKundenzeichnung:      ETN92202                                        |||||||||||||||004
+307845|POS_TEXTP|4|1|||||||||||tZZ-Zeichnung:         X730-3921 (unbestœckt)                          |||||||||||||||004
+307845|POS_TEXTP|5|1|||||||||||tAchsabstand:          730mm                                           |||||||||||||||004
+307845|POS_TEXTP|6|1|||||||||||tSchaltschritte:       40                                              |||||||||||||||004
+307845|POS_TEXTP|7|1|||||||||||tDoppelschaltung:      9≥ Schrittwinkel pro Takt                       |||||||||||||||004
+307845|POS_TEXTP|8|1|||||||||||tSchaltwinkel:         120≥  (2x 60≥)                                  |||||||||||||||004
+307845|POS_TEXTP|9|1|||||||||||tRastwinkel:           240≥  (2x120≥)                                  |||||||||||||||004
+307845|POS_TEXTP|10|1|||||||||||tGangrichtung:         rechts                                          |||||||||||||||004
+307845|POS_TEXTP|11|1|||||||||||tKurvenrolle:          4" (“101,6)                                     |||||||||||||||004
+307845|POS_TEXTP|12|1|||||||||||tAnzahl Kurvenrollen:  20                                              |||||||||||||||004
+307845|POS_TEXTP|13|1|||||||||||tTaktzahl Anwendung:   250 Takte/min                                   |||||||||||||||004
+307845|POS_TEXTP|14|1|||||||||||tAntriebsdrehzahl:     125 U/min (Kurvenwelle)                         |||||||||||||||004
+307845|POS_TEXTP|15|1|||||||||||tSchaltzeit pro Takt:  0,08s                                           |||||||||||||||004
+307845|POS_TEXTP|16|1|||||||||||tRastzeit pro Takt:    0,16s                                           |||||||||||||||004
+307845|POS_TEXTP|17|1|||||||||||t|||||||||||||||004
+307845|POS_TEXTP|18|1|||||||||||tAnwendung:                                                            |||||||||||||||004
+307845|POS_TEXTP|19|1|||||||||||tTrÃgheitsmoment Last: 130 kgm^2                                       |||||||||||||||004
+307845|POS_TEXTP|20|1|||||||||||tTrÃgheit Rollenstern:  53 kgm^2                                       |||||||||||||||004
+307845|POS_TEXTP|21|1|||||||||||tGesamttrÃgheitsmasse: 183 kgm^2                                       |||||||||||||||004
+307845|POS_TEXTP|22|1|||||||||||tmax. dyn. Drehmoment: ca. 24900 Nm                                    |||||||||||||||004
+307845|POS_TEXTP|23|1|||||||||||tmax. Winkelbeschl.:   135,7 rad/s^2                                   |||||||||||||||004
+307845|POS_TEXTP|24|1|||||||||||t|||||||||||||||004
+307845|POS_TEXTP|25|1|||||||||||tKomponentensatz bestehend aus:                                        |||||||||||||||004
+307845|POS_TEXTP|26|1|||||||||||t-Globoidkurve:        einsatzgehÃrtet und geschliffen                 |||||||||||||||004
+307845|POS_TEXTP|27|1|||||||||||t-Rollenstern:         unbestœckt                                      |||||||||||||||004
+307845|POS_TEXTP|28|1|||||||||||t                      kundenseitige Montage der Kurvenrollen          |||||||||||||||004
+307845|POS_TEXTP|29|1|||||||||||t-Kurvenrollen:        Kurvenrollenaustausch beliebig                  |||||||||||||||004
+307845|POS_TEXTP|30|1|||||||||||t                      Demontage mit Abzugsgewinde + Vorrichtung       |||||||||||||||004
+307845|POS_TEXTP|31|1|||||||||||tBesonderheiten:                                                       |||||||||||||||004
+307845|POS_TEXTP|32|1|||||||||||t- ursprœngliche Definition, dass nur 17 Kurvenrollen bestœckt und     |||||||||||||||004
+307845|POS_TEXTP|33|1|||||||||||t  3 Stœck Kurvenrollen werden lose mitgeliefert werden wird           |||||||||||||||004
+307845|POS_TEXTP|34|1|||||||||||t  aufgehoben.                                                         |||||||||||||||004
+307845|POS_TEXTP|35|1|||||||||||t- neue Vereinbarung (ab Lieferungen 2018) ist, dass die Kurven-       |||||||||||||||004
+307845|POS_TEXTP|36|1|||||||||||t  rollen erst bei Montage im Gestell bei MH eingebracht werden.       |||||||||||||||004
+307845|POS_TEXTP|37|1|||||||||||t|||||||||||||||004
+307845|POS_TEXTP|38|1|||||||||||tAusfœhrung:                                                           |||||||||||||||004
+307845|POS_TEXTP|39|1|||||||||||t- radiale Sicherung der Kurvenrollen mit Schrauben DIN7984-M12        |||||||||||||||004
+307845|POS_TEXTP|40|1|||||||||||t- Kurvenrollensitz: Treibsitzpassung (keine Presspassung)             |||||||||||||||004
+307845|POS_TEXTP|41|1|||||||||||t- Rollenstern mit Gewichtsentlastungsbohrungen                        |||||||||||||||004
+307845|POS_TEXTP|42|1|||||||||||t- Rollenstern auf beiden PlanflÃchen geschliffen                      |||||||||||||||004
+307845|POS_TEXTP|43|1|||||||||||t- Schmierung der Kurvenrollen durch Tropfschmierung                   |||||||||||||||004
+307845|POS_TEXTP|44|1|||||||||||t- Kurvenrollen nicht abgedichtet; Standardausfœhrung                  |||||||||||||||004
+307845|POS_TEXTP|45|1|||||||||||t- Kurvenrollen durch Schraube axial im Rollenstern verschraubt        |||||||||||||||004
+307845|POS_TEXTP|46|1|||||||||||t*                                                                     |||||||||||||||004
+307845|POS_TEXTP|47|1|||||||||||tKENNZEICHNUNG:                                                        |||||||||||||||004
+307845|POS_TEXTP|48|1|||||||||||tGetriebenummer:   6                                                   |||||||||||||||004
+307845|POS_TEXTP|49|1|||||||||||tKundenreferenz:   ETN92202                                            |||||||||||||||004
+307845|POS_TEXTP|50|1|||||||||||t*                                                                     |||||||||||||||004
+307845|POS|2|1,0000|1,0000|||||||||31.10.19|Ihre Produkt-Nr:||SONDERKOSTEN-X|SONDERKOSTEN        |                    |  |Termin: ||||||||44/19|004
+307845|POS2|2||||||||||||ÿnderungsindex      |||||||||||||||004
+307845|POS_TEXTP|1|2|||||||||||tMehrpreis Stehle Kurvenrollen                                         |||||||||||||||004
+307845|POS_TEXTP|2|2|||||||||||t170 Euro pro Kurvenrolle                                              |||||||||||||||004
+307845|FUSS_LIEFB|||||||||||||frei Haus, ausschlieﬁl. Verp.                               |Lieferbedingung:|3|||||||||||||004
+307845|FUSS_VART|1||||||||||||Zufuhr                                                                |Versandart:|39|||||||||||||004
+307845|FUSS_PACK|1||||||||||||Pal.|Verpackung:||||||||||||||004
+307845|FUSS_GEW||425||||||||||||Versandgewichte:|netto|brutto||||||||||||004

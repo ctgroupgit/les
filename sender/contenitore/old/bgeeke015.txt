@@ -1,0 +1,37 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|015
+-149445|KOPIEN|001|001||||||||0|||BESTELLUNG|BESTELLUNG||||||||||0|bestellung@hahn-kolb.de; Gordana.Clausen@hahn-kolb.de|||015
+-149445|KOPF_USTID|||||||||||||Ihre Ust-Identnr|                |Unsere Ust-Identnr|DE815609203     ||||||||||||015
+-149445|KOPF||||||||||||09.07.19|Datum|Bestellung|108016          |||||Hahn & Kolb Werkzeuge GmbH|Borsigstraﬁe 50|70469 Stuttgart||||||015
+-149445|KOPF_DATEN||||||||||||05.07.19|Angebots-Nr|3301238375        |KundenNr/Ihre Zeichen |7234321             |                  ||Lieferant|60801   |Unser Zeichen / Telefon|Nadine Cordeiro                 |Tel:0721/6205-35    |D|korte|||015
+-149445|KONTAKT|||||||||||||Fax:0721/6205-10|nadine.cordeiro@zzdrivetech.com|Fax:0721 6205-10|0721 6205-51|klaus.korte@zzdrivetech.com|Klaus Korte|||| |07141 498-6794|07141 498-6752||||015
+-149445|KOPF_TEXTF|1||||||||||||tIn allen Schriftstœcken bitte unsere Bestell-Daten                    |||||||||||||||015
+-149445|KOPF_TEXTF|2||||||||||||tangeben, Rechnung + Lieferschein zweifach.                            |||||||||||||||015
+-149445|KOPF_TEXTF|3||||||||||||tZu unseren Einkaufsbedingungen bestellen wir:                         |||||||||||||||015
+-149445|KOPF_POSUEB|||||||||||||Pos  |Artikel-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt|EUR ||||||||015
+-149445|POS|1|1,00|425,00|425,00|425,00|||0,00||||01.10.19|Ihre Artikel-Nr:|                        |500|WERKZEUG            |                    |ST||Termin:        |Kommission:    |030393-113          |||||01.10.19|015
+-149445|POS2|1||||||||||||Kostenstelle:||Kontierungsgruppe:||Werkstoff:||Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÿI:|||015
+-149445|POS 3|1|||||||||||||||||||||||||||015
+-149445|POS_TEXTP|1|1|||||||||||t32673999                                                              |||||||||||||||015
+-149445|POS_TEXTP|2|1|||||||||||tGewindegrenzlehrdorn (Gutlehrdorn)                                    |||||||||||||||015
+-149445|POS_TEXTP|3|1|||||||||||tTR65x10-7H                                                            |||||||||||||||015
+-149445|POS_TEXTP|4|1|||||||||||tmit Werkskalibrierschein                                              |||||||||||||||015
+-149445|FUSS_WERTE|1||425,00||||||||||AUFTRW|Bestellwert||||||||||||||015
+-149445|FUSS_LIEFD||||||||||||01.10.19||Liefertermin:      ||||||||||||||015
+-149445|FUSS_LIEFB|||||||||||||frei Haus, inkl. Verp.                                      |Lieferbedingung:   ||||||||||||||015
+-149445|FUSS_PRE|1||||||||||||zzgl. 19 % MWST                                                       |Preisstellung:     ||||||||||||||015
+-149445|FUSS_ZAHLB|1||||||||||||14 Tage 3,00 % Skonto                                                                              |Zahlungsbedingung: ||||||||||||||015
+-149445|FUSS_ZAHLB|3||||||||||||30 Tage netto                                                                                      |Zahlungsbedingung: ||||||||||||||015
+-149445|FUSS_TEXTF|1||||||||||||t|||||||||||||||015
+-149445|FUSS_TEXTF|2||||||||||||tZZ Drive Tech GmbH                                                    |||||||||||||||015
+-149445|FUSS_TEXTF|3||||||||||||t|||||||||||||||015
+-149445|FUSS_TEXTF|4||||||||||||ti.A.         i.A.             i.A.                                    |||||||||||||||015
+-149445|FUSS_TEXTF|5||||||||||||tKlaus Korte  Nadine Cordeiro  Michael Batzler                         |||||||||||||||015
+-149445|FUSS_TEXTF|6||||||||||||t|||||||||||||||015
+-149445|FUSS_TEXTF|7||||||||||||t|||||||||||||||015
+-149445|FUSS_TEXTF|8||||||||||||t*****************************************************                 |||||||||||||||015
+-149445|FUSS_TEXTF|9||||||||||||tWir bitten um eine AuftragsbestÃtigung innerhalb                      |||||||||||||||015
+-149445|FUSS_TEXTF|10||||||||||||tvon 3 Arbeitstagen.                                                   |||||||||||||||015
+-149445|FUSS_TEXTF|11||||||||||||tBei AuftragsbestÃtigungen und Lieferscheinen immer                    |||||||||||||||015
+-149445|FUSS_TEXTF|12||||||||||||tunsere Artikelnummern angeben.                                        |||||||||||||||015
+-149445|FUSS_TEXTF|13||||||||||||tBitte die Ware zum angegebenen Liefertermin anliefern                 |||||||||||||||015
+-149445|FUSS_TEXTF|14||||||||||||t*****************************************************                 |||||||||||||||015

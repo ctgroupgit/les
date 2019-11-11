@@ -38,6 +38,33 @@ export class LieferscheinService {
           break;
         }
         case 'KOPF_ANS': {
+          if (row[20].length > 0) {
+            this.docClass.docHeadingDetail.ourContact.push('#B#' + row[20]);
+          }
+          if (row[21].length > 0) {
+            this.docClass.docHeadingDetail.ourContact.push(row[21]);
+          }
+          if (row[22].length > 0) {
+            this.docClass.docHeadingDetail.ourContact.push(row[22]);
+          }
+          if (row[23].length > 0) {
+            this.docClass.docHeadingDetail.ourContact.push(row[23]);
+          }
+          if (row[24].length > 0) {
+            this.docClass.docHeadingDetail.ourContact.push(row[24]);
+          }
+          if (row[25].length > 0) {
+            this.docClass.docHeadingDetail.ourContact.push(row[25]);
+          }
+          if (row[26].length > 0) {
+            this.docClass.docHeadingDetail.ourContact.push(row[26]);
+          }
+          if (row[27].length > 0) {
+            this.docClass.docHeadingDetail.ourContact.push(row[27]);
+          }
+          if (row[28].length > 0) {
+            this.docClass.docHeadingDetail.ourContact.push(row[28]);
+          }
           break;
         }
         case 'KOPF_RGAN': {
@@ -49,6 +76,8 @@ export class LieferscheinService {
           this.docClass.heading.push(row[23].trim());
           this.docClass.heading.push(row[24].trim());
           this.docClass.heading.push(row[25].trim());
+          this.docClass.heading.push(row[26].trim());
+          this.docClass.heading.push(row[27].trim());
           this.docClass.documentDate.title = row[14].trim();
           this.docClass.documentDate.description = row[12].trim();
           this.docClass.documentNumber.title = row[17].trim();
@@ -63,14 +92,14 @@ export class LieferscheinService {
         case 'KOPF_DATEN': {
           this.docClass.dh3.title = row[14].trim();
           this.docClass.dh3.description = row[28].trim();
-          this.docClass.docHeadingDetail.yourContact.push('-B' + row[15]);
+          this.docClass.docHeadingDetail.yourContact.push('#B#' + row[15]);
           this.docClass.docHeadingDetail.yourContact.push(row[16]);
           this.docClass.docHeadingDetail.yourContact.push(row[22]);
-          this.docClass.docHeadingDetail.yourContact.push('-B' + row[17]);
+          this.docClass.docHeadingDetail.yourContact.push('#B#' + row[17]);
           this.docClass.docHeadingDetail.yourContact.push(row[12]);
-          this.docClass.docHeadingDetail.yourContact.push('-B' + 'Your Sign');
+          this.docClass.docHeadingDetail.yourContact.push('#B#' + 'Your Sign');
           this.docClass.docHeadingDetail.yourContact.push(row[19]);
-          this.docClass.docHeadingDetail.ourContact.push('-B' + 'Our Contact');
+          this.docClass.docHeadingDetail.ourContact.push('#B#' + 'Our Contact');
           this.gb.genKontakt(row).forEach((val) => {
             this.docClass.docHeadingDetail.ourContact.push(val);
           });
@@ -114,9 +143,9 @@ export class LieferscheinService {
           break;
         }
         case 'KOPF_USTID': {
-          this.docClass.docHeadingDetail.yourContact.push('-B' + row[14]);
+          this.docClass.docHeadingDetail.yourContact.push('#B#' + row[14]);
           this.docClass.docHeadingDetail.yourContact.push(row[15]);
-          this.docClass.docHeadingDetail.yourContact.push('-B' + row[16]);
+          this.docClass.docHeadingDetail.yourContact.push('#B#' + row[16]);
           this.docClass.docHeadingDetail.yourContact.push(row[17]);
           break;
         }
@@ -274,7 +303,7 @@ export class LieferscheinService {
       }
     });
     this.allDocClass.push(this.docClass);
-    console.log('result generate ', this.allDocClass);
+     console.log(this.allDocClass);
     return this.allDocClass;
   }
 }

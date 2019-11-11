@@ -59,7 +59,7 @@ export class PdfGenerationService {
 
     public print(csvData = []) {
         const type = this.gb.checkDocType(csvData);
-        console.log('Tipo Documento ', type);
+        // console.log(csvData, 'Tipo Documento ', type);
         switch (type) {
             case 'RECHNUNG':
             case 'RECHNUNG KOPIE':
@@ -398,13 +398,13 @@ export class PdfGenerationService {
     }
 
     writeLine(tx: string, x: number, fontSize: number = 10, NewLine: boolean = true) {
-        if (tx.substr(0, 2) === '-B') {
+        if (tx.substr(0, 3) === '#B#') {
             this.paper.setFontStyle('bold');
         } else {
             this.paper.setFontStyle('normal');
         }
         this.paper.setFontSize(fontSize);
-        tx = tx.replace('-B', '');
+        tx = tx.replace('#B#', '');
         this.paper.text(tx, this.LEFT_MARGIN + x, this.TOP_MARGIN + this.CURRENT_BODY_OFFSET);
         if (NewLine) {
             this.addNewLine();
@@ -412,13 +412,13 @@ export class PdfGenerationService {
     }
 
     writeColumn(tx: string, x: number, fontSize: number = 10) {
-        if (tx.substr(0, 2) === '-B') {
+        if (tx.substr(0, 2) === '#B#') {
             this.paper.setFontStyle('bold');
         } else {
             this.paper.setFontStyle('normal');
         }
         this.paper.setFontSize(fontSize);
-        tx = tx.replace('-B', '');
+        tx = tx.replace('#B#', '');
         this.paper.text(tx, this.LEFT_MARGIN + x, this.TOP_MARGIN + this.CURRENT_BODY_OFFSET);
     }
 
@@ -463,7 +463,6 @@ export class PdfGenerationService {
                 this.electron.fs.unlinkSync(fileName);
             }
             this.electron.fs.writeFileSync(fileName, pdfSrc);
-            // console.log('APRO IL FILE');
 
             this.electron.childProcess.exec(this.gb.getCommandLine() + '"' + fileName + '"', (error, stdout, stderr) => {
                 if (error) {

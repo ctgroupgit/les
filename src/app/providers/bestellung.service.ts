@@ -37,7 +37,7 @@ export class BestellungService {
           break;
         }
         case 'KOPF_ANS': {
-          this.docClass.docHeadingDetail.yourContact.push('-B' + row[20].trim());
+          this.docClass.docHeadingDetail.yourContact.push('#B#' + row[20].trim());
           this.docClass.docHeadingDetail.yourContact.push(row[21].trim());
           this.docClass.docHeadingDetail.yourContact.push(row[22].trim());
           this.docClass.docHeadingDetail.yourContact.push(row[23].trim());
@@ -65,11 +65,11 @@ export class BestellungService {
           this.docClass.dh2.title = row[14].trim();
           this.docClass.dh2.description = row[15].trim();
 
-          this.docClass.docHeadingDetail.ourContact.push('-B' + row[22].trim());
+          this.docClass.docHeadingDetail.ourContact.push('#B#' + row[22].trim());
           this.gb.genKontakt(row).forEach((val) => {
             this.docClass.docHeadingDetail.ourContact.push(val);
           });
-          this.docClass.docHeadingDetail.yourContact.push('-B' + row[16].trim());
+          this.docClass.docHeadingDetail.yourContact.push('#B#' + row[16].trim());
           this.docClass.docHeadingDetail.yourContact.push(row[17].trim());
           break;
         }
@@ -246,7 +246,7 @@ export class BestellungService {
     });
 
     this.allDocClass.push(this.docClass);
-    console.log('result generate ', this.allDocClass);
+     console.log(this.allDocClass);
     return this.allDocClass;
   }
 }

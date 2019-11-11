@@ -14,7 +14,7 @@ module.exports = {
     listFile: () => {
         let ar = [];
         fs.readdirSync(containerFolder).forEach((name) => {
-            if (name.split('.').pop() === 'txt') {
+            if (name.split('.').pop() === 'txt' || name.split('.').pop() === 'csv') {
                 ar.push(name);
             }
         });

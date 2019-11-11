@@ -1,0 +1,44 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|036
+307598|KOPIEN|001|000|||||||||||AUFTRAGSBESTÄTIGUNG|||||||||||||||036
+307598|KOPF_ANS|||||||||||||||||||Lieferanschrift|mimatic GmbH|Präzisions-u. Sonderwerkzeuge|Westendstraße 3|87488 Betzigau|||||036
+307598|KOPF_USTID|||||||||||||Ihre Ust-IdNr|                |Unsere Ust-IdNr|DE815609203     ||||||||||||036
+307598|KOPF_DATEN|||||||||||26.09.19||AUFTRAGSBESTÄTIGUNG|Ihre Bestell-Nr|19602353                            |Bestell-Datum|Ihre Zeichen|Herr Fleschutz    |Unsere Zeichen|Nicole Naiel      |Lief.-Nr. 82004   |Angebot A150204   |D|naiel1|Zentrale|        |0721/6205-37        |036
+307598|KOPF_DATEN2||||||||||||||||||LieferantNr|82004     |||||||||036
+307598|KOPF_POSUEB|||||||||||||Pos.|Produkt-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt |EUR |0||||||07751/87310         |036
+307598|KONTAKT|||||||||||||Fax.: 0721/6205-10|nicole.naiel@zzdrivetech.com|Fax.: 0721/6205-10|0721/6205-37|nicole.naiel@zzdrivetech.com| Nicole Naiel|||| |0831/57444-90|0831/57444-0|07751/873150|07751/87310||036
+307598|KOPF|||||||||||01.10.19||Datum|Vertreter|Heinz Flohr                     |Auftrags-Nr|190603          |Kunden-Nr|12417   |mimatic GmbH|Präzisions-u. Sonderwerkzeuge|Westendstraße 3|87488 Betzigau|||||036
+307598|KOPF_TEXTF|1||||||||||||tVielen Dank für Ihren Auftrag.                                        |||||||||||||||036
+307598|KOPF_TEXTF|2||||||||||||tEs gelten unsere Allgemeinen Verkaufs- und Lieferbedingungen,         |||||||||||||||036
+307598|KOPF_TEXTF|3||||||||||||tdie Sie auf unserer Homepage www.zzdrivetech.com unter                |||||||||||||||036
+307598|KOPF_TEXTF|4||||||||||||tImpressum einsehen bzw. herunterladen können.                         |||||||||||||||036
+307598|KOPF_TEXTA|1||||||||||||tAngebot A150204                                                       |||||||||||||||036
+307598|KOPF_TEXTA|2||||||||||||tINFO: Bedingt durch Neuanfertigung ist leider keine                   |||||||||||||||036
+307598|KOPF_TEXTA|3||||||||||||t      Komplettlieferung möglich.                                      |||||||||||||||036
+307598|POS|1|18|110|0 |1980|7,56|||||18.10.19||Ihre Produkt-Nr:|113111|K110-24112|KEGELRITZELWELLE    |2:1   17L/34R-1.5 EH|ST|Termin: |||Versandgewicht      |netto||||42/19|036
+307598|POS_TEXTP|1|1|||||||||||twar K110-2412                                                         |||||||||||||||036
+307598|POS_TEXTP|2|1|||||||||||tGegenrad:K110-2312 Z=34                                               |||||||||||||||036
+307598|POS|2|18|90|0 |1620|12,24|||||18.10.19||Ihre Produkt-Nr:|113111|K110-2312|SPIRALKEGELRAD      |2:1   34R/17L-1.5 EH|ST|Termin: |||Versandgewicht      |netto||||42/19|036
+307598|POS_TEXTP|1|2|||||||||||tGegenrad:K110-2412  Z=17                                              |||||||||||||||036
+307598|POS_TEXTP|2|2|||||||||||t         K110-24112 Z=17                                              |||||||||||||||036
+307598|POS|3|10|110|0 |1100|4,2|||||13.12.19||Ihre Produkt-Nr:|113111|K110-24112|KEGELRITZELWELLE    |2:1   17L/34R-1.5 EH|ST|Termin: |||Versandgewicht      |netto||||50/19|036
+307598|POS_TEXTP|1|3|||||||||||twar K110-2412                                                         |||||||||||||||036
+307598|POS_TEXTP|2|3|||||||||||tGegenrad:K110-2312 Z=34                                               |||||||||||||||036
+307598|POS|4|10|90|0 |900|6,8|||||13.12.19||Ihre Produkt-Nr:|113111|K110-2312|SPIRALKEGELRAD      |2:1   34R/17L-1.5 EH|ST|Termin: |||Versandgewicht      |netto||||50/19|036
+307598|POS_TEXTP|1|4|||||||||||tGegenrad:K110-2412  Z=17                                              |||||||||||||||036
+307598|POS_TEXTP|2|4|||||||||||t         K110-24112 Z=17                                              |||||||||||||||036
+307598|FUSS_WERTE|1||5600||||||||||NETTOW|Nettowert||||||||||||||036
+307598|FUSS_WERTE|2|19|1064||||||||||MWST|zuzügl.% MWSt|%|||||||||||||036
+307598|FUSS_WERTE|3||6664||||||||||AUFTRW|Auftragswert||||||||||||||036
+307598|FUSS_LIEFB|||||||||||||frei Haus, inkl. Verp.                                      |Lieferbedingung:||||||||||||||036
+307598|FUSS_ZAHLB|1||||||||||||10 Tage 2 % Skonto|Zahlungsbedingung:||||||||||||||036
+307598|FUSS_ZAHLB|2||||||||||||30 Tage netto|Zahlungsbedingung:||||||||||||||036
+307598|FUSS_TEXTF|1||||||||||||tBitte beachten Sie: Es gilt die zum Zeitpunkt der Leistungs-          |||||||||||||||036
+307598|FUSS_TEXTF|2||||||||||||t                    erbringung gültige Mehrwertsteuer.                |||||||||||||||036
+307598|FUSS_TEXTF|3||||||||||||t|||||||||||||||036
+307598|FUSS_TEXTF|4||||||||||||t|||||||||||||||036
+307598|FUSS_TEXTF|5||||||||||||tMit freundlichen Grüßen                                               |||||||||||||||036
+307598|FUSS_TEXTF|6||||||||||||t|||||||||||||||036
+307598|FUSS_TEXTF|7||||||||||||tZZ-DriveTech GmbH                                                     |||||||||||||||036
+307598|FUSS_TEXTF|8||||||||||||t|||||||||||||||036
+307598|FUSS_TEXTF|9||||||||||||t|||||||||||||||036
+307598|FUSS_TEXTF|10||||||||||||ti.V. Peter Sohl                                                       |||||||||||||||036

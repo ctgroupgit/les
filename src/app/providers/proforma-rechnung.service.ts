@@ -62,14 +62,14 @@ export class ProformaRechnungService {
         case 'KOPF_DATEN': {
           this.docClass.dh5.title = row[18].trim();
           this.docClass.dh5.description = row[20].trim();
-          this.docClass.docHeadingDetail.yourContact.push('-B' + row[15]);
+          this.docClass.docHeadingDetail.yourContact.push('#B#' + row[15]);
           this.docClass.docHeadingDetail.yourContact.push(row[16]);
           this.docClass.docHeadingDetail.yourContact.push(row[22]);
-          this.docClass.docHeadingDetail.yourContact.push('-B' + row[17]);
+          this.docClass.docHeadingDetail.yourContact.push('#B#' + row[17]);
           this.docClass.docHeadingDetail.yourContact.push(row[12]);
-          this.docClass.docHeadingDetail.yourContact.push('-B' + 'Your Sign');
+          this.docClass.docHeadingDetail.yourContact.push('#B#' + 'Your Sign');
           this.docClass.docHeadingDetail.yourContact.push(row[19]);
-          this.docClass.docHeadingDetail.ourContact.push('-B' + 'Our Contact');
+          this.docClass.docHeadingDetail.ourContact.push('#B#' + 'Our Contact');
           this.gb.genKontakt(row).forEach((val) => {
             this.docClass.docHeadingDetail.ourContact.push(val);
           });
@@ -109,9 +109,9 @@ export class ProformaRechnungService {
           break;
         }
         case 'KOPF_USTID': {
-          this.docClass.docHeadingDetail.yourContact.push('-B' + row[14]);
+          this.docClass.docHeadingDetail.yourContact.push('#B#' + row[14]);
           this.docClass.docHeadingDetail.yourContact.push(row[15]);
-          this.docClass.docHeadingDetail.yourContact.push('-B' + row[16]);
+          this.docClass.docHeadingDetail.yourContact.push('#B#' + row[16]);
           this.docClass.docHeadingDetail.yourContact.push(row[17]);
           break;
         }
@@ -211,7 +211,7 @@ export class ProformaRechnungService {
       }
     });
     this.allDocClass.push(this.docClass);
-    console.log('result generate ', this.allDocClass);
+     console.log(this.allDocClass);
     return this.allDocClass;
   }
 

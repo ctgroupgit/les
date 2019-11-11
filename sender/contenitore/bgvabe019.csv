@@ -1,0 +1,58 @@
+00001;CONTROL;3;4;5;6;7;8;9;10;11;12;01.01.01;02.02.02;T15;T16;T17;T18;T19;T20;T21;T22;T23;T24;T25;T26;T27;T28;T29;019
+307566;KOPIEN;001;000;;;;;;;;;;;AUFTRAGSBESTÄTIGUNG;;;;;;;;;;;;;;;019
+307566;KOPF_DATEN;;;;;;;;;;;25.09.19;;AUFTRAGSBESTÄTIGUNG;Ihre Bestell-Nr;19090098  Bezug: 19090010-1         ;Bestell-Datum;Ihre Zeichen;Frau Fronhoffs    ;Unsere Zeichen;Nicole Naiel      ;Lief.-Nr. 72607   ;Angebot A190620a  ;D;sezer;Zentrale;        ;0721/6205-37        ;019
+307566;KOPF_DATEN2;;;;;;;;;;;;;;;;;;LieferantNr;72607     ;;;;;;;;;019
+307566;KOPF_POSUEB;;;;;;;;;;;;;Pos.;Produkt-Nr/Bezeichnung;Menge;ME;Einzelpreis;PE;Gesamt ;EUR ;0;;;;;;0721-6205-36        ;019
+307566;KONTAKT;;;;;;;;;;;;;Fax.: 0721/6205-10;nicole.naiel@zzdrivetech.com;;0721-6205-36;seher.sezer@zzdrivetech.com; Frau Sezer, Seher;;;; ;02831/971154;02831/97113;;;;019
+307566;KOPF_USTID;;;;;;;;;;;;;Ihre Ust-IdNr;                ;Unsere Ust-IdNr;DE815609203     ;;;;;;;;;;;;019
+307566;KOPF;;;;;;;;;;;26.09.19;;Datum;Vertreter;;Auftrags-Nr;190596          ;Kunden-Nr;11787   ;Slickers Technology;GmbH & Co. KG;Liebigstraße 20-22;47608 Geldern;;;;;019
+307566;KOPF_TEXTF;1;;;;;;;;;;;;tVielen Dank für Ihren Auftrag.                                        ;;;;;;;;;;;;;;;019
+307566;KOPF_TEXTF;2;;;;;;;;;;;;tEs gelten unsere Allgemeinen Verkaufs- und Lieferbedingungen,         ;;;;;;;;;;;;;;;019
+307566;KOPF_TEXTF;3;;;;;;;;;;;;tdie Sie auf unserer Homepage www.zzdrivetech.com unter                ;;;;;;;;;;;;;;;019
+307566;KOPF_TEXTF;4;;;;;;;;;;;;tImpressum einsehen bzw. herunterladen können.                         ;;;;;;;;;;;;;;;019
+307566;KOPF_TEXTA;1;;;;;;;;;;;;tAngebot A190620a v. 26.08.19                                          ;;;;;;;;;;;;;;;019
+307566;POS;1;1;760;0 ;760;9,95;;;;;08.11.19;;Ihre Produkt-Nr:;02314;K110-1017-001;KEGELRADGETRIEBE    ;02314               ;ST;Termin: ;;;Versandgewicht      ;netto;;;;     ;019
+307566;POS_TEXTP;1;1;;;;;;;;;;;tKegelradgetriebe      K110                                            ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;2;1;;;;;;;;;;;tÜbersetzung:          3:1                                             ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;3;1;;;;;;;;;;;tAusführung:           111/1 oder 111/2                                ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;4;1;;;;;;;;;;;tMontagebauform:       K01A                                            ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;5;1;;;;;;;;;;;tVerdrehflankenspiel:  Standard                                        ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;6;1;;;;;;;;;;;tWellendichtringe:     Standard NBR                                    ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;7;1;;;;;;;;;;;tEntlüftung:           ohne/beigefügt                                  ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;8;1;;;;;;;;;;;tSchmierung:           Öl, empfohlenes Öl ISO VG 220 CLP               ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;9;1;;;;;;;;;;;tAuslieferung:         ohne                                            ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;10;1;;;;;;;;;;;tSchmiermittelmenge:   ca. 0,3 l                                       ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;11;1;;;;;;;;;;;tOberflächenschutz:    grundiert                                       ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;12;1;;;;;;;;;;;tZubehör:              Verlängerung mit Entlüftung im Beutel           ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;13;1;;;;;;;;;;;t                      verpackt mitgeliefert                           ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;14;1;;;;;;;;;;;tAchtung:                                                              ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;15;1;;;;;;;;;;;tVor Inbetriebnahme Entlüftung mit Verlängerung kundenseitig           ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;16;1;;;;;;;;;;;teinschrauben.                                                         ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;17;1;;;;;;;;;;;tAusführung nach Zeichnung: K110-05220                                 ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;18;1;;;;;;;;;;;tWarennummer: 84 83 40 23                                              ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;19;1;;;;;;;;;;;t;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;20;1;;;;;;;;;;;t*                                                                     ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;21;1;;;;;;;;;;;tKENNZEICHNUNG:                                                        ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;22;1;;;;;;;;;;;tGetriebenummer:   1                                                   ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;23;1;;;;;;;;;;;tKundenreferenz:   02314                                               ;;;;;;;;;;;;;;;019
+307566;POS_TEXTP;24;1;;;;;;;;;;;t*                                                                     ;;;;;;;;;;;;;;;019
+307566;FUSS_WERTE;1;;760;;;;;;;;;;NETTOW;Nettowert;;;;;;;;;;;;;;019
+307566;FUSS_WERTE;2;;25;;;;;;;;;;KOSTEN;Verpackung       ;    ;;;;;;;;;;;;;019
+307566;FUSS_WERTE;3;;16,8;;;;;;;;;;KOSTEN;Versandkosten    ;    ;;;;;;;;;;;;;019
+307566;FUSS_WERTE;4;;801,8;;;;;;;;;;NETTOAW;Nettoauftragswert;;;;;;;;;;;;;;019
+307566;FUSS_WERTE;5;19;152,34;;;;;;;;;;MWST;zuzügl.% MWSt;%;;;;;;;;;;;;;019
+307566;FUSS_WERTE;6;;954,14;;;;;;;;;;AUFTRW;Auftragswert;;;;;;;;;;;;;;019
+307566;FUSS_LIEFB;;;;;;;;;;;;;ab Werk, ausschl. Verpackung                                ;Lieferbedingung:;;;;;;;;;;;;;;019
+307566;FUSS_VART;1;;;;;;;;;;;;GLS                                                                   ;Versandart:;;;;;;;;;;;;;;019
+307566;FUSS_ZAHLB;1;;;;;;;;;;;;10 Tage 2 % Skonto;Zahlungsbedingung:;;;;;;;;;;;;;;019
+307566;FUSS_ZAHLB;2;;;;;;;;;;;;30 Tage netto;Zahlungsbedingung:;;;;;;;;;;;;;;019
+307566;FUSS_TEXTF;1;;;;;;;;;;;;tBitte beachten Sie: Es gilt die zum Zeitpunkt der Leistungs-          ;;;;;;;;;;;;;;;019
+307566;FUSS_TEXTF;2;;;;;;;;;;;;t                    erbringung gültige Mehrwertsteuer.                ;;;;;;;;;;;;;;;019
+307566;FUSS_TEXTF;3;;;;;;;;;;;;t;;;;;;;;;;;;;;;019
+307566;FUSS_TEXTF;4;;;;;;;;;;;;t;;;;;;;;;;;;;;;019
+307566;FUSS_TEXTF;5;;;;;;;;;;;;tMit freundlichen Grüßen                                               ;;;;;;;;;;;;;;;019
+307566;FUSS_TEXTF;6;;;;;;;;;;;;t;;;;;;;;;;;;;;;019
+307566;FUSS_TEXTF;7;;;;;;;;;;;;tZZ-DriveTech GmbH                                                     ;;;;;;;;;;;;;;;019
+307566;FUSS_TEXTF;8;;;;;;;;;;;;t;;;;;;;;;;;;;;;019
+307566;FUSS_TEXTF;9;;;;;;;;;;;;t;;;;;;;;;;;;;;;019
+307566;FUSS_TEXTF;10;;;;;;;;;;;;ti.V. Peter Sohl                                                       ;;;;;;;;;;;;;;;019

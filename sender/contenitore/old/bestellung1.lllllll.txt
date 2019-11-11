@@ -1,0 +1,40 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|031
+-149877|KOPIEN|001|000||||||||0|||BESTELLUNG|||||||||||0|info@eichner-praezisionstechnik.de|||031
+-149877|KOPF_USTID|||||||||||||Ihre Ust-Identnr|                |Unsere Ust-Identnr|DE815609203     ||||||||||||031
+-149877|KOPF||||||||||||01.10.19|Datum|Bestellung|108398          |||||Eichner|Präzisionstechnik GmbH|Auf der Alm 24/2|77743 Neuried|||||031
+-149877|KOPF_DATEN||||||||||||        |Angebots-Nr|                  |KundenNr/Ihre Zeichen |                    |                  ||Lieferant|60517   |Unser Zeichen / Telefon|Klaus Korte                     |0721 6205-51        |D|korte|||031
+-149877|KONTAKT|||||||||||||Fax:0721 6205-10|klaus.korte@zzdrivetech.com|Fax:0721 6205-10|0721 6205-51|klaus.korte@zzdrivetech.com|Klaus Korte|0721/6236086|0721/6205-51|norbert.batzler@zz-antriebe.de| Hr. N. Batzler|07807/955169|07807/959191||||031
+-149877|KOPF_TEXTF|1||||||||||||tIn allen Schriftstücken bitte unsere Bestell-Daten                    |||||||||||||||031
+-149877|KOPF_TEXTF|2||||||||||||tangeben, Rechnung + Lieferschein zweifach.                            |||||||||||||||031
+-149877|KOPF_TEXTF|3||||||||||||tZu unseren Einkaufsbedingungen bestellen wir:                         |||||||||||||||031
+-149877|KOPF_POSUEB|||||||||||||Pos  |Artikel-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt|EUR ||||||||031
+-149877|POS|1|4,00|7,00|28,00|103,00|||0,00||||18.10.19|Ihre Artikel-Nr:|                        |924|Bohren / drilling   |                    |ST||Termin:        |Kommission:    |190549              |||||18.10.19|031
+-149877|POS2|1||||||||||||Kostenstelle:||Kontierungsgruppe:|590     |Werkstoff:||Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||031
+-149877|POS 3|1||||||||||||ÄI:                 |03        |Lohnschein          |21159203|Zeichn-Nr           |F1033-81-0029       |2145086001101   |Bezeichnung         |Greiferkurve UFA300 |||||||031
+-149877|POS_TEXTP|1|1|||||||||||tbohren und reiben kpl.                                                |||||||||||||||031
+-149877|POS_TEXTP|2|1|||||||||||tund Gew.schnd. und Kurvenbahn fertigfräsen                            |||||||||||||||031
+-149877|POS_TEXTP|3|1|||||||||||tund entgraten                                                         |||||||||||||||031
+-149877|POS_TEXTP|4|1|||||||||||t(Oberflächengüte Ra=1,6)                                              |||||||||||||||031
+-149877|POS_TEXTP|5|1|||||||||||tkein Drehrichtungspfeil                                               |||||||||||||||031
+-149877|POS_TEXTP|6|1|||||||||||tPR.-NR.244....                                                        |||||||||||||||031
+-149877|POS_TEXTP|7|1|||||||||||tAufn.: ZV8....                                                        |||||||||||||||031
+-149877|POS_TEXTP|8|1|||||||||||t(Progr.nr.: R0787)                                                    |||||||||||||||031
+-149877|POS_ZUSCH|1|       75|     75,00||||||||||RK              |EUR       ||||||||||||||031
+-149877|FUSS_WERTE|1||103,00||||||||||AUFTRW|Bestellwert||||||||||||||031
+-149877|FUSS_LIEFD||||||||||||18.10.19||Liefertermin:      ||||||||||||||031
+-149877|FUSS_PRE|1||||||||||||zzgl. 19 % MWST                                                       |Preisstellung:     ||||||||||||||031
+-149877|FUSS_ZAHLB|3||||||||||||60 Tage netto                                                                                      |Zahlungsbedingung: ||||||||||||||031
+-149877|FUSS_TEXTF|1||||||||||||t|||||||||||||||031
+-149877|FUSS_TEXTF|2||||||||||||tZZ Drive Tech GmbH                                                    |||||||||||||||031
+-149877|FUSS_TEXTF|3||||||||||||t|||||||||||||||031
+-149877|FUSS_TEXTF|4||||||||||||ti.A.         i.A.             i.A.                                    |||||||||||||||031
+-149877|FUSS_TEXTF|5||||||||||||tKlaus Korte  Nadine Cordeiro  Michael Batzler                         |||||||||||||||031
+-149877|FUSS_TEXTF|6||||||||||||t|||||||||||||||031
+-149877|FUSS_TEXTF|7||||||||||||t|||||||||||||||031
+-149877|FUSS_TEXTF|8||||||||||||t*****************************************************                 |||||||||||||||031
+-149877|FUSS_TEXTF|9||||||||||||tWir bitten um eine Auftragsbestätigung innerhalb                      |||||||||||||||031
+-149877|FUSS_TEXTF|10||||||||||||tvon 3 Arbeitstagen.                                                   |||||||||||||||031
+-149877|FUSS_TEXTF|11||||||||||||tBei Auftragsbestätigungen und Lieferscheinen immer                    |||||||||||||||031
+-149877|FUSS_TEXTF|12||||||||||||tunsere Artikelnummern angeben.                                        |||||||||||||||031
+-149877|FUSS_TEXTF|13||||||||||||tBitte die Ware zum angegebenen Liefertermin anliefern                 |||||||||||||||031
+-149877|FUSS_TEXTF|14||||||||||||t*****************************************************                 |||||||||||||||031

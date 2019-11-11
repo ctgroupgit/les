@@ -1,0 +1,84 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|005
+306197|KOPIEN|001|001|||||||||||RECHNUNG|RECHNUNG||||||||||||||005
+306197|KOPF_POSUEB|||||||||||||Pos.|Produkt-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt |EUR ||||||||005
+306197|KOPF|||||||||||21.10.19||Datum|Vertreter|Heinz Flohr                     |LieferantNr|          |Kunden-Nr|13004   |Pulsgetriebe GmbH & Co. KG|Am Heegwald 18|76227 Karlsruhe||||||005
+306197|KOPF_TEXTF|1||||||||||||t|||||||||||||||005
+306197|KOPF_TEXTF|2||||||||||||t|||||||||||||||005
+306197|KOPF_TEXTF|3||||||||||||t  Sie erhielten fœr Ihre Rechnung und Gefahr die unten                |||||||||||||||005
+306197|KOPF_TEXTF|4||||||||||||t  aufgefœhrten Waren.  -Lieferscheindatum = Leistungsdatum-           |||||||||||||||005
+306197|KOPF_DATEN|||||||||||02.07.19||RECHNUNG|Ihre Bestell-Nr|725033  Restabruf                   |Bestell-Datum|Auftrags-Nr|Frau Colmelet     |18068105|Nicole Naiel      |Angebot A180418   |Lief.-Nr. 71549   |D|naiel1|Zentrale|        |0721/62 05-37       |005
+306197|KOPF_DATEN2|||||||||106111|106111|16.10.19|21.10.19|106111|Rechnungs-Nr|106111|Lieferschein|Lieferdatum|||||||||||005
+306197|KONTAKT|||||||||||||Fax.: 0721/6205-10|nicole.naiel@zzdrivetech.com|Fax.: 0721/6205-10|0721/6205-37|nicole.naiel@zzdrivetech.com| Nicole Naiel|Fax.: 0721/6205-10|0721/62 05-37|nicole.naiel@zzdrivetech.com| Nicole Naiel|0721/500 08-88|0721/500 08-0|07751/873150|07751/87310||005
+306197|KOPF_TEXTA|1||||||||||||t================================================================      |||||||||||||||005
+306197|KOPF_TEXTA|2||||||||||||tVorablieferung/Zufuhr von 2 Stœck mit LS-Nr. 106111 am 16.10.19       |||||||||||||||005
+306197|KOPF_TEXTA|3||||||||||||t================================================================      |||||||||||||||005
+306197|KOPF_TEXTA|4||||||||||||tRestlieferung/Zufuhr vom 2 Stœck mit LS-Nr. 106111 am 18.10.19        |||||||||||||||005
+306197|KOPF_TEXTA|5||||||||||||t================================================================      |||||||||||||||005
+306197|KOPF_TEXTA|6||||||||||||t|||||||||||||||005
+306197|KOPF_TEXTA|7||||||||||||tInfo bezœglich Liefertermin: Die Teile werden disponiert.             |||||||||||||||005
+306197|KOPF_TEXTA|8||||||||||||tJe nach Auslastung benŒtigen wir ca. 6 - 7 Wochen Lieferzeit          |||||||||||||||005
+306197|KOPF_TEXTA|9||||||||||||tbeginnend ab Ihrem Abruf.                                             |||||||||||||||005
+306197|KOPF_TEXTA|10||||||||||||t|||||||||||||||005
+306197|KOPF_TEXTA|11||||||||||||tAus Ihrem Rahmenauftrag Nr. 725033 vom 28.08.18                       |||||||||||||||005
+306197|KOPF_TEXTA|12||||||||||||tGesamtstœckzahl = 30                                                  |||||||||||||||005
+306197|KOPF_TEXTA|13||||||||||||tDAMIT IST DIESER RAHMENAUFTRAG AUSGESCH⁄PFT.                          |||||||||||||||005
+306197|KOPF_TEXTA|14||||||||||||t================================================                      |||||||||||||||005
+306197|KOPF_USTID|||||||||||||Ihre Ust-IdNr|                |Unsere Ust-IdNr|DE815609203     ||||||||||||005
+306197|POS|1|4,0000|4330,0000|0 |17320,00|880||||||23.08.19|Ihre Produkt-Nr:|107560|K330-1370-001|KEGELRADGETRIEBE    |107560              |ST|||||Versandgewicht      |netto||||005
+306197|POS_TEXTP|1|1|||||||||||tKegelradgetriebe:     Basis K330, Sonderausfœhrung                    |||||||||||||||005
+306197|POS_TEXTP|2|1|||||||||||t€bersetzung:          i=3,1:1                                         |||||||||||||||005
+306197|POS_TEXTP|3|1|||||||||||tAusfœhrung:           verstÃrkt                                       |||||||||||||||005
+306197|POS_TEXTP|4|1|||||||||||tMontagebauform:       K03  (Ritzelwelle nach unten)                   |||||||||||||||005
+306197|POS_TEXTP|5|1|||||||||||tAntriebsdrehzahl:     n1<1475U/min                                    |||||||||||||||005
+306197|POS_TEXTP|6|1|||||||||||tAbtriebsdrehmoment:   T2<2850Nm                                       |||||||||||||||005
+306197|POS_TEXTP|7|1|||||||||||t                      T2max(zul)=4800Nm (kurzzeitig)                  |||||||||||||||005
+306197|POS_TEXTP|8|1|||||||||||tAbtriebswelle:        einseitige Hohlwelle mit DIN 5480 Profil        |||||||||||||||005
+306197|POS_TEXTP|9|1|||||||||||t                      (m=3), Sonderflansch Abtrieb fœr Anbau          |||||||||||||||005
+306197|POS_TEXTP|10|1|||||||||||t                      Planetengetriebe                                |||||||||||||||005
+306197|POS_TEXTP|11|1|||||||||||tSchmierung:           ⁄lbadschmierung (gemeinsames ⁄lvolumen mit      |||||||||||||||005
+306197|POS_TEXTP|12|1|||||||||||t                      Planetengetriebe)                               |||||||||||||||005
+306197|POS_TEXTP|13|1|||||||||||t                      - unteres Lager im Flanschlager getrennt        |||||||||||||||005
+306197|POS_TEXTP|14|1|||||||||||t                        mit Lagerfett geschmiert                      |||||||||||||||005
+306197|POS_TEXTP|15|1|||||||||||t                      - ZZ Fettschmierfristen-Empfehlung              |||||||||||||||005
+306197|POS_TEXTP|16|1|||||||||||t                        siehe AZK-140326                              |||||||||||||||005
+306197|POS_TEXTP|17|1|||||||||||t⁄lschauglÃser:        2 SchauglÃser gegenœberliegend wegen unter-     |||||||||||||||005
+306197|POS_TEXTP|18|1|||||||||||t                      schiedlicher ZugÃnglichkeit in Einbaulagen      |||||||||||||||005
+306197|POS_TEXTP|19|1|||||||||||tZubehŒr:              Getriebe mit Magnetstopfen G3/4                 |||||||||||||||005
+306197|POS_TEXTP|20|1|||||||||||tLieferung:            ohne ⁄l                                         |||||||||||||||005
+306197|POS_TEXTP|21|1|||||||||||tLackierung:           keine                                           |||||||||||||||005
+306197|POS_TEXTP|22|1|||||||||||t                      (Grundierung und Lackierung kundenseits)        |||||||||||||||005
+306197|POS_TEXTP|23|1|||||||||||tAnwendung:            Aufsteckgetriebe fœr PULS-Planetengetriebe      |||||||||||||||005
+306197|POS_TEXTP|24|1|||||||||||t                      KP3500 (Antrieb FahrgeschÃft)                   |||||||||||||||005
+306197|POS_TEXTP|25|1|||||||||||tTechnische Daten:     gemÃﬁ ZZ-Zeichnung AZK-140326                   |||||||||||||||005
+306197|POS_TEXTP|26|1|||||||||||tDokumentation:        Ersatzteilzeichnung K330-E-0023                 |||||||||||||||005
+306197|POS_TEXTP|27|1|||||||||||tFreigabe:             AZK-140326.3h (Index "h", 18.02.16)             |||||||||||||||005
+306197|POS_TEXTP|28|1|||||||||||tWarennummer: 84 83 40 23                                              |||||||||||||||005
+306197|POS_TEXTP|29|1|||||||||||t|||||||||||||||005
+306197|POS_TEXTP|30|1|||||||||||tIhre Pos. 5                                                           |||||||||||||||005
+306197|POS_TEXTP|31|1|||||||||||t===========                                                           |||||||||||||||005
+306197|POS_TEXTP|32|1|||||||||||t|||||||||||||||005
+306197|POS_TEXTP|33|1|||||||||||t*                                                                     |||||||||||||||005
+306197|POS_TEXTP|34|1|||||||||||tKENNZEICHNUNG:                                                        |||||||||||||||005
+306197|POS_TEXTP|35|1|||||||||||tGetriebenummer:   27-30                                               |||||||||||||||005
+306197|POS_TEXTP|36|1|||||||||||tKundenreferenz:   107560                                              |||||||||||||||005
+306197|POS_TEXTP|37|1|||||||||||t*                                                                     |||||||||||||||005
+306197|POS|2|4,0000||0 |0,00|||||||23.08.19|Ihre Produkt-Nr:||299-DOK-K-DE|DOKUMENTATION ZU    |KEGELRADGETRIEBEN   |ST||||||||||005
+306197|POS_TEXTP|1|2|||||||||||tBetriebs- und Wartungsanleitung                                       |||||||||||||||005
+306197|POS_TEXTP|2|2|||||||||||tzu Kegelradgetriebe                                                   |||||||||||||||005
+306197|POS_TEXTP|3|2|||||||||||t-Deutsch-                                                             |||||||||||||||005
+306197|FUSS_WERTE|1||17320,00||||||||||NETTOW|Nettowert||||||||||||||005
+306197|FUSS_WERTE|2|19,00|     3290,80||||||||||MWST|Mehrwertsteuer|%|||||||||||||005
+306197|FUSS_WERTE|3||20610,80||||||||||AUFTRW|Rechnungsbetrag||||||||||||||005
+306197|FUSS_LIEFB|||||||||||||frei Haus, inkl. Verp.                                      |Lieferbedingung:||||||||||||||005
+306197|FUSS_VART|1||||||||||||Zufuhr                                                                |Versandart:||||||||||||||005
+306197|FUSS_PACK|2||||||||||||Pal       |Verpackung:||||||||||||||005
+306197|FUSS_GEW||880,0000||||||||||||Versandgewichte:|netto|brutto||||||||||||005
+306197|FUSS_ZAHLB|1|||||||||||| Der Rechnungsbetrag ist fÃllig am 20.11.19 netto|Zahlungsbedingung:||||||||||||||005
+306197|FUSS_ZAHLB|2||||||||||||                     abzgl. 2,0% Skonto:  20198,58 EUR bis zum 31.10.19|Zahlungsbedingung:||||||||||||||005
+306197|FUSS_TEXTF|1||||||||||||tBITTE BEACHTEN SIE UNSERE NEUE BANKVERBINDUNG G€LTIG AB 01.01.16      |||||||||||||||005
+306197|FUSS_TEXTF|2||||||||||||t*****************************************************************     |||||||||||||||005
+306197|FUSS_TEXTF|3||||||||||||t|||||||||||||||005
+306197|FUSS_TEXTF|4||||||||||||tKontonummer:22616510                                                  |||||||||||||||005
+306197|FUSS_TEXTF|5||||||||||||tIBAN: DE81660202860022616510                                          |||||||||||||||005
+306197|FUSS_TEXTF|6||||||||||||tBIC:  HYVEDEMM475                                                     |||||||||||||||005
+306197|FUSS_TEXTF|7||||||||||||t*****************************************************************     |||||||||||||||005

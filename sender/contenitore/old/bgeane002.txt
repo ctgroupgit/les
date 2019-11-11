@@ -1,0 +1,45 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|002
+-1149694|KOPIEN|001|000|||||||||||ANFRAGE||||||||||||u.bechtle@hd-stahl.de|||002
+-1149694|KOPF||||||||||||21.10.19|Datum|Nr.|007258          |Lieferant|60404   |||Hagelauer Dewald GmbH|Gottlieb-Daimler-Straﬁe 11|74385 Pleidelsheim||||||002
+-1149694|KOPF_USTID|||||||||||||Ihre Ust-Id|                |Unsere Ust-Id|DE815609203     ||||||||||||002
+-1149694|KOPF_DATEN||||||||||||        |Angebots-Nr|TEST31072019      |KundenNr/Ihre Zeichen |33222               |                  |||vom|Unser Zeichen / Telefon /Fax|Michael Batzler                 |0721/6205-72        |D|batzlerm|Fax.: 0721/6205-10  ||002
+-1149694|KONTAKT|||||||||||||Fax.: 0721/6205-10|michael.batzler@zzdrivetech.com|Fax.: 0721/6205-10|0721/6205-72|michael.batzler@zzdrivetech.com| Michael Batzler|||| |07144/281599|07144/2693-0||||002
+-1149694|KOPF_TEXTF|1||||||||||||tBitte unterbreiten Sie uns Ihr kostenloses Angebot fœr die            |||||||||||||||002
+-1149694|KOPF_TEXTF|2||||||||||||tunten aufgefœhrten Positionen gem. unseren Einkaufsbedingungen.       |||||||||||||||002
+-1149694|KOPF_TEXTA|1||||||||||||t*                                                                     |||||||||||||||002
+-1149694|KOPF_TEXTA|2||||||||||||tWunschtermin KW34/19                                                  |||||||||||||||002
+-1149694|KOPF_TEXTA|3||||||||||||tAngebotstermin 28.08.19                                               |||||||||||||||002
+-1149694|KOPF_TEXTA|4||||||||||||t*                                                                     |||||||||||||||002
+-1149694|KOPF_POSUEB|||||||||||||Pos  |Artikel-Nr/Bezeichnung|Menge|ME|W-Termin  |||||||||||002
+-1149694|POS|1|2,50|||||||||29.08.19|19.08.19|Ihre Artikel-Nr||140-1.7131-240|16MnCr5             |“240                |M ||Angebotstermin |Kommission          |TEST                |||||34/19|002
+-1149694|POS2|1||||||||||||||||Werkstoff:|16MnCr5         ||||||||||002
+-1149694|POS_TEXTA|1|1|||||||||||tMit Werkszeugnis EN 10204/2.2                                         |||||||||||||||002
+-1149694|POS_TEXTP|1|1|||||||||||t*                                                                     |||||||||||||||002
+-1149694|POS_TEXTP|2|1|||||||||||tTEST                                                                  |||||||||||||||002
+-1149694|POS_TEXTP|3|1|||||||||||tfœr                                                                   |||||||||||||||002
+-1149694|POS_TEXTP|4|1|||||||||||tText                                                                  |||||||||||||||002
+-1149694|POS_TEXTP|5|1|||||||||||t*                                                                     |||||||||||||||002
+-1149694|POS_TEXTP|6|1|||||||||||tAnfragemenge = 2,5m                                                   |||||||||||||||002
+-1149694|POS_TEXTP|7|1|||||||||||tAngebotstermin 29.08.19                                               |||||||||||||||002
+-1149694|POS|2|3,17|||||||||30.08.19|19.08.19|Ihre Artikel-Nr||140-1.8519-160|31CrMoV9            |“160                |M ||Angebotstermin |||||||34/19|002
+-1149694|POS2|2||||||||||||||||Werkstoff:|31CrMoV9        ||||||||||002
+-1149694|POS_TEXTA|1|2|||||||||||tmit Werkszeugnis DIN EN10204/2.2                                      |||||||||||||||002
+-1149694|POS_TEXTP|1|2|||||||||||t*                                                                     |||||||||||||||002
+-1149694|POS_TEXTP|2|2|||||||||||tAnfragemenge 500Kg                                                    |||||||||||||||002
+-1149694|POS_TEXTP|3|2|||||||||||t|||||||||||||||002
+-1149694|POS_TEXTP|4|2|||||||||||tentspricht 3,17 m                                                     |||||||||||||||002
+-1149694|POS_TEXTP|5|2|||||||||||tAngebotstermin 30.08.19                                               |||||||||||||||002
+-1149694|POS|3|12,00|||||||||31.08.19|19.08.19|Ihre Artikel-Nr||140-1.6587-100|18CrNiMo7-6         |“100                |M ||Angebotstermin |||||||34/19|002
+-1149694|POS2|3||||||||||||||||Werkstoff:|18CrNiMo7-6     ||||||||||002
+-1149694|POS_TEXTA|1|3|||||||||||tMit Werkszeugnis DIN EN 10204/3.1                                     |||||||||||||||002
+-1149694|POS_TEXTP|1|3|||||||||||tAngebotstermin 31.08.19                                               |||||||||||||||002
+-1149694|POS|4|60,00|||||||||29.08.19|19.08.19|Ihre Artikel-Nr||140-1.7131-100|16MnCr5             |“100                |M ||Angebotstermin |||||||34/19|002
+-1149694|POS2|4||||||||||||||||Werkstoff:|16MnCr5         ||||||||||002
+-1149694|POS_TEXTA|1|4|||||||||||tMit Werkszeugnis EN 10204/2.2                                         |||||||||||||||002
+-1149694|POS_TEXTP|1|4|||||||||||tAngebotstermin 29.08.19                                               |||||||||||||||002
+-1149694|POS|5|3,50|||||||||28.08.19|09.09.19|Ihre Artikel-Nr||140-1.7131-105|16MnCr5             |“105                |M ||Angebotstermin |||||||37/19|002
+-1149694|POS2|5||||||||||||||||Werkstoff:|16MnCr5         ||||||||||002
+-1149694|POS_TEXTA|1|5|||||||||||tMit Werkszeugnis EN 10204/2.2                                         |||||||||||||||002
+-1149694|POS_TEXTP|1|5|||||||||||tAngebotstermin 28.08.19                                               |||||||||||||||002
+-1149694|FUSS_TEXTF|1||||||||||||tMit freundlichen Grœﬁen                                               |||||||||||||||002
+-1149694|FUSS_TEXTF|2||||||||||||tZZ Drive Tech GmbH                                                    |||||||||||||||002
