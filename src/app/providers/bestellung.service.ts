@@ -9,17 +9,18 @@ import {LoggerService} from './logger.service';
   providedIn: 'root'
 })
 export class BestellungService {
-  docClass: DocumentModel = new DocumentModel();
+  docClass: DocumentModel = new DocumentModel;
   allDocClass: DocumentModel[] = [];
   bodyRow: TableRowModel;
   constructor(private electron: ElectronService,
               private ls: LocalStorageService,
               private gb: GlobalService,
               private log: LoggerService
-  ) { }
+  ) {}
 
   generate(data = [], type: string) {
-    this.allDocClass.pop();
+    this.allDocClass = [];
+    this.docClass = new DocumentModel;
     let totDoc = 0;
     data.forEach( (row) => {
       switch (row[1]) {

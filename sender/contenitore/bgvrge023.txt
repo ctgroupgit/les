@@ -1,0 +1,66 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|023
+306167|KOPIEN|001|001|||||||||||RECHNUNG|RECHNUNG||||||||||||||023
+306167|KOPF_POSUEB|||||||||||||Pos.|Produkt-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt |EUR ||||||||023
+306167|KOPF|||||||||||29.11.19||Datum|Vertreter||LieferantNr|          |Kunden-Nr|12975   |Elopak EQS GmbH|Hanns-Martin-Schleyer-Str. 17|41199 Mönchengladbach|Bundesrepublik Deutschland|||||023
+306167|KOPF_TEXTF|1||||||||||||t|||||||||||||||023
+306167|KOPF_TEXTF|2||||||||||||t|||||||||||||||023
+306167|KOPF_TEXTF|3||||||||||||t  Sie erhielten für Ihre Rechnung und Gefahr die unten                |||||||||||||||023
+306167|KOPF_TEXTF|4||||||||||||t  aufgeführten Waren.  -Lieferscheindatum = Leistungsdatum-           |||||||||||||||023
+306167|KOPF_DATEN|||||||||||18.06.19||RECHNUNG|Ihre Bestell-Nr|Versandanweisung                    |Bestell-Datum|Auftrags-Nr|Viktor Funk       |190414|Frau Sezer, Seher |VERSCHROTTUNG     |Angebot A190497   |D|sezer|Zentrale|        |0721-6205-36        |023
+306167|KOPF_DATEN2|||||||||106299|106299|04.12.19|29.11.19|106299|Rechnungs-Nr|106299|Lieferschein|Lieferdatum|||||||||||023
+306167|KONTAKT||||||||||||||seher.sezer@zzdrivetech.com||0721-6205-36|seher.sezer@zzdrivetech.com| Frau Sezer, Seher||0721-6205-36|seher.sezer@zzdrivetech.com| Frau Sezer, Seher|02166-9457-199|02166-9457-0||||023
+306167|KOPF_USTID|||||||||||||Ihre Ust-IdNr|DE 256172255    |Unsere Ust-IdNr|DE815609203     ||||||||||||023
+306167|POS|1|1,0000|200,0000|0 |200,00|||||||27.12.19|Ihre Produkt-Nr:||OX200-190414|X0825-11            |Kostenpfl. Prüfung  |ST||||||||||023
+306167|POS_TEXTP|1|1|||||||||||tKOSTENPFLICHTIGE ÜBERPRÜFUNG VON                                      |||||||||||||||023
+306167|POS_TEXTP|2|1|||||||||||t*****************************************************************     |||||||||||||||023
+306167|POS_TEXTP|3|1|||||||||||tZZ-Schrittgetriebe:   X0825-11                                        |||||||||||||||023
+306167|POS_TEXTP|4|1|||||||||||tZZ-Getriebenummer:    100154/004                                      |||||||||||||||023
+306167|POS_TEXTP|5|1|||||||||||tZZ-Identnummer:       158622                                          |||||||||||||||023
+306167|POS_TEXTP|6|1|||||||||||tElopak-Artikelnummer: HE314200015                                     |||||||||||||||023
+306167|POS_TEXTP|7|1|||||||||||tBaujahr:              2010                                            |||||||||||||||023
+306167|POS_TEXTP|8|1|||||||||||tEinbaulage:           L1                                              |||||||||||||||023
+306167|POS_TEXTP|9|1|||||||||||t*                                                                     |||||||||||||||023
+306167|POS_TEXTP|10|1|||||||||||tKundenzeichn.:        74-207310                                       |||||||||||||||023
+306167|POS_TEXTP|11|1|||||||||||tGetriebetyp  :        TX  (Tischausführung)                           |||||||||||||||023
+306167|POS_TEXTP|12|1|||||||||||tStopzahl     :        6                                               |||||||||||||||023
+306167|POS_TEXTP|13|1|||||||||||tSchrittwinkel:        60°                                             |||||||||||||||023
+306167|POS_TEXTP|14|1|||||||||||tSchaltwinkel :        120°                                            |||||||||||||||023
+306167|POS_TEXTP|15|1|||||||||||tGangrichtung :        linksgängig                                     |||||||||||||||023
+306167|POS_TEXTP|16|1|||||||||||tBew.Gesetz   :        MS 0% konst. Geschwindigkeit                    |||||||||||||||023
+306167|POS_TEXTP|17|1|||||||||||tAchsabstand  :        139,7mm                                         |||||||||||||||023
+306167|POS_TEXTP|18|1|||||||||||tAntriebswelle:        ø34,92x77,76 beidseitig                         |||||||||||||||023
+306167|POS_TEXTP|19|1|||||||||||tAbtriebswelle:        ø114,3 mit Zentrierung 50,797x4,78              |||||||||||||||023
+306167|POS_TEXTP|20|1|||||||||||t                      Befestigung 4x M10x20 auf Lkr.82,55             |||||||||||||||023
+306167|POS_TEXTP|21|1|||||||||||tSchmierung   :        Fett Klübersynth UH1 14-1600 PARALIQ GA 3400    |||||||||||||||023
+306167|POS_TEXTP|22|1|||||||||||t                      (gemäß USDA H1), lebensmitteltauglich           |||||||||||||||023
+306167|POS_TEXTP|23|1|||||||||||t                      Füllmenge ca. 4 Liter, werksseitig befüllt      |||||||||||||||023
+306167|POS_TEXTP|24|1|||||||||||tDrehzahl     :        50 UPM                                          |||||||||||||||023
+306167|POS_TEXTP|25|1|||||||||||tVereinbarung :        bestätigte Abweichungen gegenüber               |||||||||||||||023
+306167|POS_TEXTP|26|1|||||||||||t                      der Kundenzeichnung:                            |||||||||||||||023
+306167|POS_TEXTP|27|1|||||||||||t                      - Fließfettfüllung bis Mitte Abtriebswelle      |||||||||||||||023
+306167|POS_TEXTP|28|1|||||||||||t                      - Verzicht auf Ölschauglas (wegen Fett)         |||||||||||||||023
+306167|POS_TEXTP|29|1|||||||||||t                      - keine Schmiernippel, keine Sonderdichtung     |||||||||||||||023
+306167|POS_TEXTP|30|1|||||||||||tZZ-Zeichnung :        X0825-11-0521                                   |||||||||||||||023
+306167|POS_TEXTP|31|1|||||||||||t                      (Freigabebasis war AZX-070132)                  |||||||||||||||023
+306167|POS_TEXTP|32|1|||||||||||tOberfläche   :        Grundiert gemäß Zeichnung X0825-11-0121         |||||||||||||||023
+306167|POS_TEXTP|33|1|||||||||||t*                                                                     |||||||||||||||023
+306167|POS_TEXTP|34|1|||||||||||tEin detaillierter Kostenvoranschlag mit Angabe von Preis und          |||||||||||||||023
+306167|POS_TEXTP|35|1|||||||||||tLieferzeit der Instandsetzung wurde Ihnen zugestellt.                 |||||||||||||||023
+306167|POS_TEXTP|36|1|||||||||||tDa aufgrund des Kostenvoranschlags kein Auftrag zustande              |||||||||||||||023
+306167|POS_TEXTP|37|1|||||||||||tgekommen ist, müssen wir Ihnen für die Überprüfung des Getriebes      |||||||||||||||023
+306167|POS_TEXTP|38|1|||||||||||tden Betrag von 200,- Euro berechnen.                                  |||||||||||||||023
+306167|POS_TEXTP|39|1|||||||||||tDas Getriebe wird umweltschonend entsorgt.                            |||||||||||||||023
+306167|POS_TEXTP|40|1|||||||||||t(gem. e-mail von Herrn Funk vom 02.12.2019)                           |||||||||||||||023
+306167|POS_TEXTP|41|1|||||||||||t****************************************************************      |||||||||||||||023
+306167|FUSS_WERTE|1||200,00||||||||||NETTOW|Nettowert||||||||||||||023
+306167|FUSS_WERTE|2|19,00|       38,00||||||||||MWST|Mehrwertsteuer|%|||||||||||||023
+306167|FUSS_WERTE|3||238,00||||||||||AUFTRW|Rechnungsbetrag||||||||||||||023
+306167|FUSS_LIEFB|||||||||||||ab Werk, ausschl. Verpackung                                |Lieferbedingung:||||||||||||||023
+306167|FUSS_ZAHLB|1|||||||||||| Der Rechnungsbetrag ist fällig am 29.12.19 netto|Zahlungsbedingung:||||||||||||||023
+306167|FUSS_TEXTF|1||||||||||||tBITTE BEACHTEN SIE UNSERE NEUE BANKVERBINDUNG GÜLTIG AB 01.01.16      |||||||||||||||023
+306167|FUSS_TEXTF|2||||||||||||t*****************************************************************     |||||||||||||||023
+306167|FUSS_TEXTF|3||||||||||||t|||||||||||||||023
+306167|FUSS_TEXTF|4||||||||||||tKontonummer:22616510                                                  |||||||||||||||023
+306167|FUSS_TEXTF|5||||||||||||tIBAN: DE81660202860022616510                                          |||||||||||||||023
+306167|FUSS_TEXTF|6||||||||||||tBIC:  HYVEDEMM475                                                     |||||||||||||||023
+306167|FUSS_TEXTF|7||||||||||||t*****************************************************************     |||||||||||||||023

@@ -1,0 +1,64 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|014
+-150187|KOPIEN|001|000||||||||0|||BESTELLUNG|||||||||||0|customerorders@ompsrl.eu|||014
+-150187|KOPF_USTID|||||||||||||Ihre Ust-Identnr|                |Unsere Ust-Identnr|DE815609203     ||||||||||||014
+-150187|KOPF||||||||||||04.12.19|Datum|Bestellung|108669          |||||OMP|Via Di Pietro Adalgiso 1|66100 Chieti|Italien|||||014
+-150187|KOPF_DATEN||||||||||||        |Angebots-Nr|                  |KundenNr/Ihre Zeichen |                    |                  ||Lieferant|63166   |Unser Zeichen / Telefon|Klaus Korte                     |0721 6205-51        |D|korte|||014
+-150187|KONTAKT|||||||||||||Fax:0721 6205-10|klaus.korte@zzdrivetech.com|Fax:0721 6205-10|0721 6205-51|klaus.korte@zzdrivetech.com|Klaus Korte|Fax:0721 6205-10|0721 6205-51|klaus.korte@zzdrivetech.com|Klaus Korte|00390871551110|00390871565624||||014
+-150187|KOPF_TEXTF|1||||||||||||tIn allen Schriftstücken bitte unsere Bestell-Daten                    |||||||||||||||014
+-150187|KOPF_TEXTF|2||||||||||||tangeben, Rechnung + Lieferschein zweifach.                            |||||||||||||||014
+-150187|KOPF_TEXTF|3||||||||||||tZu unseren Einkaufsbedingungen bestellen wir:                         |||||||||||||||014
+-150187|KOPF_TEXTK|1||||||||||||t*******************************************************               |||||||||||||||014
+-150187|KOPF_TEXTK|2||||||||||||tBitte beachten Sie, bei der Fertigung von kompletten                  |||||||||||||||014
+-150187|KOPF_TEXTK|3||||||||||||tZeichnungsteilen gehört zum Mindestlieferumfang:                      |||||||||||||||014
+-150187|KOPF_TEXTK|4||||||||||||t- Kennzeichnung mit Zeichnungsnummer                                  |||||||||||||||014
+-150187|KOPF_TEXTK|5||||||||||||t- Kennzeichnung mit Bestellnummer                                     |||||||||||||||014
+-150187|KOPF_TEXTK|6||||||||||||t- Prüfprotokoll Stichprobe der Paßmaße (Eintrag der                   |||||||||||||||014
+-150187|KOPF_TEXTK|7||||||||||||t  gemessenen Werte auf die Zeichnung ist mit                          |||||||||||||||014
+-150187|KOPF_TEXTK|8||||||||||||t  Unterschrift ausreichend).                                          |||||||||||||||014
+-150187|KOPF_TEXTK|9||||||||||||tSollten im Positionstext oder auf der Zeichnung höhere                |||||||||||||||014
+-150187|KOPF_TEXTK|10||||||||||||tAnforderungen genannt werden haben dies Gültigkeit.                   |||||||||||||||014
+-150187|KOPF_TEXTK|11||||||||||||tFalls einzelne Punkte nicht erfüllt werden können ist                 |||||||||||||||014
+-150187|KOPF_TEXTK|12||||||||||||tdies mit dem zuständigen Einkäufer abzustimmen und                    |||||||||||||||014
+-150187|KOPF_TEXTK|13||||||||||||tzusätzlich auf dem Lieferschein zu vermerken.                         |||||||||||||||014
+-150187|KOPF_TEXTK|14||||||||||||t*******************************************************               |||||||||||||||014
+-150187|KOPF_POSUEB|||||||||||||Pos  |Artikel-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt|EUR ||||||||014
+-150187|POS|1|18,00||||||0,00||||19.12.19|Ihre Artikel-Nr:|                        |X0069-00828154|HEBEL               |00828154 (Identnr.) |ST||Termin:        |Kommission:    |Reklamation         |||||19.12.19|014
+-150187|POS2|1||||||||||||Kostenstelle:||Kontierungsgruppe:|591     |Werkstoff:||Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||014
+-150187|POS 3|1|||||||||||||||||||||||||||014
+-150187|POS_TEXTA|1|1|||||||||||tMaterial 3.4345.71 AlZnMgCu0,5F45                                     |||||||||||||||014
+-150187|POS_TEXTA|2|1|||||||||||tmit Werkszeugnis 3.1 für das Material und                             |||||||||||||||014
+-150187|POS_TEXTA|3|1|||||||||||t100% zuordenbares Maßprotokoll für die Passungen                      |||||||||||||||014
+-150187|POS_TEXTA|4|1|||||||||||tund die Achsabstände.                                                 |||||||||||||||014
+-150187|POS_TEXTP|1|1|||||||||||t*************************************                                 |||||||||||||||014
+-150187|POS_TEXTP|2|1|||||||||||tDurch Recklamation bestellen wir nach                                 |||||||||||||||014
+-150187|POS_TEXTP|3|1|||||||||||tAbsprache mit Franco 18 Hebel                                         |||||||||||||||014
+-150187|POS_TEXTP|4|1|||||||||||tkostenlos.                                                            |||||||||||||||014
+-150187|POS_TEXTP|5|1|||||||||||t*************************************                                 |||||||||||||||014
+-150187|POS|2|18,00||||||0,00||||19.12.19|Ihre Artikel-Nr:|                        |X0069-00828155|HEBEL               |00828155 (Identnr.) |ST||Termin:        |Kommission:    |Reklamation         |||||19.12.19|014
+-150187|POS2|2||||||||||||Kostenstelle:||Kontierungsgruppe:|591     |Werkstoff:||Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||014
+-150187|POS 3|2|||||||||||||||||||||||||||014
+-150187|POS_TEXTA|1|2|||||||||||tMaterial 3.4345.71 AlZnMgCu0,5F45                                     |||||||||||||||014
+-150187|POS_TEXTA|2|2|||||||||||tmit Werkszeugnis 3.1 für das Material und                             |||||||||||||||014
+-150187|POS_TEXTA|3|2|||||||||||t100% zuordenbares Maßprotokoll für die Passungen                      |||||||||||||||014
+-150187|POS_TEXTA|4|2|||||||||||tund die Achsabstände.                                                 |||||||||||||||014
+-150187|POS_TEXTP|1|2|||||||||||t*************************************                                 |||||||||||||||014
+-150187|POS_TEXTP|2|2|||||||||||tDurch Recklamation bestellen wir nach                                 |||||||||||||||014
+-150187|POS_TEXTP|3|2|||||||||||tAbsprache mit Franco 18 Hebel                                         |||||||||||||||014
+-150187|POS_TEXTP|4|2|||||||||||tkostenlos.                                                            |||||||||||||||014
+-150187|POS_TEXTP|5|2|||||||||||t*************************************                                 |||||||||||||||014
+-150187|FUSS_LIEFD||||||||||||19.12.19||Liefertermin:      ||||||||||||||014
+-150187|FUSS_ZAHLB|1||||||||||||BBC 60/90 GG FM                                                       |Zahlungsbedingung: ||||||||||||||014
+-150187|FUSS_TEXTF|1||||||||||||t|||||||||||||||014
+-150187|FUSS_TEXTF|2||||||||||||tZZ Drive Tech GmbH                                                    |||||||||||||||014
+-150187|FUSS_TEXTF|3||||||||||||t|||||||||||||||014
+-150187|FUSS_TEXTF|4||||||||||||ti.A.         i.A.             i.A.                                    |||||||||||||||014
+-150187|FUSS_TEXTF|5||||||||||||tKlaus Korte  Nadine Cordeiro  Michael Batzler                         |||||||||||||||014
+-150187|FUSS_TEXTF|6||||||||||||t|||||||||||||||014
+-150187|FUSS_TEXTF|7||||||||||||t|||||||||||||||014
+-150187|FUSS_TEXTF|8||||||||||||t*****************************************************                 |||||||||||||||014
+-150187|FUSS_TEXTF|9||||||||||||tWir bitten um eine Auftragsbestätigung innerhalb                      |||||||||||||||014
+-150187|FUSS_TEXTF|10||||||||||||tvon 3 Arbeitstagen.                                                   |||||||||||||||014
+-150187|FUSS_TEXTF|11||||||||||||tBei Auftragsbestätigungen und Lieferscheinen immer                    |||||||||||||||014
+-150187|FUSS_TEXTF|12||||||||||||tunsere Artikelnummern angeben.                                        |||||||||||||||014
+-150187|FUSS_TEXTF|13||||||||||||tBitte die Ware zum angegebenen Liefertermin anliefern                 |||||||||||||||014
+-150187|FUSS_TEXTF|14||||||||||||t*****************************************************                 |||||||||||||||014

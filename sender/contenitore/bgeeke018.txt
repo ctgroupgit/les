@@ -1,0 +1,33 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|018
+-150198|KOPIEN|001|000||||||||0|||BESTELLUNG|||||||||||0|info@BIT-trade.com|||018
+-150198|KOPF_USTID|||||||||||||Ihre Ust-Identnr|                |Unsere Ust-Identnr|DE815609203     ||||||||||||018
+-150198|KOPF||||||||||||04.12.19|Datum|Bestellung|108679          |||||BIT GmbH|Bearing International Trade|Liststr. 26|76185 Karlsruhe|||||018
+-150198|KOPF_DATEN||||||||||||        |Angebots-Nr|                  |KundenNr/Ihre Zeichen |10696               |                  ||Lieferant|60231   |Unser Zeichen / Telefon|Nadine Cordeiro                 |Tel:0721/6205-35    |D|cordeiro|||018
+-150198|KONTAKT|||||||||||||Fax:0721/6205-10|nadine.cordeiro@zzdrivetech.com|Fax:0721/6205-10|Tel:0721/6205-35|nadine.cordeiro@zzdrivetech.com|Nadine Cordeiro|Fax:0721/6205-10|Tel:0721/6205-35|nadine.cordeiro@zzdrivetech.com|Nadine Cordeiro|0721/5964795|0721/5964727||||018
+-150198|KOPF_TEXTF|1||||||||||||tIn allen Schriftstücken bitte unsere Bestell-Daten                    |||||||||||||||018
+-150198|KOPF_TEXTF|2||||||||||||tangeben, Rechnung + Lieferschein zweifach.                            |||||||||||||||018
+-150198|KOPF_TEXTF|3||||||||||||tZu unseren Einkaufsbedingungen bestellen wir:                         |||||||||||||||018
+-150198|KOPF_POSUEB|||||||||||||Pos  |Artikel-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt|EUR ||||||||018
+-150198|POS|1|1,00|13,70|13,70|13,70|||0,00||||05.12.19|Ihre Artikel-Nr:|                        |201-7207-B|SCHRÄGKUGELLAGER    |035x072x17          |ST||Termin:        |Kommission:    |                    |||||05.12.19|018
+-150198|POS2|1||||||||||||Kostenstelle:||Kontierungsgruppe:||Werkstoff:||Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||018
+-150198|POS 3|1|||||||||||||||||||||||||||018
+-150198|POS_TEXTA|1|1|||||||||||tAlternativ: Ausf. BEP                                                 |||||||||||||||018
+-150198|FUSS_WERTE|1||13,70||||||||||AUFTRW|Bestellwert||||||||||||||018
+-150198|FUSS_LIEFD||||||||||||05.12.19||Liefertermin:      ||||||||||||||018
+-150198|FUSS_PRE|1||||||||||||zzgl. 19 % MWST                                                       |Preisstellung:     ||||||||||||||018
+-150198|FUSS_ZAHLB|1||||||||||||20 Tage 2,00 % Skonto                                                                              |Zahlungsbedingung: ||||||||||||||018
+-150198|FUSS_ZAHLB|3||||||||||||40 Tage netto                                                                                      |Zahlungsbedingung: ||||||||||||||018
+-150198|FUSS_TEXTF|1||||||||||||t|||||||||||||||018
+-150198|FUSS_TEXTF|2||||||||||||tZZ Drive Tech GmbH                                                    |||||||||||||||018
+-150198|FUSS_TEXTF|3||||||||||||t|||||||||||||||018
+-150198|FUSS_TEXTF|4||||||||||||ti.A.         i.A.             i.A.                                    |||||||||||||||018
+-150198|FUSS_TEXTF|5||||||||||||tKlaus Korte  Nadine Cordeiro  Michael Batzler                         |||||||||||||||018
+-150198|FUSS_TEXTF|6||||||||||||t|||||||||||||||018
+-150198|FUSS_TEXTF|7||||||||||||t|||||||||||||||018
+-150198|FUSS_TEXTF|8||||||||||||t*****************************************************                 |||||||||||||||018
+-150198|FUSS_TEXTF|9||||||||||||tWir bitten um eine Auftragsbestätigung innerhalb                      |||||||||||||||018
+-150198|FUSS_TEXTF|10||||||||||||tvon 3 Arbeitstagen.                                                   |||||||||||||||018
+-150198|FUSS_TEXTF|11||||||||||||tBei Auftragsbestätigungen und Lieferscheinen immer                    |||||||||||||||018
+-150198|FUSS_TEXTF|12||||||||||||tunsere Artikelnummern angeben.                                        |||||||||||||||018
+-150198|FUSS_TEXTF|13||||||||||||tBitte die Ware zum angegebenen Liefertermin anliefern                 |||||||||||||||018
+-150198|FUSS_TEXTF|14||||||||||||t*****************************************************                 |||||||||||||||018

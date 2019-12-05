@@ -1,6 +1,6 @@
 {
   "name": "les",
-  "version": "1.1.75",
+  "version": "1.1.78",
   "description": "Les",
   "homepage": "https://github.com/ctgroupgit/les",
   "repository": {
@@ -28,7 +28,8 @@
     "publish": [
       {
         "provider": "github",
-        "url": "https://github.com/ctgroupgit/les"
+        "url": "https://github.com/ctgroupgit/les",
+        "token": "09cdc6297f321b5d8f60ce86b69ba75e3af81ff0"
       }
     ],
     "win": {
@@ -91,7 +92,7 @@
     "test": "npm run postinstall:web && ng test",
     "e2e": "npm run build:prod && mocha --timeout 300000 --require ts-node/register e2e/**/*.spec.ts",
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-    "gh-publish": "GH_TOKEN=f1cdd894d27811901744685072756566f6f983da && npm run build:prod && electron-builder --x64 -mwl --publish always",
+    "gh-publish": "npm run build:prod && electron-builder --x64 -mwl --publish always",
     "gh-publish-win": "npm run build:prod && electron-builder --x64 --win --publish always",
     "gh-publish-mac": "npm run build:prod && electron-builder --x64 --mac --publish always",
     "gh-publish-linux": "npm run build:prod && electron-builder --x64 --linux --publish always"

@@ -59,7 +59,6 @@ export class PdfGenerationService {
 
     public print(csvData = []) {
         const type = this.gb.checkDocType(csvData);
-        // console.log(csvData, 'Tipo Documento ', type);
         switch (type) {
             case 'RECHNUNG':
             case 'RECHNUNG KOPIE':
@@ -127,6 +126,7 @@ export class PdfGenerationService {
     }
 
     sendPaginator(doc: DocumentModel) {
+        this.currentDoc = new DocumentModel();
         this.paper = new jsPDF({filters: ['ASCIIHexEncode']});
         this.DOCUMENT_FINISH = false;
         this.HEADER_IS_PRINTED = false;

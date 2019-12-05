@@ -1,0 +1,23 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|023
+304314|KOPIEN|001|002|||||||||||LIEFERSCHEIN|LIEFERSCHEIN|LIEFERSCHEIN KOPIE|||||||||||||023
+304314|KOPF_POSUEB||||||||||||27.02.19|Pos.|Produkt-Nr/Bezeichnung|Bestellmenge|Liefermenge|Restmenge|ME|Auftrags-Datum|||Datum     ____________  Empfangsbestätigung: _________________________|||||0721-6205-36|023
+304314|KOPF_ANS||||||||||||||||||Versand|Im Auftrag von|Müller Martini AG|Ersatzteil-Service-Center|Untere Brühlstrasse 13|4800 Zofingen|Schweiz||||023
+304314|KOPF_USTID|||||||||||||Ihre Ust-IdNr|                |Unsere Ust-IdNr|DE815609203     ||||||||||||023
+304314|KOPF|||||||||||28.02.19||Datum|Vertreter|Flohr                           |Lieferschein|105161|Kunden-Nr|20694   |Müller Martini AG|Ersatzteil-Service-Center|Untere Brühlstrasse 17|4800 Zofingen|Schweiz||||023
+304314|KOPF_TEXTF|1||||||||||||tSie erhielten für Ihre Rechnung und Gefahr die unten                  |||||||||||||||023
+304314|KOPF_TEXTF|2||||||||||||taufgeführten Waren.                                                   |||||||||||||||023
+304314|KOPF_TEXTF|3||||||||||||tWir wünschen Ihnen guten Empfang der Sendung.                         |||||||||||||||023
+304314|KOPF_DATEN|||||||||||27.02.19|27.02.19|Auftrags-Nr|Ihre Bestell-Nr|4510287341                          |Bestell-Datum|LIEFERSCHEIN|Carsten Rüger     |0721-6205-36        |Frau Sezer, Seher |Kred. 120036      |EK-Gruppe 5C2     |D|sezer|Zentrale|        |190137          |023
+304314|KOPF_DATEN2||||||||||||||||||LieferantNr|120036    |  |4800 Zofingen|||||||023
+304314|KONTAKT||||||||||||||seher.sezer@zzdrivetech.com||0721-6205-36|seher.sezer@zzdrivetech.com| Frau Sezer, Seher||0721-6205-36|seher.sezer@zzdrivetech.com| Frau Sezer, Seher|0041-62-7454292|0041-62-7454575||0041/050-540674||023
+304314|POS|1|10,0000|10,0000||15,4|15,4||||||08.03.19|Ihre Produkt-Nr:|H220.0928.5B|F1033-81-0123|Stapelheberkurve TAL|FJ.4320231/01       |ST|Termin: |Warennummer    |84839089    |||Versandgewicht      |netto|brutto|09/19|023
+304314|POS2|1||||||||||||Änderungsindex      |2||||||||||||||023
+304314|POS_TEXTP|1|1|||||||||||tkpl. gefertigt inkl. Mat. 16MnCr5                                     |||||||||||||||023
+304314|POS_TEXTP|2|1|||||||||||tBohrung und Kurvenbahn Ra 1,6 (entgegen Zeichnung)                    |||||||||||||||023
+304314|POS_TEXTP|3|1|||||||||||tbrüniert                                                              |||||||||||||||023
+304314|POS_TEXTP|4|1|||||||||||t*                                                                     |||||||||||||||023
+304314|POS_TEXTP|5|1|||||||||||tÄnderungsindex/Rev.: 01/B                                             |||||||||||||||023
+304314|FUSS_LIEFB|||||||||||||ab Werk, ausschl. Verpackung                                |Lieferbedingung:|1|||||||||||||023
+304314|FUSS_VART|1||||||||||||TNT                                                                   |Versandart:|11|||||||||||||023
+304314|FUSS_PACK|1||||||||||||Karton|Verpackung:||||||||||||||023
+304314|FUSS_GEW||15,4||||||||||||Versandgewichte:|netto|brutto||||||||||||023

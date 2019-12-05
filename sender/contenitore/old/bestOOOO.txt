@@ -1,0 +1,88 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|005
+-150044|KOPIEN|001|001||||||||0|||BESTELLUNG|BESTELLUNG||||||||||0|customerorders@ompsrl.eu|||005
+-150044|KOPF_USTID|||||||||||||Ihre Ust-Identnr|                |Unsere Ust-Identnr|DE815609203     ||||||||||||005
+-150044|KOPF||||||||||||04.11.19|Datum|Bestellung|108539          |||||OMP|Via Di Pietro Adalgiso 1|66100 Chieti|Italien|||||005
+-150044|KOPF_DATEN||||||||||||        |Angebots-Nr|                  |KundenNr/Ihre Zeichen |                    |                  ||Lieferant|63166   |Unser Zeichen / Telefon|Klaus Korte                     |0721 6205-51        |D|korte|||005
+-150044|KONTAKT|||||||||||||Fax:0721 6205-10|klaus.korte@zzdrivetech.com|Fax:0721 6205-10|0721 6205-51|klaus.korte@zzdrivetech.com|Klaus Korte|Fax:0721 6205-10|0721 6205-51|klaus.korte@zzdrivetech.com|Klaus Korte|00390871551110|00390871565624||||005
+-150044|KOPF_TEXTF|1||||||||||||tIn allen Schriftstücken bitte unsere Bestell-Daten                    |||||||||||||||005
+-150044|KOPF_TEXTF|2||||||||||||tangeben, Rechnung + Lieferschein zweifach.                            |||||||||||||||005
+-150044|KOPF_TEXTF|3||||||||||||tZu unseren Einkaufsbedingungen bestellen wir:                         |||||||||||||||005
+-150044|KOPF_TEXTK|1||||||||||||t*******************************************************               |||||||||||||||005
+-150044|KOPF_TEXTK|2||||||||||||tBitte beachten Sie, bei der Fertigung von kompletten                  |||||||||||||||005
+-150044|KOPF_TEXTK|3||||||||||||tZeichnungsteilen gehört zum Mindestlieferumfang:                      |||||||||||||||005
+-150044|KOPF_TEXTK|4||||||||||||t- Kennzeichnung mit Zeichnungsnummer                                  |||||||||||||||005
+-150044|KOPF_TEXTK|5||||||||||||t- Kennzeichnung mit Bestellnummer                                     |||||||||||||||005
+-150044|KOPF_TEXTK|6||||||||||||t- Prüfprotokoll Stichprobe der Paßmaße (Eintrag der                   |||||||||||||||005
+-150044|KOPF_TEXTK|7||||||||||||t  gemessenen Werte auf die Zeichnung ist mit                          |||||||||||||||005
+-150044|KOPF_TEXTK|8||||||||||||t  Unterschrift ausreichend).                                          |||||||||||||||005
+-150044|KOPF_TEXTK|9||||||||||||tSollten im Positionstext oder auf der Zeichnung höhere                |||||||||||||||005
+-150044|KOPF_TEXTK|10||||||||||||tAnforderungen genannt werden haben dies Gültigkeit.                   |||||||||||||||005
+-150044|KOPF_TEXTK|11||||||||||||tFalls einzelne Punkte nicht erfüllt werden können ist                 |||||||||||||||005
+-150044|KOPF_TEXTK|12||||||||||||tdies mit dem zuständigen Einkäufer abzustimmen und                    |||||||||||||||005
+-150044|KOPF_TEXTK|13||||||||||||tzusätzlich auf dem Lieferschein zu vermerken.                         |||||||||||||||005
+-150044|KOPF_TEXTK|14||||||||||||t*******************************************************               |||||||||||||||005
+-150044|KOPF_POSUEB|||||||||||||Pos  |Artikel-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt|EUR ||||||||005
+-150044|POS|1|20,00|48,00|960,00|960,00|||0,00||||20.12.19|Ihre Artikel-Nr:|                        |S100-1713|LAGERDECKEL EXZ.    |                    |ST||Termin:        |Kommission:    |190659              |||||20.12.19|005
+-150044|POS2|1||||||||||||Kostenstelle:||Kontierungsgruppe:|591     |Werkstoff:|C45/St52/16MnCr5|Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||005
+-150044|POS 3|1|||||||||||||||||||||||||||005
+-150044|POS|2|3,00|38,08|114,24|114,24|||0,00||||10.01.20|Ihre Artikel-Nr:|                        |X0069-00828121|WINKELSTÜCK         |00828121 (Identnr.) |ST||Termin:        |Kommission:    |18040590            |||||10.01.20|005
+-150044|POS2|2||||||||||||Kostenstelle:||Kontierungsgruppe:|591     |Werkstoff:||Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||005
+-150044|POS 3|2|||||||||||||||||||||||||||005
+-150044|POS|3|1,00|75,00|75,00|75,00|||0,00||||10.01.20|Ihre Artikel-Nr:|                        |K140-34230|ABTRIEBSWELLE       |1:1.333             |ST||Termin:        |Kommission:    |190586              |||||10.01.20|005
+-150044|POS2|3||||||||||||Kostenstelle:||Kontierungsgruppe:|591     |Werkstoff:|16MnCr5-ZF6     |Zeichn.-Nr.:|K140-34230.2    |MOD/DIN:||Abmessung:||ÄI:|||005
+-150044|POS 3|3|||||||||||||||||||||||||||005
+-150044|POS|4|5,00|170,00|850,00|850,00|||0,00||||17.01.20|Ihre Artikel-Nr:|                        |X1343-10-1521|FLANSCHLAGER        |220x72.5            |ST||Termin:        |Kommission:    |190672              |||||17.01.20|005
+-150044|POS2|4||||||||||||Kostenstelle:||Kontierungsgruppe:||Werkstoff:|AlCuMgPb F34    |Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||005
+-150044|POS 3|4|||||||||||||||||||||||||||005
+-150044|POS|5|9,00|34,00|306,00|306,00|||0,00||||17.01.20|Ihre Artikel-Nr:|                        |X1343-10-1721|LAGERDECKEL         |060x30.5            |ST||Termin:        |Kommission:    |190672              |||||17.01.20|005
+-150044|POS2|5||||||||||||Kostenstelle:||Kontierungsgruppe:||Werkstoff:||Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||005
+-150044|POS 3|5|||||||||||||||||||||||||||005
+-150044|POS|6|10,00|40,00|400,00|400,00|||0,00||||10.01.20|Ihre Artikel-Nr:|                        |X108-1412|DECKEL              |                    |ST||Termin:        |Kommission:    |190681              |||||10.01.20|005
+-150044|POS2|6||||||||||||Kostenstelle:||Kontierungsgruppe:|591     |Werkstoff:|ST37k           |Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||005
+-150044|POS 3|6|||||||||||||||||||||||||||005
+-150044|POS|7|4,00|19,00|76,00|76,00|||0,00||||20.12.19|Ihre Artikel-Nr:|                        |S63-1714|EXZENTER FÜR S.WELLE|                    |ST||Termin:        |Kommission:    |190666              |||||20.12.19|005
+-150044|POS2|7||||||||||||Kostenstelle:||Kontierungsgruppe:|591     |Werkstoff:|16MnCr5-ZF6     |Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||005
+-150044|POS 3|7|||||||||||||||||||||||||||005
+-150044|POS|8|1,00|69,00|69,00|69,00|||0,00||||20.12.19|Ihre Artikel-Nr:|                        |X152-1427|GEHÄUSEDECKEL       |Ø70H8               |ST||Termin:        |Kommission:    |190669              |||||20.12.19|005
+-150044|POS2|8||||||||||||Kostenstelle:||Kontierungsgruppe:|591     |Werkstoff:|St37-2          |Zeichn.-Nr.:|X152-1427.3     |MOD/DIN:||Abmessung:||ÄI:|||005
+-150044|POS 3|8|||||||||||||||||||||||||||005
+-150044|POS|9|1,00|33,20|33,20|33,20|||0,00||||20.12.19|Ihre Artikel-Nr:|                        |X160-1716|LAGERDECKEL         |                    |ST||Termin:        |Kommission:    |190669              |||||20.12.19|005
+-150044|POS2|9||||||||||||Kostenstelle:||Kontierungsgruppe:|591     |Werkstoff:|16MnCr5-ZF6     |Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||005
+-150044|POS 3|9|||||||||||||||||||||||||||005
+-150044|POS|10|20,00|10,18|203,60|203,60|||0,00||||20.12.19|Ihre Artikel-Nr:|                        |Ü0033-38-5312|DISTANZRING         |                    |ST||Termin:        |Kommission:    |19055700            |||||20.12.19|005
+-150044|POS2|10||||||||||||Kostenstelle:||Kontierungsgruppe:|591     |Werkstoff:|16MnCr5-ZF6     |Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||005
+-150044|POS 3|10|||||||||||||||||||||||||||005
+-150044|POS|11|4,00|58,40|233,60|233,60|||0,00||||20.12.19|Ihre Artikel-Nr:|                        |K0533-10-1511|FLANSCHLAGER        |                    |ST||Termin:        |Kommission:    |190611              |||||20.12.19|005
+-150044|POS2|11||||||||||||Kostenstelle:||Kontierungsgruppe:|591     |Werkstoff:|16MnCr5-ZF6     |Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||005
+-150044|POS 3|11|||||||||||||||||||||||||||005
+-150044|POS|12|5,00|150,00|750,00|750,00|||0,00||||20.12.19|Ihre Artikel-Nr:|                        |X1343-10-3321|ABTRIEBSWELLE       |Ø190x154            |ST||Termin:        |Kommission:    |190672              |||||20.12.19|005
+-150044|POS2|12||||||||||||Kostenstelle:||Kontierungsgruppe:||Werkstoff:|16MnCr5         |Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||005
+-150044|POS 3|12|||||||||||||||||||||||||||005
+-150044|POS_TEXTA|1|12|||||||||||tArtikel am 28.06.16 von Kaufteil                                      |||||||||||||||005
+-150044|POS_TEXTA|2|12|||||||||||tauf Eigenfertigung umgestellt                                         |||||||||||||||005
+-150044|POS|13|5,00|150,00|750,00|750,00|||0,00||||20.12.19|Ihre Artikel-Nr:|                        |SP80-37210|HOHLWELLE           |Ø35.5               |ST||Termin:        |Kommission:    |190689              |||||20.12.19|005
+-150044|POS2|13||||||||||||Kostenstelle:||Kontierungsgruppe:|591     |Werkstoff:|C45             |Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||005
+-150044|POS 3|13|||||||||||||||||||||||||||005
+-150044|POS|14|10,00|73,87|738,70|738,70|||0,00||||17.01.20|Ihre Artikel-Nr:|                        |Ü0033-42-1411|DECKEL              |                    |ST||Termin:        |Kommission:    |                    |||||17.01.20|005
+-150044|POS2|14||||||||||||Kostenstelle:||Kontierungsgruppe:|591     |Werkstoff:|GG-25           |Zeichn.-Nr.:||MOD/DIN:||Abmessung:||ÄI:|||005
+-150044|POS 3|14|||||||||||||||||||||||||||005
+-150044|POS|15|50,00|3,37|168,50|168,50|||0,00||||24.01.20|Ihre Artikel-Nr:|                        |D.048/058-015|DISTANZRING         |D048.1/058.0-015.5  |ST||Termin:        |Kommission:    |                    |||||24.01.20|005
+-150044|POS2|15||||||||||||Kostenstelle:||Kontierungsgruppe:|591     |Werkstoff:|St35            |Zeichn.-Nr.:||MOD/DIN:|160-1.0308-60x7 |Abmessung:||ÄI:|||005
+-150044|POS 3|15|||||||||||||||||||||||||||005
+-150044|FUSS_WERTE|1||5727,84||||||||||AUFTRW|Bestellwert||||||||||||||005
+-150044|FUSS_LIEFD||||||||||||20.12.19||Liefertermin:      ||||||||||||||005
+-150044|FUSS_ZAHLB|1||||||||||||BBC 60/90 GG FM                                                       |Zahlungsbedingung: ||||||||||||||005
+-150044|FUSS_TEXTF|1||||||||||||t|||||||||||||||005
+-150044|FUSS_TEXTF|2||||||||||||tZZ Drive Tech GmbH                                                    |||||||||||||||005
+-150044|FUSS_TEXTF|3||||||||||||t|||||||||||||||005
+-150044|FUSS_TEXTF|4||||||||||||ti.A.         i.A.             i.A.                                    |||||||||||||||005
+-150044|FUSS_TEXTF|5||||||||||||tKlaus Korte  Nadine Cordeiro  Michael Batzler                         |||||||||||||||005
+-150044|FUSS_TEXTF|6||||||||||||t|||||||||||||||005
+-150044|FUSS_TEXTF|7||||||||||||t|||||||||||||||005
+-150044|FUSS_TEXTF|8||||||||||||t*****************************************************                 |||||||||||||||005
+-150044|FUSS_TEXTF|9||||||||||||tWir bitten um eine Auftragsbestätigung innerhalb                      |||||||||||||||005
+-150044|FUSS_TEXTF|10||||||||||||tvon 3 Arbeitstagen.                                                   |||||||||||||||005
+-150044|FUSS_TEXTF|11||||||||||||tBei Auftragsbestätigungen und Lieferscheinen immer                    |||||||||||||||005
+-150044|FUSS_TEXTF|12||||||||||||tunsere Artikelnummern angeben.                                        |||||||||||||||005
+-150044|FUSS_TEXTF|13||||||||||||tBitte die Ware zum angegebenen Liefertermin anliefern                 |||||||||||||||005
+-150044|FUSS_TEXTF|14||||||||||||t*****************************************************                 |||||||||||||||005

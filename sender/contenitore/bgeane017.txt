@@ -1,0 +1,29 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|017
+-1150192|KOPIEN|001|000|||||||||||ANFRAGE||||||||||||Sven.Melzer@harhues-teufert.de|||017
+-1150192|KOPF||||||||||||04.12.19|Datum|Nr.|007296          |Lieferant|60926   |||Harhues & Teufert GmbH|Am Lindenkamp 41|42549 Velbert||||||017
+-1150192|KOPF_USTID|||||||||||||Ihre Ust-Id|                |Unsere Ust-Id|DE815609203     ||||||||||||017
+-1150192|KOPF_DATEN||||||||||||        |Angebots-Nr|                  |KundenNr/Ihre Zeichen |16494               |                  |||vom|Unser Zeichen / Telefon /Fax|Nadine Cordeiro                 |Tel:0721/6205-35    |D|cordeiro|Fax:0721/6205-10    ||017
+-1150192|KONTAKT|||||||||||||Fax:0721/6205-10|nadine.cordeiro@zzdrivetech.com|Fax:0721/6205-10|Tel:0721/6205-35|nadine.cordeiro@zzdrivetech.com|Nadine Cordeiro|Fax:0721/6205-10|Tel:0721/6205-35|nadine.cordeiro@zzdrivetech.com|Nadine Cordeiro|02051/31 15-15|02051/31 15-0||||017
+-1150192|KOPF_TEXTF|1||||||||||||tBitte unterbreiten Sie uns Ihr kostenloses Angebot für die            |||||||||||||||017
+-1150192|KOPF_TEXTF|2||||||||||||tunten aufgeführten Positionen gem. unseren Einkaufsbedingungen.       |||||||||||||||017
+-1150192|KOPF_POSUEB|||||||||||||Pos  |Artikel-Nr/Bezeichnung|Menge|ME|W-Termin  |||||||||||017
+-1150192|POS|1|40,00|||||||||        |20.01.20|Ihre Artikel-Nr||201-CFH-4_000-68|KURVENROLLE         |4.0 / L68           |ST||Angebotstermin |||||||20.01.20|017
+-1150192|POS2|1||||||||||||||||Werkstoff:|Ring tiefgekühlt|Zeichn.-Nr.:|201-CFH-4_000-68||||||||017
+-1150192|POS_TEXTA|1|1|||||||||||tKomplettfertigung durch Lieferant                                     |||||||||||||||017
+-1150192|POS_TEXTA|2|1|||||||||||tnach Zeichnung 201-CFH-4_000-68                                       |||||||||||||||017
+-1150192|FUSS_TEXTF|1||||||||||||tMit freundlichen Grüßen                                               |||||||||||||||017
+-1150192|FUSS_TEXTF|2||||||||||||tZZ Drive Tech GmbH                                                    |||||||||||||||017
+-2150192|KOPIEN|001|000|||||||||||ANFRAGE||||||||||||tina.dieterle@stehle-gmbh.de|||017
+-2150192|KOPF||||||||||||04.12.19|Datum|Nr.|007296          |Lieferant|62112   |||Stehle GmbH|Zerspanungs- u. Schleiftechnik|Kinzigstr. 28|77716 Fischerbach|||||017
+-2150192|KOPF_USTID|||||||||||||Ihre Ust-Id|                |Unsere Ust-Id|DE815609203     ||||||||||||017
+-2150192|KOPF_DATEN||||||||||||        |Angebots-Nr|                  |KundenNr/Ihre Zeichen |15601               |                  |||vom|Unser Zeichen / Telefon /Fax|Nadine Cordeiro                 |Tel:0721/6205-35    |D|cordeiro|Fax:0721/6205-10    ||017
+-2150192|KONTAKT|||||||||||||Fax:0721/6205-10|nadine.cordeiro@zzdrivetech.com|Fax:0721/6205-10|Tel:0721/6205-35|nadine.cordeiro@zzdrivetech.com|Nadine Cordeiro|||| |07832/97609-79|07832/97609-0||||017
+-2150192|KOPF_TEXTF|1||||||||||||tBitte unterbreiten Sie uns Ihr kostenloses Angebot für die            |||||||||||||||017
+-2150192|KOPF_TEXTF|2||||||||||||tunten aufgeführten Positionen gem. unseren Einkaufsbedingungen.       |||||||||||||||017
+-2150192|KOPF_POSUEB|||||||||||||Pos  |Artikel-Nr/Bezeichnung|Menge|ME|W-Termin  |||||||||||017
+-2150192|POS|1|40,00|||||||||        |20.01.20|Ihre Artikel-Nr||201-CFH-4_000-68|KURVENROLLE         |4.0 / L68           |ST||Angebotstermin |||||||20.01.20|017
+-2150192|POS2|1||||||||||||||||Werkstoff:|Ring tiefgekühlt|Zeichn.-Nr.:|201-CFH-4_000-68||||||||017
+-2150192|POS_TEXTA|1|1|||||||||||tKomplettfertigung durch Lieferant                                     |||||||||||||||017
+-2150192|POS_TEXTA|2|1|||||||||||tnach Zeichnung 201-CFH-4_000-68                                       |||||||||||||||017
+-2150192|FUSS_TEXTF|1||||||||||||tMit freundlichen Grüßen                                               |||||||||||||||017
+-2150192|FUSS_TEXTF|2||||||||||||tZZ Drive Tech GmbH                                                    |||||||||||||||017

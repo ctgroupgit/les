@@ -59,7 +59,7 @@ export class SockService {
                         cmd = '"' + rootPath + '\\resources\\app\\bin\\curl.exe" -k "sftp://' + socket.remoteAddress + ':22' +
                             finalPath.trim() + '" --user "nova:nova" -o "' + this.downloadPath + '\\data.csv"';
                     } else {
-                        cmd = 'curl -k "sftp://' + socket.remoteAddress + ':22' +
+                        cmd = 'curl -k "tftp://' + socket.remoteAddress + ':22' +
                             finalPath.trim() + '" --user "nova:nova" -o "' + this.downloadPath + '/data.csv"';
                     }
                     console.log(cmd);

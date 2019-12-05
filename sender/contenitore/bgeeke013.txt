@@ -1,0 +1,68 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|013
+-150193|KOPIEN|001|000||||||||0|||BESTELLUNG|||||||||||0|u.bechtle@hd-stahl.de|||013
+-150193|KOPF_USTID|||||||||||||Ihre Ust-Identnr|                |Unsere Ust-Identnr|DE815609203     ||||||||||||013
+-150193|KOPF||||||||||||04.12.19|Datum|Bestellung|108674          |||||Hagelauer Dewald GmbH|Gottlieb-Daimler-Stra�e 11|74385 Pleidelsheim||||||013
+-150193|KOPF_DATEN||||||||||||        |Angebots-Nr|                  |KundenNr/Ihre Zeichen |33222               |                  ||Lieferant|60404   |Unser Zeichen / Telefon|Klaus Korte                     |0721 6205-51        |D|korte|||013
+-150193|KONTAKT|||||||||||||Fax:0721 6205-10|klaus.korte@zzdrivetech.com|Fax:0721 6205-10|0721 6205-51|klaus.korte@zzdrivetech.com|Klaus Korte|||| |07144/281599|07144/2693-0||||013
+-150193|KOPF_TEXTF|1||||||||||||tIn allen Schriftst�cken bitte unsere Bestell-Daten                    |||||||||||||||013
+-150193|KOPF_TEXTF|2||||||||||||tangeben, Rechnung + Lieferschein zweifach.                            |||||||||||||||013
+-150193|KOPF_TEXTF|3||||||||||||tZu unseren Einkaufsbedingungen bestellen wir:                         |||||||||||||||013
+-150193|KOPF_POSUEB|||||||||||||Pos  |Artikel-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt|EUR ||||||||013
+-150193|POS|1|1,00|99,93|99,93|99,93|||0,00||||12.12.19|Ihre Artikel-Nr:|                        |141-1.0570-250|S�GEABSCHNITT       |�250x230     St52-3 |ST||Termin:        |Kommission:    |190655              |||||12.12.19|013
+-150193|POS2|1||||||||||||Kostenstelle:||Kontierungsgruppe:||Werkstoff:|St52-3          |Zeichn.-Nr.:||MOD/DIN:||Abmessung:||�I:|||013
+-150193|POS 3|1|||||||||||||||||||||||||||013
+-150193|POS_TEXTA|1|1|||||||||||tFertigma� �242x226                                                    |||||||||||||||013
+-150193|POS_TEXTA|2|1|||||||||||tinkl. Materialwerkszeugnis DIN EN 10204-2.2                           |||||||||||||||013
+-150193|FUSS_WERTE|1||99,93||||||||||AUFTRW|Bestellwert||||||||||||||013
+-150193|FUSS_LIEFD||||||||||||12.12.19||Liefertermin:      ||||||||||||||013
+-150193|FUSS_PRE|1||||||||||||zzgl. 19 % MWST                                                       |Preisstellung:     ||||||||||||||013
+-150193|FUSS_ZAHLB|1||||||||||||14 Tage 2,00 % Skonto                                                                              |Zahlungsbedingung: ||||||||||||||013
+-150193|FUSS_ZAHLB|3||||||||||||45 Tage netto                                                                                      |Zahlungsbedingung: ||||||||||||||013
+-150193|FUSS_TEXTF|1||||||||||||t|||||||||||||||013
+-150193|FUSS_TEXTF|2||||||||||||tZZ Drive Tech GmbH                                                    |||||||||||||||013
+-150193|FUSS_TEXTF|3||||||||||||t|||||||||||||||013
+-150193|FUSS_TEXTF|4||||||||||||ti.A.         i.A.             i.A.                                    |||||||||||||||013
+-150193|FUSS_TEXTF|5||||||||||||tKlaus Korte  Nadine Cordeiro  Michael Batzler                         |||||||||||||||013
+-150193|FUSS_TEXTF|6||||||||||||t|||||||||||||||013
+-150193|FUSS_TEXTF|7||||||||||||t|||||||||||||||013
+-150193|FUSS_TEXTF|8||||||||||||t*****************************************************                 |||||||||||||||013
+-150193|FUSS_TEXTF|9||||||||||||tWir bitten um eine Auftragsbest�tigung innerhalb                      |||||||||||||||013
+-150193|FUSS_TEXTF|10||||||||||||tvon 3 Arbeitstagen.                                                   |||||||||||||||013
+-150193|FUSS_TEXTF|11||||||||||||tBei Auftragsbest�tigungen und Lieferscheinen immer                    |||||||||||||||013
+-150193|FUSS_TEXTF|12||||||||||||tunsere Artikelnummern angeben.                                        |||||||||||||||013
+-150193|FUSS_TEXTF|13||||||||||||tBitte die Ware zum angegebenen Liefertermin anliefern                 |||||||||||||||013
+-150193|FUSS_TEXTF|14||||||||||||t*****************************************************                 |||||||||||||||013
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|013
+-150193|KOPIEN|001|000||||||||0|||BESTELLUNG|||||||||||0|u.bechtle@hd-stahl.de|||013
+-150193|KOPF_USTID|||||||||||||Ihre Ust-Identnr|                |Unsere Ust-Identnr|DE815609203     ||||||||||||013
+-150193|KOPF||||||||||||04.12.19|Datum|Bestellung|108674          |||||Hagelauer Dewald GmbH|Gottlieb-Daimler-Stra�e 11|74385 Pleidelsheim||||||013
+-150193|KOPF_DATEN||||||||||||        |Angebots-Nr|                  |KundenNr/Ihre Zeichen |33222               |                  ||Lieferant|60404   |Unser Zeichen / Telefon|Klaus Korte                     |0721 6205-51        |D|korte|||013
+-150193|KONTAKT|||||||||||||Fax:0721 6205-10|klaus.korte@zzdrivetech.com|Fax:0721 6205-10|0721 6205-51|klaus.korte@zzdrivetech.com|Klaus Korte|||| |07144/281599|07144/2693-0||||013
+-150193|KOPF_TEXTF|1||||||||||||tIn allen Schriftst�cken bitte unsere Bestell-Daten                    |||||||||||||||013
+-150193|KOPF_TEXTF|2||||||||||||tangeben, Rechnung + Lieferschein zweifach.                            |||||||||||||||013
+-150193|KOPF_TEXTF|3||||||||||||tZu unseren Einkaufsbedingungen bestellen wir:                         |||||||||||||||013
+-150193|KOPF_POSUEB|||||||||||||Pos  |Artikel-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt|EUR ||||||||013
+-150193|POS|1|1,00|99,93|99,93|99,93|||0,00||||12.12.19|Ihre Artikel-Nr:|                        |141-1.0570-250|S�GEABSCHNITT       |�250x230     St52-3 |ST||Termin:        |Kommission:    |190655              |||||12.12.19|013
+-150193|POS2|1||||||||||||Kostenstelle:||Kontierungsgruppe:||Werkstoff:|St52-3          |Zeichn.-Nr.:||MOD/DIN:||Abmessung:||�I:|||013
+-150193|POS 3|1|||||||||||||||||||||||||||013
+-150193|POS_TEXTA|1|1|||||||||||tFertigma� �242x226                                                    |||||||||||||||013
+-150193|POS_TEXTA|2|1|||||||||||tinkl. Materialwerkszeugnis DIN EN 10204-2.2                           |||||||||||||||013
+-150193|FUSS_WERTE|1||99,93||||||||||AUFTRW|Bestellwert||||||||||||||013
+-150193|FUSS_LIEFD||||||||||||12.12.19||Liefertermin:      ||||||||||||||013
+-150193|FUSS_PRE|1||||||||||||zzgl. 19 % MWST                                                       |Preisstellung:     ||||||||||||||013
+-150193|FUSS_ZAHLB|1||||||||||||14 Tage 2,00 % Skonto                                                                              |Zahlungsbedingung: ||||||||||||||013
+-150193|FUSS_ZAHLB|3||||||||||||45 Tage netto                                                                                      |Zahlungsbedingung: ||||||||||||||013
+-150193|FUSS_TEXTF|1||||||||||||t|||||||||||||||013
+-150193|FUSS_TEXTF|2||||||||||||tZZ Drive Tech GmbH                                                    |||||||||||||||013
+-150193|FUSS_TEXTF|3||||||||||||t|||||||||||||||013
+-150193|FUSS_TEXTF|4||||||||||||ti.A.         i.A.             i.A.                                    |||||||||||||||013
+-150193|FUSS_TEXTF|5||||||||||||tKlaus Korte  Nadine Cordeiro  Michael Batzler                         |||||||||||||||013
+-150193|FUSS_TEXTF|6||||||||||||t|||||||||||||||013
+-150193|FUSS_TEXTF|7||||||||||||t|||||||||||||||013
+-150193|FUSS_TEXTF|8||||||||||||t*****************************************************                 |||||||||||||||013
+-150193|FUSS_TEXTF|9||||||||||||tWir bitten um eine Auftragsbest�tigung innerhalb                      |||||||||||||||013
+-150193|FUSS_TEXTF|10||||||||||||tvon 3 Arbeitstagen.                                                   |||||||||||||||013
+-150193|FUSS_TEXTF|11||||||||||||tBei Auftragsbest�tigungen und Lieferscheinen immer                    |||||||||||||||013
+-150193|FUSS_TEXTF|12||||||||||||tunsere Artikelnummern angeben.                                        |||||||||||||||013
+-150193|FUSS_TEXTF|13||||||||||||tBitte die Ware zum angegebenen Liefertermin anliefern                 |||||||||||||||013
+-150193|FUSS_TEXTF|14||||||||||||t*****************************************************                 |||||||||||||||013

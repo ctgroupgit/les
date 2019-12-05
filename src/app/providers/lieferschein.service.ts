@@ -167,7 +167,9 @@ export class LieferscheinService {
           this.bodyRow.col5 = this.gb.StrToNumber(row[5]);
           this.bodyRow.col6 = row[19];
           // this.bodyRow.col7 = this.gb.currencyFormatDE(row[6]);
+          this.docClass.documentFooter.push(row[21] + ': ' + row[22]);
           this.docClass.tableRow.push(this.bodyRow);
+
           break;
         }
         case 'POS_RB': {

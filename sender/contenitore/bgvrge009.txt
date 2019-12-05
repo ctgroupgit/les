@@ -1,0 +1,38 @@
+00001|CONTROL|3|4|5|6|7|8|9|10|11|12|01.01.01|02.02.02|T15|T16|T17|T18|T19|T20|T21|T22|T23|T24|T25|T26|T27|T28|T29|009
+306395|KOPIEN|002|001|||||||||||RECHNUNG|RECHNUNG DUPLIKAT|RECHNUNG|||||||||||||009
+306395|KOPF_POSUEB|||||||||||||Pos.|Produkt-Nr/Bezeichnung|Menge|ME|Einzelpreis|PE|Gesamt |EUR ||||||||009
+306395|KOPF_ANS|||||||||||||||||||Lieferanschrift|Koenig & Bauer Digital|& Webfed AG & Co. KG|Friedrich-Koenig-Str. 4|97080 Würzburg|||||009
+306395|KOPF|||||||||||29.11.19||Datum|Vertreter|--                              |LieferantNr|          |Kunden-Nr|11003   |KBA-Digital & Webfed AG & Co.KG|Postfach 60 60|97010 Würzburg||||||009
+306395|KOPF_TEXTF|1||||||||||||t|||||||||||||||009
+306395|KOPF_TEXTF|2||||||||||||t|||||||||||||||009
+306395|KOPF_TEXTF|3||||||||||||t  Sie erhielten für Ihre Rechnung und Gefahr die unten                |||||||||||||||009
+306395|KOPF_TEXTF|4||||||||||||t  aufgeführten Waren.  -Lieferscheindatum = Leistungsdatum-           |||||||||||||||009
+306395|KOPF_DATEN|||||||||||09.07.19||RECHNUNG|Ihre Bestell-Nr|94915216 831R L                     |Bestell-Datum|Auftrags-Nr|Herr Kuemmet      |190444|Nicole Naiel      |Angebot A190443a  |Lief.-Nr. 515565  |D|spancken|Zentrale|        |0721/62 05-37       |009
+306395|KOPF_DATEN2|||||||||106300|106300|29.11.19|29.11.19|106300|Rechnungs-Nr|106300|Lieferschein|Lieferdatum|||||||||||009
+306395|KONTAKT|||||||||||||Fax.: 0721/6205-10|nicole.naiel@zzdrivetech.com|||| |||| |0931/909-4654|0931/9 09 - 0||||009
+306395|KOPF_USTID|||||||||||||Ihre Ust-IdNr|DE 134165982    |Unsere Ust-IdNr|DE815609203     ||||||||||||009
+306395|POS|1|1,0000|2990,0000|0 |2990,00|||||||20.12.19|Ihre Produkt-Nr:||F0074-00-0137|KEGELRADSATZ        |87722178/87723185   |ST||||||||||009
+306395|POS_TEXTP|1|1|||||||||||tSatz bestehend aus:                                                   |||||||||||||||009
+306395|POS_TEXTP|2|1|||||||||||t1x Kegelrad      877 221 78 ZZ-Art.Nr. F0074-10-0148 ÄI D             |||||||||||||||009
+306395|POS_TEXTP|3|1|||||||||||t|||||||||||||||009
+306395|POS_TEXTP|4|1|||||||||||t1x Kegelrad kpl. 877 220 46 ZZ-Art.Nr. F0074-10-0150 ÄI -             |||||||||||||||009
+306395|POS_TEXTP|5|1|||||||||||tbestehend aus:                                                        |||||||||||||||009
+306395|POS_TEXTP|6|1|||||||||||t   1x Kegelrad   877 231 85 ZZ-Art.Nr. F0074-10-0149 ÄI C             |||||||||||||||009
+306395|POS_TEXTP|7|1|||||||||||t   1x Zahnrad    877 222 72 ZZ-Art.Nr. F0074-02-0037 ÄI -             |||||||||||||||009
+306395|POS_TEXTP|8|1|||||||||||t|||||||||||||||009
+306395|POS_TEXTP|9|1|||||||||||tVerzahnung Palloid; Nitriert                                          |||||||||||||||009
+306395|FUSS_WERTE|1||2990,00||||||||||NETTOW|Nettowert||||||||||||||009
+306395|FUSS_WERTE|2|19,00|      568,10||||||||||MWST|Mehrwertsteuer|%|||||||||||||009
+306395|FUSS_WERTE|3||3558,10||||||||||AUFTRW|Rechnungsbetrag||||||||||||||009
+306395|FUSS_LIEFB|||||||||||||frei Haus, inkl. Verp.                                      |Lieferbedingung:||||||||||||||009
+306395|FUSS_VART|1||||||||||||GLS                                                                   |Versandart:||||||||||||||009
+306395|FUSS_PACK|1||||||||||||Karton    |Verpackung:||||||||||||||009
+306395|FUSS_ZAHLB|1|||||||||||| Der Rechnungsbetrag ist fällig am 28.01.20 netto|Zahlungsbedingung:||||||||||||||009
+306395|FUSS_ZAHLB|2||||||||||||                     abzgl. 3,0% Skonto:   3451,36 EUR bis zum 13.12.19|Zahlungsbedingung:||||||||||||||009
+306395|FUSS_TEXTF|1||||||||||||tBITTE BEACHTEN SIE UNSERE NEUE BANKVERBINDUNG GÜLTIG AB 01.01.16      |||||||||||||||009
+306395|FUSS_TEXTF|2||||||||||||t*****************************************************************     |||||||||||||||009
+306395|FUSS_TEXTF|3||||||||||||t|||||||||||||||009
+306395|FUSS_TEXTF|4||||||||||||tKontonummer:22616510                                                  |||||||||||||||009
+306395|FUSS_TEXTF|5||||||||||||tIBAN: DE81660202860022616510                                          |||||||||||||||009
+306395|FUSS_TEXTF|6||||||||||||tBIC:  HYVEDEMM475                                                     |||||||||||||||009
+306395|FUSS_TEXTF|7||||||||||||t*****************************************************************     |||||||||||||||009
