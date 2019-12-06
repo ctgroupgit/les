@@ -28,8 +28,7 @@
     "publish": [
       {
         "provider": "github",
-        "url": "https://github.com/ctgroupgit/les",
-        "token": "09cdc6297f321b5d8f60ce86b69ba75e3af81ff0"
+        "url": "https://github.com/ctgroupgit/les"
       }
     ],
     "win": {
