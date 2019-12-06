@@ -2,10 +2,7 @@ import {app, BrowserWindow, Tray, Menu, nativeImage, dialog} from 'electron';
 import * as path from 'path';
 import * as url from 'url';
 import {platform} from 'os';
-
 const {systemPreferences} = require('electron');
-
-
 const {autoUpdater} = require('electron-updater');
 const log = require('electron-log');
 
@@ -13,10 +10,16 @@ let win, serve;
 const args = process.argv.slice(1);
 serve = args.some(val => val === '--serve');
 let tray = null;
-// configure logging
 autoUpdater.logger = log;
-
 autoUpdater.logger.transports.file.level = 'info';
+autoUpdater.setFeedURL({
+    provider: 'github',
+    owner: 'ctgroupgit',
+    repo: 'les',
+    token: '09cdc6297f321b5d8f60ce86b69ba75e3af81ff0'
+});
+// autoUpdater.requestHeaders = {'PRIVATE-TOKEN': '09cdc6297f321b5d8f60ce86b69ba75e3af81ff0'};
+autoUpdater.autoDownload = true;
 
 log.info('App starting...');
 
@@ -113,10 +116,14 @@ try {
         tray.setToolTip(app.getName());
         tray.setContextMenu(contextMenu);
 
-        createWindow();
         setInterval(() => {
-            autoUpdater.checkForUpdatesAndNotify();
-        }, 60000);
+            autoUpdater.checkForUpdatesAndNotify().then( r => {
+                console.log('AutoUpdate', r);
+            });
+        }, 6000);
+
+        createWindow();
+
     });
 
     app.on('before-quit', () => {
@@ -159,6 +166,7 @@ try {
             `Download speed: ${progressObj.bytesPerSecond} - Downloaded ${progressObj.percent}% (${progressObj.transferred} + '/' + ${progressObj.total} + )`
         );
     });
+
     autoUpdater.on('update-downloaded', info => {
         sendStatusToWindow('Update downloaded; will install now');
         tray.destroy();

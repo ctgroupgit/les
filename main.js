@@ -11,9 +11,16 @@ var win, serve;
 var args = process.argv.slice(1);
 serve = args.some(function (val) { return val === '--serve'; });
 var tray = null;
-// configure logging
 autoUpdater.logger = log;
 autoUpdater.logger.transports.file.level = 'info';
+autoUpdater.setFeedURL({
+    provider: 'github',
+    owner: 'ctgroupgit',
+    repo: 'les',
+    token: '09cdc6297f321b5d8f60ce86b69ba75e3af81ff0'
+});
+// autoUpdater.requestHeaders = {'PRIVATE-TOKEN': '09cdc6297f321b5d8f60ce86b69ba75e3af81ff0'};
+autoUpdater.autoDownload = true;
 log.info('App starting...');
 function createWindow() {
     win = new electron_1.BrowserWindow({
@@ -101,10 +108,12 @@ try {
         ]);
         tray.setToolTip(electron_1.app.getName());
         tray.setContextMenu(contextMenu);
-        createWindow();
         setInterval(function () {
-            autoUpdater.checkForUpdatesAndNotify();
-        }, 60000);
+            autoUpdater.checkForUpdatesAndNotify().then(function (r) {
+                console.log('AutoUpdate', r);
+            });
+        }, 6000);
+        createWindow();
     });
     electron_1.app.on('before-quit', function () {
         if (win) {

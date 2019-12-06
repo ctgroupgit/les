@@ -1,6 +1,6 @@
 {
   "name": "les",
-  "version": "1.1.78",
+  "version": "1.1.72",
   "description": "Les",
   "homepage": "https://github.com/ctgroupgit/les",
   "repository": {
@@ -25,11 +25,13 @@
   },
   "build": {
     "appId": "com.les.app",
+    "productName": "Les PDF",
     "publish": [
       {
         "provider": "github",
         "url": "https://github.com/ctgroupgit/les",
-        "token": "09cdc6297f321b5d8f60ce86b69ba75e3af81ff0"
+        "owner": "ctgroupgit",
+        "repo": "les"
       }
     ],
     "win": {
@@ -155,7 +157,7 @@
     "chartjs": "^0.3.24",
     "electron-log": "^3.0.6",
     "electron-root-path": "^1.0.9",
-    "electron-updater": "^4.1.2",
+    "electron-updater": "^4.2.0",
     "electron-window-state": "^5.0.3",
     "eslint": "^6.1.0",
     "font-awesome": "^4.7.0",
