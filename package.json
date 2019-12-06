@@ -29,9 +29,7 @@
     "publish": [
       {
         "provider": "github",
-        "url": "https://github.com/ctgroupgit/les",
-        "owner": "ctgroupgit",
-        "repo": "les"
+        "url": "https://github.com/ctgroupgit/les"
       }
     ],
     "win": {
