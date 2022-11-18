@@ -98,7 +98,7 @@
     "gh-publish-linux": "npm run build:prod && electron-builder --x64 --linux --publish always"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "0.800.0",
+    "@angular-devkit/build-angular": "15.0.0",
     "@angular/cli": "8.0.1",
     "@angular/common": "8.0.0",
     "@angular/compiler": "8.0.0",
